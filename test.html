@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/global.css">
+
+  <title>Collapsible Container Expands</title>
+  <style>
+    .collapsible-container {
+      height: 395px;
+      width: 693px; /* Initial width */
+      font-family: "CustomFont", Helvetica;
+      border-radius: 20px;
+      display: flex;
+      overflow: hidden;
+      cursor: pointer;
+      transition: width 0.3s ease-out; /* Smooth expansion */
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      background: #333;
+      color: #fff;
+    }
+    .collapsible-container h1 {
+        font-size: 64px;
+        line-height: 80px;
+        margin: 0px;
+    }
+    .collapsible-container p {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    .collapsible-header {
+      color: #fff;
+      text-align: justify;
+      white-space: nowrap;
+      text-wrap: wrap;
+    }
+
+    .collapsible-content {
+      display: none;
+      text-wrap: wrap;
+      text-align: justify;
+      color: #fff;
+    }
+
+    .collapsible-container.expanded {
+      width: 1385px;
+    }
+
+    .collapsible-container.expanded .collapsible-content {
+      display: inline;
+    }
+    
+.btn-or {
+    font-size: 1rem;
+    background: #FF5722;
+    padding: 0.3rem;
+    border-radius: 1rem;
+    border: #FF5722 solid 1px;
+    margin-bottom: 0.5rem;
+    width: 231px;
+    height: 39px;
+    color: #fff;
+}
+.btn-simp {
+    font-size: 0.7rem;
+    border: #fff solid 1px;
+    border-radius: 1rem;
+    padding: 0.3rem;
+    width: 149px;
+    height: 39px;
+}
+  </style>
+</head>
+<body>
+  <div class="collapsible-container">
+    <h1>Explore <br>the Flaming Cliffs</h1>
+    <p>Nestled in the heart of Mongolia's Gobi Desert, the Flaming Cliffs beckon adventurers from around the globe.<span class="collapsible-content">Their fiery red hues, carved by time and wind, are a stunning testament to the power of nature. Famous as the cradle of dinosaur discoveries, this breathtaking landscape whispers stories of ancient worlds and invites you to create unforgettable memories.
+    From sunrise to sunset, the Flaming Cliffs radiate an otherworldly beauty that captures the imagination. Step into a land of discovery, where history and natural splendor converge in an awe-inspiring experience
+    </span>
+    </p>
+    <div class="btn">
+        <button class="btn-or">LEARN ABOUT HISTORY</button>
+        <a href="/index.html"><button class="btn-simp">LEARN MORE</button></a>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.collapsible-container').addEventListener('click', function () {
+      this.classList.toggle('expanded');
+    });
+  </script>
+  <!-- <script>
+    document.querySelector('.collapsible-header').addEventListener('click', function () {
+      const content = document.querySelector('.collapsible-content');
+      if (content.style.display === 'block') {
+        content.style.display = 'none';
+        this.textContent = 'LEARN ABOUT HISTORY';
+      } else {
+        content.style.display = 'block';
+        this.textContent = 'Read Less';
+      }
+    });
+  </script> -->
+</body>
+</html>
