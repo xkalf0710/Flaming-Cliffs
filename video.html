@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Videos Section</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #2b241f;
+      color: #fff;
+    }
+
+    .header {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .header h1::before,
+    .header h1::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 100px;
+      height: 4px;
+      background-color: #fff;
+    }
+
+    .header h1::before {
+      right: 100%;
+      margin-right: 20px;
+    }
+
+    .header h1::after {
+      left: 100%;
+      margin-left: 20px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      padding: 20px 40px 10px;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px 40px;
+    }
+
+    .video-card {
+      background-color: #1e1a17;
+      border-radius: 5px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .video-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .video-card .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-card .play-button::after {
+      content: '▶';
+      color: #8338ec;
+      font-size: 20px;
+      margin-left: 3px;
+    }
+
+    .video-info {
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .video-info span {
+      display: block;
+      color: #bbb;
+    }
+
+    .video-info .title {
+      color: #fff;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Videos</h1>
+  </div>
+
+  <div class="section-title">Flaming Cliffs</div>
+
+  <div class="video-grid">
+    <!-- Repeat this block for each video -->
+    <div class="video-card">
+      <img src="https://via.placeholder.com/400x200?text=Flaming+Cliffs" alt="Video thumbnail">
+      <div class="play-button"></div>
+      <div class="video-info">
+        <span>youtube.com</span>
+        <div class="title">Sun shining</div>
+      </div>
+    </div>
+
+    <!-- Copy the above .video-card block for more videos -->
+    <!-- Example: -->
+    <div class="video-card">
+      <img src="https://via.placeholder.com/400x200?text=Flaming+Cliffs" alt="Video thumbnail">
+      <div class="play-button"></div>
+      <div class="video-info">
+        <span>youtube.com</span>
+        <div class="title">Sun shining</div>
+      </div>
+    </div>
+    <!-- Add more as needed -->
+  </div>
+
+</body>
+</html>
