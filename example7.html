@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo & Video Gallery</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #333;
+    }
+
+    .hero {
+      background: url('images/banner.jpg') no-repeat center center;
+      background-size: cover;
+      height: 380px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+      text-align: center;
+      letter-spacing: 4px;
+    }
+
+    .gallery-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .gallery-description {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+      position: relative;
+    }
+
+    .gallery-description a {
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 14px;
+      color: #000;
+      text-decoration: underline;
+    }
+
+    .gallery-section h3 {
+      margin-bottom: 20px;
+      color: #000;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .media-item {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background-color: #f5f5f5;
+      position: relative;
+    }
+
+    .media-item img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .media-caption {
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .video-thumbnail {
+      position: relative;
+    }
+
+    .video-thumbnail::after {
+      content: "▶";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 36px;
+      color: white;
+      text-shadow: 0 0 10px rgba(0,0,0,0.5);
+      pointer-events: none;
+    }
+
+    .video-meta {
+      font-size: 12px;
+      color: #666;
+      padding: 0 10px 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>PHOTO & VIDEO GALLERY</h1>
+  </div>
+
+  <section class="gallery-section">
+    <div class="gallery-description">
+      <a href="#">See more</a>
+      The Flaming Cliffs are more than just a historical site—they're a visual wonder. Explore our gallery to uncover the unique aspects of this iconic location. From breathtaking drone footage and serene sunsets to snapshots of the camel caravan and souvenir shop, there’s something for everyone to discover. Click below to dive into the full gallery and immerse yourself in the beauty of the Flaming Cliffs.
+    </div>
+
+    <h3>Photos</h3>
+    <div class="media-grid">
+      <div class="media-item">
+        <img src="images/photo1.jpg" alt="">
+        <div class="media-caption">Flaming Cliffs</div>
+      </div>
+      <div class="media-item">
+        <img src="images/photo2.jpg" alt="">
+        <div class="media-caption">Camel Caravan</div>
+      </div>
+      <div class="media-item">
+        <img src="images/photo3.jpg" alt="">
+        <div class="media-caption">Souvenir shop</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 40px;">Videos</h3>
+    <div class="media-grid">
+      <div class="media-item">
+        <div class="video-thumbnail">
+          <img src="images/video1.jpg" alt="">
+        </div>
+        <div class="media-meta">
+          <div class="media-caption">youtube.com</div>
+          <div class="video-meta">Sun shining</div>
+        </div>
+      </div>
+      <div class="media-item">
+        <div class="video-thumbnail">
+          <img src="images/video2.jpg" alt="">
+        </div>
+        <div class="media-meta">
+          <div class="media-caption">youtube.com</div>
+          <div class="video-meta">Sun shining</div>
+        </div>
+      </div>
+      <div class="media-item">
+        <div class="video-thumbnail">
+          <img src="images/video3.jpg" alt="">
+        </div>
+        <div class="media-meta">
+          <div class="media-caption">youtube.com</div>
+          <div class="video-meta">Sun shining</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
