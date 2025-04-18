@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Getting to Flaming Cliffs</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 30px;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .left-map {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .left-map img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .right-text {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+    }
+
+    .right-text h2 {
+      font-size: 22px;
+      border-bottom: 2px solid #5a2f0c;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+      color: #5a2f0c;
+    }
+
+    .right-text h3 {
+      color: #5a2f0c;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      border-bottom: 2px solid #5a2f0c;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .right-text ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .right-text ul li::before {
+      content: "★ ";
+      color: #c94d0f;
+      margin-right: 6px;
+    }
+
+    .right-text p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .right-text {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="section">
+  <!-- Left Image -->
+  <div class="left-map">
+    <img src="map-dino.png" alt="Travel Map and Dino Character" />
+  </div>
+
+  <!-- Right Text Content -->
+  <div class="right-text">
+    <h2>Getting There</h2>
+    <p>
+      Located in the Gobi Desert, the Flaming Cliffs are about 120 kilometers from Dalanzadgad. Options to reach the site include:
+    </p>
+    <ul>
+      <li><span class="bold">Self-Drive:</span> A 4×4 vehicle is recommended, but locals often use standard vehicles depending on rainfall.</li>
+      <li><span class="bold">Guided Tours:</span> Day trips or multi-day expeditions.</li>
+      <li><span class="bold">Flights:</span> Domestic flights to Dalanzadgad, followed by a drive to the site.</li>
+    </ul>
+
+    <h3>Best Time To Visit</h3>
+    <p>
+      The ideal months for visiting are May through October, with mild weather and accessible roads.
+    </p>
+
+    <h3>Visitor Guidelines</h3>
+    <ul>
+      <li>Stay on designated paths to avoid disturbing fossils.</li>
+      <li>Fossil collection is strictly prohibited.</li>
+      <li>Wear sturdy shoes, sun protection, and carry water.</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
