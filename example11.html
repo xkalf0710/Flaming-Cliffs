@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Objectives</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      color: #333;
+    }
+
+    .objectives {
+      text-align: center;
+    }
+
+    .objectives h2 {
+      font-size: 28px;
+      color: #5A2D0C;
+      margin-bottom: 40px;
+    }
+
+    .objective-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      text-align: center;
+      border-top: 2px solid #5A2D0C;
+      padding-top: 20px;
+    }
+
+    .objective {
+      border-right: 1px solid #ccc;
+      padding: 0 15px;
+    }
+
+    .objective:last-child {
+      border-right: none;
+    }
+
+    .objective h3 {
+      font-size: 18px;
+      color: #5A2D0C;
+      margin-bottom: 15px;
+    }
+
+    .objective p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .objective-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .objective-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .objective {
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+
+      .objective:last-child {
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="objectives">
+    <h2>Our Objectives</h2>
+    <div class="objective-grid">
+      <div class="objective">
+        <h3>Conservation</h3>
+        <p>Implement sustainable practices to protect the geological and paleontological integrity of the Flaming Cliffs.</p>
+      </div>
+      <div class="objective">
+        <h3>Research</h3>
+        <p>Support and collaborate on scientific studies that enhance our understanding of the site's fossils and geological formations.</p>
+      </div>
+      <div class="objective">
+        <h3>Community Engagement</h3>
+        <p>Work closely with local communities to promote cultural heritage and create economic opportunities through eco-tourism.</p>
+      </div>
+      <div class="objective">
+        <h3>Education</h3>
+        <p>Develop programs and exhibits that inform and inspire the public about the significance of the Flaming Cliffs and its discoveries.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
