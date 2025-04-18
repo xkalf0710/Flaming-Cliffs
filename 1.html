@@ -1,112 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mission & Vision</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Mission</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #fff;
-      margin: 0;
-      padding: 20px;
-    }
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  color: #333;
+}
 
-    .mission-vision {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 80px 1fr;
-      align-items: center;
-      gap: 20px;
-    }
+.mission-section {
+  max-width: 800px;
+  margin: auto;
+}
 
-    .mission, .vision {
-      text-align: justify;
-      padding: 20px;
-      position: relative;
-    }
+.mission-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
-    .mission h3, .vision h3 {
-      font-size: 20px;
-      font-weight: bold;
-      color: #5A371B;
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
+.icon {
+  width: 50px;
+  height: auto;
+}
 
-    .mission h3::before {
-      content: url('https://img.icons8.com/ios-filled/50/5A371B/visible--v1.png'); /* Replace with your own icon if needed */
-      margin-right: 10px;
-    }
+.mission-header h2 {
+  font-size: 1.5rem;
+  color: #5a3a1e;
+  font-weight: bold;
+  margin: 0;
+}
 
-    .vision h3::after {
-      content: url('https://img.icons8.com/ios-filled/50/5A371B/goal--v1.png'); /* Replace with your own icon if needed */
-      margin-left: 10px;
-    }
+.mission-text {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
 
-    .line {
-      border-top: 3px solid #5A371B;
-      margin: 10px 0;
-      width: 100%;
-    }
+.mission-line {
+  margin-top: 15px;
+  border: none;
+  height: 3px;
+  background-color: #5a3a1e;
+  width: 100%;
+}
 
-    .dino-img {
-      text-align: center;
-    }
-
-    .dino-img img {
-      max-width: 80px;
-      height: auto;
-    }
-
-    @media (max-width: 768px) {
-      .mission-vision {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .mission, .vision {
-        text-align: center;
-      }
-
-      .mission h3, .vision h3 {
-        justify-content: center;
-      }
-
-      .dino-img {
-        order: -1;
-        margin-bottom: 20px;
-      }
-    }
   </style>
 </head>
 <body>
-
-<div class="mission-vision">
-  <!-- Mission -->
-  <div class="mission">
-    <h3>Our Mission</h3>
-    <p>
+  <section class="mission-section">
+    <div class="mission-header">
+      <img src="img/oour mission icon.png" alt="Eye icon" class="icon" />
+      <h2>Our Mission</h2>
+    </div>
+    <p class="mission-text">
       At the Flaming Cliffs Administration, our mission is to preserve, study, and share the rich paleontological heritage of the Flaming Cliffs (Bayanzag). We are dedicated to safeguarding this unique site, promoting scientific research, and providing educational experiences that connect visitors to its historical and natural significance.
     </p>
-    <div class="line"></div>
-  </div>
-
-  <!-- Dino Image -->
-  <div class="dino-img">
-    <img src="cc04d5dd-508c-4b26-947e-07977336dcff.png" alt="Dino Mascot">
-  </div>
-
-  <!-- Vision -->
-  <div class="vision">
-    <h3>Our Vision</h3>
-    <p>
-      We envision the Flaming Cliffs as a globally recognized center for paleontological research and eco-tourism, where visitors can immerse themselves in the wonders of Earth’s prehistoric past while contributing to the preservation of this invaluable heritage.
-    </p>
-    <div class="line"></div>
-  </div>
-</div>
-
+    <hr class="mission-line" />
+  </section>
 </body>
 </html>
