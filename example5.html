@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nearby Destinations</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f8f8;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #4d2c0f;
+      margin-top: 40px;
+      position: relative;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: '';
+      display: inline-block;
+      width: 100px;
+      height: 4px;
+      background-color: #4d2c0f;
+      vertical-align: middle;
+      margin: 0 16px;
+      border-radius: 4px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-title {
+      position: absolute;
+      bottom: 12px;
+      left: 16px;
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <h2 class="section-title">Nearby Destinations</h2>
+
+  <div class="card-grid">
+    <!-- Example Card -->
+    <div class="card">
+      <img src="images/molto_els.jpg" alt="Molto Els">
+      <div class="card-title">Molto Els</div>
+    </div>
+
+    <div class="card">
+      <img src="images/tugruugiin_shiree.jpg" alt="Tugruugiin Shiree">
+      <div class="card-title">Tugruugiin Shiree</div>
+    </div>
+
+    <div class="card">
+      <img src="images/khongoryn_els.jpg" alt="Khongoryn Els">
+      <div class="card-title">Khongoryn Els</div>
+    </div>
+
+    <!-- Add more cards below -->
+    <div class="card">
+      <img src="images/yolyn_am.jpg" alt="Yolyn Am">
+      <div class="card-title">Yolyn Am</div>
+    </div>
+
+    <div class="card">
+      <img src="images/petroglyphs.jpg" alt="Petroglyphs of Khavtsgait">
+      <div class="card-title">Petroglyphs of Khavtsgait</div>
+    </div>
+
+    <div class="card">
+      <img src="images/tsagaan_suvraga.jpg" alt="Tsagaan Suvraga">
+      <div class="card-title">Tsagaan Suvraga</div>
+    </div>
+
+    <div class="card">
+      <img src="images/ongi_monastery.jpg" alt="Ongi Monastery">
+      <div class="card-title">Ongi Monastery</div>
+    </div>
+
+    <div class="card">
+      <img src="images/baga_gazriin_chuluu.jpg" alt="Baga Gazariin Chuluu">
+      <div class="card-title">Baga Gazariin Chuluu</div>
+    </div>
+
+    <div class="card">
+      <img src="images/mukhar_shivert.jpg" alt="Mukhar Shivert's Am">
+      <div class="card-title">Mukhar Shivert's Am</div>
+    </div>
+
+    <div class="card">
+      <img src="images/khermen_tsaw.jpg" alt="Khermen Tsaw">
+      <div class="card-title">Khermen Tsaw</div>
+    </div>
+
+    <div class="card">
+      <img src="images/khanan_khets.jpg" alt="Khanan Khets">
+      <div class="card-title">Khanan Khets</div>
+    </div>
+
+    <div class="card">
+      <img src="images/monastery.jpg" alt="Monastery">
+      <div class="card-title">Monastery</div>
+    </div>
+  </div>
+
+</body>
+</html>

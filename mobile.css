@@ -388,27 +388,337 @@ body {
     margin-top: 5px;
   }
 
-  /* .information{
-    background: url(img/information\ center\ desktop.jpg) no-repeat center center/cover;
+
+  .entry-fees {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 1100px;
+    gap: 40px;
+    border-top: 3px solid #5b2c06;
+    flex-wrap: wrap;
+    }
+
+    .content {
+    flex: 1 1 500px;
+    }
+
+    h2 {
+    color: #5b2c06;
+    border-bottom: 2px solid #bda89e;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    }
+
+    .fees, .projects {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    list-style-type: disc;
+    }
+
+    .fees li {
+    margin-bottom: 5px;
+    }
+
+    .projects li {
+    color: #1a4170;
+    font-weight: 500;
+    margin-bottom: 6px;
+    }
+
+    .image-gallery {
+    flex: 1 1 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    }
+
+    .image-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    }
+
+    .stats-container {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      margin: 30px auto;
+      max-width: 1000px;
+    }
     
-  }
-  .info {
-    color: #fff;
-    align-items: center;
-    padding: 40px;
-    padding-right: 63px;
-   
-    margin-top: 300px;
-    margin-left: 257px;
-  }
-  .info h1 {
-    font-size: 37px;
-    width: 745px;
-    position: relative;
-    text-align: center;
-    color: white;
-  } */
+    .stat-box {
+      background-color: #f8f8f8;
+      border-radius: 12px;
+      padding: 20px 40px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      flex: 1;
+      margin: 0 10px;
+    }
+    
+    .stat-title {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    .stat-value {
+      font-size: 32px;
+      font-weight: bold;
+      color: #2a2a2a;
+    }
+    
+    .icon {
+      margin-right: 10px;
+    }
+    
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .live-stats-btn {
+      background-color: #f98c2b;
+      color: white;
+      font-weight: bold;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .map-container{
+      position: relative;
+        width: 800px;
+        margin: auto;
+        background: url('img/best\ time\ to\ visit\ map.png') no-repeat center;
+        background-size: contain;
+        height: 500px;
+    }
+  
+    .location {
+      position: absolute;
+      text-align: center;
+      width: 100px;
+      font-size: 14px;
+    }
+  
+    .location img {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      border: 3px solid #fff;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+  
+    .ulan {
+      top: 20px;
+      left: 600px;
+    }
+  
+    .dalanzadgad {
+      top: 400px;
+      left: 600px;
+    }
+  
+    .info-section {
+      width: 800px;
+      margin: 40px auto;
+    }
+  
+    .info-section h3 {
+      border-bottom: 2px solid #6c3e1a;
+      color: #6c3e1a;
+      padding-bottom: 5px;
+    }
+  
+    .info-section ul {
+      list-style: disc;
+      margin-left: 20px;
+    }
+  
+    .highlight {
+      color: #6c3e1a;
+      font-weight: bold;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      background: url('img/information\ center\ desktop.jpg') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .banner::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3); /* Optional overlay for contrast */
+    }
+
+    .banner h1 {
+      position: relative;
+      color: white;
+      font-size: 48px;
+      letter-spacing: 4px;
+      z-index: 1;
+    }
+    .legend-banner {
+      position: relative;
+      width: 100%;
+      height: 360px;
+      background: url('img/uncover\ legendary\ stories\ desktop.jpg') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .legend-banner::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.25); /* subtle overlay for contrast */
+    }
+
+    .legend-banner h1 {
+      position: relative;
+      color: #fff;
+      font-size: 36px;
+      font-weight: 600;
+      letter-spacing: 6px;
+      z-index: 1;
+      text-align: center;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #4d2c0f;
+      margin-top: 40px;
+      position: relative;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: '';
+      display: inline-block;
+      width: 100px;
+      height: 4px;
+      background-color: #4d2c0f;
+      vertical-align: middle;
+      margin: 0 16px;
+      border-radius: 4px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-title {
+      position: absolute;
+      bottom: 12px;
+      left: 16px;
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    }
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #4d2c0f;
+      margin: 40px 0 20px;
+      position: relative;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: '';
+      display: inline-block;
+      width: 80px;
+      height: 3px;
+      background-color: #4d2c0f;
+      vertical-align: middle;
+      margin: 0 12px;
+      border-radius: 4px;
+    }
+
+    .location-group {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+    }
+
+    .location-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 30px 0 10px;
+      color: #4d2c0f;
+      border-bottom: 2px solid #d9b18e;
+      width: fit-content;
+      padding-bottom: 4px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      padding: 10px 12px;
+      font-size: 15px;
+      font-weight: 500;
+    }
