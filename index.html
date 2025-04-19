@@ -9,18 +9,101 @@
     <link rel="stylesheet" href="global.css">
     <title>Flaming Cliffs</title>
 
- 
+    <style>
+  
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.main-content {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.left {
+  flex: 1;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.right {
+  flex: 1;
+}
+
+.title-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-block h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #5d3c1c;
+  margin: 0;
+}
+
+.number-box {
+  background-color: #5d3c1c;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+.right p {
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.cta-button {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e68a00;
+}
+
+.image-gallery {
+  display: flex;
+  gap: 10px;
+}
+
+.image-gallery img {
+  height: 100px;
+  width: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+    </style>
   
 </head>
 <body>
     <div class="explore">
-    <nav class="navbar">
+      <nav class="navbar">
         <div class="logo"><img src="img/baynzag logo.png" alt=""> &nbsp; Flaming Cliffs </div>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     <div class="menu" id="menu">
       <a href="index.html">HOME</a>
       <a href="about.html">ABOUT</a>
@@ -49,7 +132,34 @@
     <!-- The Flaming Cliffs Experience -->
     
      <!-- Gateway to Prehistory -->
-    
+   
+
+     <section class="container">
+      <div class="main-content">
+        <div class="left">
+          <img src="img/Roy chapman Andrews.jpg" alt="Roy Chapman Andrews Expedition" class="main-image" />
+        </div>
+        <div class="right">
+          <div class="title-block">
+            <h2>Gateway to Prehistory</h2>
+            <div class="number-box">02</div>
+          </div>
+          <p>The Flaming Cliffs gained global fame in the 1920s when paleontologist Roy Chapman Andrews unearthed the first dinosaur eggs here. This discovery redefined our understanding of prehistoric life and placed the Flaming Cliffs firmly on the map of world heritage. Today, the site stands as a living museum, connecting us to a time when dinosaurs roamed the earth.</p>
+          <p>Every visitor who steps foot here walks in the footsteps of history, experiencing the thrill of standing where groundbreaking discoveries were made. As you explore the cliffs, you’ll uncover layers of geological and cultural significance that make this place truly unique.</p>
+          <a href="learn_detail.html">
+            <button class="cta-button">Learn more →</button>
+          </a>
+        </div>
+      </div>
+      <div class="image-gallery">
+        <img src="img/Roy chapman Andrews.jpg" alt="Thumbnail 1" />
+        <img src="img/Camel Caravan-2.jpg" alt="Thumbnail 2" />
+        <img src="img/image-2.jpg" alt="Thumbnail 3" />
+        <img src="img/image-3.jpg" alt="Thumbnail 4" />
+        <img src="img/image-4.jpg" alt="Thumbnail 5" />
+      </div>
+    </section>
+     
 
     <div class="banner">
         <div><img class="btm-divider-wt" src="img/btm-divider-wt.png" alt=""></div>
