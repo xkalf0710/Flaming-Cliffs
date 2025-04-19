@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Flaming Cliffs Experience</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #fff;
+      color: #333;
+    }
+
+    .section {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .text-content {
+      flex: 1;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .section-number {
+      background-color: #5e3a1e;
+      color: white;
+      font-weight: bold;
+      padding: 10px 16px;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    .section-heading {
+      font-size: 22px;
+      font-weight: bold;
+      color: #5e3a1e;
+    }
+
+    .text-content p {
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .image-container {
+      flex: 1;
+      position: relative;
+      max-width: 500px;
+    }
+
+    .image-container img {
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .play-button::before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 12px solid #8d4e1b;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <div class="text-content">
+      <div class="section-title">
+        <div class="section-number">01</div>
+        <div class="section-heading">The Flaming Cliffs Experience</div>
+      </div>
+      <p>
+        Nestled in the heart of Mongolia’s Gobi Desert, the Flaming Cliffs beckon adventurers from around the globe. Their fiery red hues, carved by time and wind, are a stunning testament to the power of nature. Famous as the cradle of dinosaur discoveries, this breathtaking landscape whispers stories of ancient worlds and invites you to create unforgettable memories.
+      </p>
+      <p>
+        From sunrise to sunset, the Flaming Cliffs radiate an otherworldly beauty that captures the imagination. Step into a land of discovery, where history and natural splendor converge in an awe-inspiring experience.
+      </p>
+    </div>
+
+    <div class="image-container">
+      <img src="03193c0b-3982-4d5a-98f5-a9935714320b.png" alt="The Flaming Cliffs">
+      <div class="play-button"></div>
+    </div>
+  </div>
+
+</body>
+</html>
