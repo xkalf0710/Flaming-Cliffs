@@ -166,65 +166,165 @@
         display: none;
       }
     }
-    
+    h2 {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    .section h2::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: #6d3a1d;
+      margin-top: 10px;
+    }
+
+    .highlight-section {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .number-box {
+      background-color: #6d3a1d;
+      color: white;
+      font-weight: bold;
+      font-size: 28px;
+      padding: 10px 20px;
+      margin-right: 10px;
+    }
+
+    .highlight-section h3 {
+      font-size: 26px;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .subheading {
+      font-size: 20px;
+      font-weight: bold;
+      color: #7b4e2e;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 1000px;
+    }
+
+    hr {
+      border: none;
+      height: 4px;
+      background-color: #6d3a1d;
+      margin: 10px 0 20px 0;
+    }
+
+
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      background: url('img/photo\ &\ video\ gallery\ top\ desktop.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      background: radial-gradient(circle at center, #fff 40%, transparent 70%);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .content {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
+<div class="container">
   <!-- Section 1: The Prelude -->
-  <section class="content-section">
-    <div class="section-header">
-      <div class="number-box">01</div>
-      <h2>The Prelude</h2>
-    </div>
-    <h3 class="subtitle">Mongolia Before The Discovery</h3>
-    <div class="section-body">
-      <div class="text full-width">
-        <p>Long before its rise to fame, the Flaming Cliffs—known locally as Bayanzag—were merely a remote area within Mongolia’s Gobi Desert. Named <strong>“Bayanzag”</strong> by locals for its abundance of <strong>saxaul trees</strong> (“bayan” meaning rich and “zag” meaning saxaul), the region was known primarily to local herders, who often stumbled upon unusual bones and stones, unaware of their scientific significance.</p>
-
-        <p>Mongolia in the early 20th century was largely unexplored by Western science, a vast territory of myth, legend, and mystery. Tales circulated about hidden treasures beneath the Gobi sands—stories that would soon inspire an adventurous scientist to embark on an epic expedition.</p>
+    <section class="content-section">
+      <div class="section-header">
+        <div class="number-box">01</div>
+        <h2>The Prelude</h2>
       </div>
-    </div>
-  </section>
+      <h3 class="subtitle">Mongolia Before The Discovery</h3>
+      <div class="section-body">
+        <div class="text full-width">
+          <p>Long before its rise to fame, the Flaming Cliffs—known locally as Bayanzag—were merely a remote area within Mongolia’s Gobi Desert. Named <strong>“Bayanzag”</strong> by locals for its abundance of <strong>saxaul trees</strong> (“bayan” meaning rich and “zag” meaning saxaul), the region was known primarily to local herders, who often stumbled upon unusual bones and stones, unaware of their scientific significance.</p>
 
-  <!-- Section 2: Roy Chapman Andrews -->
-  <section class="content-section">
-    <div class="section-header">
-      <div class="number-box">02</div>
-      <h2>Roy Chapman Andrews</h2>
-    </div>
-    <h3 class="subtitle">The Man Behind The Legend</h3>
-    <div class="section-body">
-      <div class="text">
-        <p>Roy Chapman Andrews, an American explorer and paleontologist working for the American Museum of Natural History, was driven by a profound curiosity about Earth's past. With the ambition of discovering the origins of life in Asia, Andrews began meticulously planning the <strong>Central Asiatic Expeditions</strong> in 1921.</p>
-
-        <p>His vision was bold: to cross vast, uncharted terrain with the latest technology of the time, including Ford Model-T motor vehicles—revolutionary for scientific expeditions—tents, excavation tools, and advanced photographic equipment to document the discoveries. Andrews was charismatic, adventurous, and resilient; qualities that helped him secure financial backing and worldwide interest in the project.</p>
-      </div>
-      <div class="image">
-        <img src="img/Roy chapman Andrews.jpg" alt="Roy Chapman Andrews Expedition">
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 3: Expeditions -->
-  <section class="content-section reverse">
-    <div class="section-header">
-      <h2>Central Asiatic Expeditions <span class="years">(1922–1930)</span></h2>
-      <div class="number-box">03</div>
-    </div>
-    <h3 class="subtitle">A Decade Of Discovery</h3>
-    <div class="section-body">
-      <div class="image">
-        <div class="video-wrapper">
-          <img src="" alt="Video Thumbnail">
-          <button class="play-btn">▶</button>
+          <p>Mongolia in the early 20th century was largely unexplored by Western science, a vast territory of myth, legend, and mystery. Tales circulated about hidden treasures beneath the Gobi sands—stories that would soon inspire an adventurous scientist to embark on an epic expedition.</p>
         </div>
       </div>
-      <div class="text">
-        <p>In July 1923, Andrews and his team made their most groundbreaking discovery at the Flaming Cliffs: fossilized dinosaur eggs, the first ever found in human history. This find conclusively proved dinosaurs reproduced through egg-laying, dramatically transforming the scientific understanding of dinosaur biology. The discovery instantly elevated the Flaming Cliffs to global prominence, making headlines worldwide.</p>
+    </section>
+
+    <!-- Section 2: Roy Chapman Andrews -->
+    <section class="content-section">
+      <div class="section-header">
+        <div class="number-box">02</div>
+        <h2>Roy Chapman Andrews</h2>
       </div>
-    </div>
-  </section>
+      <h3 class="subtitle">The Man Behind The Legend</h3>
+      <div class="section-body">
+        <div class="text">
+          <p>Roy Chapman Andrews, an American explorer and paleontologist working for the American Museum of Natural History, was driven by a profound curiosity about Earth's past. With the ambition of discovering the origins of life in Asia, Andrews began meticulously planning the <strong>Central Asiatic Expeditions</strong> in 1921.</p>
+
+          <p>His vision was bold: to cross vast, uncharted terrain with the latest technology of the time, including Ford Model-T motor vehicles—revolutionary for scientific expeditions—tents, excavation tools, and advanced photographic equipment to document the discoveries. Andrews was charismatic, adventurous, and resilient; qualities that helped him secure financial backing and worldwide interest in the project.</p>
+        </div>
+        <div class="image">
+          <img src="img/Roy chapman Andrews.jpg" alt="Roy Chapman Andrews Expedition">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Expeditions -->
+    <section class="content-section reverse">
+      <div class="section-header">
+        <h2>Central Asiatic Expeditions <span class="years">(1922–1930)</span></h2>
+        <div class="number-box">03</div>
+      </div>
+      <h3 class="subtitle">A Decade Of Discovery</h3>
+      <div class="section-body">
+        <div class="image">
+          <div class="video-wrapper">
+            <img src="" alt="Video Thumbnail">
+            <button class="play-btn">▶</button>
+          </div>
+        </div>
+        <div class="text">
+          <p>In July 1923, Andrews and his team made their most groundbreaking discovery at the Flaming Cliffs: fossilized dinosaur eggs, the first ever found in human history. This find conclusively proved dinosaurs reproduced through egg-laying, dramatically transforming the scientific understanding of dinosaur biology. The discovery instantly elevated the Flaming Cliffs to global prominence, making headlines worldwide.</p>
+        </div>
+      </div>
+    </section>
 
   
     <img src="img/learn more detail dino icon.png" alt="Dino Icon" class="dino-icon">
@@ -236,23 +336,58 @@
     <div class="species-section">
       <div class="species-card">
         <h3>Velociraptor mongoliensis (1924)</h3>
+        <p>First described by Henry Fairfield Osborn, the Velociraptor became famous through multiple significant finds at the Flaming Cliffs.</p>
         <img src="img/Velociraptor mongoliensis.jpg" alt="Velociraptor">
         <p>This agile, intelligent predator was smaller than portrayed in popular culture—about the size of a turkey—but lethal, with razor-sharp claws. Its most notable fossil, the "Fighting Dinosaurs," preserves a dramatic predator-prey encounter with Protoceratops.</p>
       </div>
 
       <div class="species-card">
         <h3>Protoceratops andrewsi (1923)</h3>
+        <p>Discovered by Andrews himself and named in his honor, Protoceratops became one of the most abundant fossils at Bayanzag.</p>
         <img src="img/Protoceratops andrewsi.jpg" alt="Protoceratops">
         <p>These small, frilled, hornless ceratopsians were herbivorous dinosaurs that moved in herds, evidence indicated by fossilized nests and eggs. Their remains provided unprecedented details about dinosaur nesting behaviors and social structures.</p>
       </div>
 
       <div class="species-card">
         <h3>Oviraptor philoceratops (1924)</h3>
+        <p>Initially misunderstood as an "egg thief" due to fossils found near nests, later research revealed that Oviraptor was actually protecting its own eggs.</p>
         <img src="img/Oviraptor philoceratops.jpg" alt="Oviraptor">
         <p>These finds at the Flaming Cliffs significantly corrected paleontological misconceptions, offering a remarkable glimpse into dinosaur parental behaviors.</p>
       </div>
     </div>
+
+
+    <div class="section">
+      <h2>Scientific Legacy And Global Impact</h2>
+      <p>Andrews' discoveries at the Flaming Cliffs transformed Mongolia into a paleontological epicenter. They sparked worldwide interest in paleontology, inspired future generations of scientists, and cemented the site's historical and scientific significance.</p>
+    </div>
+  
+    <div class="section">
+      <div class="highlight-section">
+        <div class="number-box">04</div>
+        <h3>Flaming Cliffs Today</h3>
+      </div>
+      <hr>
+      <div class="subheading">Walking In History</div>
+      <p>Today, Bayanzag remains an active research site attracting paleontologists worldwide. Each year, new findings continue to enhance our understanding of Earth's ancient past. Visitors can explore these same cliffs, retrace Andrews’ footsteps, and directly connect with a vibrant legacy of exploration and discovery.</p>
+      <p>This site, now carefully preserved, serves as both an outdoor museum and living laboratory, constantly reminding us of the wonders still hidden beneath our feet.</p>
+    </div>
+
+    
   </div>
+
+
+    <div class="hero">
+      <h1>PHOTO & VIDEO<br>GALLERY</h1>
+    </div>
+
+    <div class="content">
+      <p>
+        The Flaming Cliffs are more than just a historical site—they're a visual wonder. Explore our gallery to uncover the unique aspects of this iconic location. From breathtaking drone footage and serene sunsets to snapshots of the camel caravan and souvenir shop, there’s something for everyone to discover. Click below to dive into the full gallery and immerse yourself in the beauty of the Flaming Cliffs.
+      </p>
+    </div>
+
+
 
 </body>
 </html>
