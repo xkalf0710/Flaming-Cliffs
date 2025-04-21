@@ -2,102 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Flaming Cliffs Experience</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entry Fees & Preservation</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #fff;
-      color: #333;
-    }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
 
-    .section-container {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-    }
+.container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-    .text-content {
-      max-width: 50%;
-    }
+h2 {
+  color: #5a2c0d;
+  font-size: 24px;
+  font-weight: bold;
+}
 
-    .number-box {
-      display: inline-block;
-      background-color: #743f17;
-      color: #fff;
-      padding: 10px 15px;
-      font-weight: bold;
-      font-size: 20px;
-      margin-right: 10px;
-    }
+.divider {
+  border: none;
+  border-top: 2px solid #5a2c0d;
+  margin: 10px 0 20px;
+}
 
-    .section-title {
-      font-size: 22px;
-      font-weight: bold;
-      vertical-align: middle;
-      color: #333;
-    }
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 
-    .image-container {
-      position: relative;
-      width: 400px;
-    }
+.text {
+  flex: 1 1 50%;
+  font-size: 16px;
+}
 
-    .image-container img {
-      width: 100%;
-      border-radius: 4px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
+.text ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
 
-    .play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
+.images {
+  flex: 1 1 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
 
-    .play-button::before {
-      content: '';
-      display: inline-block;
-      border-left: 10px solid #743f17;
-      border-top: 6px solid transparent;
-      border-bottom: 6px solid transparent;
-    }
+.images img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
   </style>
 </head>
 <body>
+  <section class="container">
+    <h2>Entry Fees & Preservation</h2>
+    <hr class="divider" />
 
-  <div class="section-container">
-    <div class="text-content">
-      <div>
-        <span class="number-box">01</span>
-        <span class="section-title">The Flaming Cliffs Experience</span>
+    <div class="content">
+      <div class="text">
+        <p>Visitors to the Flaming Cliffs contribute directly to preserving this historic site. Entry fees ensure ongoing research, conservation efforts, and public education:</p>
+        <ul>
+          <li><strong>Domestic Visitors:</strong> 3,000 MNT</li>
+          <li><strong>Tourists:</strong> 10,000 MNT</li>
+        </ul>
+
+        <p>Your visit also directly contributes to the preservation and enhancement of this iconic site. Every ticket sold supports essential projects such as:</p>
+        <ul>
+          <li>Stair and pathway renovations</li>
+          <li>Regular cleaning and maintenance</li>
+          <li>Eco-friendly fencing that accommodates herders and livestock</li>
+          <li>Planting trees to combat desertification</li>
+        </ul>
+
+        <p>Meet the dedicated team working tirelessly to protect and promote the Flaming Cliffs. Their commitment ensures this destination remains pristine and accessible for generations to come.</p>
       </div>
-      <p>
-        Nestled in the heart of Mongolia’s Gobi Desert, the Flaming Cliffs beckon adventurers from around the globe.
-        Their fiery red hues, carved by time and wind, are a stunning testament to the power of nature. Famous as the
-        cradle of dinosaur discoveries, this breathtaking landscape whispers stories of ancient worlds and invites you
-        to create unforgettable memories.
-      </p>
-      <p>
-        From sunrise to sunset, the Flaming Cliffs radiate an otherworldly beauty that captures the imagination. Step
-        into a land of discovery, where history and natural splendor converge in an awe-inspiring experience.
-      </p>
-    </div>
-    <div class="image-container">
-      <img src="3647ec37-f304-486d-a12f-81b4eb72ea49.png" alt="Flaming Cliffs Image" />
-      <div class="play-button"></div>
-    </div>
-  </div>
 
+      <div class="images">
+        <img src="img1.jpg" alt="Viewing platform at Flaming Cliffs" />
+        <img src="img2.jpg" alt="Dinosaur statue" />
+        <img src="img3.jpg" alt="Livestock grazing near eco-fencing" />
+        <img src="img4.jpg" alt="Visitors on pathway through cliffs" />
+      </div>
+    </div>
+  </section>
 </body>
 </html>

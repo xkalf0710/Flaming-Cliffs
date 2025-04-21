@@ -93,6 +93,49 @@
   object-fit: cover;
 }
 
+
+h2 {
+  color: #5a2c0d;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.divider {
+  border: none;
+  border-top: 2px solid #5a2c0d;
+  margin: 10px 0 20px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.text {
+  flex: 1 1 50%;
+  font-size: 16px;
+}
+
+.text ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.images {
+  flex: 1 1 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.images img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
     </style>
   
 </head>
@@ -161,7 +204,7 @@
           <div class="play-button"></div>
         </div>
       </div>
-      
+
       <div class="main-content">
         <div class="left">
           <img src="img/Roy chapman Andrews.jpg" alt="Roy Chapman Andrews Expedition" class="main-image" />
@@ -197,42 +240,116 @@
      
 
     <!-- The Flaming Cliffs Information Center -->
-    
+
+    <div class="info cntr">
+      <img class="btm-divider" src="img/btm-divider.png" alt="">
+      <div class="gallery">
+          <h1>The Flaming Cliffs Experience</h1>
+          <p></p>
+          <!-- <img id="big-picture" src="/img/Information Center/Information Center- (1).png" alt="Big Picture" class="big-picture" > -->
+          <div class="info-plus">
+              <div class="info-text">
+                  <ul>
+                  <li><span class="bold">Documentary</span>: Start with an immersive film that brings the story of the Flaming Cliffs to life.</li>
+                  <li><span class="bold">Coffee Shop</span>: Relax and refresh with a variety of local and international beverages</li>
+                  <li><span class="bold">Dining Area</span>: Savor delicious meals prepared with care, offering a taste of Mongolia.</li>
+                  <li><span class="bold">Souvenir Shop</span>: Take a piece of the Flaming Cliffs home with beautifully crafted local goods.</li>
+                  <li><span class="bold">Exhibition Hall</span>: Explore a wealth of information through engaging displays, showcasing the region’s history, ecology, and preservation efforts.</li>
+                  </ul>
+              </div>
+              <!-- <div class="small-pictures">
+                  <img src="/img/Information Center/Information Center- (3).png" alt="Small 1" data-big="/img/Information Center/Information Center- (3).png">
+                  <img src="/img/Information Center/Information Center- (4).png" alt="Small 2" data-big="/img/Information Center/Information Center- (4).png">
+                  <img src="/img/Information Center/Information Center- (7).png" alt="Small 3" data-big="/img/Information Center/Information Center- (7).png">
+                  <img src="/img/Information Center/Information Center- (9).png" alt="Small 4" data-big="/img/Information Center/Information Center- (9).png">
+                  <img src="/img/Information Center/Information Center- (1).png" alt="Small 5" data-big="/img/Information Center/Information Center- (1).png">
+              </div> -->
+          </div>
+        </div>
+      <div class="gallery-2">
+          <div class="info-plus">
+              <div class="big">
+              <div class="info-text-2">
+                  <h1>The Flaming Cliffs Information Center</h1>
+                  <p>The Flaming Cliffs Information Center serves as the gateway to your journey. Here, you’ll find everything you need to deepen your understanding of this remarkable destination</p>
+                  <div class="list">
+                      <div class="blt">&#8226</div>
+                      <div class="info">
+                      <span class="bold">Documentary</span>: Start with an immersive film that brings the story of the Flaming Cliffs to life.
+                      </div>
+                  </div>
+                  <div class="list">
+                      <div class="blt">&#8226</div>
+                      <div class="info">
+                      <span class="bold">Coffee Shop</span>: Relax and refresh with a variety of local and international beverages</div>
+                  </div>
+                  <div class="list">
+                      <div class="blt">&#8226</div>
+                      <div class="info">
+                      <span class="bold">Dining Area</span>: Savor delicious meals prepared with care, offering a taste of Mongolia.
+                      </div>
+                  </div>
+                  <div class="list">
+                      <div class="blt">&#8226</div>
+                      <div class="info">
+                      <span class="bold">Souvenir Shop</span>: Take a piece of the Flaming Cliffs home with beautifully crafted local goods.
+                      </div>
+                  </div>
+                  <div class="list">
+                      <div class="blt">&#8226</div>
+                      <div class="info">
+                      <span class="bold">Exhibition Hall</span>: Explore a wealth of information through engaging displays, showcasing the region’s history, ecology, and preservation efforts.
+                      </div>
+                  </div>
+              </div>
+              <img id="big-picture-2" src="img/Information Center/Information Center- (1).png" alt="Big Picture" class="big-picture-2" >
+          </div>
+              <div class="small-pictures-2">
+                  <img src="img/Information Center/Information Center- (3).png" alt="Small 1" data-big="img/Information Center/Information Center- (3).png">
+                  <img src="img/Information Center/Information Center- (4).png" alt="Small 2" data-big="img/Information Center/Information Center- (4).png">
+                  <img src="img/Information Center/Information Center- (7).png" alt="Small 3" data-big="img/Information Center/Information Center- (7).png">
+                  <img src="img/Information Center/Information Center- (9).png" alt="Small 4" data-big="img/Information Center/Information Center- (9).png">
+                  <img src="img/Information Center/Information Center- (1).png" alt="Small 5" data-big="img/Information Center/Information Center- (1).png">
+              </div>
+          </div>
+        </div>
+  </div>
 
        <!-- Entry Fees -->
 
-       <section class="entry-fees">
+       <section class="container">
+        <h2>Entry Fees & Preservation</h2>
+        <hr class="divider" />
+    
         <div class="content">
-          <h2>Entry Fees & Preservation</h2>
-          <p>
-            Visitors to the Flaming Cliffs contribute directly to preserving this historic site. Entry fees ensure ongoing research, conservation efforts, and public education:
-          </p>
-          <ul class="fees">
-            <li><strong>Domestic Visitors:</strong> 3,000 MNT</li>
-            <li><strong>Tourists:</strong> 10,000 MNT</li>
-          </ul>
+          <div class="text">
+            <p>Visitors to the Flaming Cliffs contribute directly to preserving this historic site. Entry fees ensure ongoing research, conservation efforts, and public education:</p>
+            <ul>
+              <li><strong>Domestic Visitors:</strong> 3,000 MNT</li>
+              <li><strong>Tourists:</strong> 10,000 MNT</li>
+            </ul>
     
-          <p>Your visit also directly contributes to the preservation and enhancement of this iconic site. Every ticket sold supports essential projects such as:</p>
-          <ul class="projects">
-            <li>Stair and pathway renovations</li>
-            <li>Regular cleaning and maintenance</li>
-            <li>Eco-friendly fencing that accommodates herders and livestock</li>
-            <li>Planting trees to combat desertification</li>
-          </ul>
+            <p>Your visit also directly contributes to the preservation and enhancement of this iconic site. Every ticket sold supports essential projects such as:</p>
+            <ul>
+              <li>Stair and pathway renovations</li>
+              <li>Regular cleaning and maintenance</li>
+              <li>Eco-friendly fencing that accommodates herders and livestock</li>
+              <li>Planting trees to combat desertification</li>
+            </ul>
     
-          <p>
-            Meet the dedicated team working tirelessly to protect and promote the Flaming Cliffs. Their commitment ensures this destination remains pristine and accessible for generations to come.
-          </p>
-        </div>
+            <p>Meet the dedicated team working tirelessly to protect and promote the Flaming Cliffs. Their commitment ensures this destination remains pristine and accessible for generations to come.</p>
+          </div>
     
-        <div class="image-gallery">
-            <img src="img/Entry Fees & Preservation (1).jpg" alt="Stairway view">
-            <img src="img/Entry Fees & Preservation (2).jpg" alt="Dinosaur sculpture">
-            <img src="img/Entry Fees & Preservation (3).jpg" alt="Livestock grazing">
-            <img src="img/Entry Fees & Preservation (4).jpg" alt="Flaming Cliffs landscape">
+          <div class="images">
+            <img src="img/Entry Fees & Preservation (1).jpg" alt="Viewing platform at Flaming Cliffs" />
+            <img src="img/Entry Fees & Preservation (2).jpg" alt="Dinosaur statue" />
+            <img src="img/Entry Fees & Preservation (3).jpg" alt="Livestock grazing near eco-fencing" />
+            <img src="img/Entry Fees & Preservation (4).jpg" alt="Visitors on pathway through cliffs" />
+          </div>
         </div>
       </section>
 
+      
       <!-- Visitors -->
 
       <div class="stats-container">
