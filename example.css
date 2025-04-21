@@ -1,0 +1,37 @@
+.section-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .text-content {
+    max-width: 50%;
+  }
+
+  .number-box {
+    display: inline-block;
+    background-color: #743f17;
+    color: #fff;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    font-weight: bold;
+    vertical-align: middle;
+    color: #333;
+  }
+
+  .image-container {
+    position: relative;
+    width: 400px;
+  }
+
+  .image-container img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
