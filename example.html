@@ -1,99 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Entry Fees & Preservation</title>
+  <meta charset="UTF-8">
+  <title>Visitors Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fff;
-  color: #333;
-}
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f9f9f9;
+    }
 
-.container {
-  padding: 40px;
-  max-width: 1200px;
-  margin: auto;
-}
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-h2 {
-  color: #5a2c0d;
-  font-size: 24px;
-  font-weight: bold;
-}
+    .chart-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
 
-.divider {
-  border: none;
-  border-top: 2px solid #5a2c0d;
-  margin: 10px 0 20px;
-}
+    canvas {
+      width: 100% !important;
+      height: auto !important;
+    }
 
-.content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
+    .chart-title {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
-.text {
-  flex: 1 1 50%;
-  font-size: 16px;
-}
+    .double-donut {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
 
-.text ul {
-  padding-left: 20px;
-  margin-top: 10px;
-}
-
-.images {
-  flex: 1 1 40%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.images img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  object-fit: cover;
-}
-
+    .half-donut canvas {
+      max-width: 140px;
+    }
   </style>
 </head>
 <body>
-  <section class="container">
-    <h2>Entry Fees & Preservation</h2>
-    <hr class="divider" />
 
-    <div class="content">
-      <div class="text">
-        <p>Visitors to the Flaming Cliffs contribute directly to preserving this historic site. Entry fees ensure ongoing research, conservation efforts, and public education:</p>
-        <ul>
-          <li><strong>Domestic Visitors:</strong> 3,000 MNT</li>
-          <li><strong>Tourists:</strong> 10,000 MNT</li>
-        </ul>
+  <div class="dashboard">
+    <!-- Visitors by Countries -->
+    <div class="chart-card">
+      <div class="chart-title">Visitors by Top Countries (Top 6 + Others)</div>
+      <canvas id="countriesChart"></canvas>
+    </div>
 
-        <p>Your visit also directly contributes to the preservation and enhancement of this iconic site. Every ticket sold supports essential projects such as:</p>
-        <ul>
-          <li>Stair and pathway renovations</li>
-          <li>Regular cleaning and maintenance</li>
-          <li>Eco-friendly fencing that accommodates herders and livestock</li>
-          <li>Planting trees to combat desertification</li>
-        </ul>
+    <!-- Vehicle Types -->
+    <div class="chart-card">
+      <div class="chart-title">Vehicle Types</div>
+      <canvas id="vehicleChart"></canvas>
+    </div>
 
-        <p>Meet the dedicated team working tirelessly to protect and promote the Flaming Cliffs. Their commitment ensures this destination remains pristine and accessible for generations to come.</p>
-      </div>
-
-      <div class="images">
-        <img src="img1.jpg" alt="Viewing platform at Flaming Cliffs" />
-        <img src="img2.jpg" alt="Dinosaur statue" />
-        <img src="img3.jpg" alt="Livestock grazing near eco-fencing" />
-        <img src="img4.jpg" alt="Visitors on pathway through cliffs" />
+    <!-- Monthly Guides and Drivers -->
+    <div class="chart-card">
+      <div class="chart-title">Monthly Guides and Drivers</div>
+      <div class="double-donut">
+        <div class="half-donut">
+          <div style="text-align: center">This Month</div>
+          <canvas id="guidesChart1"></canvas>
+        </div>
+        <div class="half-donut">
+          <div style="text-align: center">2025</div>
+          <canvas id="guidesChart2"></canvas>
+        </div>
       </div>
     </div>
-  </section>
+
+    <!-- Visitors by Tour Operator -->
+    <div class="chart-card">
+      <div class="chart-title">Visitors by Tour Operator</div>
+      <canvas id="operatorChart"></canvas>
+    </div>
+  </div>
+
+  <script>
+    // Donut Chart: Visitors by Countries
+    new Chart(document.getElementById("countriesChart"), {
+      type: "doughnut",
+      data: {
+        labels: ["China", "Russia", "South Korea", "Others", "Kazakhstan", "Japan", "USA"],
+        datasets: [{
+          data: [31, 24, 22, 14, 4, 3, 2],
+          backgroundColor: ["#FF8C42", "#E7467D", "#F4B400", "#4BD6C8", "#A864A8", "#36A2EB", "#FF6384"],
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            position: 'right',
+          }
+        },
+        cutout: '60%'
+      }
+    });
+
+    // Donut Chart: Vehicle Types
+    new Chart(document.getElementById("vehicleChart"), {
+      type: "doughnut",
+      data: {
+        labels: ["Minibus", "4WD SUV", "Bus", "Mid-Size Crossover", "Motorcycle", "Compact car"],
+        datasets: [{
+          data: [30, 25, 20, 15, 5, 5],
+          backgroundColor: ["#FFA726", "#EF5350", "#FFEE58", "#BA68C8", "#4DB6AC", "#29B6F6"]
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            position: 'right',
+          }
+        },
+        cutout: '60%'
+      }
+    });
+
+    // Half-Donut: Guides and Drivers (This Month)
+    new Chart(document.getElementById("guidesChart1"), {
+      type: "doughnut",
+      data: {
+        labels: ["Drivers", "Guides"],
+        datasets: [{
+          data: [600, 200],
+          backgroundColor: ["#FFA726", "#42A5F5"]
+        }]
+      },
+      options: {
+        rotation: -90,
+        circumference: 180,
+        plugins: {
+          legend: { display: false },
+        },
+        cutout: '70%'
+      }
+    });
+
+    // Half-Donut: Guides and Drivers (2025)
+    new Chart(document.getElementById("guidesChart2"), {
+      type: "doughnut",
+      data: {
+        labels: ["Drivers", "Guides"],
+        datasets: [{
+          data: [4725, 1575],
+          backgroundColor: ["#FFA726", "#42A5F5"]
+        }]
+      },
+      options: {
+        rotation: -90,
+        circumference: 180,
+        plugins: {
+          legend: { display: false },
+        },
+        cutout: '70%'
+      }
+    });
+
+    // Horizontal Bar: Tour Operators
+    new Chart(document.getElementById("operatorChart"), {
+      type: 'bar',
+      data: {
+        labels: ["Tour operator B", "Tour operator C", "Tour operator D", "Tour operator E", "Tour operator F"],
+        datasets: [{
+          data: [98, 95, 90, 85, 80],
+          backgroundColor: "#4CAF50"
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          x: {
+            beginAtZero: true,
+            max: 100
+          }
+        }
+      }
+    });
+  </script>
+
 </body>
 </html>
