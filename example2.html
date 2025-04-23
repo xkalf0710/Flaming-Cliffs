@@ -2,81 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Top Countries Donut Chart</title>
-  <style>
-       body {
-        font-family: Arial, sans-serif;
-        background-color: #f5f7fa;
-        padding: 40px;
-        }
-
-        .chart-card {
-        max-width: 450px;
-        margin: auto;
-        padding: 20px;
-        background: white;
-        border-radius: 16px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-        text-align: center;
-        }
-
-        .subtext {
-        font-weight: normal;
-        font-size: 14px;
-        color: #555;
-        }
-
-        canvas {
-        margin-top: 20px;
-        }
-
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visitors by Tour Operator</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .chart-container {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
-  <div class="chart-card">
-    <h3>Visitors by Top Countries <span class="subtext">( Top 6 + Others )</span></h3>
-    <canvas id="countriesChart"></canvas>
+  <div class="chart-container">
+    <canvas id="tourOperatorChart" width="600" height="400"></canvas>
   </div>
 
   <script>
-    const ctx1 = document.getElementById('countriesChart').getContext('2d');
-
-        new Chart(ctx1, {
-        type: 'doughnut',
-        data: {
-            labels: ['China', 'Russia', 'South Korea', 'Others', 'Kazakhstan', 'Japan', 'USA'],
-            datasets: [{
-            data: [31, 24, 22, 14, 4, 3, 2],
-            backgroundColor: [
-                '#FF6B00', '#F53D56', '#FFA800', '#3FF2EC',
-                '#59D5D9', '#A348F5', '#F83EC2'
-            ],
-            borderWidth: 0
-            }]
+    const ctx = document.getElementById('tourOperatorChart').getContext('2d');
+    const tourOperatorChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Tour operator B', 'Tour operator C', 'Tour operator D', 'Tour operator E', 'Tour operator F'],
+        datasets: [{
+          label: 'Visitors',
+          data: [100, 100, 100, 50, 100], // Adjust data here
+          backgroundColor: '#3e6ea7',
+          borderRadius: 5,
+          barThickness: 20,
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: 'Visitors by Tour Operator',
+            font: {
+              size: 20,
+              weight: 'bold'
+            }
+          }
         },
-        options: {
-            cutout: '65%',
-            plugins: {
-            legend: {
-                position: 'right',
-                labels: {
-                usePointStyle: true,
-                pointStyle: 'circle',
-                boxWidth: 8,
-                padding: 15
-                }
-            },
-            tooltip: {
-                callbacks: {
-                label: (ctx1) => `${ctx1.label}: ${ctx1.raw}%`
-                }
+        scales: {
+          x: {
+            beginAtZero: true,
+            max: 100,
+            grid: {
+              borderDash: [4, 4]
             }
-            }
+          },
+          y: {
+            grid: { display: false }
+          }
         }
-        });
-
+      }
+    });
   </script>
 </body>
 </html>

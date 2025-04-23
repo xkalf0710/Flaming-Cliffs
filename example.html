@@ -1,95 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Tourism Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily Visitor Trend</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-  display: flex;
-  justify-content: center;
-  padding: 50px;
-}
-
-.dashboard {
-  display: flex;
-  gap: 40px;
-}
-
-.chart-container {
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  width: 400px;
-  height: 400px;
-}
-
+      background: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+    .chart-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
   </style>
 </head>
 <body>
-  <div class="dashboard">
-    <div class="chart-container">
-      <canvas id="visitorsChart"></canvas>
-    </div>
-    <div class="chart-container">
-      <canvas id="vehiclesChart"></canvas>
-    </div>
+  <div class="chart-container">
+    <canvas id="dailyVisitorTrend" width="800" height="400"></canvas>
   </div>
+
   <script>
-    const visitorsCtx = document.getElementById('visitorsChart').getContext('2d');
-const vehiclesCtx = document.getElementById('vehiclesChart').getContext('2d');
-
-new Chart(visitorsCtx, {
-  type: 'doughnut',
-  data: {
-    labels: ['China', 'Russia', 'South Korea', 'Others', 'Kazakhstan', 'Japan', 'USA'],
-    datasets: [{
-      data: [31, 24, 22, 14, 4, 3, 2],
-      backgroundColor: ['#FF6A00', '#EF2F5B', '#F9B233', '#36E2BD', '#AB47BC', '#64B5F6', '#F06292'],
-      borderWidth: 1,
-    }]
-  },
-  options: {
-    plugins: {
-      title: {
-        display: true,
-        text: 'Visitors by Top Countries'
+    const ctx = document.getElementById('dailyVisitorTrend').getContext('2d');
+    const dailyVisitorTrend = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+          label: 'Visitors',
+          data: [50, 50, 100, 150, 200, 200, 250], // Adjust data here
+          borderColor: 'orange',
+          backgroundColor: 'orange',
+          tension: 0.3,
+          fill: false,
+          pointBackgroundColor: 'orange',
+          pointRadius: 4,
+        }]
       },
-      legend: {
-        position: 'right'
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: 'Daily Visitor Trend',
+            align: 'start',
+            font: {
+              size: 20,
+              weight: 'bold'
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: {
+              drawBorder: false,
+              borderDash: [5, 5]
+            }
+          },
+          y: {
+            beginAtZero: true,
+            grid: {
+              drawBorder: false,
+              borderDash: [5, 5]
+            }
+          }
+        }
       }
-    },
-    cutout: '60%'
-  }
-});
-
-new Chart(vehiclesCtx, {
-  type: 'doughnut',
-  data: {
-    labels: ['Minibus', '4WD SUV', 'Bus', 'Mid-Size Crossover', 'Motorcycle', 'Compact car'],
-    datasets: [{
-      data: [30, 25, 20, 15, 5, 5],
-      backgroundColor: ['#F57C00', '#EF2F5B', '#FFD600', '#C2185B', '#009688', '#42A5F5'],
-      borderWidth: 1,
-    }]
-  },
-  options: {
-    plugins: {
-      title: {
-        display: true,
-        text: 'Vehicle Types'
-      },
-      legend: {
-        position: 'right'
-      }
-    },
-    cutout: '60%'
-  }
-});
-
+    });
   </script>
 </body>
 </html>

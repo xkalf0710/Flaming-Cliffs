@@ -77,7 +77,6 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       padding: 20px;
       display: flex;
-      align-items: center;
       gap: 15px;
       z-index: 1;
     }
@@ -102,7 +101,94 @@
       font-weight: bold;
     }
 
-    
+    .dashboard{
+      padding: 50px;
+      display: flex;
+      gap: 40px;
+    }
+
+    .chart-container{
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      height: 400px;
+    }
+
+
+   /* monthly
+    .card-donuts {
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        max-width: 500px;
+        text-align: center;
+      }
+
+      h3 {
+        margin-top: 0;
+      }
+
+      .charts {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+
+      .donut-wrapper p {
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+
+      .donut-center {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        margin: auto;
+      }
+
+      .center-label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      canvas{
+        width: 120px !important;
+        height: 120px !important;
+      }
+
+      .details {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+
+      .legend {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+
+      .dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 0 6px;
+      }
+
+      .orange {
+        background-color: #f7931e;
+      }
+
+      .blue {
+        background-color: #4668d9;
+      }
+     */
   </style>
 </head>
 <body>
@@ -156,9 +242,55 @@
       </div>
     </div>
     
+
+    
+  </div>
+
+  <div class="dashboard">
+    <div class="chart-container">
+      <canvas id="visitorsChart"></canvas>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="vehiclesChart"></canvas>
+    </div>
   </div>
 
  
+
+  <div class="card-donuts">
+    <h3>Monthly Guides and Drivers</h3>
+    <div class="charts">
+      <div class="donut-wrapper">
+        <p>This Month</p>
+        <div class="donut-center">
+          <canvas id="donutThisMonth"></canvas>
+          <div class="center-label">800</div>
+        </div>
+        <div class="details">
+          <span class="dot orange"></span> 600
+          <span class="dot blue"></span> 200
+        </div>
+      </div>
+      <div class="donut-wrapper">
+        <p>2025</p>
+        <div class="donut-center">
+          <canvas id="donut2025"></canvas>
+          <div class="center-label">6300</div>
+        </div>
+        <div class="details">
+          <span class="dot orange"></span> 4725
+          <span class="dot blue"></span> 1575
+        </div>
+      </div>
+    </div>
+    <div class="legend">
+      <span class="dot orange"></span> Drivers
+      <span class="dot blue"></span> Guides
+    </div>
+  </div>
+
+  
   
 
   <script>
@@ -216,6 +348,82 @@
 
     // Initialize with "Today" tab
     renderChart(dataSets.today);
+
+
+
+
+    const visitorsCtx = document.getElementById('visitorsChart').getContext('2d');
+    const vehiclesCtx = document.getElementById('vehiclesChart').getContext('2d');
+
+    new Chart(visitorsCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['China', 'Russia', 'South Korea', 'Others', 'Kazakhstan', 'Japan', 'USA'],
+        datasets: [{
+          data: [31, 24, 22, 14, 4, 3, 2],
+          backgroundColor: ['#FF6A00', '#EF2F5B', '#F9B233', '#36E2BD', '#AB47BC', '#64B5F6', '#F06292'],
+          borderWidth: 1,
+        }]
+      },
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'Visitors by Top Countries'
+          },
+          legend: {
+            position: 'right'
+          }
+        },
+        cutout: '60%'
+      }
+    });
+
+    new Chart(vehiclesCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Minibus', '4WD SUV', 'Bus', 'Mid-Size Crossover', 'Motorcycle', 'Compact car'],
+        datasets: [{
+          data: [30, 25, 20, 15, 5, 5],
+          backgroundColor: ['#F57C00', '#EF2F5B', '#FFD600', '#C2185B', '#009688', '#42A5F5'],
+          borderWidth: 1,
+        }]
+      },
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'Vehicle Types'
+          },
+          legend: {
+            position: 'right'
+          }
+        },
+        cutout: '60%'
+      }
+    });
+
+    const config = (data) => ({
+        type: 'doughnut',
+        data: {
+          labels: ['Drivers', 'Guides'],
+          datasets: [{
+            data,
+            backgroundColor: ['#f7931e', '#4668d9'],
+            borderWidth: 0
+          }]
+        },
+        options: {
+          cutout: '70%',
+          plugins: {
+            legend: { display: false },
+            tooltip: { enabled: false }
+          }
+        }
+      });
+
+      new Chart(document.getElementById('donutThisMonth'), config([600, 200]));
+      new Chart(document.getElementById('donut2025'), config([4725, 1575]));
 
 
   </script>

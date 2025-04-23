@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Peak Visitor Hours</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .chart-container {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="chart-container">
+    <h2>Peak Visitor Hours</h2>
+    <canvas id="visitorChart"></canvas>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('visitorChart').getContext('2d');
+    const visitorChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          '7 AM', '8 AM', '9 AM', '10 AM', '11 AM', '12 PM',
+          '13 PM', '14 PM', '15 PM', '16 PM', '17 PM', '18 PM',
+          '19 PM', '20 PM', '21 PM', '22 PM', '23 PM'
+        ],
+        datasets: [{
+          label: 'Visitors',
+          data: [0, 6, 11, 15, 22, 22, 34, 38, 22, 22, 18, 15, 15, 10, 8, 6, 2],
+          backgroundColor: '#4b6ea9',
+          borderRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              stepSize: 10,
+              color: '#555'
+            },
+            grid: {
+              color: '#ddd'
+            }
+          },
+          x: {
+            ticks: {
+              color: '#555'
+            },
+            grid: {
+              color: '#eee'
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
