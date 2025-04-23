@@ -9,8 +9,7 @@
     body {
       font-family: "CustomFont", Helvetica;
       background: #fff;
-      margin: 0;
-      padding: 0;
+      padding: 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -102,6 +101,8 @@
       font-size: 24px;
       font-weight: bold;
     }
+
+    
   </style>
 </head>
 <body>
@@ -124,7 +125,7 @@
     <div class="circle-background"></div>
 
     <div class="card">
-      <img src="https://i.ibb.co/FW1vqPf/today.png" alt="Today">
+      <img src="img/live stats/Property 1=coming soon.png" alt="Today">
       <div class="card-content">
         <div class="card-title">Visitors Today</div>
         <div class="card-value">50</div>
@@ -132,7 +133,7 @@
     </div>
 
     <div class="card">
-      <img src="https://i.ibb.co/DtXBr4C/week.png" alt="This Week">
+      <img src="img/live stats/Property 1=medeelel-1.png" alt="This Week">
       <div class="card-content">
         <div class="card-title">Visitors This Week</div>
         <div class="card-value">800</div>
@@ -140,7 +141,7 @@
     </div>
 
     <div class="card">
-      <img src="https://i.ibb.co/d5YwFSr/month.png" alt="This Month">
+      <img src="img/live stats/Property 1=bichih.png" alt="This Month">
       <div class="card-content">
         <div class="card-title">Visitors This Month</div>
         <div class="card-value">5000</div>
@@ -148,13 +149,17 @@
     </div>
 
     <div class="card">
-      <img src="https://i.ibb.co/8rGKwmt/year.png" alt="This Year">
+      <img src="img/live stats/Property 1=medeelel.png" alt="This Year">
       <div class="card-content">
         <div class="card-title">Visitors This Year</div>
         <div class="card-value">11500</div>
       </div>
     </div>
+    
   </div>
+
+ 
+  
 
   <script>
     const ctx = document.getElementById('barChart').getContext('2d');
@@ -211,6 +216,8 @@
 
     // Initialize with "Today" tab
     renderChart(dataSets.today);
+
+
   </script>
 
 </body>
