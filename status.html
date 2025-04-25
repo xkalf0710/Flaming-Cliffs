@@ -13,6 +13,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
     }
 
     .title-bar {
@@ -50,6 +51,10 @@
       max-width: 800px;
       height: 400px;
     }
+    #scrollable-chart{
+      max-height: 400px;
+      overflow-y: scroll;
+    }
 
     .stats-container {
       display: grid;
@@ -74,9 +79,11 @@
     .card {
       background: #fff;
       border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      box-shadow:  0 4px 10px rgba(0, 0, 0, 0.05);
       padding: 20px;
       display: flex;
+      max-width: 500px;
+      text-align: center;
       gap: 15px;
       z-index: 1;
     }
@@ -112,13 +119,21 @@
       padding: 20px;
       border-radius: 15px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      width: 400px;
-      height: 400px;
+      max-width: 700px;
+      margin: auto;
+      
     }
 
+    h2{
+      font-size: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: #333;    
+    }
 
-   /* monthly
-    .card-donuts {
+/* 
+   
+     .card {
         background: #fff;
         border-radius: 12px;
         padding: 20px;
@@ -187,8 +202,8 @@
 
       .blue {
         background-color: #4668d9;
-      }
-     */
+      } */
+    
   </style>
 </head>
 <body>
@@ -202,7 +217,7 @@
   </div>
 
 
-  <div id="chart-container">
+  <div id="chart-container scrollable-chart">
     <canvas id="barChart"></canvas>
   </div>
 
@@ -258,7 +273,7 @@
 
  
 
-  <div class="card-donuts">
+  <div class="card">
     <h3>Monthly Guides and Drivers</h3>
     <div class="charts">
       <div class="donut-wrapper">
@@ -290,10 +305,229 @@
     </div>
   </div>
 
-  
-  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <div class="chart-container">
+    <canvas id="tourOperatorChart" width="600" height="400"></canvas>
+
+  </div>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+  <!-- Daily Visitor Trend -->
+
+  <div class="chart-container">
+    <canvas id="dailyVisitorTrend" width="800" height="400"></canvas>
+  </div>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <!-- Peak Visitor Hours -->
+  <div class="chart-container">
+    <h2>Peak Visitor Hours</h2>
+    <canvas id="visitorChart"></canvas>
+  </div>
+
+  <!-- Visitor–Moon Phase Correlation -->
+  <div class="chart-container">
+    <h2>Visitor–Moon Phase Correlation</h2>
+    <canvas id="moonPhaseChart"></canvas>
+  </div>
+
 
   <script>
+
+const moonIcons = {
+      'New Moon': '🌑',
+      'First Quarter': '🌓',
+      'Full Moon': '🌕',
+      'Last Quarter': '🌗'
+    };
+
+    const moonctx = document.getElementById('moonPhaseChart').getContext('2d');
+    const moonPhaseChart = new Chart(moonctx, {
+      type: 'bar',
+      data: {
+        labels: ['New Moon', 'First Quarter', 'Full Moon', 'Last Quarter'],
+        datasets: [{
+          label: 'Visitors',
+          data: [280, 460, 160, 380],
+          backgroundColor: ['#1a1a1a', '#e1bb69', '#f9edc4', '#a67c52'],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${moonIcons[context.label]} ${context.dataset.label}: ${context.raw}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              stepSize: 100
+            }
+          }
+        }
+      },
+      plugins: [{
+        id: 'moonIcons',
+        afterDatasetsDraw(chart) {
+          const { ctx, chartArea: { top }, scales: { x, y } } = chart;
+          const iconMap = moonIcons;
+
+          chart.data.labels.forEach((label, i) => {
+            const xPos = x.getPixelForValue(i);
+            const yPos = y.getPixelForValue(chart.data.datasets[0].data[i]) + 30;
+
+            ctx.font = '28px serif';
+            ctx.textAlign = 'center';
+            ctx.fillText(iconMap[label], xPos, yPos);
+          });
+        }
+      }]
+    });
+
+
+    const PeakCtx = document.getElementById('visitorChart').getContext('2d');
+    const visitorChart = new Chart(PeakCtx, {
+      type: 'bar',
+      data: {
+        labels: [
+          '7 AM', '8 AM', '9 AM', '10 AM', '11 AM', '12 PM',
+          '13 PM', '14 PM', '15 PM', '16 PM', '17 PM', '18 PM',
+          '19 PM', '20 PM', '21 PM', '22 PM', '23 PM'
+        ],
+        datasets: [{
+          label: 'Visitors',
+          data: [0, 6, 11, 15, 22, 22, 34, 38, 22, 22, 18, 15, 15, 10, 8, 6, 2],
+          backgroundColor: '#4b6ea9',
+          borderRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              stepSize: 10,
+              color: '#555'
+            },
+            grid: {
+              color: '#ddd'
+            }
+          },
+          x: {
+            ticks: {
+              color: '#555'
+            },
+            grid: {
+              color: '#eee'
+            }
+          }
+        }
+      }
+    })
+    const dailyCtx = document.getElementById('dailyVisitorTrend').getContext('2d');
+
+    const dailyVisitorTrend = new Chart(dailyCtx, {
+      type: 'line',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+          label: 'Visitors',
+          data: [50, 50, 100, 150, 200, 200, 250], // Adjust data here
+          borderColor: 'orange',
+          backgroundColor: 'orange',
+          tension: 0.3,
+          fill: false,
+          pointBackgroundColor: 'orange',
+          pointRadius: 4,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: 'Daily Visitor Trend',
+            align: 'start',
+            font: {
+              size: 20,
+              weight: 'bold'
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: {
+              drawBorder: false,
+              borderDash: [5, 5]
+            }
+          },
+          y: {
+            beginAtZero: true,
+            grid: {
+              drawBorder: false,
+              borderDash: [5, 5]
+            }
+          }
+        }
+      }
+    });
+
+    const toursCtx = document.getElementById('tourOperatorChart').getContext('2d');
+
+    const tourOperatorChart = new Chart(toursCtx, {
+      type: 'bar', 
+      data: {
+        labels: ['Tour operator B', 'Tour operator C', 'Tour operator D', 'Tour operator E', 'Tour operator F'],
+        datasets: [{
+          label: 'Visitors',
+          data: [100, 100, 100, 50, 100], // Adjust data here
+          backgroundColor: '#3e6ea7',
+          borderRadius: 5,
+          barThickness: 20,
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: 'Visitors by Tour Operator',
+            font: {
+              size: 20,
+              weight: 'bold'
+            }
+          }
+        },
+        scales: {
+          x: {
+            beginAtZero: true,
+            max: 100,
+            grid: {
+              borderDash: [4, 4]
+            }
+          },
+          y: {
+            grid: { display: false }
+          }
+        }
+      }
+    });
     const ctx = document.getElementById('barChart').getContext('2d');
 
     const countryLabels = [

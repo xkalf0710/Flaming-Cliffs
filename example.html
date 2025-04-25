@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tour Dashboard</title>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  padding: 40px;
+  color: #333;
+}
+
+.dashboard {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 24px;
+  width: 420px;
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.donut-section {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.donut-wrapper {
+  position: relative;
+  width: 130px;
+  text-align: center;
+}
+
+.donut-title {
+  font-weight: 500;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.donut-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.sub-label {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #555;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.orange {
+  background-color: #f79b0b;
+}
+
+.blue {
+  background-color: #3b5998;
+}
+
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <div class="card">
+      <h2>Monthly Guides and Drivers</h2>
+      <div class="donut-section">
+        <div class="donut-wrapper">
+          <span class="donut-title">This Month</span>
+          <canvas id="donutThisMonth"></canvas>
+          <div class="donut-label">800</div>
+          <div class="sub-label">
+            <span class="dot orange"></span>600
+            <span class="dot blue"></span>200
+          </div>
+        </div>
+        <div class="donut-wrapper">
+          <span class="donut-title">2025</span>
+          <canvas id="donutYear"></canvas>
+          <div class="donut-label">6300</div>
+          <div class="sub-label">
+            <span class="dot orange"></span>4725
+            <span class="dot blue"></span>1575
+          </div>
+        </div>
+      </div>
+      <div class="legend">
+        <span><span class="dot orange"></span>Drivers</span>
+        <span><span class="dot blue"></span>Guides</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Visitors by Tour Operator</h2>
+      <canvas id="barChart"></canvas>
+    </div>
+  </div>
+
+  <script>
+    // Donut - This Month
+new Chart(document.getElementById("donutThisMonth"), {
+  type: 'doughnut',
+  data: {
+    labels: ['Drivers', 'Guides'],
+    datasets: [{
+      data: [600, 200],
+      backgroundColor: ['#f79b0b', '#3b5998'],
+      borderWidth: 0
+    }]
+  },
+  options: {
+    cutout: '75%',
+    plugins: {
+      legend: { display: false },
+      tooltip: { enabled: false }
+    }
+  }
+});
+
+// Donut - Year 2025
+new Chart(document.getElementById("donutYear"), {
+  type: 'doughnut',
+  data: {
+    labels: ['Drivers', 'Guides'],
+    datasets: [{
+      data: [4725, 1575],
+      backgroundColor: ['#f79b0b', '#3b5998'],
+      borderWidth: 0
+    }]
+  },
+  options: {
+    cutout: '75%',
+    plugins: {
+      legend: { display: false },
+      tooltip: { enabled: false }
+    }
+  }
+});
+
+// Horizontal Bar Chart
+new Chart(document.getElementById("barChart"), {
+  type: 'bar',
+  data: {
+    labels: ['Tour operator B', 'Tour operator C', 'Tour operator D', 'Tour operator E', 'Tour operator F'],
+    datasets: [{
+      label: 'Visitors',
+      data: [95, 90, 98, 100, 97],
+      backgroundColor: '#4a6fa5'
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    scales: {
+      x: {
+        beginAtZero: true,
+        grid: { display: false }
+      },
+      y: {
+        grid: { display: false }
+      }
+    },
+    plugins: {
+      legend: { display: false }
+    }
+  }
+});
+
+  </script>
+</body>
+</html>
