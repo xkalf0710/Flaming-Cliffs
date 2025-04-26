@@ -3,145 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Visitors of All Countries</title>
+  <title>Donut Charts with Icons</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
-  font-family: 'Arial', sans-serif;
-  background: #fff;
-  margin: 0;
-  padding: 20px;
-}
-
-.container {
-  max-width: 800px;
-  margin: auto;
-  border: 1px solid #eee;
-  padding: 20px;
-}
-
-.header {
-  background: #f57c00;
-  color: #fff;
-  font-size: 24px;
-  text-align: center;
-  padding: 10px 0;
-  margin-bottom: 20px;
-}
-
-.tabs {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.tabs button {
-  background: none;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-weight: bold;
-  color: #777;
-}
-
-.tabs button.active {
-  color: #f57c00;
-  border-bottom: 2px solid #f57c00;
-}
-
-.chart {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.row {
-  display: flex;
-  align-items: center;
-}
-
-.country {
-  width: 200px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.country img {
-  width: 20px;
-  height: 15px;
-  object-fit: cover;
-}
-
-.bar {
-  flex: 1;
-  background: #eee;
-  height: 25px;
-  position: relative;
-  border-radius: 5px;
-}
-
-.bar-fill {
-  height: 100%;
-  background: #f57c00;
-  border-radius: 5px 0 0 5px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 5px;
-  position: relative;
-}
-
-.count {
-  background: #660000;
-  color: #fff;
-  font-size: 12px;
-  padding: 2px 6px;
-  border-radius: 12px;
-}
-
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      gap: 50px;
+      padding-top: 50px;
+      background: #f9f9f9;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .chart-container {
+      width: 300px;
+      text-align: center;
+    }
+    .custom-legend {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 8px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+    .legend-item img {
+      width: 20px;
+      height: 20px;
+    }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="header">
-    Visitors of All Countries
+  <div class="chart-container">
+    <canvas id="visitorsChart"></canvas>
+    <div id="visitorsLegend" class="custom-legend"></div>
   </div>
 
-  <div class="tabs">
-    <button class="active">Today</button>
-    <button>This week</button>
-    <button>This year</button>
+  <div class="chart-container">
+    <canvas id="vehiclesChart"></canvas>
+    <div id="vehiclesLegend" class="custom-legend"></div>
   </div>
 
-  <div class="chart">
-    <div class="row">
-      <div class="country">
-        <img src="https://flagcdn.com/kr.svg" alt="South Korea"> South Korea
-      </div>
-      <div class="bar">
-        <div class="bar-fill" style="width: 90%;">
-          <span class="count">321</span>
-        </div>
-      </div>
+  <script>
+    // Example icons (you should replace these with your actual icons)
+const vehicleIcons = {
+  "Minibus": "https://img.icons8.com/emoji/48/minibus-emoji.png",
+  "Compact car": "https://img.icons8.com/emoji/48/automobile-emoji.png",
+  "4WD SUV": "https://img.icons8.com/emoji/48/sport-utility-vehicle-emoji.png",
+  "Motorcycle": "https://img.icons8.com/emoji/48/motorcycle-emoji.png",
+  "Bus": "https://img.icons8.com/emoji/48/bus-emoji.png",
+  "Mid-Size Crossover": "https://img.icons8.com/emoji/48/sport-utility-vehicle-emoji.png"
+};
+
+// Visitors chart
+const visitorsCtx = document.getElementById('visitorsChart').getContext('2d');
+const visitorsChart = new Chart(visitorsCtx, {
+  type: 'doughnut',
+  data: {
+    labels: ['China', 'Russia', 'South Korea', 'Others', 'Kazakhstan', 'USA', 'Japan'],
+    datasets: [{
+      data: [31, 24, 22, 14, 4, 3, 2],
+      backgroundColor: ['#FF8C00', '#FF416C', '#FFC107', '#4DD0E1', '#4CAF50', '#673AB7', '#F44336'],
+      hoverOffset: 10
+    }]
+  },
+  options: {
+    plugins: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Visitors by Top Countries',
+        font: { size: 18 }
+      }
+    },
+    cutout: '60%',
+  }
+});
+
+// Vehicles chart
+const vehiclesCtx = document.getElementById('vehiclesChart').getContext('2d');
+const vehiclesChart = new Chart(vehiclesCtx, {
+  type: 'doughnut',
+  data: {
+    labels: ['Minibus', 'Compact car', '4WD SUV', 'Motorcycle', 'Bus', 'Mid-Size Crossover'],
+    datasets: [{
+      data: [30, 20, 20, 5, 20, 15],
+      backgroundColor: ['#FF8C00', '#F44336', '#E91E63', '#00BCD4', '#8BC34A', '#9C27B0'],
+      hoverOffset: 10
+    }]
+  },
+  options: {
+    plugins: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Vehicle Types',
+        font: { size: 18 }
+      }
+    },
+    cutout: '60%',
+  }
+});
+
+// Custom legend for visitors (just text for now)
+const visitorsLegendContainer = document.getElementById('visitorsLegend');
+visitorsChart.data.labels.forEach((label, i) => {
+  const color = visitorsChart.data.datasets[0].backgroundColor[i];
+  visitorsLegendContainer.innerHTML += `
+    <div class="legend-item">
+      <div style="width:15px;height:15px;background:${color};border-radius:50%;"></div>
+      <span>${label}</span>
     </div>
+  `;
+});
 
-    <!-- Repeat this .row block for each country -->
-    <div class="row">
-      <div class="country">
-        <img src="https://flagcdn.com/ru.svg" alt="Russia"> Russia
-      </div>
-      <div class="bar">
-        <div class="bar-fill" style="width: 85%;">
-          <span class="count">243</span>
-        </div>
-      </div>
+// Custom legend for vehicles (with icons!)
+const vehiclesLegendContainer = document.getElementById('vehiclesLegend');
+vehiclesChart.data.labels.forEach((label, i) => {
+  const iconUrl = vehicleIcons[label];
+  vehiclesLegendContainer.innerHTML += `
+    <div class="legend-item">
+      <img src="${iconUrl}" alt="${label} icon">
+      <span>${label}</span>
     </div>
+  `;
+});
 
-    <!-- Add more countries as needed -->
-  </div>
-
-</div>
+  </script>
 
 </body>
 </html>

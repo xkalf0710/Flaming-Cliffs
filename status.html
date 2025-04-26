@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="global.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Flaming Cliffs</title>
+    <style>
+        /* body{
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            gap: 50px;
+            padding-top: 50px;
+            background: #f9f9f9;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        } */
+    </style>
 </head>
 <body>
     <div class="explore">
@@ -222,15 +234,139 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="chart-container">
-            <canvas id="visitorChart"></canvas>
+            <div class="stats-container">
+                <div class="circle-background"></div>
+
+                <div class="card">
+                    <img src="img/live stats/Property 1=coming soon.png" alt="Today">
+                    <div class="card-content">
+                        <div class="card-title">Visitors Today</div>
+                        <div class="card-value">50</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/live stats/Property 1=medeelel-1.png" alt="This Week">
+                    <div class="card-content">
+                      <div class="card-title">Visitors This Week</div>
+                      <div class="card-value">800</div>
+                    </div>
+                  </div>
+              
+                  <div class="card">
+                    <img src="img/live stats/Property 1=bichih.png" alt="This Month">
+                    <div class="card-content">
+                      <div class="card-title">Visitors This Month</div>
+                      <div class="card-value">5000</div>
+                    </div>
+                  </div>
+              
+                  <div class="card">
+                    <img src="img/live stats/Property 1=medeelel.png" alt="This Year">
+                    <div class="card-content">
+                      <div class="card-title">Visitors This Year</div>
+                      <div class="card-value">11500</div>
+                    </div>
+            </div>
+            
         </div>
+        
+        
     </div>
+
+    <div class="chart-container">
+        <canvas id="visitorsChart"></canvas>
+        <div id="visitorsLegend" class="custom-legend"></div>
+      </div>
+    
+      <div class="chart-container">
+        <canvas id="vehiclesChart"></canvas>
+        <div id="vehiclesLegend" class="custom-legend"></div>
+      </div>
      
     <script>
-      
+      const vehicleIcons = {
+        "Minibus": "img/minibus.png",
+        "Compact car": "img/Compact car.png",
+        "4WD SUV": "img/4WD SYV.png",
+        "Motorcycle": "img/motorcycle.png",
+        "Bus": "img/bus.png",
+        "Mid-Size Crossover": "img/mid size Crossover.png"
+      };
+      // Visitors chart
+        const visitorsCtx = document.getElementById('visitorsChart').getContext('2d');
+        const visitorsChart = new Chart(visitorsCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['China', 'Russia', 'South Korea', 'Others', 'Kazakhstan', 'USA', 'Japan'],
+            datasets: [{
+            data: [31, 24, 22, 14, 4, 3, 2],
+            backgroundColor: ['#FF8C00', '#FF416C', '#FFC107', '#4DD0E1', '#4CAF50', '#673AB7', '#F44336'],
+            hoverOffset: 10
+            }]
+        },
+        options: {
+            plugins: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: 'Visitors by Top Countries',
+                font: { size: 18 }
+            }
+            },
+            cutout: '60%',
+        }
+        });
+
+        // Vehicles chart
+        const vehiclesCtx = document.getElementById('vehiclesChart').getContext('2d');
+        const vehiclesChart = new Chart(vehiclesCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Minibus', 'Compact car', '4WD SUV', 'Motorcycle', 'Bus', 'Mid-Size Crossover'],
+            datasets: [{
+            data: [30, 20, 20, 5, 20, 15],
+            backgroundColor: ['#FF8C00', '#F44336', '#E91E63', '#00BCD4', '#8BC34A', '#9C27B0'],
+            hoverOffset: 10
+            }]
+        },
+        options: {
+            plugins: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: 'Vehicle Types',
+                font: { size: 18 }
+            }
+            },
+            cutout: '60%',
+        }
+        });
+
+        // Custom legend for visitors (just text for now)
+        const visitorsLegendContainer = document.getElementById('visitorsLegend');
+        visitorsChart.data.labels.forEach((label, i) => {
+        const color = visitorsChart.data.datasets[0].backgroundColor[i];
+        visitorsLegendContainer.innerHTML += `
+            <div class="legend-item">
+            <div style="width:15px;height:15px;background:${color};border-radius:50%;"></div>
+            <span>${label}</span>
+            </div>
+        `;
+        });
+
+        // Custom legend for vehicles (with icons!)
+        const vehiclesLegendContainer = document.getElementById('vehiclesLegend');
+        vehiclesChart.data.labels.forEach((label, i) => {
+        const iconUrl = vehicleIcons[label];
+        vehiclesLegendContainer.innerHTML += `
+            <div class="legend-item">
+            <img src="${iconUrl}" alt="${label} icon">
+            <span>${label}</span>
+            </div>
+        `;
+        });
         function updateChart(period) {
             document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
             event.target.classList.add('active');
