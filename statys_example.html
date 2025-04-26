@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visitors of All Countries</title>
+  <style>
+    body {
+  font-family: 'Arial', sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  border: 1px solid #eee;
+  padding: 20px;
+}
+
+.header {
+  background: #f57c00;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #777;
+}
+
+.tabs button.active {
+  color: #f57c00;
+  border-bottom: 2px solid #f57c00;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.country {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.country img {
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+}
+
+.bar {
+  flex: 1;
+  background: #eee;
+  height: 25px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.bar-fill {
+  height: 100%;
+  background: #f57c00;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 5px;
+  position: relative;
+}
+
+.count {
+  background: #660000;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 12px;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    Visitors of All Countries
+  </div>
+
+  <div class="tabs">
+    <button class="active">Today</button>
+    <button>This week</button>
+    <button>This year</button>
+  </div>
+
+  <div class="chart">
+    <div class="row">
+      <div class="country">
+        <img src="https://flagcdn.com/kr.svg" alt="South Korea"> South Korea
+      </div>
+      <div class="bar">
+        <div class="bar-fill" style="width: 90%;">
+          <span class="count">321</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat this .row block for each country -->
+    <div class="row">
+      <div class="country">
+        <img src="https://flagcdn.com/ru.svg" alt="Russia"> Russia
+      </div>
+      <div class="bar">
+        <div class="bar-fill" style="width: 85%;">
+          <span class="count">243</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more countries as needed -->
+  </div>
+
+</div>
+
+</body>
+</html>
