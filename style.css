@@ -78,8 +78,8 @@ body {
 }
 
 
-.explore_status{
-  background: url('img/DJI_20240813193714_0038_D.00_01_28_21.Still044 1.png') no-repeat center center/cover;
+.explore-live{
+  background: url('img/live\ stats\ top\ desktop.jpg') no-repeat center center/cover;
   width: 100%;
   height: 60.5rem;
   display: flex;
