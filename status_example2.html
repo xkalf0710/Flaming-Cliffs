@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 767px)">
+    <link rel="stylesheet" href="tablet.css" media="screen and (max-width: 1449px) and (min-width: 768px)">
+    <link rel="stylesheet" href="style.css" media="screen and (min-width: 1450px)">
+    <link rel="stylesheet" href="status.css" media="screen and (min-width: 1450px)">
+    <link rel="stylesheet" href="global.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Flaming Cliffs</title>
+    <style>
+        /* body{
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            gap: 50px;
+            padding-top: 50px;
+            background: #f9f9f9;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        } */
+    </style>
+</head>
+<body>
+    <div class="explore">
+    <nav class="navbar">
+        <div class="logo"><img src="img/vector.png" alt=""> &nbsp; Flaming Cliffs </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="menu" id="menu">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="#fossils">FOSSILS & DISCOVERIES</a>
+      <a href="status.html">LIVE STATUS FROM VISITORS</a>
+      <a href="#preservation">PRESERVATION</a>
+      <a href="#gallery">GALLERY</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+    </nav>
+    <div class="frame-1">
+        <div class="collapsible-container">
+            <h1>Explore <br>the Flaming Cliffs</h1>
+            
+            <div class="btn">
+                <button class="btn-or">LEARN ABOUT HISTORY</button>
+            </div>
+          </div>
+    </div>
+        <img class="divider" src="img/divider.png" alt="">
+    </div>
+
+    <!-- visiors of all countries -->
+
+    <div class="container">
+        <div class="header">
+            Visitors of All Countries
+        </div>
+
+        <div class="tabs">
+            <div class="tab active" onclick="updateChart('today')">Today</div>
+            <div class="tab" onclick="updateChart('week')">This week</div>
+            <div class="tab" onclick="updateChart('year')">This year</div>
+        </div>
+
+        <div class="chart">
+            <div class="row">
+                <div class="country">
+                    <img src="img/flag/KR.png" alt="South Korea">Sourth Korea
+                </div>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 90%;">
+                        <span class="count">321</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat this .row block for each country -->
+            <div class="row">
+                <div class="country">
+                <img src="img/flag/RU.png" alt="Russia"> Russia
+                </div>
+                <div class="bar">
+                <div class="bar-fill" style="width: 85%;">
+                    <span class="count">243</span>
+                </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="country">
+                    <img src="img/flag/CN.png" alt="China"> China
+                </div>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 80%;">
+                        <span class="count">228</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="country">
+                    <img src="img/flag/KZ.png" alt="Kazakhstan"> Kazakhstan
+                </div>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 75%;">
+                        <span class="count">190</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="country">
+                    <img src="img/flag/JP.png" alt="Japan"> Japan
+                </div>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 70%;">
+                        <span class="count">170</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="country">
+                    <img src="img/flag/US.png" alt="USA"> USA
+                </div>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 65%;">
+                        <span class="count">160</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="country">
+                    <img src="img/flag/DE.png" alt="German"> German
+                </div>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 60%;">
+                        <span class="count">140</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="country">
+                    <img src="img/flag/FR.png" alt="France"> France
+                </div>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 55%;">
+                        <span class="count">130</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="country">
+                    <img src="img/flag/GB.png" alt="UK"> UK
+                </div>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 50%;">
+                        <span class="count">120</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="country">
+                    <img src="img/flag/AU.png" alt="Australia"> Australia
+                </div>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 45%;">
+                        <span class="count">100</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="country">
+                    <img src="img/flag/CA.png" alt="Canada"> Canada
+                </div>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 40%;">
+                        <span class="count">95</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="country">
+                    <img src="img/flag/IT.png" alt="Italy"> Italy
+                </div>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 35%;">
+                        <span class="count">60</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="country">
+                    <img src="img/flag/PL.png" alt="Poland"> Poland
+                </div>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 30%;">
+                        <span class="count">30</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="country">
+                    <img src="img/flag/TR.png" alt="Turkey"> Turkey
+                </div>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 25%;">
+                        <span class="count">25</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="country">
+                    <img src="img/flag/CH.png" alt="Switzerland"> Switzerland
+                </div>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 20%;">
+                        <span class="count">20</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-container">
+                <div class="circle-background"></div>
+
+                <div class="card">
+                    <img src="img/live stats/Property 1=coming soon.png" alt="Today">
+                    <div class="card-content">
+                        <div class="card-title">Visitors Today</div>
+                        <div class="card-value">50</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/live stats/Property 1=medeelel-1.png" alt="This Week">
+                    <div class="card-content">
+                      <div class="card-title">Visitors This Week</div>
+                      <div class="card-value">800</div>
+                    </div>
+                  </div>
+              
+                  <div class="card">
+                    <img src="img/live stats/Property 1=bichih.png" alt="This Month">
+                    <div class="card-content">
+                      <div class="card-title">Visitors This Month</div>
+                      <div class="card-value">5000</div>
+                    </div>
+                  </div>
+              
+                  <div class="card">
+                    <img src="img/live stats/Property 1=medeelel.png" alt="This Year">
+                    <div class="card-content">
+                      <div class="card-title">Visitors This Year</div>
+                      <div class="card-value">11500</div>
+                    </div>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+
+    <div class="chart-container">
+        <canvas id="visitorsChart"></canvas>
+        <div id="visitorsLegend" class="custom-legend"></div>
+      </div>
+    
+      <div class="chart-container">
+        <canvas id="vehiclesChart"></canvas>
+        <div id="vehiclesLegend" class="custom-legend"></div>
+    </div>
+
+
+    <div class="card">
+        <h3>Monthly Guides and Drivers</h3>
+        <div class="charts">
+            <div class="donut-wrapper">
+                <p>This Month</p>
+                <div class="donut-center">
+                    <canvas id="donutThisMonth"></canvas>
+                    <div class="center-label">800</div>
+                </div>
+                <div class="details">
+                    <span class="dot orange"></span> 600
+                    <span class="dot blue"></span> 200
+                </div>
+            </div>
+            <div class="donut-wrapper">
+                <p>2025</p>
+                <div class="donut-center">
+                    <canvas id="donut2025"></canvas>
+                    <div class="center-label">6300</div>
+                </div>
+                <div class="details">
+                    <span class="dot orange"></span> 4725
+                    <span class="dot blue"></span> 1575
+                </div>
+            </div>
+        </div>
+        <div class="legend">
+            <span class="dot orange"></span> Drivers
+            <span class="dot blue"></span>   Guides
+        </div>
+    </div>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="card">
+        <div class="chart-container">
+            <canvas id="tourOperatorChart" width="600" height="400"></canvas>
+        </div>
+    </div>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   
+    <script>
+
+const toursCtx = document.getElementById('tourOperatorChart').getContext('2d');
+
+const tourOperatorChart = new Chart(toursCtx, {
+  type: 'bar', 
+  data: {
+    labels: ['Tour operator B', 'Tour operator C', 'Tour operator D', 'Tour operator E', 'Tour operator F'],
+    datasets: [{
+      label: 'Visitors',
+      data: [100, 100, 100, 50, 100], // Adjust data here
+      backgroundColor: '#3e6ea7',
+      borderRadius: 5,
+      barThickness: 20,
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Visitors by Tour Operator',
+        font: {
+          size: 20,
+          weight: 'bold'
+        }
+      }
+    },
+    scales: {
+      x: {
+        beginAtZero: true,
+        max: 100,
+        grid: {
+          borderDash: [4, 4]
+        }
+      },
+      y: {
+        grid: { display: false }
+      }
+    }
+  }
+});
+
+        
+    const config = (data) => ({
+        type: 'doughnut',
+        data: {
+          labels: ['Drivers', 'Guides'],
+          datasets: [{
+            data,
+            backgroundColor: ['#f7931e', '#4668d9'],
+            borderWidth: 0
+          }]
+        },
+        options: {
+          cutout: '70%',
+          plugins: {
+            legend: { display: false },
+            tooltip: { enabled: false }
+          }
+        }
+    });
+
+      new Chart(document.getElementById('donutThisMonth'), config([600, 200]));
+      new Chart(document.getElementById('donut2025'), config([4725, 1575]));
+
+
+
+      const vehicleIcons = {
+        "Minibus": "img/minibus.png",
+        "Compact car": "img/Compact car.png",
+        "4WD SUV": "img/4WD SYV.png",
+        "Motorcycle": "img/motorcycle.png",
+        "Bus": "img/bus.png",
+        "Mid-Size Crossover": "img/mid size Crossover.png"
+      };
+      // Visitors chart
+        const visitorsCtx = document.getElementById('visitorsChart').getContext('2d');
+        const visitorsChart = new Chart(visitorsCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['China', 'Russia', 'South Korea', 'Others', 'Kazakhstan', 'USA', 'Japan'],
+            datasets: [{
+            data: [31, 24, 22, 14, 4, 3, 2],
+            backgroundColor: ['#FF8C00', '#FF416C', '#FFC107', '#4DD0E1', '#4CAF50', '#673AB7', '#F44336'],
+            hoverOffset: 10
+            }]
+        },
+        options: {
+            plugins: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: 'Visitors by Top Countries',
+                font: { size: 18 }
+            }
+            },
+            cutout: '60%',
+        }
+        });
+
+        // Vehicles chart
+        const vehiclesCtx = document.getElementById('vehiclesChart').getContext('2d');
+        const vehiclesChart = new Chart(vehiclesCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Minibus', 'Compact car', '4WD SUV', 'Motorcycle', 'Bus', 'Mid-Size Crossover'],
+            datasets: [{
+            data: [30, 20, 20, 5, 20, 15],
+            backgroundColor: ['#FF8C00', '#F44336', '#E91E63', '#00BCD4', '#8BC34A', '#9C27B0'],
+            hoverOffset: 10
+            }]
+        },
+        options: {
+            plugins: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: 'Vehicle Types',
+                font: { size: 18 }
+            }
+            },
+            cutout: '60%',
+        }
+        });
+
+        // Custom legend for visitors (just text for now)
+        const visitorsLegendContainer = document.getElementById('visitorsLegend');
+        visitorsChart.data.labels.forEach((label, i) => {
+        const color = visitorsChart.data.datasets[0].backgroundColor[i];
+        visitorsLegendContainer.innerHTML += `
+            <div class="legend-item">
+            <div style="width:15px;height:15px;background:${color};border-radius:50%;"></div>
+            <span>${label}</span>
+            </div>
+        `;
+        });
+
+        // Custom legend for vehicles (with icons!)
+        const vehiclesLegendContainer = document.getElementById('vehiclesLegend');
+        vehiclesChart.data.labels.forEach((label, i) => {
+        const iconUrl = vehicleIcons[label];
+        vehiclesLegendContainer.innerHTML += `
+            <div class="legend-item">
+            <img src="${iconUrl}" alt="${label} icon">
+            <span>${label}</span>
+            </div>
+        `;
+        });
+        function updateChart(period) {
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            chart.data.labels = visitorData[period].labels;
+            chart.data.datasets[0].data = visitorData[period].data;
+            chart.update();
+        }
+
+
+        function toggleMenu() {
+          const menu = document.getElementById('menu');
+          menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+    <script>
+        function setupGallery(gallerySelector, bigPictureSelector, smallPicturesSelector) {
+    // Select the gallery container
+    const gallery = document.querySelector(gallerySelector);
+
+    if (gallery) {
+        // Select the big picture element within the gallery
+        const bigPicture = gallery.querySelector(bigPictureSelector);
+
+        // Select all small picture elements within the gallery
+        const smallPictures = gallery.querySelectorAll(smallPicturesSelector);
+
+        // Add hover events to small pictures
+        smallPictures.forEach(smallPic => {
+            smallPic.addEventListener('mouseover', () => {
+                // Update the big picture's source with the data-big attribute of the hovered small picture
+                bigPicture.src = smallPic.getAttribute('data-big');
+            });
+
+            smallPic.addEventListener('mouseout', () => {
+                // Optionally reset the big picture if needed
+                // bigPicture.src = "default-image-path.png";
+            });
+        });
+    }
+}
+
+// Apply the function to both galleries
+setupGallery('.gallery', '.big-picture', '.small-pictures img');
+setupGallery('.gallery-2', '.big-picture-2', '.small-pictures-2 img');
+    </script>
+    
+    <script>
+        document.querySelector('.collapsible-container').addEventListener('click', function () {
+          this.classList.toggle('expanded');
+        });
+      </script>
+    
+</body>
+</html>

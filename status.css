@@ -165,3 +165,62 @@
     width: 20px;
     height: 20px;
 }
+
+
+h3{
+    margin-top: 0;
+    padding: 20px;
+}
+
+.charts{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.donut-wrapper p{
+    font-weight: 500px;
+    margin-bottom: 8px;
+}
+
+.donut-center{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+}
+.center-label{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+canvas{
+    width: 120px !important;
+    height: 120px !important;
+}
+.details{
+    margin-top: 10px;
+    font-size: 14px;
+}
+.legend{
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.dot{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 6px;
+}
+.orange{
+    background-color: #f7931e;
+}
+.blue{
+    background-color: #4669d9;
+}
