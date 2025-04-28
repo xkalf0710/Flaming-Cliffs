@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 767px)">
     <link rel="stylesheet" href="tablet.css" media="screen and (max-width: 1449px) and (min-width: 768px)">
     <link rel="stylesheet" href="style.css" media="screen and (min-width: 1450px)">
     <link rel="stylesheet" href="global.css">
   <title>Flaming Cliffs History</title>
   <style>
-    body {
+    /* body {
       margin: 0;
       font-family: Arial, sans-serif;
       color: #333;
       background: #fff;
       line-height: 1.6;
       padding: 40px;
-}
+} */
 
       .content-section {
         margin-bottom: 60px;
@@ -347,6 +347,33 @@
   </style>
 </head>
 <body>
+
+  <div class="explore-learn">
+    <nav class="navbar">
+      <div class="logo"><img src="img/baynzag logo.png" alt=""> &nbsp; Flaming Cliffs </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  <div class="menu" id="menu">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="#fossils">FOSSILS & DISCOVERIES</a>
+    <a href="status.html">LIVE STATUS FROM VISITORS</a>
+    <a href="#preservation">PRESERVATION</a>
+    <a href="#gallery">GALLERY</a>
+    <a href="#contact">CONTACT</a>
+  </div>
+  </nav>
+ 
+      <div class="collapsible-container">
+          <h1>Flaming Cliffs: <br>A Journey Throught Time</h1>
+        </div>
+  
+      <img class="divider" src="img/divider.png" alt="">
+  </div>
+  
   
 <div class="container">
   <!-- Section 1: The Prelude -->
@@ -629,9 +656,9 @@
         <h4>Follow Us</h4>
         <div class="social-icons">
             
-          <img src="img/Facebook round.png">
-          <img src="img/Insta Round.png">
-          <img src="img/Youtube round.png">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-youtube"></i>
         </div>
       </div>
   
@@ -654,6 +681,52 @@
         const parent = q.parentElement;
         parent.classList.toggle('open');
       });
+    });
+  </script>
+
+<script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+</script>
+<script>
+    function setupGallery(gallerySelector, bigPictureSelector, smallPicturesSelector) {
+// Select the gallery container
+const gallery = document.querySelector(gallerySelector);
+
+if (gallery) {
+    // Select the big picture element within the gallery
+    const bigPicture = gallery.querySelector(bigPictureSelector);
+
+    // Select all small picture elements within the gallery
+    const smallPictures = gallery.querySelectorAll(smallPicturesSelector);
+
+    // Add hover events to small pictures
+    smallPictures.forEach(smallPic => {
+        smallPic.addEventListener('mouseover', () => {
+            // Update the big picture's source with the data-big attribute of the hovered small picture
+            bigPicture.src = smallPic.getAttribute('data-big');
+        });
+
+        smallPic.addEventListener('mouseout', () => {
+            // Optionally reset the big picture if needed
+            // bigPicture.src = "default-image-path.png";
+        });
+    });
+}
+}
+
+// Apply the function to both galleries
+
+
+setupGallery('.gallery', '.big-picture', '.small-pictures img');
+setupGallery('.gallery-2', '.big-picture-2', '.small-pictures-2 img');
+</script>
+
+<script>
+    document.querySelector('.collapsible-container').addEventListener('click', function () {
+      this.classList.toggle('expanded');
     });
   </script>
 
