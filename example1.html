@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Хоточ, Жолооч, Машин</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('your-background.jpg') no-repeat center center/cover;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+    }
+
+    .header i {
+      margin-right: 10px;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .filters select, .filters input {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .filters select:focus, .filters input:focus {
+      outline: none;
+      border-color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <i>🛣️</i>
+    <h2>Хоточ, Жолооч, Машин</h2>
+  </div>
+
+  <div class="filters">
+    <select>
+      <option>Жолооч</option>
+    </select>
+    <select>
+      <option>Хоточ</option>
+    </select>
+    <input type="text" placeholder="Хотчийн нэр">
+    <input type="text" placeholder="Машины дугаар">
+    <select>
+      <option>Тур Оператор Компани</option>
+    </select>
+    <select>
+      <option>Тээврийн хэрэгсэл</option>
+    </select>
+  </div>
+
+</body>
+</html>

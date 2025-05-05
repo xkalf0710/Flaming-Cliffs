@@ -2,132 +2,57 @@
 <html lang="mn">
 <head>
   <meta charset="UTF-8">
-  <title>Аяллагчдын Бүртгэлийн Систем</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: url('img/baynzag-1.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #333;
-    }
-    .container {
-      background: rgba(255,255,255,0.95);
-      margin: 20px auto;
-      padding: 20px;
-      max-width: 1200px;
-      border-radius: 12px;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 10px;
-    }
-    p{
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    .filters {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
-      justify-content: center;
-    }
-    .filters select, .filters input {
-      padding: 5px 10px;
-      border-radius: 5px;
-    }
-    .section {
-      margin-bottom: 20px;
-    }
-    .country-select {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      background: #f9f9f9;
-    }
-    .country-select button {
-      border: none;
-      background: none;
-      cursor: pointer;
-      font-size: 20px;
-    }
-    .counter-box, .summary-box {
-      padding: 10px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-      max-width: 200px;
-      text-align: center;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-      background: #fff;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 8px;
-      text-align: center;
-    }
-    th {
-      background: #eee;
-    }
-    .btn {
-      background-color: orange;
-      color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    .summary-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Аялалын Бүртгэлийн Систем</title>
+  <link rel="stylesheet" href="home.css">
 </head>
 <body>
   <div class="container">
     <h1>Аялагчдын Бүртгэлийн Систем</h1>
     <p>Үндэсний болон олон улсын аялагчдыг хялбар бүртгэнэ.</p>
+
+    <!-- Filters -->
     <div class="filters">
       <select><option>Жолооч</option></select>
       <select><option>Хөтөч</option></select>
-      <select><option>Хөтөчийн нэр</option></select>
+      <input type="text" placeholder="Хөтчийн нэр">
       <input type="text" placeholder="Машины дугаар">
       <select><option>Тур Оператор Компани</option></select>
       <select><option>Тээврийн хэрэгсэл</option></select>
     </div>
 
-    <div class="section">
-      <h3>Улс сонгох</h3>
-      <div class="country-select" id="countryList">
-        🇨🇳 🇷🇺 🇯🇵 🇫🇷 🇰🇷 🇺🇸 🇰🇿 🇺🇦 🇮🇹 🇩🇪
-      </div>
-    </div>
-
-    <div class="section summary-container">
+    <!-- Country and Tourist Count -->
+    <div class="countries-section">
       <div class="counter-box">
-        <p>Жуулчдын тоо</p>
-        <h2 id="count">0</h2>
+        <h3>Жуулчдын тоо</h3>
+        <p id="touristCount">1</p>
         <button onclick="resetCount()">Reset</button>
       </div>
+
+      <div class="country-select">
+        <select>
+          <option>Бусад улс сонгох</option>
+        </select>
+        <div class="flags">
+          <img src="https://flagcdn.com/w40/cn.png" alt="China">
+          <img src="https://flagcdn.com/w40/ru.png" alt="Russia">
+          <img src="https://flagcdn.com/w40/jp.png" alt="Japan">
+          <!-- Add more flags here -->
+        </div>
+      </div>
+
       <div class="summary-box">
-        <p>Төлбөр дүн:</p>
-        <h2 id="totalPrice">0₮</h2>
-        <button class="btn" onclick="alert('Төлбөр хийлээ')">Төлбөр хийх</button>
+        <p>Жуулчдын тоо: <strong>16</strong></p>
+        <p>Төлөх дүн: <strong>160,000₮</strong></p>
+        <p>10,000₮ * (10+6)</p>
+        <button>Төлбөр хийх</button>
       </div>
     </div>
 
-    <div class="section">
+    <!-- Table -->
+    <div class="table-section">
       <h3>Сүүлийн бүртгэлүүд</h3>
+      <button>Өнөөдөр</button>
       <table>
         <thead>
           <tr>
@@ -137,7 +62,7 @@
             <th>Хөтөч</th>
             <th>Жолооч</th>
             <th>Тур Оператор</th>
-            <th>Жуулчин</th>
+            <th>Жуулчид</th>
             <th>Улс</th>
             <th>Төлбөр</th>
           </tr>
@@ -146,7 +71,7 @@
           <tr>
             <td>05/01/2025</td>
             <td>УБА 9985</td>
-            <td>Mid size Crowmower</td>
+            <td>Mid size Crowwower</td>
             <td>1</td>
             <td>1</td>
             <td>New Juulchin Tour</td>
@@ -154,34 +79,24 @@
             <td>Korean(6), Russia(10)</td>
             <td>233,000₮</td>
           </tr>
-          <!-- Repeat rows as needed -->
+          <!-- Add more rows as needed -->
         </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="6">Нийт</td>
+            <td>64</td>
+            <td></td>
+            <td>1,233,000₮</td>
+          </tr>
+        </tfoot>
       </table>
     </div>
   </div>
-
   <script>
-    let count = 0;
-    const pricePerPerson = 10000;
-    const countDisplay = document.getElementById('count');
-    const priceDisplay = document.getElementById('totalPrice');
-
-    document.querySelectorAll('#countryList button').forEach(btn => {
-      btn.addEventListener('click', () => {
-        count += 1;
-        updateDisplay();
-      });
-    });
-
-    function updateDisplay() {
-      countDisplay.textContent = count;
-      priceDisplay.textContent = (count * pricePerPerson).toLocaleString() + '₮';
-    }
-
     function resetCount() {
-      count = 0;
-      updateDisplay();
-    }
+     document.getElementById('touristCount').innerText = '0';
+   }
+
   </script>
 </body>
 </html>
