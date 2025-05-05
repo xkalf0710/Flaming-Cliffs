@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Flaming Cliffs Registration</title>
+  <style>
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+        }
+
+        body, html {
+        height: 100%;
+        }
+
+        .background {
+        background-image: url('img/baynzag-1.png');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        }
+
+        .overlay {
+        background-color: rgba(0, 0, 0, 0.4); /* darken for readability */
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .center-box {
+        text-align: center;
+        color: #fff;
+        }
+
+        .logo {
+        width: 100px;
+        margin-bottom: 20px;
+        }
+
+        h1 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+        }
+
+        p {
+        font-size: 1.1em;
+        margin-bottom: 30px;
+        }
+
+        .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        }
+
+        .btn {
+        padding: 12px 24px;
+        font-size: 1em;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+        }
+
+        .btn-check {
+        background-color: #ffffffcc;
+        color: #333;
+        }
+
+        .btn-register {
+        background-color: #f0f0f0cc;
+        color: #333;
+        }
+
+        .btn:hover {
+        background-color: #ffffff;
+        }
+
+  </style>
+</head>
+<body>
+  <div class="background">
+    <div class="overlay">
+      <div class="center-box">
+        <img src="img/baynzag logo.png" alt="Flaming Cliffs Logo" class="logo">
+        <h1>Flaming Cliffs - Баянзаг Улалзах Цонж</h1>
+        <p>Аялагчдын Бүртгэлийн Систем</p>
+        <div class="button-group">
+          <button class="btn btn-check"><i class="fa fa-check-circle"></i> Хянан Шалгагч</button>
+          <a href="home.html">
+            <button class="btn btn-register"><i class="fa fa-visitors-add"></i> Жуулчин бүртгэгч</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
