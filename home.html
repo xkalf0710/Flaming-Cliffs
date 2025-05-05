@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <title>Аялалын Бүртгэлийн Систем</title>
   <link rel="stylesheet" href="home.css">
 </head>
@@ -13,6 +14,7 @@
 
     <!-- Filters -->
     <div class="filters">
+      <h5><span class=""></span>Хөтөч, Жолооч, Машин</h5>
       <select><option>Жолооч</option></select>
       <select><option>Хөтөч</option></select>
       <input type="text" placeholder="Хөтчийн нэр">
@@ -22,47 +24,56 @@
     </div>
 
     <!-- Country and Tourist Count -->
-    <div class="countries-section">
-      <div class="counter-box">
-        <h3>Жуулчдын тоо</h3>
-        <p id="touristCount">1</p>
-        <button onclick="resetCount()">Reset</button>
+    <h5><span class="globe-icon">🌐</span> Улс сонгох</h5>
+    <button class="clear" onclick="resetAll()">✕ Clear all</button>
+    <div class="app-container">
+      <!-- Left Panel -->
+      <div class="left-panel">
+        <h3>Жуулчны тоо<br>Нэмэх</h3>
+        <div class="counter" id="totalCount">1</div>
+        <button onclick="resetAll()">Reset</button>
       </div>
-
-      <div class="country-select">
-        <select>
-          <option>Бусад улс сонгох</option>
-        </select>
-        <div class="flags">
-          <img src="img/flag/CN.png" alt="China"> Хятад &nbsp;
-          <img src="img/flag/RU.png" alt="Russia"> Орос &nbsp;
-          <img src="img/flag/JP.png" alt="Japan"> Япон &nbsp;
-          <img src="img/flag/FR.png" alt="Qrants"> Франц &nbsp;
-          <img src="img/flag/KR.png" alt="Qrants"> Солонгос &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>
-          <img src="img/flag/US.png" alt="US"> АНУ &nbsp;
-          <img src="img/flag/KZ.png" alt="Kazakstan"> Казакстан &nbsp;
-          <img src="img/flag/US.png" alt="US"> Украйн &nbsp;
-          <img src="img/flag/IT.png" alt="US"> Итали &nbsp;
-          <img src="img/flag/DE.png" alt="US"> Герман &nbsp;
-          <hr>
-          <p>Хятад(6), Орос(10)</p>
-          <!-- Add more flags here -->
+  
+      <!-- Middle Panel -->
+      <div class="middle-panel">
+        <div class="dropdown">
+          <select id="otherCountrySelect">
+            <option disabled selected>Бусад улс сонгох</option>
+            <option value="Spain">Испани</option>
+            <option value="Canada">Канад</option>
+          </select>
+          <button onclick="addOtherCountry()">+</button>
+        </div>
+  
+        <div class="country-grid" id="countryGrid">
+          <!-- Flags and names will be added dynamically -->
+        </div>
+  
+        <div class="summary" id="selectionSummary">
+          <!-- Example: Хятад (6), Орос(10) -->
         </div>
       </div>
-
-      <div class="summary-box">
-        <p>Жуулчдын тоо: <strong>16</strong></p>
-        <p>Төлөх дүн: <strong>160,000₮</strong></p>
-        <p>10,000₮ * (10+6)</p>
-        <button>Төлбөр хийх</button>
+  
+      <!-- Right Panel -->
+      <div class="right-panel">
+       
+        <p>Жуулчны тоо: <strong id="finalCount">1</strong></p>
+        <p>Төлөх дүн: <strong id="totalPrice">10,000₮</strong></p>
+        <small>10,000₮ * (10+6)</small>
+        <button class="pay-btn">Төлбөр хийх</button>
       </div>
     </div>
 
     <!-- Table -->
-    <div class="table-section">
-     
-      <h1>Сүүлийн бүртгэлүүд  </h1>
-      <table>
+    <h2>Сүүлчийн бүртгэлүүд</h2>
+    <div class="tabs">
+      <button class="tab active" onclick="fliterTable('today')">Өнөөдөр</button>
+      <button class="tab" onclick="filterTable('week')">Сүүлийн 7 хоног</button>
+      <button class="tab" onclick="filterTable('month')">Сүүлийн 1 сар</button>
+    </div>
+
+    <div class="table-wrapper">
+      <table id="logTable">
         <thead>
           <tr>
             <th>Огноо</th>
@@ -76,35 +87,179 @@
             <th>Төлбөр</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>05/01/2025</td>
-            <td>УБА 9985</td>
-            <td>Mid size Crowwower</td>
-            <td>1</td>
-            <td>1</td>
-            <td>New Juulchin Tour</td>
-            <td>16</td>
-            <td>Korean(6), Russia(10)</td>
-            <td>233,000₮</td>
-          </tr>
-          <!-- Add more rows as needed -->
+        <tbody id="tableBody">
+          <!-- Data is inserted dynamically -->
         </tbody>
         <tfoot>
           <tr>
-            <td colspan="6">Нийт</td>
-            <td>64</td>
-            <td></td>
-            <td>1,233,000₮</td>
+            <th colspan="3">Нийт</th>
+            <th id="totalGuides">0</th>
+            <th id="totalDrivers">0</th>
+            <th></th>
+            <th id="totalTourists">0</th>
+            <th></th>
+            <th id="totalAmount">0₮</th>
           </tr>
         </tfoot>
       </table>
     </div>
   </div>
   <script>
-    function resetCount() {
-     document.getElementById('touristCount').innerText = '0';
-   }
+     const countries = [
+  { name: 'Хятад', flag: 'img/flag/CN.png', count: 6 },
+  { name: 'Орос', flag: 'img/flag/RU.png', count: 10 },
+  { name: 'Япон', flag: 'img/flag/JP.png', count: 0 },
+  { name: 'Франц', flag: 'img/flag/FR.png', count: 0 },
+  { name: 'Солонгос', flag: 'img/flag/KR.png', count: 0 },
+  { name: 'АНУ', flag: 'img/flag/US.png', count: 0 },
+  { name: 'Казахстан', flag: 'img/flag/KZ.png', count: 0 },
+  { name: 'Украйн', flag: 'flags/ukraine.png', count: 0 },
+  { name: 'Итали', flag: 'img/flag/IT.png', count: 0 },
+  { name: 'Герман', flag: 'img/flag/DE.png', count: 0 }
+];
+
+const pricePerPerson = 10000;
+
+function renderCountries() {
+  const grid = document.getElementById('countryGrid');
+  grid.innerHTML = '';
+
+  countries.forEach((c, i) => {
+    const div = document.createElement('div');
+    div.className = 'country';
+    div.innerHTML = `<img src="${c.flag}" alt=""> ${c.name}`;
+    div.onclick = () => {
+      countries[i].count += 1;
+      updateDisplay();
+    };
+    grid.appendChild(div);
+  });
+}
+
+function updateDisplay() {
+  const total = countries.reduce((sum, c) => sum + c.count, 0);
+  document.getElementById('totalCount').innerText = total;
+  document.getElementById('finalCount').innerText = total;
+  document.getElementById('totalPrice').innerText = `${(total * pricePerPerson).toLocaleString()}₮`;
+
+  const selected = countries.filter(c => c.count > 0).map(c => `${c.name} (${c.count})`);
+  document.getElementById('selectionSummary').innerText = selected.join(', ');
+}
+
+function resetAll() {
+  countries.forEach(c => c.count = 0);
+  updateDisplay();
+}
+
+function addOtherCountry() {
+  const select = document.getElementById('otherCountrySelect');
+  const selected = select.value;
+  if (!selected) return;
+
+  const found = countries.find(c => c.name === selected);
+  if (found) {
+    found.count += 1;
+  } else {
+    countries.push({ name: selected, flag: '', count: 1 });
+  }
+  updateDisplay();
+}
+
+renderCountries();
+updateDisplay();
+
+
+
+const records = [
+  {
+    date: '05/01/2025',
+    plate: 'УБА 9985',
+    type: 'Mid size Crowwover',
+    guide: 1,
+    driver: 1,
+    operator: 'New Juulchin Tour',
+    tourists: 16,
+    countries: 'Korean(6), Russia(10)',
+    price: 233000
+  },
+  {
+    date: '05/01/2025',
+    plate: 'УБА 9985',
+    type: 'Motorcycle',
+    guide: 1,
+    driver: 1,
+    operator: 'Guru Travel',
+    tourists: 2,
+    countries: 'Korean(6), Russia(10)',
+    price: 233000
+  },
+  {
+    date: '05/01/2025',
+    plate: 'УБА 9985',
+    type: 'bus',
+    guide: 1,
+    driver: 1,
+    operator: 'New Juulchin Tour',
+    tourists: 16,
+    countries: 'Korean(6), Russia(10)',
+    price: 233000
+  },
+  {
+    date: '05/01/2025',
+    plate: 'УБА 9985',
+    type: 'Mid size Crowwover',
+    guide: 1,
+    driver: 1,
+    operator: 'New Juulchin Tour',
+    tourists: 16,
+    countries: 'Korean(6), Russia(10)',
+    price: 233000
+  }
+];
+
+function renderTable(data) {
+  const tbody = document.getElementById('tableBody');
+  tbody.innerHTML = '';
+
+  let totalGuide = 0, totalDriver = 0, totalTourists = 0, totalPrice = 0;
+
+  data.forEach(row => {
+    totalGuide += row.guide;
+    totalDriver += row.driver;
+    totalTourists += row.tourists;
+    totalPrice += row.price;
+
+    tbody.innerHTML += `
+      <tr>
+        <td>${row.date}</td>
+        <td>${row.plate}</td>
+        <td>${row.type}</td>
+        <td>${row.guide}</td>
+        <td>${row.driver}</td>
+        <td>${row.operator}</td>
+        <td>${row.tourists}</td>
+        <td>${row.countries}</td>
+        <td>${row.price.toLocaleString()}₮</td>
+      </tr>
+    `;
+  });
+
+  document.getElementById('totalGuides').innerText = totalGuide;
+  document.getElementById('totalDrivers').innerText = totalDriver;
+  document.getElementById('totalTourists').innerText = totalTourists;
+  document.getElementById('totalAmount').innerText = `${totalPrice.toLocaleString()}₮`;
+}
+
+function filterTable(filter) {
+  document.querySelectorAll('.tab').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+
+  // For demonstration: all filters return the same dataset
+  renderTable(records);
+}
+
+renderTable(records);
+
 
   </script>
 </body>

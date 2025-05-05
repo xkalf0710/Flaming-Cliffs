@@ -15,8 +15,12 @@ body {
   h1, h3, p {
     text-align: center;
   }
-  
-  .filters, .countries-section, .table-section {
+   h5{
+    text-align: left;
+    color: white;
+    font-size: 20px;
+   }
+  .filters, .table-section {
     margin: 20px 0;
   }
   
@@ -24,32 +28,7 @@ body {
     padding: 8px;
     margin: 5px;
   }
-  
-  .counter-box, .summary-box, .country-select {
-    display: inline-block;
-    vertical-align: top;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background: white;
-    border-radius: 8px;
-  }
-  
-  .summary-box button {
-    background-color: #f7931e;
-    color: white;
-    padding: 10px;
-    border: none;
-    margin-top: 10px;
-    cursor: pointer;
-  }
-  
-  .flags img {
-    width: 40px;
-    height: 25px;
-    margin: 2px;
-    cursor: pointer;
-  }
+
   
   table {
     width: 100%;
@@ -61,5 +40,91 @@ body {
     border: 1px solid #ccc;
     text-align: center;
     padding: 10px;
+  }
+
+  .app-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
+  }
+  
+  .left-panel, .right-panel {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 160px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .middle-panel {
+    background: white;
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .counter {
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+  
+  .dropdown {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .country-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+  }
+  
+  .country {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background: #f5f5f5;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .country img {
+    width: 24px;
+  }
+  
+  .summary {
+    font-size: 14px;
+    color: #333;
+    border-top: 1px solid #ccc;
+    padding-top: 8px;
+  }
+  
+  .clear {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  .pay-btn {
+    background: orange;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
   }
   
