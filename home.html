@@ -21,7 +21,15 @@
       <input type="text" placeholder="Машины дугаар">
       <input type="text" placeholder="Тур Оператор Компани">
       <!-- <select><option>Тур Оператор Компани</option></select> -->
-      <select><option>Тээврийн хэрэгсэл</option></select>
+      <select>
+        <option value="Тээврийн хэрэгсэл">Тээврийн хэрэгсэл</option>
+        <option value="4wd suv">4wd suv</option>
+        <option value="Mid size">Mid size</option>
+        <option value="Compact car">Compact car</option>
+        <option value="Minibus">Minibus</option>
+        <option value="Motorcycle">Motorcycle</option>
+        <option value="Bus">Bus</option>
+      </select>
     </div>
 
     <!-- Country and Tourist Count -->
@@ -31,7 +39,10 @@
       <!-- Left Panel -->
       <div class="left-panel">
         <h3>Жуулчны тоо<br>Нэмэх</h3>
-        <div class="counter" id="totalCount">1</div>
+        <!-- <div class="counter" id="totalCount">1</div> -->
+         <input type="number" id="totalCount" 
+         placeholder="Жуулчны тоо">
+         &nbsp; &nbsp; &nbsp;
         <button onclick="resetAll()">Reset</button>
       </div>
   
@@ -59,8 +70,7 @@
       <div class="right-panel">
        
         <p>Жуулчны тоо: 
-          <input type="number" id="finalCount" placeholder="">
-          <!-- <strong id="finalCount">1</strong> -->
+          <strong id="finalCount">1</strong>
         </p>
         <p>Төлөх дүн: <strong id="totalPrice">10,000₮</strong></p>
         <small>10,000₮ * (10+6)</small>
@@ -142,8 +152,8 @@ function renderCountries() {
 
 function updateDisplay() {
   const total = countries.reduce((sum, c) => sum + c.count, 0);
-  document.getElementById('totalCount').innerText = total;
-  // document.getElementById('finalCount').innerText = total;
+  // document.getElementById('totalCount').innerText = total;
+  document.getElementById('finalCount').innerText = total;
   document.getElementById('totalPrice').innerText = `${(total * pricePerPerson).toLocaleString()}₮`;
 
   const selected = countries.filter(c => c.count > 0).map(c => `${c.name} (${c.count})`);

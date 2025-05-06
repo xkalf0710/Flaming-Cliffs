@@ -1,22 +1,22 @@
 .container{
-    max-width: 800px;
+    max-width: 400px;
     margin: auto;
     border: 1px solid #eee;
-    padding: 20px;
+    padding: 10px;
 }
 .header{
     background: #f57c00;
     color: #fff;
-    font-size: 24px;
+    font-size: 14px;
     text-align: center;
-    padding: 10px 0;
-    margin-bottom: 20px;
+    padding: 8% 0;
+    margin-bottom: 10px;
 }
 .tabs{
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 .tab{
     cursor: pointer;
@@ -28,32 +28,32 @@
 }
 
 .chart{
-    padding: 30px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 8px;
 }
 .row{
     display: flex;
     align-items: center;
 }
 .country{
-    width: 200px;
+    width: 100px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
 }
 .country img{
-    width: 20px;
-    height: 15px;
+    width: 10px;
+    height: 8px;
     object-fit: cover;
 }
 .bar{
     flex: 1;
     background: #eee;
-    height: 25px;
+    height: 14px;
     position: relative;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 .bar-fill{
     height: 100%;
