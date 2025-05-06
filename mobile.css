@@ -613,11 +613,11 @@ body {
     }
 
     .banner h1 {
-      position: relative;
+      font-size: 40px;
       color: white;
-      font-size: 48px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+      text-align: center;
       letter-spacing: 4px;
-      z-index: 1;
     }
     .legend-banner {
       position: relative;

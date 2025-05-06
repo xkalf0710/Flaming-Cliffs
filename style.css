@@ -169,9 +169,7 @@ body {
     justify-content: center;
     align-items: center;
 } 
-.fossil .btn-simp {
-    justify-self: end;
-}
+
 .divider {
     position: absolute;
     bottom: -40px;
@@ -180,7 +178,6 @@ body {
     box-shadow: #FFF4E0 0px 10px;
 }
 .discover {
-    
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -407,52 +404,7 @@ body {
   height: auto;
   box-shadow: #fff 0px 10px;
 }
-.fossil {
-  background: url(img/baynzag-1.png) no-repeat center center/cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* align-items: center; */
-  height: 1100px;
-  /* padding-bottom: 40px; */
-}
-.fossil-info {
-  width: 788px;
-  height: 488px;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 1rem;
-  padding: 20px;
-  color: #fff;
-  padding: 40px;
-  padding-right: 63px;
-  /* margin: 40px; */
-  margin-top: 300px;
-  margin-left: 257px;
-}
-.fossil-info h1 {
-  font-size: 37px;
-  border-bottom: #fff solid;
-  padding-bottom: 15px;
-  width: 745px;
-}
-.fossil-info h2 {
-  font-weight: 100;
-  font-size: 25px;
-}
-.fossil-info p {
-  text-align: justify;
-  font-size: 20px;
-  line-height: 24.8px;
-  margin: 10px;
-}
-.fossil-btn {
-  position: relative;
-  /* left: 30vw; */
-  text-align: center;
-  justify-self: end;
-  height: 39px;
-  width: 149px;
-}
+
 .frame-2 {
   display: flex;
   flex-direction: row;
@@ -619,14 +571,13 @@ body {
   }
 
   .banner {
-    position: relative;
-    width: 100%;
-    height: 350px;
-    background: url('img/information\ center\ desktop.jpg') no-repeat center center;
+    background: url('img/photo\ &\ video\ gallery\ top\ desktop.jpg') no-repeat center center;
     background-size: cover;
+    height: 380px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    position: relative;
   }
 
   .banner::after {
@@ -1597,4 +1548,11 @@ body {
   .card1-value{
     font-size: 24px;
     font-weight: bold;
+  }
+
+  .right{
+    flex: 1; /* Equal width */
+      padding: 20px;
+      box-sizing: border-box;
+      
   }
