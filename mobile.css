@@ -9,11 +9,11 @@ body {
     padding-inline-start: 0px;
   }
 
-    .collapsible-content {
-      display: none;
-    }
+  .collapsible-content {
+    display: none;
+  
+  }
 
-    
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -75,7 +75,7 @@ body {
     display: flex;
     flex-direction: column;
   }
-  .explore-1 {
+  .explore_photo {
     background: url('img/Photo\ &\ video\ gallery/photo and video gallery top mobile.jpg') no-repeat center center/cover;
     width: 100%;
     height: 60vh;
@@ -120,8 +120,6 @@ body {
     display: flex;
     flex-direction: column;
   }
-  
-
 
   .collapsible-container {
     color: #fff;
@@ -356,48 +354,7 @@ body {
     height: auto;
     box-shadow: #fff 0px 10px;
   }
-  .fossil {
-    background: url(img/baynzag-1.png) no-repeat center center/cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* padding-bottom: 40px; */
-  }
-  .fossil-info {
-    width: 70vw;
-    max-height: 200vh;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 1rem;
-    padding: 20px;
-    padding-right: 50px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    /* margin: 40px; */
-    /* margin-top: 50px; */
-  }
-  .fossil-info h1 {
-    font-size: 24px;
-    border-bottom: #fff solid;
-    width: 80%;
-  }
-  .fossil-info h2 {
-    font-weight: 100;
-    margin: 0.5rem;
-    font-size: 20px;
-  }
-  .fossil-info p {
-    text-align: justify;
-    font-size: 16px;
-    margin: 0.5rem;
-  }
-  .fossil-btn {
-    position: relative;
-    /* left: 30vw; */
-    text-align: center;
-    justify-self: end;
-  }
+  
   .frame-2 {
     display: flex;
     flex-direction: row;
@@ -1500,64 +1457,36 @@ body {
     padding: 40px 20px;
   }
 
-  .main-content {
-    display: flex;
-    gap: 40px;
-    margin-bottom: 30px;
+  .main-content{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .title-block{
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .left {
-    flex: 1;
+  .title-block h2{
+    font-size: 22px;
   }
 
-  .main-image {
+  .number-box{
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+
+  .cta-button {
     width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
+    padding: 14px;
+    font-size: 16px;
   }
-
-  .right {
-    flex: 1;
-  }
-
-  .title-block {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .title-block h2 {
-    font-size: 28px;
-    font-weight: bold;
-    color: #5d3c1c;
-    margin: 0;
-  }
-
-  .number-box {
-    background-color: #5d3c1c;
-    color: #fff;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 4px;
-    font-size: 20px;
-  }
-
+  
   .right p {
     line-height: 1.6;
     margin-bottom: 16px;
   }
 
-  .cta-button {
-    background-color: #ff9800;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-
+  
   .cta-button:hover {
     background-color: #e68a00;
   }

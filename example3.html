@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <title>Улс сонгох</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: url('desert-background.jpg') no-repeat center center;
+      background-size: cover;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .main {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 220px;
+      min-height: 150px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .box h3 {
+      margin-top: 0;
+    }
+
+    .flag-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .flag {
+      text-align: center;
+      cursor: pointer;
+      border: 2px solid transparent;
+      padding: 4px;
+      border-radius: 5px;
+    }
+
+    .flag.selected {
+      border-color: orange;
+      background: #fff5e6;
+    }
+
+    .flag img {
+      width: 30px;
+      height: 20px;
+      display: block;
+      margin: auto;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .summary {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      background-color: #ff912d;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .btn.reset {
+      background-color: #ccc;
+      color: #000;
+      margin-top: 10px;
+    }
+
+    select {
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      flex: 1;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .topbar h2 {
+      margin: 0;
+    }
+
+    .clear {
+      cursor: pointer;
+      font-size: 14px;
+      color: #ff912d;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <h2>🌐 Улс сонгох</h2>
+    <span class="clear" onclick="clearAll()">✕ Clear all</span>
+  </div>
+
+  <div class="main">
+    <!-- Tourist Counter -->
+    <div class="box">
+      <h3>Жуулчдын тоо<br>Нэмэх</h3>
+      <div id="touristCount" style="font-size: 32px; text-align: center;">1</div>
+      <button class="btn reset" onclick="resetTourists()">Reset</button>
+    </div>
+
+    <!-- Flag Selector -->
+    <div class="box" style="width: 500px;">
+      <div class="controls">
+        <select id="countrySelect">
+          <option value="">Бусад улс сонгох</option>
+          <option value="Турк">Турк</option>
+          <option value="Нидерланд">Нидерланд</option>
+        </select>
+        <button class="btn" onclick="addCountry()">＋</button>
+      </div>
+      <div class="flag-grid" id="flagsContainer">
+        <!-- Flags with countries -->
+      </div>
+      <div class="summary" id="selectedSummary">Хятад (6), Орос (10)</div>
+    </div>
+
+    <!-- Summary and Payment -->
+    <div class="box">
+      <p><strong>Жуулчдын тоо:</strong> <span id="totalTourists">16</span></p>
+      <p><strong>Төлөх дүн:</strong> <span id="totalCost">160,000₮</span></p>
+      <p style="font-size: 12px; color: #555;">10,000₮ × (10+6)</p>
+      <button class="btn" onclick="alert('Төлбөр хийгдлээ')">Төлбөр хийх</button>
+    </div>
+  </div>
+
+  <script>
+    const countries = [
+      { name: "Хятад", flag: "https://flagcdn.com/w40/cn.png" },
+      { name: "Орос", flag: "https://flagcdn.com/w40/ru.png" },
+      { name: "Япон", flag: "https://flagcdn.com/w40/jp.png" },
+      { name: "Франц", flag: "https://flagcdn.com/w40/fr.png" },
+      { name: "Солонгос", flag: "https://flagcdn.com/w40/kr.png" },
+      { name: "АНУ", flag: "https://flagcdn.com/w40/us.png" },
+      { name: "Казахстан", flag: "https://flagcdn.com/w40/kz.png" },
+      { name: "Украйн", flag: "https://flagcdn.com/w40/ua.png" },
+      { name: "Итали", flag: "https://flagcdn.com/w40/it.png" },
+      { name: "Герман", flag: "https://flagcdn.com/w40/de.png" }
+    ];
+
+    const flagsContainer = document.getElementById("flagsContainer");
+    const totalTouristsEl = document.getElementById("totalTourists");
+    const totalCostEl = document.getElementById("totalCost");
+    const touristCountEl = document.getElementById("touristCount");
+    const summaryEl = document.getElementById("selectedSummary");
+    let touristCount = 1;
+    let selectedCountries = { "Хятад": 6, "Орос": 10 };
+
+    function renderFlags() {
+      flagsContainer.innerHTML = "";
+      countries.forEach(c => {
+        const div = document.createElement("div");
+        div.className = "flag" + (selectedCountries[c.name] ? " selected" : "");
+        div.innerHTML = `<img src="${c.flag}" alt="${c.name}"><small>${c.name}</small>`;
+        div.onclick = () => toggleCountry(c.name);
+        flagsContainer.appendChild(div);
+      });
+      updateSummary();
+    }
+
+    function toggleCountry(name) {
+      if (selectedCountries[name]) {
+        delete selectedCountries[name];
+      } else {
+        selectedCountries[name] = 1;
+      }
+      renderFlags();
+    }
+
+    function updateSummary() {
+      let total = 0;
+      const parts = [];
+      for (let [country, count] of Object.entries(selectedCountries)) {
+        parts.push(`${country} (${count})`);
+        total += count;
+      }
+      summaryEl.textContent = parts.join(', ');
+      totalTouristsEl.textContent = total;
+      totalCostEl.textContent = `${total * 10000}₮`;
+    }
+
+    function resetTourists() {
+      touristCount = 1;
+      touristCountEl.textContent = touristCount;
+    }
+
+    function addCountry() {
+      const name = document.getElementById("countrySelect").value;
+      if (name) {
+        selectedCountries[name] = selectedCountries[name] || 1;
+        renderFlags();
+      }
+    }
+
+    function clearAll() {
+      selectedCountries = {};
+      renderFlags();
+    }
+
+    renderFlags();
+  </script>
+</body>
+</html>

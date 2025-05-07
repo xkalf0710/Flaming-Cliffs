@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Аялагчдын Бүртгэлийн Систем</title>
+  <style>
+    /* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: url('desert.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  padding: 20px;
+}
+
+/* Header */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px black;
+}
+
+.dashboard-header h1 {
+  font-size: 2em;
+}
+
+.dashboard-header p {
+  font-size: 1em;
+  opacity: 0.9;
+}
+
+/* Filters */
+.filters, .country-selector, .registrations {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+/* Filter Inputs */
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.filter-group select,
+.filter-group input {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+}
+
+/* Country Selector */
+.country-selector h2 {
+  margin-bottom: 10px;
+}
+
+.counter-box {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.counter {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.country-flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.country-flags img {
+  width: 40px;
+  height: 28px;
+  border: 2px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.country-flags img:hover {
+  transform: scale(1.1);
+}
+
+.summary-box {
+  background-color: #fff;
+  color: black;
+  padding: 12px;
+  border-radius: 10px;
+  max-width: 300px;
+  margin-top: 10px;
+}
+
+.pay-button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: orange;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.pay-button:hover {
+  background-color: darkorange;
+}
+
+/* Tables */
+.registrations h2 {
+  margin-bottom: 10px;
+}
+
+.table-header {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.table-header button {
+  padding: 6px 12px;
+  border: none;
+  background-color: orange;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.table-header span {
+  padding: 6px 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+}
+
+/* Table Style */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #eee;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+tfoot {
+  background-color: #f9f9f9;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+  </style>
+</head>
+<body>
+
+  <header class="dashboard-header">
+    <h1>Аялагчдын Бүртгэлийн Систем</h1>
+    <p>Үндэсний болон олон улсын аялагчдыг хялбар бүртгэнэ.</p>
+  </header>
+
+  <section class="filters">
+    <div class="filter-group">
+      <label for="driver">Жолооч</label>
+      <select id="driver"><option>Жолооч</option></select>
+
+      <label for="guide">Хөтөч</label>
+      <select id="guide"><option>Хөтөч</option></select>
+
+      <input type="text" placeholder="Хөтчийн нэр">
+      <input type="text" placeholder="Машины дугаар">
+      <select><option>Тур Оператор Компани</option></select>
+      <select><option>Тээврийн хэрэгсэл</option></select>
+    </div>
+  </section>
+
+  <section class="country-selector">
+    <h2>Улс сонгох</h2>
+    <div class="counter-box">
+      <p>Жуулчны тоо Нэмэх</p>
+      <div class="counter">1</div>
+      <button>Reset</button>
+    </div>
+
+    <div class="country-flags">
+      <!-- Example flags -->
+      <img src="china.png" alt="Хятад">
+      <img src="russia.png" alt="Орос">
+      <!-- Add more flags here -->
+    </div>
+
+    <div class="summary-box">
+      <p>Жуулчны тоо: <strong>16</strong></p>
+      <p>Төлөх дүн: <strong>160,000₮</strong></p>
+      <button class="pay-button">Төлбөр хийх</button>
+    </div>
+  </section>
+
+  <section class="registrations">
+    <h2>Сүүлийн бүртгэлүүд</h2>
+
+    <div class="table-header">
+      <button>Өнөөдөр</button>
+      <span>Сүүлийн 7 хоног</span>
+      <span>Сүүлийн 1 сар</span>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Огноо</th>
+          <th>Машины дугаар</th>
+          <th>Машины марк</th>
+          <th>Хөтөч</th>
+          <th>Жолооч</th>
+          <th>Тур Оператор</th>
+          <th>Жуулчид</th>
+          <th>Улс</th>
+          <th>Төлбөр</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dynamic rows go here -->
+        <tr>
+          <td>05/01/2025</td>
+          <td>УБА 9985</td>
+          <td>Mid size Crowwover</td>
+          <td>1</td>
+          <td>1</td>
+          <td>New Juulchin Tour</td>
+          <td>16</td>
+          <td>Korean(6), Russia(10)</td>
+          <td>233,000₮</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="5">Нийт</td>
+          <td>4</td>
+          <td>64</td>
+          <td></td>
+          <td>1,233,000₮</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <footer>
+    <a href="#">Бүртгэл сэргээх</a> | 
+    <a href="#">Статистик харах</a>
+  </footer>
+
+</body>
+</html>
