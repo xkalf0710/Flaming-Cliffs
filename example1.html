@@ -1,252 +1,96 @@
 <!DOCTYPE html>
 <html lang="mn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Аялагчдын Бүртгэлийн Систем</title>
+  <meta charset="UTF-8">
+  <title>Сүүлийн бүртгэлүүд</title>
   <style>
-    /* Reset default browser styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: url('desert-bg.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 20px;
+    }
 
-body {
-  font-family: "Arial", sans-serif;
-  background: url('desert.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-  padding: 20px;
-}
+    .container {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow-x: auto;
+      max-width: 100%;
+    }
 
-/* Header */
-.dashboard-header {
-  text-align: center;
-  margin-bottom: 30px;
-  text-shadow: 1px 1px 3px black;
-}
+    .header-tabs {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-.dashboard-header h1 {
-  font-size: 2em;
-}
+    .tab {
+      padding: 6px 16px;
+      background: #ff912d;
+      color: white;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-.dashboard-header p {
-  font-size: 1em;
-  opacity: 0.9;
-}
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 1000px;
+    }
 
-/* Filters */
-.filters, .country-selector, .registrations {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 15px;
-  border-radius: 15px;
-  margin-bottom: 20px;
-}
+    .table thead {
+      background: #f2f2f2;
+    }
 
-/* Filter Inputs */
-.filter-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
+    .table th, .table td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      white-space: nowrap;
+    }
 
-.filter-group select,
-.filter-group input {
-  padding: 8px;
-  border-radius: 8px;
-  border: none;
-  font-size: 14px;
-}
+    .table tfoot td {
+      font-weight: bold;
+      background: #fafafa;
+    }
 
-/* Country Selector */
-.country-selector h2 {
-  margin-bottom: 10px;
-}
+    .footer-links {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      margin-top: 10px;
+      font-weight: 500;
+    }
 
-.counter-box {
-  background-color: white;
-  color: black;
-  padding: 10px;
-  width: 100px;
-  text-align: center;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
+    .footer-links a {
+      color: #ff912d;
+      text-decoration: none;
+    }
 
-.counter {
-  font-size: 2em;
-  margin: 10px 0;
-}
-
-.country-flags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 10px 0;
-}
-
-.country-flags img {
-  width: 40px;
-  height: 28px;
-  border: 2px solid white;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.country-flags img:hover {
-  transform: scale(1.1);
-}
-
-.summary-box {
-  background-color: #fff;
-  color: black;
-  padding: 12px;
-  border-radius: 10px;
-  max-width: 300px;
-  margin-top: 10px;
-}
-
-.pay-button {
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: orange;
-  border: none;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.pay-button:hover {
-  background-color: darkorange;
-}
-
-/* Tables */
-.registrations h2 {
-  margin-bottom: 10px;
-}
-
-.table-header {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 10px;
-}
-
-.table-header button {
-  padding: 6px 12px;
-  border: none;
-  background-color: orange;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.table-header span {
-  padding: 6px 12px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  color: #fff;
-}
-
-/* Table Style */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 14px;
-  background-color: rgba(255, 255, 255, 0.95);
-  color: black;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-thead {
-  background-color: #eee;
-}
-
-th, td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ccc;
-}
-
-tfoot {
-  background-color: #f9f9f9;
-  font-weight: bold;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 20px;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
-}
+    @media (max-width: 768px) {
+      .table {
+        min-width: 700px;
+      }
+    }
 
   </style>
 </head>
 <body>
 
-  <header class="dashboard-header">
-    <h1>Аялагчдын Бүртгэлийн Систем</h1>
-    <p>Үндэсний болон олон улсын аялагчдыг хялбар бүртгэнэ.</p>
-  </header>
-
-  <section class="filters">
-    <div class="filter-group">
-      <label for="driver">Жолооч</label>
-      <select id="driver"><option>Жолооч</option></select>
-
-      <label for="guide">Хөтөч</label>
-      <select id="guide"><option>Хөтөч</option></select>
-
-      <input type="text" placeholder="Хөтчийн нэр">
-      <input type="text" placeholder="Машины дугаар">
-      <select><option>Тур Оператор Компани</option></select>
-      <select><option>Тээврийн хэрэгсэл</option></select>
-    </div>
-  </section>
-
-  <section class="country-selector">
-    <h2>Улс сонгох</h2>
-    <div class="counter-box">
-      <p>Жуулчны тоо Нэмэх</p>
-      <div class="counter">1</div>
-      <button>Reset</button>
+  <div class="container">
+    <div class="header-tabs">
+      <div class="tab">Өнөөдөр</div>
+      <strong>Сүүлийн 7 хоног</strong>
+      <strong>Сүүлийн 1 сар</strong>
     </div>
 
-    <div class="country-flags">
-      <!-- Example flags -->
-      <img src="china.png" alt="Хятад">
-      <img src="russia.png" alt="Орос">
-      <!-- Add more flags here -->
-    </div>
-
-    <div class="summary-box">
-      <p>Жуулчны тоо: <strong>16</strong></p>
-      <p>Төлөх дүн: <strong>160,000₮</strong></p>
-      <button class="pay-button">Төлбөр хийх</button>
-    </div>
-  </section>
-
-  <section class="registrations">
-    <h2>Сүүлийн бүртгэлүүд</h2>
-
-    <div class="table-header">
-      <button>Өнөөдөр</button>
-      <span>Сүүлийн 7 хоног</span>
-      <span>Сүүлийн 1 сар</span>
-    </div>
-
-    <table>
+    <table class="table">
       <thead>
         <tr>
           <th>Огноо</th>
@@ -261,7 +105,39 @@ footer a {
         </tr>
       </thead>
       <tbody>
-        <!-- Dynamic rows go here -->
+        <tr>
+          <td>05/01/2025</td>
+          <td>УБА 9985</td>
+          <td>Mid size Crowwover</td>
+          <td>1</td>
+          <td>1</td>
+          <td>New Juulchin Tour</td>
+          <td>16</td>
+          <td>Korean(6), Russia(10)</td>
+          <td>233,000₮</td>
+        </tr>
+        <tr>
+          <td>05/01/2025</td>
+          <td>УБА 9985</td>
+          <td>Motorcycle</td>
+          <td>1</td>
+          <td>1</td>
+          <td>Guru Travel</td>
+          <td>2</td>
+          <td>Korean(6), Russia(10)</td>
+          <td>233,000₮</td>
+        </tr>
+        <tr>
+          <td>05/01/2025</td>
+          <td>УБА 9985</td>
+          <td>bus</td>
+          <td>1</td>
+          <td>1</td>
+          <td>New Juulchin Tour</td>
+          <td>16</td>
+          <td>Korean(6), Russia(10)</td>
+          <td>233,000₮</td>
+        </tr>
         <tr>
           <td>05/01/2025</td>
           <td>УБА 9985</td>
@@ -276,20 +152,22 @@ footer a {
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="5">Нийт</td>
+          <td colspan="3">Нийт</td>
           <td>4</td>
+          <td>4</td>
+          <td></td>
           <td>64</td>
           <td></td>
           <td>1,233,000₮</td>
         </tr>
       </tfoot>
     </table>
-  </section>
 
-  <footer>
-    <a href="#">Бүртгэл сэргээх</a> | 
-    <a href="#">Статистик харах</a>
-  </footer>
+    <div class="footer-links">
+      <a href="#">Бүртгэл сэлгэх</a>
+      <a href="#">Статистик харах 📈</a>
+    </div>
+  </div>
 
 </body>
 </html>
