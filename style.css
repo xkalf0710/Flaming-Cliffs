@@ -457,21 +457,21 @@ body {
     }
 
   .content {
-  flex: 1 1 500px;
-  }
+    flex: 1 1 500px;
+    }
 
-  h2 {
-  color: #5b2c06;
-  border-bottom: 2px solid #bda89e;
-  padding-bottom: 8px;
-  margin-bottom: 20px;
-  }
+    h2 {
+    color: #5b2c06;
+    border-bottom: 2px solid #bda89e;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    }
 
-  .fees, .projects {
-  margin-left: 20px;
-  margin-bottom: 20px;
-  list-style-type: disc;
-  }
+    .fees, .projects {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    list-style-type: disc;
+    }
 
   .fees li {
   margin-bottom: 5px;
