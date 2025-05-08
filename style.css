@@ -326,135 +326,135 @@ body {
     align-items: center;
     justify-content: center;
   }
-.gallery {
+  .gallery {
+      display: none;
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
+      gap: 10px;
+      padding: 1rem;
+  }
+  .big-picture {
+    display: none;
+    width: 90vw;
+    height: 20vh;
+    object-fit: cover;
+    border: 0.4rem solid #744017;
+    /* margin-bottom: 10px; */
+    border-radius: 1rem;
+    margin-bottom: 20px;
+  }
+  .small-pictures {
     display: none;
     display: flex;
+    gap: 30px;
+    /* margin-top: 5vh; */
     flex-direction: column;
-    /* align-items: center; */
-    gap: 10px;
-    padding: 1rem;
-}
-.big-picture {
-  display: none;
-  width: 90vw;
-  height: 20vh;
-  object-fit: cover;
-  border: 0.4rem solid #744017;
-  /* margin-bottom: 10px; */
-  border-radius: 1rem;
-  margin-bottom: 20px;
-}
-.small-pictures {
-  display: none;
-  display: flex;
-  gap: 30px;
-  /* margin-top: 5vh; */
-  flex-direction: column;
-  /* margin-top: 20vh; */
-}
-.small-pictures img {
-  width: 22vw;
-  height: 10vh;
-  border-radius: 1rem;
-  border: 0.2rem solid #744017;
-  object-fit: cover;
-  cursor: pointer;
-  transition: transform 0.2s;
-  display: none;
-}
-.small-pictures img:hover {
-  transform: scale(1.1);
-  display: none;
-
-}
-.blt {
-    margin: 0px 10px;
-}
-.info-plus {
-    display: none;
-  display: flex;
-  flex-direction: column;
-  font-size: 20px;
-}
-.gallery h1 {
-    display: none;
-  font-size: 1.5rem;
-  color: #744017;
-  margin: 0;
-}
-.gallery p {
-    display: none;
-  text-align: justify;
-  font-size: 20px;
-  /* padding-right: 5vw; */
-}
-.info-text li {
-    display: none;
-  padding-right: 5vw;
-  text-align: justify;
-  list-style: none;
-}
-.bold {
-  font-weight: bold;
-}
-.btm-divider {
-  position: sticky;
-  bottom: 400.55vh;
-  max-width: 100%;
-  height: auto;
-  box-shadow: #fff 0px 10px;
-}
-
-.frame-2 {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-left: 10px;
-}
-.frame-3 {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-left: 10px;
-}
-.frame-4 {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-left: 10px;
-}
-.btm-divider-wt {
-  position: relative;
-  /* top: 200px; */
-  width: 100%;
-  height: auto;
-  box-shadow: #fff 0px -10px;
-}
-.divider-wt {
-  /* position: relative; */
-  /* bottsom: 100px; */
-  top: 64px;
-  width: 100%;
-  height: auto;
-  box-shadow: #FFF4E0 0px 10px;
-}
-.visitor {
-  background: #FFF4E0;
-}
-.visitor p {
-  margin: 0;
-  margin-top: 5px;
-}
-
-.entry-fees {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 20px;
-  display: flex;
-  gap: 40px;
-  border-top: 3px solid #5b2c06;
-  flex-wrap: wrap;
+    /* margin-top: 20vh; */
   }
+  .small-pictures img {
+    width: 22vw;
+    height: 10vh;
+    border-radius: 1rem;
+    border: 0.2rem solid #744017;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: none;
+  }
+  .small-pictures img:hover {
+    transform: scale(1.1);
+    display: none;
+
+  }
+  .blt {
+      margin: 0px 10px;
+  }
+  .info-plus {
+      display: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+  }
+  .gallery h1 {
+      display: none;
+    font-size: 1.5rem;
+    color: #744017;
+    margin: 0;
+  }
+  .gallery p {
+      display: none;
+    text-align: justify;
+    font-size: 20px;
+    /* padding-right: 5vw; */
+  }
+  .info-text li {
+      display: none;
+    padding-right: 5vw;
+    text-align: justify;
+    list-style: none;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .btm-divider {
+    position: sticky;
+    bottom: 400.55vh;
+    max-width: 100%;
+    height: auto;
+    box-shadow: #fff 0px 10px;
+  }
+
+  .frame-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 10px;
+  }
+  .frame-3 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 10px;
+  }
+  .frame-4 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 10px;
+  }
+  .btm-divider-wt {
+    position: relative;
+    /* top: 200px; */
+    width: 100%;
+    height: auto;
+    box-shadow: #fff 0px -10px;
+  }
+  .divider-wt {
+    /* position: relative; */
+    /* bottsom: 100px; */
+    top: 64px;
+    width: 100%;
+    height: auto;
+    box-shadow: #FFF4E0 0px 10px;
+  }
+  .visitor {
+    background: #FFF4E0;
+  }
+  .visitor p {
+    margin: 0;
+    margin-top: 5px;
+  }
+
+  .entry-fees {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    border-top: 3px solid #5b2c06;
+    flex-wrap: wrap;
+    }
 
   .content {
   flex: 1 1 500px;
