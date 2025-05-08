@@ -113,13 +113,14 @@ body {
     padding: 8px 12px;
     border-radius: 6px;
     cursor: pointer;
+   
   }
 
   .btn.reset {
     background-color: #ccc;
     color: #000;
     margin-top: 10px;
-    text-align: center;
+    
   }
 
   select {
