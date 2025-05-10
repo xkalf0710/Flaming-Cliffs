@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="mn">
 <head>
@@ -6,6 +7,142 @@
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <title>Аялалын Бүртгэлийн Систем</title>
   <link rel="stylesheet" href="home.css">
+
+  <style>
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px;
+      gap: 20px;
+    }
+
+    .box, .selector, .summary {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .box {
+      width: 120px;
+      text-align: center;
+    }
+
+    .box h2 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .box .number {
+      font-size: 28px;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    .selector {
+      flex-grow: 1;
+    }
+
+    .selector select {
+      width: 300px;
+      padding: 8px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .select-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    select {
+      padding: 8px;
+      font-size: 16px;
+      width: 300px;
+    }
+
+    .add-btn {
+      padding: 10px 12px;
+      background: white;
+      border: none;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .flag-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .flag-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f9f9f9;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+    }
+
+    .flag-item img {
+      width: 24px;
+      height: 16px;
+    }
+
+    .summary {
+      width: 220px;
+    }
+
+    .summary h3 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    .summary p {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    .summary .price {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .summary .btn {
+      background: orange;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .topbar h2{
+    margin: 0;
+    color: white;
+  }
+
+  .clear{
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+  }
+
+  </style>
 </head>
 <body>
   <div class="container">
@@ -33,49 +170,61 @@
     </div>
 
 
+
     <div class="topbar">
       <h2>🌐 Улс сонгох</h2>
       <span class="clear" onclick="clearAll()">
         ✕ Clear all
       </span>
     </div>
-
-    <div class="main">
-      <!-- Tourist Counter -->
+    
+    
+    <div class="wrapper">
       <div class="box">
-        <h3>Жуулчдын тоо <br> Нэмэх</h3>
-        <div id="touristCount" style="font-size:  32px; text-align: center;">
-          1
-        </div>
-        <button class="btn reset" onclick="resetTourists()">Reset</button>
+        <h2>Жуулчдын тоо<br>Нэмэх</h2>
+        <div class="number">1</div>
+        <button onclick="resetCount()">Reset</button>
       </div>
-
-      <!-- Flag Selector -->
-
-      <div class="box" style="width: 500px;">
-        <div class="controls">
+    
+      <div class="selector">
+        <div class="select-row">
           <select id="countrySelect">
             <option value="">Бусад улс сонгох</option>
-            <option value="Турк">Турк</option>
-            <option value="Нидерланд">Нидерланд</option>
+            <option value="china">Хятад</option>
+            <option value="russia">Орос</option>
+            <option value="japan">Япон</option>
+            <option value="france">Франц</option>
+            <option value="korea">Солонгос</option>
+            <option value="usa">АНУ</option>
+            <option value="kazakhstan">Казахстан</option>
+            <option value="ukraine">Украйн</option>
+            <option value="italy">Итали</option>
+            <option value="germany">Герман</option>
           </select>
-          <button class="btn" onclick="addCountry()">＋</button>
+          <button class="add-btn">+</button>
         </div>
-
-        <div class="flag-grid" id="flagsContainer">
-          <!-- Flags with countries -->
+    
+        <div class="flag-grid">
+          <div class="flag-item"><img src="https://flagcdn.com/w40/cn.png" alt="Хятад"> Хятад</div>
+          <div class="flag-item"><img src="https://flagcdn.com/w40/ru.png" alt="Орос"> Орос</div>
+          <div class="flag-item"><img src="https://flagcdn.com/w40/jp.png" alt="Япон"> Япон</div>
+          <div class="flag-item"><img src="https://flagcdn.com/w40/fr.png" alt="Франц"> Франц</div>
+          <div class="flag-item"><img src="https://flagcdn.com/w40/kr.png" alt="Солонгос"> Солонгос</div>
+          <div class="flag-item"><img src="https://flagcdn.com/w40/us.png" alt="АНУ"> АНУ</div>
+          <div class="flag-item"><img src="https://flagcdn.com/w40/kz.png" alt="Казахстан"> Казахстан</div>
+          <div class="flag-item"><img src="https://flagcdn.com/w40/ua.png" alt="Украйн"> Украйн</div>
+          <div class="flag-item"><img src="https://flagcdn.com/w40/it.png" alt="Итали"> Итали</div>
+          <div class="flag-item"><img src="https://flagcdn.com/w40/de.png" alt="Герман"> Герман</div>
         </div>
-        <div class="summary" id="selectedSummary">Хятад (6), Орос (10)</div>
       </div>
-
-
-       <!-- Summary and Payment -->
-      <div class="box">
-        <p><strong>Жуулчдын тоо:</strong> <span id="totalTourists">16</span></p>
-        <p><strong>Төлөх дүн:</strong> <span id="totalCost">160,000₮</span></p>
-        <p style="font-size: 12px; color: #555;">10,000₮ × (10+6)</p>
-        <button class="btn" onclick="alert('Төлбөр хийгдлээ')">Төлбөр хийх</button>
+    
+      <div class="summary">
+        <h3>Жуулчдын тоо: <strong>16</strong></h3>
+        <p>Төлөх дүн: <span class="price">160,000₮</span></p>
+        <p>10,000₮ * (10+6)</p>
+        <button class="btn">Төлбөр хийх</button>
       </div>
+    </div>
 
 
 
@@ -241,6 +390,8 @@
       selectedCountries = {};
       renderFlags();
     }
+
+
 
     renderFlags();
   </script>
