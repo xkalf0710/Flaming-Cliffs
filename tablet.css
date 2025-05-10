@@ -1,384 +1,321 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "CustomFont", Helvetica;
-    box-sizing: border-box;
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: "CustomFont", Helvetica;
+      box-sizing: border-box;
+    }
+  ul {
+    padding-inline-start: 20px;
+    text-align: justify;
   }
-ul {
-  padding-inline-start: 20px;
-  text-align: justify;
-}
-li {
-  text-align: justify;
-}
-  .navbar {
+  li {
+    text-align: justify;
+  }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #f0f0f0;
+      padding: 10px 20px;
+      /* width: 100%; */
+    }
+
+    .menu {
+      display: none;
+      flex-direction: row;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 3rem;
+      right: 0;
+      width: 100%;
+      font-size: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      border-bottom: 1px solid #555;
+      flex: 1;
+      text-align: center;
+    }
+
+    .menu a:hover {
+      background-color: #555;
+    }
+
+    .hamburger {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+    .logo img {
+      width: 30px;
+      height: 30px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      margin-right: 0rem;
+    }
+    .explore {
+      background: url('img/DJI_20240813193714_0038_D.00_01_28_21.Still044\ 1.png') no-repeat center center/cover;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .explore_photo{
+      background: url('img/Photo\ &\ video\ gallery/photo and video gallery top mobile.jpg') no-repeat center center/cover;
+      width: 100%;
+      height: 60.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .explore-about {
+      background: url('img/About\ us\ Top\ mobile.jpg') no-repeat center center/cover;
+      width: 100%;
+      height: 60.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .explore-3 {
+      background: url('img/learn\ more\ detail\ Top\ mobile.jpg') no-repeat center center/cover;
+      width: 100%;
+      height: 60.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .exploree{
+      background: url('img/Camel\ Caravan-1.jpg') no-repeat center center/cover;
+      width: 100%;
+      height: 60.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .explore-live{
+      background: url('img/live\ stats\ Top\ mobile.jpg') no-repeat center center/cover;
+      width: 100%;
+      height: 60.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .explore-learn{
+      background: url('img/learn\ more\ detail\ Top\ mobile.jpg') no-repeat center center/cover;
+      width: 100%;
+      height: 60.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    .collapsible-container {
+      max-height: 70%;
+      max-width: 70%; /* Initial width */
+      font-family: "CustomFont", Helvetica;
+      border-radius: 1.25rem;
+      display: flex;
+      overflow: hidden;
+      cursor: pointer;
+      transition: width 0s ease-out; /* Smooth expansion */
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      margin: 5rem;
+      position: absolute;
+    }
+    .collapsible-container h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+        margin: 0px;
+    }
+    .collapsible-container p {
+        font-size: 1.375rem;
+        line-height: 2rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-align: justify;
+    }
+    .collapsible-header {
+      color: #fff;
+      text-align: justify;
+      white-space: nowrap;
+      text-wrap: wrap;
+    }
+    .collapsible-content {
+      display: none;
+      text-wrap: wrap;
+      text-align: justify;
+      color: #fff;
+    }
+    .collapsible-container.expanded {
+      max-width: 70%;
+      max-height: 69%;
+    }
+    .collapsible-container.expanded .collapsible-content {
+      display: inline;
+    }
+    .divider {
+      position: sticky;
+      top: 400.55vh;
+      max-width: 100%;
+      height: auto;
+      box-shadow: #FFF4E0 0px 10px;
+  }
+  .btn-or {
+      font-size: 1rem;
+      background: #FF5722;
+      padding: 0.3rem;
+      border-radius: 1rem;
+      border: #FF5722 solid 1px;
+      margin-right: 1rem;
+      /* margin-bottom: 0.5rem; */
+      width: 220px;
+      /* max-width: 160px; */
+      /* text-align: center; */
+  }
+  .fossil-info .btn-simp {
+    align-self: flex-end;
+  }
+  .btn-simp {
+      font-size: 1rem;
+      border: #fff solid 1px;
+      border-radius: 1rem;
+      text-align: center;
+      padding: 0.3rem;
+      width: 149px;
+      max-width: 160px;
+      /* width: 50%; */
+  }
+  .discover {
+      background: #FFF4E0;
+  }
+  .video {
+      display: flex;
+      width: 100vw;
+      height: 50vh;
+      align-items: center;
+      justify-content: center;
+  }
+  .video iframe{
+      width: 80%;
+      height: 80%;
+      border: #744017 solid 0.7rem;
+      border-radius: 1rem;
+  }
+  .discover-text h1 {
+      font-size: 37px;
+      color: #744017;
+      text-align: center;
+      width: 70vw;
+      align-self: center;
+  }
+  .discover-text p {
+    font-size: 22px;
+  }
+  .discover-text {
+      padding: 2rem;
+      text-align: justify;
+      padding-top: 0rem;
+      padding: 9vw;
+      padding-top: 0px;
+      display: flex;
+      flex-direction: column;
+  }
+  .gallery-2{
+    padding: 20px;
+  }  
+
+  .info-plus{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #f0f0f0;
-    padding: 10px 20px;
-    /* width: 100%; */
   }
 
-  .menu {
-    display: none;
-    flex-direction: row;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 3rem;
-    right: 0;
-    width: 100%;
-    font-size: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .menu a {
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    border-bottom: 1px solid #555;
-    flex: 1;
+  .info-plus .big{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
-  .menu a:hover {
-    background-color: #555;
+  .info-text-2 h1{
+    font-size: 24px;
+    margin-bottom: 10px;
   }
 
-  .hamburger {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  .info-text-2 p{
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding: 0 10px;
   }
 
-  .hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-  }
-  .logo img {
-    width: 30px;
-    height: 30px;
-  }
-  .logo {
+  .list{
     display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-    margin-right: 0rem;
-  }
-  .explore {
-    background: url('img/DJI_20240813193714_0038_D.00_01_28_21.Still044\ 1.png') no-repeat center center/cover;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  .explore_photo{
-    background: url('img/Photo\ &\ video\ gallery/photo and video gallery top mobile.jpg') no-repeat center center/cover;
-    width: 100%;
-    height: 60.5rem;
-    display: flex;
-    flex-direction: column;
-  }
-  .explore-about {
-    background: url('img/About\ us\ Top\ mobile.jpg') no-repeat center center/cover;
-    width: 100%;
-    height: 60.5rem;
-    display: flex;
-    flex-direction: column;
-  }
-  .explore-3 {
-    background: url('img/learn\ more\ detail\ Top\ mobile.jpg') no-repeat center center/cover;
-    width: 100%;
-    height: 60.5rem;
-    display: flex;
-    flex-direction: column;
+    align-items: flex-start;
+    margin:  10px 0;
+    padding: 0 10px;
   }
 
-  .exploree{
-    background: url('img/Camel\ Caravan-1.jpg') no-repeat center center/cover;
-    width: 100%;
-    height: 60.5rem;
-    display: flex;
-    flex-direction: column;
+  .blt{
+    margin-right: 10px;
+    font-size: 20px;
+    color: #333;
   }
 
-  .explore-live{
-    background: url('img/live\ stats\ Top\ mobile.jpg') no-repeat center center/cover;
-    width: 100%;
-    height: 60.5rem;
-    display: flex;
-    flex-direction: column;
+  .info{
+    font-size: 15px;
+    text-align: left;
   }
 
-  .explore-learn{
-    background: url('img/learn\ more\ detail\ Top\ mobile.jpg') no-repeat center center/cover;
-    width: 100%;
-    height: 60.5rem;
-    display: flex;
-    flex-direction: column;
+  .bold{
+    font-weight: bold;
   }
 
-
-  .collapsible-container {
-    max-height: 70%;
-    max-width: 70%; /* Initial width */
-    font-family: "CustomFont", Helvetica;
-    border-radius: 1.25rem;
-    display: flex;
-    overflow: hidden;
-    cursor: pointer;
-    transition: width 0s ease-out; /* Smooth expansion */
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.4);
-    color: #fff;
-    margin: 5rem;
-    position: absolute;
-  }
-  .collapsible-container h1 {
-      font-size: 4rem;
-      line-height: 5rem;
-      margin: 0px;
-  }
-  .collapsible-container p {
-      font-size: 1.375rem;
-      line-height: 2rem;
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
-      text-align: justify;
-  }
-  .collapsible-header {
-    color: #fff;
-    text-align: justify;
-    white-space: nowrap;
-    text-wrap: wrap;
-  }
-  .collapsible-content {
-    display: none;
-    text-wrap: wrap;
-    text-align: justify;
-    color: #fff;
-  }
-  .collapsible-container.expanded {
-    max-width: 70%;
-    max-height: 69%;
-  }
-  .collapsible-container.expanded .collapsible-content {
-    display: inline;
-  }
-  .divider {
-    position: sticky;
-    top: 400.55vh;
+  .big-pictures-2 {
     max-width: 100%;
     height: auto;
-    box-shadow: #FFF4E0 0px 10px;
-}
-.btn-or {
-    font-size: 1rem;
-    background: #FF5722;
-    padding: 0.3rem;
-    border-radius: 1rem;
-    border: #FF5722 solid 1px;
-    margin-right: 1rem;
-    /* margin-bottom: 0.5rem; */
-    width: 220px;
-    /* max-width: 160px; */
-    /* text-align: center; */
-}
-.fossil-info .btn-simp {
-  align-self: flex-end;
-}
-.btn-simp {
-    font-size: 1rem;
-    border: #fff solid 1px;
-    border-radius: 1rem;
-    text-align: center;
-    padding: 0.3rem;
-    width: 149px;
-    max-width: 160px;
-    /* width: 50%; */
-}
-.discover {
-    background: #FFF4E0;
-}
-.video {
-    display: flex;
-    width: 100vw;
-    height: 50vh;
-    align-items: center;
-    justify-content: center;
-}
-.video iframe{
-    width: 80%;
-    height: 80%;
-    border: #744017 solid 0.7rem;
-    border-radius: 1rem;
-}
-.discover-text h1 {
-    font-size: 37px;
-    color: #744017;
-    text-align: center;
-    width: 70vw;
-    align-self: center;
-}
-.discover-text p {
-  font-size: 22px;
-}
-.discover-text {
-    padding: 2rem;
-    text-align: justify;
-    padding-top: 0rem;
-    padding: 9vw;
-    padding-top: 0px;
-    display: flex;
-    flex-direction: column;
-}
-.gallery {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    gap: 10px;
-    padding: 9vw;
-  }
-
-  .big-picture {
-    width: 81vw;
-    height: 30vh;
-    object-fit: cover;
-    border: 0.4rem solid #744017;
-    /* margin-bottom: 10px; */
-    border-radius: 1rem;
-    margin-bottom: 20px;
-    align-self: center;
-  }
-
-  .small-pictures {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2.0vw;
-    /* margin-top: 5vh; */
-    flex-direction: row;
-    width: 81vw;
-    align-items: center;
-    justify-content: center;
-    /* margin-top: 20vh; */
-    flex: 1;
-  }
-
-  .small-pictures img {
-    width: 14vw;
-    height: 10vh;
-    border-radius: 1rem;
-    border: 0.2vw solid #744017;
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-
-  .small-pictures img:hover {
-    transform: scale(1.1);
-  }
-  .info-plus {
-    display: flex;
-    font-size: 20px;
-    flex-direction: column-reverse;
-  }
-  .info-text {
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    font-size: 22px;
-  }
-  .gallery h1 {
-    font-size: 37px;
-    color: #744017;
-    margin: 0;
-    text-align: center;
-  }
-  .gallery p {
-    text-align: justify;
-    font-size: 22px;
-    /* padding-right: 5vw; */
-  } 
-  .gallery-2 {
-    display: none;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    gap: 10px;
-    padding: 1rem;
-  }
-
-  .big-picture-2 {
-    display: none;
-    width: 80vw;
-    height: 20vh;
-    object-fit: cover;
-    border: 0.4rem solid #744017;
-    /* margin-bottom: 10px; */
-    border-radius: 1rem;
-    margin-bottom: 20px;
-    align-self: center;
+    margin: 20px 0;
+    border-radius: 8px;
   }
 
   .small-pictures-2 {
-    display: none;
     display: flex;
-    gap: 30px;
-    /* margin-top: 5vh; */
-    flex-direction: column;
-    /* margin-top: 20vh; */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0;
   }
 
   .small-pictures-2 img {
-    display: none;
-    width: 22vw;
-    height: 10vh;
-    border-radius: 1rem;
-    border: 0.2rem solid #744017;
-    object-fit: cover;
+    width: 100px;
+    height: auto;
+    border-radius: 6px;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.3s ease;
   }
 
   .small-pictures-2 img:hover {
-    display: none;
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
-  .info-plus-2 {
-    display: none;
-    display: flex;
-    font-size: 20px;
-  }
-  .gallery-2 {
-    display: none;
-    padding: 2rem;
-  }
-  .gallery-2 h1 {
-    display: none;
-    font-size: 1.5rem;
-    color: #744017;
-    margin: 0;
-  }
-  .gallery-2 p {
-    display: none;
-    text-align: justify;
-    font-size: 20px;
-    /* padding-right: 5vw; */
-  }
-  .info-text-2 .list {
-    display: none;
-    padding-right: 5vw;
-    text-align: justify;
-    list-style: none;
-  }
-  .bold {
-    font-weight: bold;
-  }
+
+
+
   .btm-divider {
     position: sticky;
     bottom: 400.55vh;

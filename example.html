@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        /* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.cntr {
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Gallery layout */
+.gallery,
+.gallery-2 {
+  margin-top: 20px;
+}
+
+.info-plus {
+  margin-top: 15px;
+}
+
+.info-text ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.info-text ul li {
+  margin-bottom: 10px;
+}
+
+/* Custom list with bullets */
+.list {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.blt {
+  margin-right: 8px;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.info {
+  flex: 1;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* Big and small image section */
+.big {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.big-picture-2 {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+/* Small picture thumbnails */
+.small-pictures-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.small-pictures-2 img {
+  width: 30%;
+  max-width: 100px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .big {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .info-text-2 {
+    flex: 1;
+    padding-right: 20px;
+  }
+
+  .big-picture-2 {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .small-pictures-2 {
+    justify-content: flex-start;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+    </style>
+    <body>
+        <div class="info cntr">
+            <img class="btm-divider" src="img/btm-divider.png" alt="">
+            <div class="gallery-2">
+                <div class="info-plus">
+                    <div class="big">
+                    <div class="info-text-2">
+                        <h1>The Flaming Cliffs Information Center</h1>
+                        <p>The Flaming Cliffs Information Center serves as the gateway to your journey. Here, you’ll find everything you need to deepen your understanding of this remarkable destination</p>
+                        <div class="list">
+                            <div class="blt">&#8226</div>
+                            <div class="info">
+                            <span class="bold">Documentary</span>: Start with an immersive film that brings the story of the Flaming Cliffs to life.
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="blt">&#8226</div>
+                            <div class="info">
+                            <span class="bold">Coffee Shop</span>: Relax and refresh with a variety of local and international beverages</div>
+                        </div>
+                        <div class="list">
+                            <div class="blt">&#8226</div>
+                            <div class="info">
+                            <span class="bold">Dining Area</span>: Savor delicious meals prepared with care, offering a taste of Mongolia.
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="blt">&#8226</div>
+                            <div class="info">
+                            <span class="bold">Souvenir Shop</span>: Take a piece of the Flaming Cliffs home with beautifully crafted local goods.
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="blt">&#8226</div>
+                            <div class="info">
+                            <span class="bold">Exhibition Hall</span>: Explore a wealth of information through engaging displays, showcasing the region’s history, ecology, and preservation efforts.
+                            </div>
+                        </div>
+                    </div>
+                    <img id="big-picture-2" src="img/Information Center/Information Center- (1).png" alt="Big Picture" class="big-picture-2" >
+                </div>
+                    <div class="small-pictures-2">
+                        <img src="img/Information Center/Information Center- (3).png" alt="Small 1" data-big="img/Information Center/Information Center- (3).png">
+                        <img src="img/Information Center/Information Center- (4).png" alt="Small 2" data-big="img/Information Center/Information Center- (4).png">
+                        <img src="img/Information Center/Information Center- (7).png" alt="Small 3" data-big="img/Information Center/Information Center- (7).png">
+                        <img src="img/Information Center/Information Center- (9).png" alt="Small 4" data-big="img/Information Center/Information Center- (9).png">
+                        <img src="img/Information Center/Information Center- (1).png" alt="Small 5" data-big="img/Information Center/Information Center- (1).png">
+                    </div>
+                </div>
+              </div>
+        </div>
+    </body>
+</html>
