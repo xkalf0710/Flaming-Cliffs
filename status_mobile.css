@@ -255,21 +255,7 @@ h3 {
       margin: 20px auto;
   }
 
-  .card {
-      max-width: 100%;
-      flex-direction: column;
-      gap: 10px;
-      padding: 15px;
-  }
-
-  .card img {
-      width: 50px;
-      height: 50px;
-  }
-
-  .chart-container {
-      max-width: 100%;
-  }
+  
 
   .dashboard {
       flex-direction: column;
@@ -310,14 +296,9 @@ h3 {
       gap: 5px;
   }
 
-  .card {
-      padding: 10px;
-  }
+  
 
-  .card img {
-      width: 40px;
-      height: 40px;
-  }
+
 
   .chart-container {
       padding: 15px;
