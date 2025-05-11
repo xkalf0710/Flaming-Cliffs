@@ -142,6 +142,47 @@
       color: white;
     }
 
+
+    @media (max-width: 768px){
+      .wrapper{
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .box{
+        width: 100%;
+      }
+
+      .selector select{
+        width: 100%;
+      }
+
+      .select-row{
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .summary{
+        width: 100%;
+      }
+
+      .flag-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .topbar h2,
+      .clear {
+        color: #333;
+      }
+
+
+    }
+
   </style>
 </head>
 <body>
