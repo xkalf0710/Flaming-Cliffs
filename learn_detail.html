@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="tablet.css" media="screen and (max-width: 1449px) and (min-width: 768px)">
     <link rel="stylesheet" href="style.css" media="screen and (min-width: 1450px)">
     <link rel="stylesheet" href="global.css">
-  <title>Flaming Cliffs History</title>
+  <title>Learn Details</title>
   <style>
       .content-section {
         margin-bottom: 60px;
@@ -98,12 +98,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    .play-button::before {
-      content: '▶';
-      font-size: 1.5rem;
-      color: #800080;
     }
 
     .video-caption {
@@ -198,6 +192,7 @@
         display: none;
       }
     }
+
     h2 {
       font-size: 28px;
       font-weight: bold;
@@ -258,8 +253,6 @@
       margin: 10px 0 20px 0;
     }
 
-
-
     .hero {
       position: relative;
       width: 100%;
@@ -295,37 +288,38 @@
       font-size: 1.1rem;
     }
 
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-    }
-
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 20px;
+      padding: 10px;
     }
 
     .gallery-item {
       position: relative;
       overflow: hidden;
-      border-radius: 8px;
+      border-radius: 12px;
       cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background: #000;
     }
 
-    .gallery-item img {
-      width: 100%;
-      height: auto;
+    .gallery-item::before {
+      content: "";
       display: block;
-      transition: transform 0.3s ease;
+      padding-top: 56.25%;
     }
 
-    .gallery-item:hover img {
-      transform: scale(1.05);
+    .gallery-item iframe{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
-    .gallery-caption {
+    .gallery-caption{
       position: absolute;
       bottom: 0;
       background: rgba(0,0,0,0.6);
@@ -333,7 +327,27 @@
       width: 100%;
       padding: 10px;
       font-size: 1rem;
+      box-sizing: border-box;
     }
+
+    
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .gallery-caption{
+        font-size: 0.9rem;
+        padding: 8px;
+      }
+    }
+
+    
 
   </style>
 </head>
@@ -413,8 +427,7 @@
       <div class="section-body">
         <div class="image">
           <div class="video-wrapper">
-            <img src="" alt="Video Thumbnail">
-            <button class="play-btn">▶</button>
+            <iframe width="450" height="280" src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=3BjQOMSdzLKOEwPE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
         </div>
         <div class="text">
@@ -503,28 +516,13 @@
     <div class="see-more"><a href="#">See more</a></div>
     <div class="gallery-grid">
       <div class="gallery-item">
-        <img src="896d9945-84fc-4d77-8e6a-77e6a27f26a3.png" alt="Sun shining">
-        <div class="play-button"></div>
-        <div class="video-caption">
-          <span>youtube.com</span>
-          <span>Sun shining</span>
-        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=3BjQOMSdzLKOEwPE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <div class="gallery-item">
-        <img src="896d9945-84fc-4d77-8e6a-77e6a27f26a3.png" alt="Sun shining">
-        <div class="play-button"></div>
-        <div class="video-caption">
-          <span>youtube.com</span>
-          <span>Sun shining</span>
-        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LQ9jJ-l_ryE?si=QaS4CuYfJyH7Q57C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <div class="gallery-item">
-        <img src="896d9945-84fc-4d77-8e6a-77e6a27f26a3.png" alt="Sun shining">
-        <div class="play-button"></div>
-        <div class="video-caption">
-          <span>youtube.com</span>
-          <span>Sun shining</span>
-        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LWYDZuAbYGk?si=5hGq2vWFl3kH7VsN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
     </div>
