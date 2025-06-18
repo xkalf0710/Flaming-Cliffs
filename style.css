@@ -37,6 +37,8 @@ body {
   font-size: 1.5rem;
   margin-left: 10vw;
 }
+
+/* deerh koduudiig solih */
 .explore {
   background: url('img/DJI_20240813193714_0038_D.00_01_28_21.Still044 1.png') no-repeat center center/cover;
   width: 100%;
@@ -170,6 +172,8 @@ body {
     align-items: center;
 } 
 
+
+/* deerh koduudiig zasah  */
 .divider {
     position: absolute;
     bottom: -40px;
