@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: "CustomFont", Helvetica;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 .navbar {
   display: flex;
@@ -40,60 +41,88 @@ body {
 
 /* deerh koduudiig solih */
 .explore {
-  background: url('img/DJI_20240813193714_0038_D.00_01_28_21.Still044 1.png') no-repeat center center/cover;
+  background-image: url('img/DJI_20240813193714_0038_D.00_01_28_21.Still044 1.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 60.5rem;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .explore_photo {
-  background: url('img/photo\ &\ video\ gallery\ top\ desktop.jpg') no-repeat center center/cover;
+  background-image: url('img/photo\ &\ video\ gallery\ top\ desktop.jpg') no-repeat center center/cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 60.5rem;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .explore-about {
-  background: url('img/About\ us\ Top\ desktop.jpg') no-repeat center center/cover;
+  background-image: url('img/About\ us\ Top\ desktop.jpg') no-repeat center center/cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 60.5rem;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .explore-3 {
-  background: url('img/Learn\ more\ detail\ Top\ dektop.jpg') no-repeat center center/cover;
+  background-image: url('img/Learn\ more\ detail\ Top\ dektop.jpg') no-repeat center center/cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 60.5rem;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 
 .exploree{
-  background: url('img/Camel\ Caravan-1.jpg') no-repeat center center/cover;
+  background-image: url('img/Camel\ Caravan-1.jpg') no-repeat center center/cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 60.5rem;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 
 .explore-live{
-  background: url('img/live\ stats\ top\ desktop.jpg') no-repeat center center/cover;
+  background-image: url('img/live\ stats\ top\ desktop.jpg') no-repeat center center/cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 60.5rem;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .explore-learn{
-  background: url('img/Learn\ more\ detail\ Top\ dektop.jpg') no-repeat center center/cover;
+  background-image: url('img/Learn\ more\ detail\ Top\ dektop.jpg') no-repeat center center/cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 60.5rem;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .collapsible-container {
@@ -173,11 +202,7 @@ body {
 
 
 /* deerh koduudiig zasah  */
-.divider {
-    position: absolute;
-    bottom: -12px;
-  
-}
+
 .discover {
     display: flex;
     flex-direction: row;
@@ -750,7 +775,7 @@ body {
   }
 
   .hero {
-    background: url('img/photo\ &\ video\ gallery\ top\ desktop.jpg') no-repeat center center;
+    background-image: url('img/photo\ &\ video\ gallery\ top\ desktop.jpg') no-repeat center center;
     background-size: cover;
     height: 380px;
     display: flex;

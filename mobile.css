@@ -11,9 +11,7 @@ ul {
 
 .collapsible-content {
   display: none;
-
 }
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -150,10 +148,11 @@ ul {
   font-size: 16px;
 }
 .divider {
-  border: none;
-  border-top: 2px solid #5a2c0d;
-  margin: 10px 20px;
-
+  position: sticky;
+  margin-top: 400vh;
+  max-width: 100%;
+  height: auto;
+  z-index: 1;
 }
 .btn-or {
   font-size: 0.7rem;
