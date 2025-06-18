@@ -108,7 +108,6 @@ body {
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
-  /* background: rgba(0, 0, 0, 0.4); */
   color: #fff;
   margin: 15rem;
 }
@@ -165,7 +164,7 @@ body {
     padding: 0.3rem;
     width: 149px;
     height: 39px;
-    background: rgba(0, 0, 0, 0);
+    
     color: #fff;
     display: flex;
     justify-content: center;
@@ -176,10 +175,8 @@ body {
 /* deerh koduudiig zasah  */
 .divider {
     position: absolute;
-    bottom: -40px;
-    max-width: 100%;
-    height: auto;
-    box-shadow: #FFF4E0 0px 10px;
+    bottom: -12px;
+  
 }
 .discover {
     display: flex;
