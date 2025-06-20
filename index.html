@@ -35,13 +35,13 @@
 
     .card1 {
       background: #fff;
-      border-radius: 12px;
+      border-radius: 15px;
       box-shadow:  0 4px 10px rgba(0, 0, 0, 0.05);
-      padding: 20px;
+      padding: 25px;
       display: flex;
       max-width: 500px;
       text-align: center;
-      gap: 15px;
+      gap: 20px;
       z-index: 1;
     }
 
@@ -64,6 +64,8 @@
       font-size: 24px;
       font-weight: bold;
     }
+
+ 
     
     </style>
 </head>
@@ -108,6 +110,7 @@
        
       <div class="experience-section">
         <div class="experience-content">
+          
           <div class="experience-number">01</div>
           <h2 class="experience-title">The Flaming Cliffs Experience</h2>
           <p>
@@ -125,7 +128,34 @@
           <iframe width="560" height="315" src="https://www.youtube.com/embed/nw8pJFkGXsk?si=o0T8F1h-e8SHor46" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
-     
+
+      <div class="experience-section">
+        <div class="experience-content">
+          
+          <div class="experience-number">02</div>
+          <h2 class="experience-title">Gateway to Prehistory</h2>
+          <p>The Flaming Cliffs gained global fame in the 1920s when paleontologist Roy Chapman Andrews unearthed the first dinosaur eggs here. This discovery redefined our understanding of prehistoric life and placed the Flaming Cliffs firmly on the map of world heritage. Today, the site stands as a living museum, connecting us to a time when dinosaurs roamed the earth.</p>
+          <p>Every visitor who steps foot here walks in the footsteps of history, experiencing the thrill of standing where groundbreaking discoveries were made. As you explore the cliffs, you’ll uncover layers of geological and cultural significance that make this place truly unique.</p>
+         <a href="#" class="experience-button">Learn more →</a>
+        </div>
+        <div class="experience-image">
+          <img src="img/image.jpg" alt="Gateway to Prehistory">
+        </div>
+
+        
+      </div>
+
+                <div class="small-pictures-2">
+                  <img src="img/Information Center/Information Center- (3).png" alt="Small 1" data-big="img/Information Center/Information Center- (3).png">
+                  <img src="img/Information Center/Information Center- (4).png" alt="Small 2" data-big="img/Information Center/Information Center- (4).png">
+                  <img src="img/Information Center/Information Center- (7).png" alt="Small 3" data-big="img/Information Center/Information Center- (7).png">
+                  <img src="img/Information Center/Information Center- (9).png" alt="Small 4" data-big="img/Information Center/Information Center- (9).png">
+                  <img src="img/Information Center/Information Center- (1).png" alt="Small 5" data-big="img/Information Center/Information Center- (1).png">
+              </div>
+
+              &nbsp;
+
+
     <div><img class="btm-divider-wt" src="img/btm-divider-wt.png" alt=""></div>
     <div class="banner">
         <h1>INFORMATION CENTER</h1>
@@ -689,6 +719,12 @@ setupGallery('.gallery-2', '.big-picture-2', '.small-pictures-2 img');
           this.classList.toggle('expanded');
         });
       </script>
+
+      <script>
+    function changeImage(imgSrc) {
+      document.getElementById("mainDisplay").src = imgSrc;
+    }
+  </script>
     
 </body>
 </html>

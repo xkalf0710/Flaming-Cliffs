@@ -253,6 +253,21 @@ body {
   display: block;
 }
 
+ .experience-button {
+      display: inline-block;
+      background-color: #f7931e;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 12px 30px;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+.experience-button:hover {
+  background-color: #e67e00;
+}
+
 
 
 .discover {
@@ -355,8 +370,7 @@ body {
   .small-pictures-2 img {
     width: 279px;
     height: 155px;
-    border-radius: 1rem;
-    border: 0.2rem solid #744017;
+    
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.2s;
@@ -503,7 +517,7 @@ body {
   }
   .btm-divider-wt {
     position: relative;
-    /* top: 200px; */
+    top: 200px;
     width: 100%;
     height: auto;
     box-shadow: #fff 0px -10px;
@@ -1130,13 +1144,13 @@ body {
   }
 
   .left-map {
-    flex: 1;
+    flex: 2;
     min-width: 100px;
     text-align: center;
   }
 
   .left-map img {
-    max-width: 50%;
+    max-width: 60%;
     height: auto;
   }
 

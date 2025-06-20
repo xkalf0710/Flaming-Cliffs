@@ -1,157 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flaming Cliffs Navbar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gateway to Prehistory</title>
   <style>
     body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 40px;
-  background: #fff;
-  color: #333;
-}
-
-.section {
-  margin-bottom: 60px;
-}
-
-.section-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 20px;
-}
-
-.section-header.left {
-  flex-direction: row;
-}
-
-.section-header.right {
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-}
-
-.section-number {
-  background-color: #6b3b0c;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.section-header h2 {
-  font-size: 24px;
-  color: #6b3b0c;
-}
-
-.section-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.section-content.reverse {
-  flex-direction: row-reverse;
-}
-
-.text {
-  flex: 1;
-  min-width: 300px;
-}
-
-.media {
-  flex: 1;
-  min-width: 300px;
-}
-
-.media img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.button {
-  display: inline-block;
-  background-color: #f7941d;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 6px;
-  margin-top: 20px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #e68300;
-}
-
-.gallery {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.gallery img {
-  width: calc(25% - 8px);
-  border-radius: 6px;
-  object-fit: cover;
-}
-
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      align-items: center;
+    }
+    .main-image {
+      flex: 1;
+      padding: 20px;
+    }
+    .main-image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+    .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .title h1 {
+      font-size: 32px;
+      color: #6b340f;
+      margin: 0;
+    }
+    .number-box {
+      background: #6b340f;
+      color: #fff;
+      font-size: 28px;
+      padding: 5px 15px;
+      margin-left: 10px;
+      border-radius: 5px;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .button {
+      background-color: #ff9933;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background-color: #e68122;
+    }
+    .thumbnails {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 40px 40px 40px;
+      flex-wrap: wrap;
+    }
+    .thumbnails img {
+      width: 18%;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .thumbnails img:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
 
-<section class="section">
-  <div class="section-header left">
-    <div class="section-number">01</div>
-    <h2>The Flaming Cliffs Experience</h2>
-  </div>
-  <div class="section-content">
-    <div class="text">
-      <p>
-        Nestled in the heart of Mongolia’s Gobi Desert, the Flaming Cliffs beckon adventurers... 
-        [shortened for clarity]
-      </p>
-      <p>
-        From sunrise to sunset, the Flaming Cliffs radiate an otherworldly beauty...
-      </p>
+  <div class="container">
+    <div class="main-image">
+      <img id="mainDisplay" src="img/image.jpg" alt="Main Image">
     </div>
-    <div class="media">
-      <img src="img/video-placeholder.jpg" alt="Video Preview">
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-header right">
-    <h2>Gateway to Prehistory</h2>
-    <div class="section-number">02</div>
-  </div>
-  <div class="section-content reverse">
-    <div class="media">
-      <img src="img/expedition.jpg" alt="Expedition">
-    </div>
-    <div class="text">
-      <p>
-        The Flaming Cliffs gained global fame in the 1920s when paleontologist Roy Chapman Andrews...
-      </p>
-      <p>
-        Every visitor who steps foot here walks in the footsteps of history...
-      </p>
+    <div class="content">
+      <div class="title">
+        <h1>Gateway to Prehistory</h1>
+        <div class="number-box">02</div>
+      </div>
+      <p>The Flaming Cliffs gained global fame in the 1920s when paleontologist Roy Chapman Andrews unearthed the first dinosaur eggs here. This discovery redefined our understanding of prehistoric life and placed the Flaming Cliffs firmly on the map of world heritage. Today, the site stands as a living museum, connecting us to a time when dinosaurs roamed the earth.</p>
+      <p>Every visitor who steps foot here walks in the footsteps of history, experiencing the thrill of standing where groundbreaking discoveries were made. As you explore the cliffs, you'll uncover layers of geological and cultural significance that make this place truly unique.</p>
       <a href="#" class="button">Learn more →</a>
     </div>
   </div>
-  <div class="gallery">
-    <img src="img/thumb1.jpg" alt="">
-    <img src="img/thumb2.jpg" alt="">
-    <img src="img/thumb3.jpg" alt="">
-    <img src="img/thumb4.jpg" alt="">
+
+  <div class="thumbnails">
+    <img src="img/image-1.jpg" alt="Thumbnail 1" onclick="changeImage('thumb1.jpg')">
+    <img src="img/image-2.jpg" alt="Thumbnail 2" onclick="changeImage('thumb2.jpg')">
+    <img src="img/image-3.jpg" alt="Thumbnail 3" onclick="changeImage('thumb3.jpg')">
+    <img src="img/image-4.jpg" alt="Thumbnail 4" onclick="changeImage('thumb4.jpg')">
+    
   </div>
-</section>
+
+  <script>
+    function changeImage(imgSrc) {
+      document.getElementById("mainDisplay").src = imgSrc;
+    }
+  </script>
 
 </body>
 </html>
