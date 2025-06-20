@@ -158,10 +158,9 @@ ul {
 }
 .btn-or {
   font-size: 0.7rem;
-  background: #FF5722;
   padding: 0.3rem;
   border-radius: 1rem;
-  border: #FF5722 solid 1px;
+  border: white solid 1px;
   margin-bottom: 0.5rem;
   width: 156px;
   max-width: 160px;

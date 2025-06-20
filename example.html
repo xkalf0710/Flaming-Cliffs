@@ -3,47 +3,155 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flaming Cliffs</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Flaming Cliffs Navbar</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px;
+  background: #fff;
+  color: #333;
+}
+
+.section {
+  margin-bottom: 60px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.section-header.left {
+  flex-direction: row;
+}
+
+.section-header.right {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.section-number {
+  background-color: #6b3b0c;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.section-header h2 {
+  font-size: 24px;
+  color: #6b3b0c;
+}
+
+.section-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.section-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.media {
+  flex: 1;
+  min-width: 300px;
+}
+
+.media img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.button {
+  display: inline-block;
+  background-color: #f7941d;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e68300;
+}
+
+.gallery {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: calc(25% - 8px);
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+  </style>
 </head>
-<body class="font-sans text-white bg-black">
+<body>
 
-  <!-- Hero Section -->
-  <section class="relative h-screen bg-cover bg-center" style="background-image: url('img/DJI_20240813193714_0038_D.00_01_28_21.Still044\ 1.png');">
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-
-    <!-- Navbar -->
-    <header class="absolute top-0 left-0 w-full z-10 flex items-center justify-between px-10 py-5">
-      <div class="flex items-center gap-3">
-        <img src="img/baynzag logo.png" alt="Logo" class="h-10" />
-        <span class="text-xl font-bold">Flaming Cliffs</span>
-      </div>
-      <nav class="hidden md:flex gap-6 text-sm font-medium">
-        <a href="#" class="hover:text-orange-400">HOME</a>
-        <a href="#" class="hover:text-orange-400">ABOUT</a>
-        <a href="#" class="hover:text-orange-400">FOSSILS & DISCOVERIES</a>
-        <a href="#" class="hover:text-orange-400">LIVE STATS FROM VISITORS</a>
-        <a href="#" class="hover:text-orange-400">PRESERVATION</a>
-        <a href="#" class="hover:text-orange-400">GALLERY</a>
-        <a href="#" class="hover:text-orange-400">CONTACT</a>
-      </nav>
-      <div class="ml-6">
-        <select class="bg-transparent border border-white text-white px-2 py-1 rounded">
-          <option>EN</option>
-          <option>MN</option>
-        </select>
-      </div>
-    </header>
-
-    <!-- Hero Content -->
-    <div class="relative z-10 flex flex-col justify-center h-full px-10 max-w-4xl">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">Explore<br />the Flaming Cliffs</h1>
-      <a href="#" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 transition">
-        Learn About History
-      </a>
+<section class="section">
+  <div class="section-header left">
+    <div class="section-number">01</div>
+    <h2>The Flaming Cliffs Experience</h2>
+  </div>
+  <div class="section-content">
+    <div class="text">
+      <p>
+        Nestled in the heart of Mongolia’s Gobi Desert, the Flaming Cliffs beckon adventurers... 
+        [shortened for clarity]
+      </p>
+      <p>
+        From sunrise to sunset, the Flaming Cliffs radiate an otherworldly beauty...
+      </p>
     </div>
-  </section>
+    <div class="media">
+      <img src="img/video-placeholder.jpg" alt="Video Preview">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-header right">
+    <h2>Gateway to Prehistory</h2>
+    <div class="section-number">02</div>
+  </div>
+  <div class="section-content reverse">
+    <div class="media">
+      <img src="img/expedition.jpg" alt="Expedition">
+    </div>
+    <div class="text">
+      <p>
+        The Flaming Cliffs gained global fame in the 1920s when paleontologist Roy Chapman Andrews...
+      </p>
+      <p>
+        Every visitor who steps foot here walks in the footsteps of history...
+      </p>
+      <a href="#" class="button">Learn more →</a>
+    </div>
+  </div>
+  <div class="gallery">
+    <img src="img/thumb1.jpg" alt="">
+    <img src="img/thumb2.jpg" alt="">
+    <img src="img/thumb3.jpg" alt="">
+    <img src="img/thumb4.jpg" alt="">
+  </div>
+</section>
 
 </body>
 </html>

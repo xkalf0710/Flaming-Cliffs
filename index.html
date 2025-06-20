@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="tablet.css" media="screen and (max-width: 1449px) and (min-width: 768px)">
     <link rel="stylesheet" href="style.css" media="screen and (min-width: 1450px)">
     <link rel="stylesheet" href="global.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Flaming Cliffs</title>
     <style>
       .stats-container {
@@ -112,89 +114,63 @@
     </style>
 </head>
 <body>
-    <div class="explore">
-      <nav class="navbar">
-        
-          <div class="logo">
-            <a href="index.html"><img src="img/baynzag logo.png" alt=""> </a>
-            &nbsp; Flaming Cliffs </div>
-      <div class="hamburger" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    <div class="menu" id="menu">
-      <a href="home.html">HOME</a>
-      <a href="about.html">ABOUT</a>
-      <a href="#fossils">FOSSILS & DISCOVERIES</a>
-      <a href="status.html">LIVE STATUS FROM VISITORS</a>
-      <a href="#preservation">PRESERVATION</a>
-      <a href="#gallery">GALLERY</a>
-      <a href="#contact">CONTACT</a>
-      <a href="login.html">LOGIN</a>
-    </div>
-    </nav>
-        <div class="collapsible-container">
-            <h1>Explore <br>the Flaming Cliffs</h1>
-            
-            <div class="btn">
-                <a href="learn_detail.html"><button class="btn-or">LEARN ABOUT HISTORY</button></a>
-            </div>
-        </div>
-        <!-- <img class="divider" src="img/divider.png" alt=""> -->
-    </div>
-    
-    <section class="container">
-      <div class="main-content">
-        <div class="left1">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/nw8pJFkGXsk?si=o0T8F1h-e8SHor46" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          
-        </div>
-        <div class="right">
-          <div class="title-block">
-            <h2>The Flaming Cliffs Experience</h2>
-            <div class="number-box">01</div>
+      <div class="explore">
+        <nav class="navbar">
+              <div class="logo">
+                <a href="index.html"><img src="img/baynzag logo.png" alt=""> </a>
+                &nbsp; Flaming Cliffs </div>
+          <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
+        <div class="menu" id="menu">
+          <a href="home.html">HOME</a>
+          <a href="about.html">ABOUT</a>
+          <a href="learn_detail.html">FOSSILS & DISCOVERIES</a>
+          <a href="status.html">LIVE STATUS FROM VISITORS</a>
+          <a href="#preservation">PRESERVATION</a>
+          <a href="#gallery">GALLERY</a>
+          <a href="#contact">CONTACT</a>
+          <a href="login.html">LOGIN</a>
+          <select class="bg-transparent border  text-black px-2 py-1 rounded">
+            <option>EN</option>
+            <option>MN</option>
+          </select>
+          &nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;
+        </div>
+        
+        </nav>
+    
+        <div class="collapsible-container">
+              <h1>Explore <br>the Flaming Cliffs</h1>
+              
+              <div class="btn">
+                  <a href="learn_detail.html"><button class="btn-or">LEARN ABOUT HISTORY</button></a>
+              </div>
+        </div>
+      </div>
+       
+      <div class="experience-section">
+        <div class="experience-content">
+          <div class="experience-number">01</div>
+          <h2 class="experience-title">The Flaming Cliffs Experience</h2>
           <p>
-            Nestled in the heart of Mongolia’s Gobi Desert, the Flaming Cliffs beckon adventurers from around the globe.
-            Their fiery red hues, carved by time and wind, are a stunning testament to the power of nature. Famous as the
-            cradle of dinosaur discoveries, this breathtaking landscape whispers stories of ancient worlds and invites you
+            Nestled in the heart of Mongolia's Gobi Desert, the Flaming Cliffs beckon adventurers from around the globe. 
+            Their fiery red hues, carved by time and wind, are a stunning testament to the power of nature. Famous as the 
+            cradle of dinosaur discoveries, this breathtaking landscape whispers stories of ancient worlds and invites you 
             to create unforgettable memories.
           </p>
           <p>
-            From sunrise to sunset, the Flaming Cliffs radiate an otherworldly beauty that captures the imagination. Step
-            into a land of discovery, where history and natural splendor converge in an awe-inspiring experience.
+            From sunrise to sunset, the Flaming Cliffs radiate an otherworldly beauty that captures the imagination. 
+            Step into a land of discovery, where history and natural splendor converge in an awe-inspiring experience.
           </p>
         </div>
-      </div>
-
-      
-      <div class="main-content">
-        <div class="left">
-          <img src="img/Roy chapman Andrews.jpg" alt="Roy Chapman Andrews Expedition" class="main-image" />
-        </div>
-        <div class="right">
-          <div class="title-block">
-            <h2>Gateway to Prehistory</h2>
-            <div class="number-box">02</div>
-          </div>
-          <p>The Flaming Cliffs gained global fame in the 1920s when paleontologist Roy Chapman Andrews unearthed the first dinosaur eggs here. This discovery redefined our understanding of prehistoric life and placed the Flaming Cliffs firmly on the map of world heritage. Today, the site stands as a living museum, connecting us to a time when dinosaurs roamed the earth.</p>
-          <p>Every visitor who steps foot here walks in the footsteps of history, experiencing the thrill of standing where groundbreaking discoveries were made. As you explore the cliffs, you’ll uncover layers of geological and cultural significance that make this place truly unique.</p>
-          <a href="learn_detail.html">
-            <button class="cta-button">Learn more →</button>
-          </a>
+        <div class="experience-image">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/nw8pJFkGXsk?si=o0T8F1h-e8SHor46" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
-
-
-      <div class="image-gallery">
-        <img src="img/Roy chapman Andrews.jpg" alt="Thumbnail 1" />
-        <img src="img/Camel Caravan-2.jpg" alt="Thumbnail 2" />
-        <img src="img/image-2.jpg" alt="Thumbnail 3" />
-        <img src="img/image-3.jpg" alt="Thumbnail 4" />
-        <img src="img/image-4.jpg" alt="Thumbnail 5" />
-      </div>
-    </section>
      
     <div><img class="btm-divider-wt" src="img/btm-divider-wt.png" alt=""></div>
     <div class="banner">
@@ -205,21 +181,7 @@
     <!-- The Flaming Cliffs Information Center -->
     <div class="info cntr">
       <img class="btm-divider" src="img/btm-divider.png" alt="">
-      <!-- <div class="gallery">
-          <h1>The Flaming Cliffs Experience</h1>
-          <p>The Flaming Cliffs Information Center serves as the gateway to your journey. Here, you’ll find everything you need to deepen your understanding of this remarkable destination</p>
-          <div class="info-plus">
-              <div class="info-text">
-                  <ul>
-                  <li><span class="bold">Documentary</span>: Start with an immersive film that brings the story of the Flaming Cliffs to life.</li>
-                  <li><span class="bold">Coffee Shop</span>: Relax and refresh with a variety of local and international beverages</li>
-                  <li><span class="bold">Dining Area</span>: Savor delicious meals prepared with care, offering a taste of Mongolia.</li>
-                  <li><span class="bold">Souvenir Shop</span>: Take a piece of the Flaming Cliffs home with beautifully crafted local goods.</li>
-                  <li><span class="bold">Exhibition Hall</span>: Explore a wealth of information through engaging displays, showcasing the region’s history, ecology, and preservation efforts.</li>
-                  </ul>
-              </div>
-          </div>
-        </div> -->
+      
       <div class="gallery-2">
           <div class="info-plus">
               <div class="big">

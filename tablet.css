@@ -179,10 +179,9 @@
   }
   .btn-or {
       font-size: 1rem;
-      background: #FF5722;
       padding: 0.3rem;
       border-radius: 1rem;
-      border: #FF5722 solid 1px;
+      border: white solid 1px;
       margin-right: 1rem;
       /* margin-bottom: 0.5rem; */
       width: 220px;
