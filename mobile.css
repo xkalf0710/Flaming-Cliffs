@@ -3,6 +3,8 @@ body {
   padding: 0;
   font-family: "CustomFont", Helvetica;
   box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 ul {
   margin-top: 0px;
@@ -67,8 +69,8 @@ ul {
   transition: all 0.3 ease;
 }
 .logo img {
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
 }
 .logo {
   display: flex;
@@ -184,8 +186,25 @@ align-self: flex-end;
 }
 
 .left1 {
-  padding: 5px;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
 }
+.left1 iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+ .number-box {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 3px;
+  }
 
 .video-wrapper {
   padding-bottom: 75%; /* Slightly taller aspect ratio for small screens */
@@ -461,34 +480,23 @@ align-self: flex-end;
     letter-spacing: 2px;
   }
   .legend-banner {
-    position: relative;
-    width: 100%;
     height: 220px;
+    width: 100%;
     background: url('img/uncover\ legendary\ stories\ desktop.jpg') no-repeat center center;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0 1rem;
   }
 
-  .legend-banner::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.25); /* subtle overlay for contrast */
-  }
+  
 
   .legend-banner h1 {
-    position: relative;
-    color: #fff;
-    font-size: 22px;
-    font-weight: 100;
-    letter-spacing: 3px;
-    z-index: 1;
+    font-size: 1.5rem; /* smaller font for mobile */
+    letter-spacing: 0.2rem;
+    padding: 0;
     text-align: center;
   }
+
+
   .section-title {
     display: flex;
     align-items: center;
@@ -1353,15 +1361,40 @@ p {
   display: block;
 }
 
-.title-block h2{
-  font-size: 1rem;
-}
+ .title-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
-.cta-button{
-  margin: 0 auto;
-  display: block;
-  font-size: 1.1rem;
-}
+  .title-block h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #5d3c1c;
+    margin: 0;
+  }
+
+  .number-box {
+    background-color: #5d3c1c;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 20px;
+  }
+
+  .right p {
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .cta-button{
+    background-color: #ff9800;
+    width: 100%;
+    padding: 14px 16px;
+    font: 1.1rem;
+    text-align: center;
+  }
 
 /* .image-gallery img{
   width: calc(20% - 100px);

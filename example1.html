@@ -3,39 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flaming Cliffs Experience</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-white text-gray-800">
-  <section class="max-w-7xl mx-auto px-4 py-10">
-    <div class="flex flex-col md:flex-row items-start md:items-center gap-8">
-      
-      <!-- Text Content -->
-      <div class="md:w-1/2 space-y-4">
-        <div class="flex items-center gap-3">
-          <span class="bg-[#814A2C] text-white px-3 py-1 text-lg font-bold rounded">01</span>
-          <h2 class="text-2xl font-bold text-[#4C2F23]">The Flaming Cliffs Experience</h2>
-        </div>
-        <p class="text-sm leading-relaxed">
-          Nestled in the heart of Mongolia’s Gobi Desert, the Flaming Cliffs beckon adventurers from around the globe. Their fiery red hues, carved by time and wind, are a stunning testament to the power of nature. Famous as the cradle of dinosaur discoveries, this breathtaking landscape whispers stories of ancient worlds and invites you to create unforgettable memories.
-        </p>
-        <p class="text-sm leading-relaxed">
-          From sunrise to sunset, the Flaming Cliffs radiate an otherworldly beauty that captures the imagination. Step into a land of discovery, where history and natural splendor converge in an awe-inspiring experience.
-        </p>
-      </div>
+  <title>The Flaming Cliffs</title>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
 
-      <!-- Video/Image Section -->
-      <div class="relative md:w-1/2">
-        <img src="your-image.jpg" alt="The Flaming Cliffs" class="rounded shadow-md w-full">
-        <button class="absolute inset-0 flex items-center justify-center">
-          <div class="bg-white p-2 rounded-full shadow-lg hover:scale-110 transition">
-            <svg class="w-6 h-6 text-[#814A2C]" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M6 4l10 6-10 6V4z" />
-            </svg>
-          </div>
-        </button>
+  .section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .section-header h2 {
+    font-size: 24px;
+  }
+
+  .number-box {
+    background: #804000;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+  }
+
+  .section-content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .video {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .video img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+  }
+
+  .image-row img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .thumbnail-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .thumbnail-row img {
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex: 1;
+  }
+
+  .alt .section-header {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .alt .section-header h2 {
+    font-size: 22px;
+    color: #804000;
+  }
+
+  .learn-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #f7931e;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+
+  </style>
+</head>
+<body>
+  <section class="section">
+    <div class="section-header">
+      <div class="number-box">01</div>
+      <h2>The Flaming Cliffs Experience</h2>
+    </div>
+    <div class="section-content">
+      <p>
+        Nestled in the heart of Mongolia’s Gobi Desert, the Flaming Cliffs beckon adventurers from around the globe. Their fiery red hues, carved by time and wind, are a stunning testament to the power of nature...
+      </p>
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/nw8pJFkGXsk?si=o0T8F1h-e8SHor46" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-      
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="image-row">
+      <img src="explorer.jpg" alt="Explorer">
+    </div>
+    <div class="section-header alt">
+      <h2>Gateway to Prehistory</h2>
+      <div class="number-box">02</div>
+    </div>
+    <div class="section-content">
+      <p>
+        The Flaming Cliffs gained global fame in the 1920s when paleontologist Roy Chapman Andrews unearthed the first dinosaur eggs here...
+      </p>
+      <a href="#" class="learn-more">Learn more →</a>
+    </div>
+    <div class="thumbnail-row">
+      <img src="thumb1.jpg" alt="">
+      <img src="thumb2.jpg" alt="">
+      <img src="thumb3.jpg" alt="">
+      <img src="thumb4.jpg" alt="">
     </div>
   </section>
 </body>

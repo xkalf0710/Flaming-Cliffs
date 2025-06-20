@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="global.css">
     <title>Flaming Cliffs</title>
     <style>
-       .stats-container {
+      .stats-container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
@@ -62,12 +62,62 @@
       font-size: 24px;
       font-weight: bold;
     }
+
+    @media (max-width: 768px) {
+      .stats-container{
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 12px;
+        margin: 20px auto;
+      }
+
+      .circle-background{
+        width: 180px;
+        height: 180px;
+        border-width: 5px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    @media (min-width: 600px) {
+      .card1 {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 15px;
+        text-align: center;
+        gap: 10px;
+      }
+
+      .card1 img{
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+      }
+
+      .card-content{
+        align-items: center;
+      }
+
+      .card-title{
+        font-size: 14px;
+      }
+
+      .card-value{
+        font-size: 20px;
+      }
+    }
+    
     </style>
 </head>
 <body>
     <div class="explore">
       <nav class="navbar">
-        <div class="logo"><img src="img/baynzag logo.png" alt=""> &nbsp; Flaming Cliffs </div>
+        
+          <div class="logo">
+            <a href="index.html"><img src="img/baynzag logo.png" alt=""> </a>
+            &nbsp; Flaming Cliffs </div>
       <div class="hamburger" onclick="toggleMenu()">
         <div></div>
         <div></div>
@@ -330,19 +380,18 @@
 
 
      <!-- uncover legency  -->
-    <div>
-      <img class="btm-divider" src="img/btm-divider.png" alt="">
-    </div>
-     <div class="legend-banner">
+      <div>
+        <img class="btm-divider" src="img/btm-divider.png" alt="">
+      </div>
+      <div class="legend-banner">
         <h1>UNCOVER LEGENDARY STORIES</h1>
-        <img class="divider" src="img/divider.png" alt="">
-    </div>
+      </div>
+    
     
 
     <!-- Nearby Destinations  -->
 
     <h2 class="section-title">Nearby Destinations</h2>
-
     <div class="card-grid">
         <div class="card">
             <img src="img/Moltsog els.jpg" alt="Molto Els">

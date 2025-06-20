@@ -6,103 +6,44 @@
   <title>Flaming Cliffs</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white/40 text-white">
-
-  <!-- Navbar -->
-  <nav class=" fixed w-full z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16 items-center">
-        <!-- Logo -->
-        <div class="flex items-center space-x-3">
-          <img src="img/baynzag logo.png" alt="Logo" class="h-10">
-          <span class="text-lg font-semibold">Flaming Cliffs</span>
-        </div>
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center space-x-6 text-sm uppercase">
-          <a href="#" class="hover:text-yellow-400">Home</a>
-          <a href="#" class="hover:text-yellow-400">About</a>
-          <a href="#" class="hover:text-yellow-400">Fossils & Discoveries</a>
-          <a href="#" class="hover:text-yellow-400">Live Stats</a>
-          <a href="#" class="hover:text-yellow-400">Preservation</a>
-          <a href="#" class="hover:text-yellow-400">Gallery</a>
-          <a href="#" class="hover:text-yellow-400">Contact</a>
-        </div>
-        <!-- Language Selector -->
-        <div class="hidden md:block">
-          <button class="border border-white px-3 py-1 rounded text-sm hover:bg-white hover:text-black">EN ▾</button>
-        </div>
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
-          <button id="menu-toggle" class="text-white focus:outline-none">
-            ☰
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden px-4 pt-2 pb-4 space-y-2 text-sm bg-black backdrop-blur-md">
-      <a href="#" class="block hover:text-yellow-400">Home</a>
-      <a href="#" class="block hover:text-yellow-400">About</a>
-      <a href="#" class="block hover:text-yellow-400">Fossils & Discoveries</a>
-      <a href="#" class="block hover:text-yellow-400">Live Stats</a>
-      <a href="#" class="block hover:text-yellow-400">Preservation</a>
-      <a href="#" class="block hover:text-yellow-400">Gallery</a>
-      <a href="#" class="block hover:text-yellow-400">Contact</a>
-      <button class="mt-2 border border-white px-3 py-1 rounded text-sm hover:bg-white hover:text-black w-full">EN ▾</button>
-    </div>
-  </nav>
+<body class="font-sans text-white bg-black">
 
   <!-- Hero Section -->
-  <section class="relative pt-16 h-[100vh] md:h-[90vh] w-full">
-    <img src="img/DJI_20240813193714_0038_D.00_01_28_21.Still044 1.png" alt="Flaming Cliffs" class="w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-black/40 flex flex-col justify-center px-8 md:px-16">
-      <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Explore<br>the Flaming Cliffs</h1>
-      <a href="learn_detail.html" class="inline-block border border-white px-6 py-2 rounded text-white hover:bg-white hover:text-black transition duration-300 w-max">
+  <section class="relative h-screen bg-cover bg-center" style="background-image: url('img/DJI_20240813193714_0038_D.00_01_28_21.Still044\ 1.png');">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    <!-- Navbar -->
+    <header class="absolute top-0 left-0 w-full z-10 flex items-center justify-between px-10 py-5">
+      <div class="flex items-center gap-3">
+        <img src="img/baynzag logo.png" alt="Logo" class="h-10" />
+        <span class="text-xl font-bold">Flaming Cliffs</span>
+      </div>
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#" class="hover:text-orange-400">HOME</a>
+        <a href="#" class="hover:text-orange-400">ABOUT</a>
+        <a href="#" class="hover:text-orange-400">FOSSILS & DISCOVERIES</a>
+        <a href="#" class="hover:text-orange-400">LIVE STATS FROM VISITORS</a>
+        <a href="#" class="hover:text-orange-400">PRESERVATION</a>
+        <a href="#" class="hover:text-orange-400">GALLERY</a>
+        <a href="#" class="hover:text-orange-400">CONTACT</a>
+      </nav>
+      <div class="ml-6">
+        <select class="bg-transparent border border-white text-white px-2 py-1 rounded">
+          <option>EN</option>
+          <option>MN</option>
+        </select>
+      </div>
+    </header>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 flex flex-col justify-center h-full px-10 max-w-4xl">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Explore<br />the Flaming Cliffs</h1>
+      <a href="#" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 transition">
         Learn About History
       </a>
     </div>
   </section>
-
-  <section class="max-w-7xl mx-auto px-4 py-10">
-    <div class="flex flex-col md:flex-row items-start md:items-center gap-8">
-      
-      <!-- Text Content -->
-      <div class="md:w-1/2 space-y-4">
-        <div class="flex items-center gap-3">
-          <span class="bg-[#814A2C] text-white px-3 py-1 text-lg font-bold rounded">01</span>
-          <h2 class="text-2xl font-bold text-[#4C2F23]">The Flaming Cliffs Experience</h2>
-        </div>
-        <p class="text-sm leading-relaxed">
-          Nestled in the heart of Mongolia’s Gobi Desert, the Flaming Cliffs beckon adventurers from around the globe. Their fiery red hues, carved by time and wind, are a stunning testament to the power of nature. Famous as the cradle of dinosaur discoveries, this breathtaking landscape whispers stories of ancient worlds and invites you to create unforgettable memories.
-        </p>
-        <p class="text-sm leading-relaxed">
-          From sunrise to sunset, the Flaming Cliffs radiate an otherworldly beauty that captures the imagination. Step into a land of discovery, where history and natural splendor converge in an awe-inspiring experience.
-        </p>
-      </div>
-
-      <!-- Video/Image Section -->
-      <div class="relative md:w-1/2">
-        <img src="your-image.jpg" alt="The Flaming Cliffs" class="rounded shadow-md w-full">
-        <button class="absolute inset-0 flex items-center justify-center">
-          <div class="bg-white p-2 rounded-full shadow-lg hover:scale-110 transition">
-            <svg class="w-6 h-6 text-[#814A2C]" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M6 4l10 6-10 6V4z" />
-            </svg>
-          </div>
-        </button>
-      </div>
-      
-    </div>
-  </section>
-
-  <!-- JavaScript for Mobile Menu -->
-  <script>
-    document.getElementById('menu-toggle').addEventListener('click', function () {
-      const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('hidden');
-    });
-  </script>
 
 </body>
 </html>
