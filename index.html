@@ -12,6 +12,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Flaming Cliffs</title>
     <style>
+      
       .stats-container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -64,9 +65,159 @@
       font-size: 24px;
       font-weight: bold;
     }
-
- 
     
+
+    .container1{
+      display: flex;
+      gap: 40px;
+      max-width: 1100px;
+      margin: auto;
+      align-items: flex-start;
+    }
+
+    .left2{
+      flex: 1;
+    }
+    .left2 img{
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .right1{
+      flex: 1;
+    }
+    .title-section1{
+      display: inline-block;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .title-section1 h1{
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #5d3c1c;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .title-number1{
+      background-color: #5d3c1c;
+      color: white;
+      font-weight: bold;
+      padding: 10px 20px;
+      font-size: 1.5rem;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    .right1 p{
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .button{
+      background-color: #f7a531;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: background 0.3s;
+      
+      
+    }
+
+    .button:hover {
+       background: #d68622;
+    }
+    .thumbnails1 {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        gap: 10px;
+    }
+    .thumbnails1 img{
+      width: 220px;
+      height: 150px;
+      
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      
+    }
+
+    .btm-divider-wt {
+      shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .btm-divider{
+     
+      shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .banner h1 {
+      font-size: 48px;
+      align-items: center;
+      color: white;
+      letter-spacing: 12px; /* This adds space between letters */
+    }
+
+
+    @media (max-width: 768px){
+      .container1{
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+      }
+      .title-section1{
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .title-number1{
+        font-size: 1.2rem;
+        padding: 8px 16px;
+      }
+
+      .title-section1 h1{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+      .left2 img{
+        max-height: 300px;
+        object-fit: cover;
+      }
+      .thumbnails1{
+        flex-direction: column;
+        align-items: center;
+      }
+      .thumbnails1 img{
+        width: 100%;
+        height: auto;
+        max-width: 98%;
+      }
+      .button{
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+        font-size: 16px;
+      }
+    }
+
+    .section-header1 {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .section-title1 {
+      font-weight: bold;
+      color: #5c3113; /* similar brown color */
+      margin-right: 15px;
+      white-space: nowrap;
+    }
+    .section-line1{
+      flex-grow: 1;
+      height: 5px;
+      background-color: #5c3113; /* same color as title */
+    }
+
     </style>
 </head>
 <body>
@@ -89,7 +240,7 @@
           <a href="#gallery">GALLERY</a>
           <a href="#contact">CONTACT</a>
           <a href="login.html">LOGIN</a>
-          <select class="bg-transparent border  text-black px-2 py-1 rounded">
+          <select class="bg-transparent border white px-2 py-1 rounded">
             <option>EN</option>
             <option>MN</option>
           </select>
@@ -129,31 +280,32 @@
         </div>
       </div>
 
-      <div class="experience-section">
-        <div class="experience-content">
-          
-          <div class="experience-number">02</div>
-          <h2 class="experience-title">Gateway to Prehistory</h2>
-          <p>The Flaming Cliffs gained global fame in the 1920s when paleontologist Roy Chapman Andrews unearthed the first dinosaur eggs here. This discovery redefined our understanding of prehistoric life and placed the Flaming Cliffs firmly on the map of world heritage. Today, the site stands as a living museum, connecting us to a time when dinosaurs roamed the earth.</p>
-          <p>Every visitor who steps foot here walks in the footsteps of history, experiencing the thrill of standing where groundbreaking discoveries were made. As you explore the cliffs, you’ll uncover layers of geological and cultural significance that make this place truly unique.</p>
-         <a href="#" class="experience-button">Learn more →</a>
-        </div>
-        <div class="experience-image">
-          <img src="img/image.jpg" alt="Gateway to Prehistory">
+      <div class="container1">
+        <div class="left2">
+          <img src="img/image.jpg" alt="Main Image">
         </div>
 
-        
+        <div class="right1">
+          <div class="title-section1">
+            <h1>Gateway to Prehistory</h1>
+            <div class="title-number1">02</div>
+            <div>
+              <p>The Flaming Cliffs gained global fame in the 1920s when paleontologist Roy Chapman Andrews unearthed the first dinosaur eggs here. This discovery redefined our understanding of prehistoric life and placed the Flaming Cliffs firmly on the map of world heritage. Today, the site stands as a living museum, connecting us to a time when dinosaurs roamed the earth.</p>
+              <p>Every visitor who steps foot here walks in the footsteps of history, experiencing the thrill of standing where groundbreaking discoveries were made. As you explore the cliffs, you’ll uncover layers of geological and cultural significance that make this place truly unique.
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <a href="learn_detail.html"><button class="button" onclick="">Learn more →</button></a>
+              </p>
+            </div>
+          </div>
+          <div class="thumbnails1">
+            <img src="img/image.jpg" alt="Thumbnail 1">
+            <img src="img/image-1.jpg" alt="Thumbnail 1">
+            <img src="img/image-2.jpg" alt="Thumbnail 2">
+            <img src="img/image-3.jpg" alt="Thumbnail 3">
+            <img src="img/image-4.jpg" alt="Thumbnail 4">
+          </div>
+        </div>
       </div>
-
-                <div class="small-pictures-2">
-                  <img src="img/Information Center/Information Center- (3).png" alt="Small 1" data-big="img/Information Center/Information Center- (3).png">
-                  <img src="img/Information Center/Information Center- (4).png" alt="Small 2" data-big="img/Information Center/Information Center- (4).png">
-                  <img src="img/Information Center/Information Center- (7).png" alt="Small 3" data-big="img/Information Center/Information Center- (7).png">
-                  <img src="img/Information Center/Information Center- (9).png" alt="Small 4" data-big="img/Information Center/Information Center- (9).png">
-                  <img src="img/Information Center/Information Center- (1).png" alt="Small 5" data-big="img/Information Center/Information Center- (1).png">
-              </div>
-
-              &nbsp;
 
 
     <div><img class="btm-divider-wt" src="img/btm-divider-wt.png" alt=""></div>
@@ -170,7 +322,13 @@
           <div class="info-plus">
               <div class="big">
               <div class="info-text-2">
-                  <h1>The Flaming Cliffs Information Center</h1>
+
+                  
+                    <div class="experience-number">04</div>
+                    &nbsp;
+                    <div class="experience-title">The Flaming Cliffs Information Center</div>
+                  
+                  
                   <p>The Flaming Cliffs Information Center serves as the gateway to your journey. Here, you’ll find everything you need to deepen your understanding of this remarkable destination</p>
                   <div class="list">
                       <div class="blt">&#8226</div>
@@ -218,9 +376,10 @@
        <!-- Entry Fees -->
 
        <section class="container">
-        <h2>Entry Fees & Preservation</h2>
-        <hr class="divider" />
-    
+        <div class="section-header1">
+          <div class="section-title1">Entry Fees & Preservation</div>
+          <div class="section-line1"></div>
+        </div>
         <div class="content">
           <div class="text">
             <p>Visitors to the Flaming Cliffs contribute directly to preserving this historic site. Entry fees ensure ongoing research, conservation efforts, and public education:</p>

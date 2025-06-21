@@ -2,120 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gateway to Prehistory</title>
+  <title>Section Header</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #333;
-    }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 40px;
-      align-items: center;
-    }
-    .main-image {
-      flex: 1;
+      background-color: #fff;
       padding: 20px;
     }
-    .main-image img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-    .content {
-      flex: 1;
-      padding: 20px;
-    }
-    .title {
+    .section-header1 {
       display: flex;
       align-items: center;
       margin-bottom: 20px;
     }
-    .title h1 {
-      font-size: 32px;
-      color: #6b340f;
-      margin: 0;
-    }
-    .number-box {
-      background: #6b340f;
-      color: #fff;
-      font-size: 28px;
-      padding: 5px 15px;
-      margin-left: 10px;
-      border-radius: 5px;
-    }
-    p {
-      line-height: 1.6;
-      margin-bottom: 15px;
-    }
-    .button {
-      background-color: #ff9933;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
+    .section-title1 {
       font-weight: bold;
-      transition: background 0.3s;
+      color: #5c3113; /* similar brown color */
+      margin-right: 10px;
+      white-space: nowrap;
     }
-    .button:hover {
-      background-color: #e68122;
-    }
-    .thumbnails {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 40px 40px 40px;
-      flex-wrap: wrap;
-    }
-    .thumbnails img {
-      width: 18%;
-      border-radius: 10px;
-      margin-top: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-    .thumbnails img:hover {
-      transform: scale(1.05);
+    .section-line1{
+      flex-grow: 1;
+      height: 1px;
+      background-color: #5c3113; /* same color as title */
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="main-image">
-      <img id="mainDisplay" src="img/image.jpg" alt="Main Image">
-    </div>
-    <div class="content">
-      <div class="title">
-        <h1>Gateway to Prehistory</h1>
-        <div class="number-box">02</div>
-      </div>
-      <p>The Flaming Cliffs gained global fame in the 1920s when paleontologist Roy Chapman Andrews unearthed the first dinosaur eggs here. This discovery redefined our understanding of prehistoric life and placed the Flaming Cliffs firmly on the map of world heritage. Today, the site stands as a living museum, connecting us to a time when dinosaurs roamed the earth.</p>
-      <p>Every visitor who steps foot here walks in the footsteps of history, experiencing the thrill of standing where groundbreaking discoveries were made. As you explore the cliffs, you'll uncover layers of geological and cultural significance that make this place truly unique.</p>
-      <a href="#" class="button">Learn more →</a>
-    </div>
+  <div class="section-header">
+    <div class="section-title">Entry Fees & Preservation</div>
+    <div class="section-line"></div>
   </div>
-
-  <div class="thumbnails">
-    <img src="img/image-1.jpg" alt="Thumbnail 1" onclick="changeImage('thumb1.jpg')">
-    <img src="img/image-2.jpg" alt="Thumbnail 2" onclick="changeImage('thumb2.jpg')">
-    <img src="img/image-3.jpg" alt="Thumbnail 3" onclick="changeImage('thumb3.jpg')">
-    <img src="img/image-4.jpg" alt="Thumbnail 4" onclick="changeImage('thumb4.jpg')">
-    
-  </div>
-
-  <script>
-    function changeImage(imgSrc) {
-      document.getElementById("mainDisplay").src = imgSrc;
-    }
-  </script>
 
 </body>
 </html>
