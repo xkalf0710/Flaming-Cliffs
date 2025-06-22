@@ -2,37 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Section Header</title>
+  <title>Section Title Design</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #fff;
-      padding: 20px;
+      margin: 40px;
     }
-    .section-header1 {
-      display: flex;
-      align-items: center;
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #5c3113;
+      position: relative;
+      display: inline-block;
       margin-bottom: 20px;
     }
-    .section-title1 {
-      font-weight: bold;
-      color: #5c3113; /* similar brown color */
-      margin-right: 10px;
-      white-space: nowrap;
-    }
-    .section-line1{
-      flex-grow: 1;
-      height: 1px;
-      background-color: #5c3113; /* same color as title */
+    .section-title::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      margin-left: 10px;
+      height: 2px;
+      width: 500px;
+      background-color: #5c3113;
+      transform: translateY(-50%);
     }
   </style>
 </head>
 <body>
 
-  <div class="section-header">
-    <div class="section-title">Entry Fees & Preservation</div>
-    <div class="section-line"></div>
-  </div>
+  <div class="section-title">Getting There</div>
 
 </body>
 </html>
