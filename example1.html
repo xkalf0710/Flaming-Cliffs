@@ -2,159 +2,156 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Responsive Footer Design</title>
+  <title>Flaming Cliffs Video Gallery</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
     body {
+      margin: 0;
+      padding: 20px;
+      background-color: #2b211c;
+      color: white;
       font-family: Arial, sans-serif;
-      background-color: #1f1813;
-      color: #fff;
     }
-    .footer {
-      background-color: #1f1813;
-      padding: 40px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      border-top: 1px solid #333;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .footer-column {
-      flex: 1 1 220px;
-      margin: 10px;
-    }
-    .footer-column h3 {
-      border-bottom: 1px solid #555;
-      padding-bottom: 10px;
-      margin-bottom: 15px;
-      font-size: 18px;
-    }
-    .footer-column ul {
-      list-style: none;
-      padding: 0;
-    }
-    .footer-column ul li {
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
-    .footer-column ul li a {
-      text-decoration: none;
-      color: #fff;
-      transition: color 0.3s;
-    }
-    .footer-column ul li a:hover {
-      color: #f4b042;
-    }
-    .contact-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
-    .contact-item img {
-      width: 20px;
-      margin-right: 10px;
-    }
-    .social-icons {
-      display: flex;
-      gap: 15px;
-      margin-top: 10px;
-    }
-    .social-icons img {
-      width: 24px;
-      cursor: pointer;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
+    h1 {
       margin-bottom: 20px;
+      font-size: 28px;
+      text-align: center;
     }
-    .logo img {
-      width: 60px;
-      margin-right: 15px;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
-    .logo-text {
-      font-weight: bold;
-      font-size: 18px;
+    .video-card {
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
     }
-    .sub-text {
-      font-size: 12px;
-      color: #ccc;
+    .video-card:hover {
+      transform: scale(1.03);
+    }
+    .video-thumb {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      background-color: #000;
+    }
+    .video-thumb iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-info {
+      padding: 12px;
+      font-size: 16px;
+    }
+    .video-info small {
+      color: #bbb;
+      font-size: 13px;
     }
 
-    /* Responsive styles */
-    @media (max-width: 992px) {
-      .footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    /* Mobile adjustments */
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
       }
-      .footer-column {
-        margin: 20px 0;
+      .gallery {
+        gap: 10px;
       }
-      .logo {
-        justify-content: center;
+      h1 {
+        font-size: 20px;
       }
-      .contact-item {
-        justify-content: center;
+      .video-info {
+        font-size: 14px;
+        padding: 8px;
       }
-      .social-icons {
-        justify-content: center;
+    }
+
+    /* Tablet adjustments */
+    @media (min-width: 481px) and (max-width: 1024px) {
+      body {
+        padding: 20px;
+      }
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 18px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+      .video-info {
+        font-size: 15px;
+        padding: 10px;
       }
     }
   </style>
 </head>
 <body>
 
-<footer class="footer">
-   
+  <h1>Flaming Cliffs</h1>
 
-  <div class="footer-column">
-    <h3>Quick links</h3>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Gateway to Prehistory</a></li>
-      <li><a href="#">Key fossils</a></li>
-      <li><a href="#">Information Center</a></li>
-      <li><a href="#">Getting There</a></li>
-      <li><a href="#">Nearby Destinations</a></li>
-      <li><a href="#">Accommodation</a></li>
-      <li><a href="#">Gallery</a></li>
-      <li><a href="#">FAQs</a></li>
-      <li><a href="#">Language</a></li>
-    </ul>
-  </div>
+  <div class="gallery">
+    <div class="video-card">
+      <div class="video-thumb">
+        <iframe src="https://www.youtube.com/embed/LQ9jJ-l_ryE" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <small>youtube.com</small><br>
+        Sun shining
+      </div>
+    </div>
 
-  <div class="footer-column">
-    <h3>Visitor Information</h3>
-    <p><strong>Entry Fees</strong><br>Domestic - 3,000 MNT | International - 10,000 MNT</p>
-    <p><strong>Best Time to Visit:</strong> May - October</p>
-    <p><strong>Location</strong><br>Bayanzag, Ömnögovi Province, Mongolia</p>
-  </div>
+    <div class="video-card">
+      <div class="video-thumb">
+        <iframe src="https://www.youtube.com/embed/LQ9jJ-l_ryE" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <small>youtube.com</small><br>
+        Sun shining
+      </div>
+    </div>
+     <div class="video-card">
+      <div class="video-thumb">
+        <iframe src="https://www.youtube.com/embed/LQ9jJ-l_ryE" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <small>youtube.com</small><br>
+        Sun shining
+      </div>
+    </div>
+     <div class="video-card">
+      <div class="video-thumb">
+        <iframe src="https://www.youtube.com/embed/LQ9jJ-l_ryE" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <small>youtube.com</small><br>
+        Sun shining
+      </div>
+    </div>
+     <div class="video-card">
+      <div class="video-thumb">
+        <iframe src="https://www.youtube.com/embed/LQ9jJ-l_ryE" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <small>youtube.com</small><br>
+        Sun shining
+      </div>
+    </div>
+     <div class="video-card">
+      <div class="video-thumb">
+        <iframe src="https://www.youtube.com/embed/LQ9jJ-l_ryE" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <small>youtube.com</small><br>
+        Sun shining
+      </div>
+    </div>
 
-  <div class="footer-column">
-    <h3>Contacts Us</h3>
-    <div class="contact-item">
-      <img src="phone-icon.png" alt="Phone">
-      +976-12345678
-    </div>
-    <div class="contact-item">
-      <img src="email-icon.png" alt="Email">
-      info@flamingcliffs.mn
-    </div>
-    <h3>Follow Us</h3>
-    <div class="social-icons">
-      <img src="facebook-icon.png" alt="Facebook">
-      <img src="instagram-icon.png" alt="Instagram">
-      <img src="youtube-icon.png" alt="YouTube">
-    </div>
   </div>
-</footer>
 
 </body>
 </html>

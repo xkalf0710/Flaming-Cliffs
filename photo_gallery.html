@@ -12,14 +12,291 @@
     <title>Flaming Cliffs</title>
     <style>
       body {
-        margin: 0;
         font-family: sans-serif;
         background-color: #1e1a17;
         color: white;
+        align-items: center;
+        justify-content: center;
       }
-      .container {
-          padding: 20px;
+     
+
+      .banner-text{
+         color: white;
+          text-align: center;
+          font-size: 28px;
+          font-weight: bold;
+          line-height: 2; /* мөр хоорондын зай */
+          letter-spacing: 10px; /* үсэг хоорондын зай */
+          text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* тод харагдуулах effect */
       }
+
+
+      .gallery-container{
+        margin: auto;
+        padding: 40px 480px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .title-baynzag{
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      .gallery_bayanzag{
+       display: flex;
+       gap: 5px;
+      }
+      .gallery_bayanzag img{
+        aspect-ratio: 16/9;
+        height: 100px;
+        object-fit: cover;
+        border: 1px solid #333;
+      }
+
+    .nearby-header{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 50px 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .nearby-line{
+      flex: 1;
+      height: 4px;
+      background-color: white;
+      max-width: 400px;
+    }
+
+    .nearby-title{
+      margin: 0 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+    }
+
+      h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+
+      margin: 0;
+      padding: 40px;
+      
+    }
+
+    .gallery{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));    }
+
+    .video-card{
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    .video-card:hover{
+      transform: scale(1.03);
+    }
+    .video-thumb {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      background-color: #000;
+    }
+    .video-thumb iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-info {
+      padding: 12px;
+      font-size: 16px;
+    }
+    .video-info small {
+      color: #bbb;
+      font-size: 13px;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+      .gallery {
+        gap: 10px;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      .video-info {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+
+    /* Tablet adjustments */
+    @media (min-width: 481px) and (max-width: 1024px) {
+      body {
+        padding: 20px;
+      }
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 18px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+      .video-info {
+        font-size: 15px;
+        padding: 10px;
+      }
+    }
+     .footer{
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      border-top: 1px solid #333;
+      max-width: 2000px;
+      margin: auto;
+      
+    }
+    .footer-header{
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      
+    }
+    .footer-logo img{
+      height: 80px;
+      margin: 0;
+      padding: 2%;
+    }
+    .footer-title{
+      margin-left: 15px;
+      color: white;
+    }
+    .footer-title h1{
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .footer-title p{
+      margin: 2px 0 0 0;
+      font-size: 12px;
+      color: #ccc;
+    }
+
+    .footer-column {
+      flex: 1 1 220px;
+      margin: 10px;
+    }
+    .footer-column h3 {
+      border-bottom: 1px solid #555;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-column ul li {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s;
+    }
+    .footer-column ul li a:hover {
+      color: #f4b042;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .contact-item img {
+      width: 20px;
+      margin-right: 10px;
+    }
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .social-icons img {
+      width: 24px;
+      cursor: pointer;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .logo img {
+      width: 60px;
+      margin-right: 15px;
+    }
+    .logo-text {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .sub-text {
+      font-size: 12px;
+      color: #ccc;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 992px) {
+      .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .footer-column {
+        margin: 20px 0;
+      }
+      .logo {
+        justify-content: center;
+      }
+      .contact-item {
+        justify-content: center;
+      }
+      .social-icons {
+        justify-content: center;
+      }
+    }
+
+    
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #ccc;
+  }
+
+  .footer-bottom a {
+    color: orange;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-highlight {
+    font-weight: bold;
+    margin-top: 10px;
+  }
     
     </style>
 </head>
@@ -33,186 +310,233 @@
       <div></div>
     </div>
     <div class="menu" id="menu">
-      <a href="home.html">HOME</a>
-      <a href="about.html">ABOUT</a>
-      <a href="#fossils">FOSSILS & DISCOVERIES</a>
-      <a href="status.html">LIVE STATUS FROM VISITORS</a>
-      <a href="#preservation">PRESERVATION</a>
-      <a href="#gallery">GALLERY</a>
-      <a href="#contact">CONTACT</a>
-      <a href="login.html">LOGIN</a>
+          <a href="home.html">HOME</a>
+          <a href="about.html">ABOUT</a>
+          <a href="learn_detail.html">FOSSILS & DISCOVERIES</a>
+          <a href="status.html">LIVE STATUS FROM VISITORS</a>
+          <a href="#preservation">PRESERVATION</a>
+          <a href="#gallery">GALLERY</a>
+          <a href="#contact">CONTACT</a>
+          <a href="login.html">LOGIN</a>
+          <select class="bg-transparent border white px-2 py-1 rounded">
+            <option>EN</option>
+            <option>MN</option>
+          </select>
+          &nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;
     </div>
     </nav>
    
         <div class="collapsible-container">
-            <h1>PHOTO & VIDEO <br> GALLERY</h1>
-          </div>
+          <div class="banner-text">PHOTO & VIDEO <br> GALLERY</div>
+        </div>
     
-        <img class="divider" src="img/divider.png" alt="">
+        
     </div>
     
      <!-- Bayanzag -->
 
-    <div class="container">
-        <h1>Bayanzag</h1>
-        <div class="gallery">
-          <!-- Placeholder images using Unsplash -->
-          <img src="img/Zag/Zag-1.jpg" alt="Bayanzag 1">
-          <img src="img/Zag/Zag-2.jpg" alt="Bayanzag 2">
-          <img src="img/Zag/Zag-3.jpg" alt="Bayanzag 3">
-          <img src="img/Zag/Zag-4.jpg" alt="Bayanzag 4">
-          <img src="img/Zag/Zag-5.jpg" alt="Bayanzag 5">
-    
-          <img src="img/Zag/Zag-6.jpg" alt="Bayanzag 6">
-          <img src="img/Zag/Zag-7.jpg" alt="Bayanzag 7">
-          <img src="img/Zag/Zag-8.jpg" alt="Bayanzag 8">
-          <img src="img/Zag/Zag-9.jpg" alt="Bayanzag 9">
-          <img src="img/Zag/Zag-10.jpg" alt="Bayanzag 10">
-    
-          <img src="img/Zag/Zag-11.jpg" alt="Bayanzag 11">
-          <img src="img/Zag/Zag-12.jpg" alt="Bayanzag 12">
-          <img src="img/Zag/Zag-13.jpg" alt="Bayanzag 13">
-          <img src="img/Zag/Zag-14.jpg" alt="Bayanzag 14">
-          <img src="img/Zag/Zag-15.jpg" alt="Bayanzag 15">
-    
-          <img src="img/Zag/Zag-16.jpg" alt="Bayanzag 16">
-          <img src="img/Zag/Zag-17.jpg" alt="Bayanzag 17">
-          
-        </div>
-
-        <!-- Camel Caravan -->
-        <h1>Camel Caravan</h1>
-        <div class="gallery">
-          <!-- Placeholder images using Unsplash -->
-          <img src="img/Camel Caravan-2.jpg" alt="Camel 1">
-          <img src="img/Zag/Zag-2.jpg" alt="Camel 2">
-          <img src="img/Camel Caravan-16.jpg" alt="Camel 3">
-          <img src="img/Zag/Zag-4.jpg" alt="Camel 4">
-          <img src="img/Camel Caravan-1.jpg" alt="Camel 5">
-    
-          <img src="img/Zag/Zag-6.jpg" alt="Camel 6">
-          <img src="img/Zag/Zag-7.jpg" alt="Camel 7">
-          <img src="img/Zag/Zag-8.jpg" alt="Camel 8">
-          <img src="img/Camel Caravan-19.jpg" alt="Camel 9">
-          <img src="img/Camel Caravan-4.jpg" alt="Camel 10">
-        </div>
-
-        <h1>Souvenir Shop</h1>
-        <div class="gallery">
-          <!-- Placeholder images using Unsplash -->
-          <img src="img/Souviner shop/SouvinerShop-14.jpg" alt="Souvenir Shop 1">
-          <img src="img/Souviner shop/SouvinerShop-10.jpg" alt="Souvenir Shop 2">
-          <img src="img/Souviner shop/SouvinerShop-11.jpg" alt="Souvenir Shop 3">
-          <img src="img/Souviner shop/SouvinerShop-12.jpg" alt="Souvenir Shop 4">
-          <img src="img/Souviner shop/SouvinerShop-13.jpg" alt="Souvenir Shop 5">
-    
-          <img src="img/Souviner shop/SouvinerShop-9.jpg" alt="Souvenir Shop 6">
-          <img src="img/Souviner shop/SouvinerShop-8.jpg" alt="Souvenir Shop 7">
-          <img src="img/Souviner shop/SouvinerShop-7.jpg" alt="Souvenir Shop 8">
-          <img src="img/Souviner shop/SouvinerShop-6.jpg" alt="Souvenir Shop 9">
-          <img src="img/Souviner shop/SouvinerShop-5.jpg" alt="Souvenir Shop 10">
-        </div>
-    </div>
-
-
-    <section class="videos-section">
-      <h2 class="section-title">
-        <span class="line"></span> Videos <span class="line"></span>
-      </h2>
-  
-      <h3 class="subtitle">Flaming Cliffs</h3>
-  
-      <div class="video-grid">
-        <!-- Repeat this video-card block for each video -->
-        <div class="video-card">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/LWYDZuAbYGk?si=Ii1exzJNLpA7OleJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-
-
-        <!-- Copy the video-card div to add more videos -->
-
-        <div class="video-card">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=FQD-dD2FnsrR0HWQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-
-
-        <div class="video-card">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/LQ9jJ-l_ryE?si=0_J3TWtT8-X6fqfR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-
-
-        <div class="video-card">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/LWYDZuAbYGk?si=Ii1exzJNLpA7OleJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-
-        <div class="video-card">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=FQD-dD2FnsrR0HWQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-
-
-        <div class="video-card">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/LQ9jJ-l_ryE?si=0_J3TWtT8-X6fqfR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-
+    <div class="gallery-container">
+      <div class="title-baynzag">Bayanzag</div>
+      <div class="gallery_bayanzag">
+        <img src="img/Zag/Zag-1.jpg">
+        <img src="img/Zag/Zag-2.jpg">
+        <img src="img/Zag/Zag-3.jpg">
+        <img src="img/Zag/Zag-4.jpg">
+        <img src="img/Zag/Zag-5.jpg">
+      </div>
+      &nbsp;
+      <div class="gallery_bayanzag">
+        <img src="img/Zag/Zag-6.jpg">
+        <img src="img/Zag/Zag-7.jpg">
+        <img src="img/Zag/Zag-8.jpg">
+        <img src="img/Zag/Zag-9.jpg">
+        <img src="img/Zag/Zag-10.jpg">
+      </div>
+      &nbsp;
+      <div class="gallery_bayanzag">
+        <img src="img/Zag/Zag-11.jpg">
+        <img src="img/Zag/Zag-12.jpg">
+        <img src="img/Zag/Zag-13.jpg">
+        <img src="img/Zag/Zag-14.jpg">
+        <img src="img/Zag/Zag-15.jpg">
+      </div>
+        &nbsp;
+      <div class="gallery_bayanzag">
+        <img src="img/Zag/Zag-16.jpg">
+        <img src="img/Zag/Zag-17.jpg">
+        
         
       </div>
-    </section>
-    
-      <footer>
-        <div class="footer-container">
+      &nbsp;
+      <div class="title-baynzag">Camel Caraven</div>
+      <div class="gallery_bayanzag">
+        <img src="img/Camel Caravan-2.jpg">
+        <img src="img/Zag/Zag-2.jpg">
+        <img src="img/Camel Caravan-16.jpg">
+        <img src="img/Zag/Zag-4.jpg">
+        <img src="img/Camel Caravan-1.jpg">
+      </div>
+      &nbsp;
+      <div class="gallery_bayanzag">
+        <img src="img/Zag/Zag-6.jpg">
+        <img src="img/Zag/Zag-7.jpg">
+        <img src="img/Zag/Zag-8.jpg">
+        <img src="img/Camel Caravan-19.jpg">
+        <img src="img/Camel Caravan-4.jpg">
+      </div>
+     
+      &nbsp;
+      <div class="title-baynzag">Souvenir Shop</div>
+      <div class="gallery_bayanzag">
+        <img src="img/Souviner shop/SouvinerShop-14.jpg">
+        <img src="img/Souviner shop/SouvinerShop-10.jpg">
+        <img src="img/Souviner shop/SouvinerShop-11.jpg">
+        <img src="img/Souviner shop/SouvinerShop-12.jpg">
+        <img src="img/Souviner shop/SouvinerShop-13.jpg">
+      </div>
+      &nbsp;
+      <div class="gallery_bayanzag">
+        <img src="img/Souviner shop/SouvinerShop-9.jpg">
+        <img src="img/Souviner shop/SouvinerShop-8.jpg">
+        <img src="img/Souviner shop/SouvinerShop-7.jpg">
+        <img src="img/Souviner shop/SouvinerShop-6.jpg">
+        <img src="img/Souviner shop/SouvinerShop-5.jpg">
+      </div>
       
-          <!-- Logo & tagline -->
-          <div class="footer-logo">
-            <img src="img/baynzag logo.png" alt="Flaming Cliffs Logo" />
-            <h3>Flaming Cliffs (BayanZag)</h3>
-            <p>Discover Mongolia’s Legendary Dinosaur Site</p>
-          </div>
-      
-          <!-- Quick Links -->
-          <div class="footer-column">
-            <h4>Quick links</h4>
-            <ul>
-              <li>Home</li>
-              <li>Gateway to Prehistory</li>
-              <li>Key fossils</li>
-              <li>Information Center</li>
-              <li>Getting There</li>
-              <li>Nearby Destinations</li>
-              <li>Accommodation</li>
-              <li>Gallery</li>
-              <li>FAQs</li>
-            </ul>
-          </div>
-      
-          <!-- Visitor Info -->
-          <div class="footer-column">
-            <h4>Visitor Information</h4>
-            <ul>
-              <li><span>Entry Fees</span>: Domestic - 3,000 <small>MNT</small> | International - 10,000 <small>MNT</small></li>
-              <li><span>Best Time to Visit</span>: May - October</li>
-              <li><span>Location</span>: Bayanzag, Ömnögovi Province, Mongolia</li>
-            </ul>
-          </div>
-      
-          <!-- Contact Info -->
-          <div class="footer-column">
-            <h4>Contacts Us</h4>
-            <ul class="contact-icons">
-              <li><i class="fas fa-phone-alt"></i>+976-12345678</li>
-              <li><i class="fas fa-envelope"></i>info@flamingcliffs.mn</li>
-            </ul>
-            <h4>Follow Us</h4>
-            <div class="social-icons">
-                
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-instagram"></i>
-              <i class="fab fa-youtube"></i>
-            </div>
-          </div>
-      
+    </div>
+
+      <div class="nearby-header">
+      <div class="nearby-line"></div>
+      <div class="nearby-title">Videos</div>
+      <div class="nearby-line"></div>
+    </div>
+
+     
+    <h1>Flaming Cliffs</h1>
+
+    <div class="gallery">
+      <div class="video-card">
+        <div class="video-thumb">
+          <iframe src="https://www.youtube.com/embed/LWYDZuAbYGk?si=Ii1exzJNLpA7OleJ" allowfullscreen></iframe>
         </div>
+        <div class="video-info">
+          <small>youtube.com</small><br>
+          Sun shining
+        </div>
+      </div>
+       <div class="video-card">
+        <div class="video-thumb">
+          <iframe src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=FQD-dD2FnsrR0HWQ" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <small>youtube.com</small><br>
+          Sun shining
+        </div>
+      </div>
       
-        <div class="footer-bottom">
+       <div class="video-card">
+        <div class="video-thumb">
+          <iframe src="https://www.youtube.com/embed/LQ9jJ-l_ryE?si=0_J3TWtT8-X6fqfR" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <small>youtube.com</small><br>
+          Sun shining
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <div class="video-card">
+        <div class="video-thumb">
+          <iframe src="https://www.youtube.com/embed/LWYDZuAbYGk?si=Ii1exzJNLpA7OleJ" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <small>youtube.com</small><br>
+          Sun shining
+        </div>
+      </div>
+       <div class="video-card">
+        <div class="video-thumb">
+          <iframe src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=FQD-dD2FnsrR0HWQ" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <small>youtube.com</small><br>
+          Sun shining
+        </div>
+      </div>
+      
+       <div class="video-card">
+        <div class="video-thumb">
+          <iframe src="https://www.youtube.com/embed/LQ9jJ-l_ryE?si=0_J3TWtT8-X6fqfR" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <small>youtube.com</small><br>
+          Sun shining
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-header">
+          <div class="footer-logo">
+            <img src="img/baynzag logo.png" alt="Logo">
+            
+          </div>
+
+          <div class="footer-title">
+            <h1>Flaming Cliffs ( BayanZag )</h1>
+            <p>Discover Mongolia's Legendary Dinosaur Site</p>
+          </div>
+        </div>
+      </footer>
+      <footer class="footer">
+        <div class="footer-column">
+          <h3 class="footer-title">Quick links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gateway to Prehistory</a></li>
+            <li><a href="#">Key fossils</a></li>
+            <li><a href="#">Information Center</a></li>
+            <li><a href="#">Getting There</a></li>
+            <li><a href="#">Nearby Destinations</a></li>
+            <li><a href="#">Accommodation</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Language</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Visitor Information</h3>
+          <p class="footer-title"><strong>Entry Fees</strong><br>Domestic - 3,000 MNT | International - 10,000 MNT</p>
+          <p class="footer-title"><strong>Best Time to Visit:</strong> May - October</p>
+          <p class="footer-title"><strong>Location</strong><br>Bayanzag, Ömnögovi Province, Mongolia</p>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Contacts Us</h3>
+          <div class="contact-item">
+            <img src="img/phone number icon.png" alt="Phone">
+            <h1 class="footer-title">+976-12345678</h1>
+          </div>
+          <div class="contact-item">
+            <img src="img/Email icon.png" alt="Email">
+            <h1 class="footer-title">info@flamingcliffs.mn</h1>
+          </div>
+          <h3 class="footer-title">Follow Us</h3>
+          <div class="social-icons">
+            <img src="img/Facebook round.png" alt="Facebook">
+            <img src="img/Insta Round.png" alt="Instagram">
+            <img src="img/Youtube round.png" alt="YouTube">
+          </div>
+        </div>
+
+       
+
+      </footer>
+      <footer class="footer">
+         <div class="footer-bottom">
           <div class="footer-highlight">Preserving History, Supporting Communities</div>
           Your visit directly contributes to preserving Mongolia’s heritage and empowering local communities.<br>
           <strong>Plan Your Visit Today!</strong><br><br>
@@ -221,16 +545,8 @@
           <a href="#">Terms of Use</a>
         </div>
       </footer>
-    
-      <script>
-        // FAQ toggle logic
-        document.querySelectorAll('.faq-question').forEach(q => {
-          q.addEventListener('click', () => {
-            const parent = q.parentElement;
-            parent.classList.toggle('open');
-          });
-        });
-      </script>
+
+     
 
     <script>
         function toggleMenu() {

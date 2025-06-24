@@ -2,52 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Flaming Cliffs Header</title>
+  <title>Photo & Video Gallery</title>
   <style>
-    body {
-      margin: 0;
-      background-color: #1e1813; /* dark background */
-      font-family: Arial, sans-serif;
-    }
-
-    .header {
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      background-image: url('your-image.jpg'); /* Зургийн замыг солино */
+      background-size: cover;
+      background-position: center;
       display: flex;
       align-items: center;
-      padding: 10px 20px;
-      border-bottom: 1px solid #3a322b;
+      justify-content: center;
     }
 
-    .logo img {
-      height: 50px;
-    }
-
-    .title {
-      margin-left: 15px;
+    .banner-text {
       color: white;
-    }
-
-    .title h1 {
-      margin: 0;
-      font-size: 16px;
+      text-align: center;
+      font-size: 28px;
       font-weight: bold;
-    }
-
-    .title p {
-      margin: 2px 0 0 0;
-      font-size: 12px;
-      color: #ccc;
+      line-height: 1.4; /* мөр хоорондын зай */
+      letter-spacing: 5px; /* үсэг хоорондын зай */
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* тод харагдуулах effect */
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <div class="logo">
-      <img src="your-logo.png" alt="Logo">
-    </div>
-    <div class="title">
-      <h1>Flaming Cliffs ( BayanZag )</h1>
-      <p>Discover Mongolia's Legendary Dinosaur Site</p>
+  <div class="banner">
+    <div class="banner-text">
+      PHOTO & VIDEO <br> GALLERY
     </div>
   </div>
 
