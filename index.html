@@ -370,6 +370,50 @@
       font-weight: bold;
       font-size: 16px;
     }
+
+    h1{
+      font-size: 32px;
+      margin-bottom: 20px
+    }
+    .faq-container{
+      border-top: 2px solid #000;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .faq-item{
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
+    }
+
+    .faq-question{
+      font-size: 18px;
+      font-weight: normal;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-question.active{
+      font-weight: bold;
+    }
+    .faq-answer{
+      display: none;
+      margin-top: 10px;
+      color: #555;
+      font-size: 16px;
+    }
+    .faq-answer .active{
+      display: block;
+    }
+    .arrow{
+      width: 20px;
+      height: 20px;
+      transition: transform 0.3s;
+    }
+    .rotate{
+      transform: rotate(180deg);
+    }
   </style>
 </head>
 <body>
@@ -1015,46 +1059,79 @@
       </div>
      </div>
     
-      <section class="faq-section">
-        <h3>Frequently asked questions</h3>
-    
-        <div class="faq-item">
-          <div class="faq-question">1. When is the best time to visit?</div>
-          <div class="faq-answer">May to October, during mild weather and accessible road conditions.</div>
+
+     <h1>Frequently asked questions</h1> 
+     <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question active">
+          1.When is the beast time to visit?
+          <img src="img/down-arrow.png" class="arrow active">
         </div>
-    
-        <div class="faq-item">
-          <div class="faq-question">2. Can I collect fossils?</div>
-          <div class="faq-answer">No, fossil collection is prohibited to ensure preservation for future generations.</div>
+        <div class="faq-answer active">
+          May to October, during mild weather and accessible road conditions.
         </div>
-    
-        <div class="faq-item">
-          <div class="faq-question">3. Are there nearby accommodations?</div>
-          <div class="faq-answer">Yes, options include traditional ger camps and modern hotels in Dalanzadgad.
-          </div>
+      </div>
+
+         <div class="faq-item">
+        <div class="faq-question active">
+          2 Can I collect fossils?
+          <img src="img/down-arrow.png" class="arrow active">
         </div>
-    
-        <div class="faq-item">
-          <div class="faq-question">4. What transportation options are available?</div>
-          <div class="faq-answer">Self-drive, guided tours, and flights to Dalanzadgad followed by a drive.</div>
+        <div class="faq-answer active">
+          No, fossil collection is prohibited to ensure preservation for future generations.
         </div>
-    
-        <div class="faq-item">
-          <div class="faq-question">5. What should I bring for my visit?</div>
-          <div class="faq-answer">Sturdy shoes, sun protection, plenty of water, and a sense of adventure.
-          </div>
+      </div>
+
+         <div class="faq-item">
+        <div class="faq-question active">
+            3. Are there nearby accommodations?
+          <img src="img/down-arrow.png" class="arrow active">
         </div>
-    
-        <div class="faq-item">
-          <div class="faq-question">6. Is there food available at the Flaming Cliffs?</div>
-          <div class="faq-answer">Yes, the Information Center offers a dining area with local and international cuisine.</div>
+        <div class="faq-answer active">
+          Yes, options include traditional ger camps and modern hotels in Dalanzadgad.
         </div>
-    
-        <div class="faq-item">
-          <div class="faq-question">7. How does my visit support the site?</div>
-          <div class="faq-answer">Entry fees fund conservation, research, and local community initiatives.: [Links to Facebook and Instagram].</div>
+      </div>
+
+
+         <div class="faq-item">
+        <div class="faq-question active">
+          4. What transportation options are available?.
+          <img src="img/down-arrow.png" class="arrow active">
         </div>
-      </section>
+        <div class="faq-answer active">
+         Self-drive, guided tours, and flights to Dalanzadgad followed by a drive.
+        </div>
+      </div>
+
+         <div class="faq-item">
+        <div class="faq-question active">
+          5. What should I bring for my visit?.
+          <img src="img/down-arrow.png" class="arrow active">
+        </div>
+        <div class="faq-answer active">
+         Sturby shoes, sun protection, plehty of water, and sense of adventure.
+        </div>
+      </div>
+
+         <div class="faq-item">
+        <div class="faq-question active">
+          6. Is there food avaliable at the Falmming Cliffs?
+          <img src="img/down-arrow.png" class="arrow active">
+        </div>
+        <div class="faq-answer active">
+          Yes, the Information Center offers a dinning area with local and international cuisine.
+        </div>
+      </div>
+         <div class="faq-item">
+        <div class="faq-question active">
+          7. How does my visit support the site?
+          <img src="img/down-arrow.png" class="arrow active">
+        </div>
+        <div class="faq-answer active">
+          Entry fees fund conservation, research, and local community initiatives.:[LInks to Facebook and Instagram].
+        </div>
+      </div>
+     </div>
     
       <footer>
         <div class="footer-container">
