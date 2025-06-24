@@ -2,69 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ger Camp Cards</title>
+  <title>Uncovering Iconic Species</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
-      padding: 50px;
+      background-color: #fff;
+      margin: 0;
+      padding: 40px;
+      color: #3d2a17;
     }
 
-
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: auto;
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
     }
 
-    .card {
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-      padding: 10px;
-      text-align: center;
-    }
-
-    .card img {
+     .line {
+      border-bottom: 3px solid #8b5a32;
       width: 100%;
-      height: auto;
-      border-radius: 10px;
+      margin-bottom: 20px;
     }
 
-    .card-title {
-      margin: 15px 0 10px;
+    h2 {
+      font-size: 20px;
+      font-weight: normal;
+      margin-bottom: 40px;
+      color: #7c6042;
+    }
+
+    .species-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .species-box {
+      flex: 1;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    .species-box img {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 15px;
+    }
+
+    .species-title {
+      font-weight: bold;
       font-size: 18px;
-      font-weight: 500;
-      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .species-description {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #444;
+    }
+
+    .character {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      width: 100px;
+    }
+
+    @media (max-width: 900px) {
+      .species-container {
+        flex-direction: column;
+      }
+      .character {
+        position: static;
+        margin: 0 auto 20px auto;
+        display: block;
+      }
     }
   </style>
 </head>
 <body>
 
-  
+  <h1>Uncovering Iconic Species</h1>
+  <div class="line"></div>
+  <h2>Beyond Eggs, The Flaming Cliffs Yielded Numerous Remarkable Fossils, Providing Invaluable Insights Into Prehistoric Life:</h2>
 
-  <div class="card-container">
-    <div class="card">
-      <img src="img/Dino's tourist camp.jpg" alt="Ger Camp 1">
-      <div class="card-title">Dino’s Guest House</div>
+  <img src="img/learn more detail dino icon.png" alt="Character" class="character">
+
+  <div class="species-container">
+    <div class="species-box">
+      <div class="species-title">Velociraptor mongoliensis (1924)</div>
+      <img src="velociraptor.png" alt="Velociraptor">
+      <div class="species-description">
+        First described by Henry Fairfield Osborn, the Velociraptor became famous through multiple significant finds at the Flaming Cliffs.<br><br>
+        This agile, intelligent predator was smaller than portrayed in popular culture—about the size of a turkey—but lethal, with razor-sharp claws. Its most notable fossil, the "Fighting Dinosaurs," preserves a dramatic predator-prey encounter with Protoceratops.
+      </div>
     </div>
 
-    <div class="card">
-      <img src="img/GobiTour.jpg" alt="Ger Camp 2">
-      <div class="card-title">Eagle's Nest Camp</div>
+    <div class="species-box">
+      <div class="species-title">Protoceratops andrewsi (1923)</div>
+      <img src="protoceratops.png" alt="Protoceratops">
+      <div class="species-description">
+        Discovered by Andrews himself and named in his honor, Protoceratops became one of the most abundant fossils at Bayanzag.<br><br>
+        These small, frilled, hornless ceratopsians were herbivorous dinosaurs that moved in herds, evidence indicated by fossilized nests and eggs. Their remains provided unprecedented details about dinosaur nesting behaviors and social structures.
+      </div>
     </div>
 
-    <div class="card">
-      <img src="img/GobiOasis.jpg" alt="Ger Camp 3">
-      <div class="card-title">Nomad Star Ger</div>
-    </div>
-
-    <div class="card">
-      <img src="img/Mongol Gobi tourist camp.jpg" alt="Ger Camp 4">
-      <div class="card-title">Blue Sky Lodge</div>
+    <div class="species-box">
+      <div class="species-title">Oviraptor philoceratops (1924)</div>
+      <img src="oviraptor.png" alt="Oviraptor">
+      <div class="species-description">
+        Initially misunderstood as an "egg thief" due to fossils found near nests, later research revealed that Oviraptor was actually protecting its own eggs.<br><br>
+        These finds at the Flaming Cliffs significantly corrected paleontological misconceptions, offering a remarkable glimpse into dinosaur parental behaviors.
+      </div>
     </div>
   </div>
 
