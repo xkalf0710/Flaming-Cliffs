@@ -325,7 +325,7 @@
     .contact-header{
       display: flex;
       align-items: center;
-      padding: 20px;
+      padding: 100px;
     }
 
     .contact-title{
@@ -337,7 +337,7 @@
     }
     .divider{
       flex: 1;
-      height: 5px;
+      height: 5px; 
       background-color: #5c3113;
     }
 
@@ -345,17 +345,25 @@
       font-size: 18px;
       color: #333;
       line-height: 1.6;
+      text-align: center;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
     }
 
     .container-contact{
       display: flex;
       justify-content: space-around;
       align-items: center;
-      flex-wrap: wrap;
+      flex-wrap: wrap; 
+      margin-right: 20px;
     }
     .card-contact{
       text-align: center;
       margin: 20px;
+      margin-right: 80px;
     }
     .icon{
       font-size: 60px;
@@ -371,9 +379,14 @@
       font-size: 16px;
     }
 
-    h1{
+    .text{
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 40px auto 20px auto;
+      background-color: #fff;
+      color: #000;
       font-size: 32px;
-      margin-bottom: 20px
+      text-align: center;
+      width: fit-content;
     }
     .faq-container{
       border-top: 2px solid #000;
@@ -414,6 +427,151 @@
     .rotate{
       transform: rotate(180deg);
     }
+
+    .footer{
+      background-color: #1f1813;
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      border-top: 1px solid #333;
+      /* max-width: 1700px; */
+      margin: auto;
+      
+    }
+    .footer-header{
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      
+    }
+    .footer-logo img{
+      height: 50px;
+      margin: 0;
+      padding: 1%;
+    }
+    .footer-title{
+      margin-left: 15px;
+      color: white;
+    }
+    .footer-title h1{
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .footer-title p{
+      margin: 2px 0 0 0;
+      font-size: 12px;
+      color: #ccc;
+    }
+
+    .footer-column {
+      flex: 1 1 220px;
+      margin: 10px;
+    }
+    .footer-column h3 {
+      border-bottom: 1px solid #555;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-column ul li {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s;
+    }
+    .footer-column ul li a:hover {
+      color: #f4b042;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .contact-item img {
+      width: 20px;
+      margin-right: 10px;
+    }
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .social-icons img {
+      width: 24px;
+      cursor: pointer;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .logo img {
+      width: 60px;
+      margin-right: 15px;
+    }
+    .logo-text {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .sub-text {
+      font-size: 12px;
+      color: #ccc;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 992px) {
+      .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .footer-column {
+        margin: 20px 0;
+      }
+      .logo {
+        justify-content: center;
+      }
+      .contact-item {
+        justify-content: center;
+      }
+      .social-icons {
+        justify-content: center;
+      }
+    }
+
+    
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #ccc;
+  }
+
+  .footer-bottom a {
+    color: orange;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-highlight {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+      
   </style>
 </head>
 <body>
@@ -1060,7 +1218,7 @@
      </div>
     
 
-     <h1>Frequently asked questions</h1> 
+     <div class="text">Frequently asked questions</div> 
      <div class="faq-container">
       <div class="faq-item">
         <div class="faq-question active">
@@ -1133,60 +1291,66 @@
       </div>
      </div>
     
-      <footer>
-        <div class="footer-container">
-      
-          <!-- Logo & tagline -->
+      <footer class="footer">
+        <div class="footer-header">
           <div class="footer-logo">
-            <img src="img/baynzag logo.png" alt="Flaming Cliffs Logo" />
-            <h3>Flaming Cliffs (BayanZag)</h3>
-            <p>Discover Mongolia’s Legendary Dinosaur Site</p>
+            <img src="img/baynzag logo.png" alt="Logo">
+            
           </div>
-      
-          <!-- Quick Links -->
-          <div class="footer-column">
-            <h4>Quick links</h4>
-            <ul>
-              <li>Home</li>
-              <li>Gateway to Prehistory</li>
-              <li>Key fossils</li>
-              <li>Information Center</li>
-              <li>Getting There</li>
-              <li>Nearby Destinations</li>
-              <li>Accommodation</li>
-              <li>Gallery</li>
-              <li>FAQs</li>
-            </ul>
+
+          <div class="footer-title">
+            <h1>Flaming Cliffs ( BayanZag )</h1>
+            <p>Discover Mongolia's Legendary Dinosaur Site</p>
           </div>
-      
-          <!-- Visitor Info -->
-          <div class="footer-column">
-            <h4>Visitor Information</h4>
-            <ul>
-              <li><span>Entry Fees</span>: Domestic - 3,000 <small>MNT</small> | International - 10,000 <small>MNT</small></li>
-              <li><span>Best Time to Visit</span>: May - October</li>
-              <li><span>Location</span>: Bayanzag, Ömnögovi Province, Mongolia</li>
-            </ul>
-          </div>
-      
-          <!-- Contact Info -->
-          <div class="footer-column">
-            <h4>Contacts Us</h4>
-            <ul class="contact-icons">
-              <li><i class="fas fa-phone-alt"></i>+976-12345678</li>
-              <li><i class="fas fa-envelope"></i>info@flamingcliffs.mn</li>
-            </ul>
-            <h4>Follow Us</h4>
-            <div class="social-icons">
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-instagram"></i>
-              <i class="fab fa-youtube"></i>
-            </div>
-          </div>
-      
         </div>
-      
-        <div class="footer-bottom">
+      </footer>
+      <footer class="footer">
+        <div class="footer-column">
+          <h3 class="footer-title">Quick links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gateway to Prehistory</a></li>
+            <li><a href="#">Key fossils</a></li>
+            <li><a href="#">Information Center</a></li>
+            <li><a href="#">Getting There</a></li>
+            <li><a href="#">Nearby Destinations</a></li>
+            <li><a href="#">Accommodation</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Language</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Visitor Information</h3>
+          <p class="footer-title"><strong>Entry Fees</strong><br>Domestic - 3,000 MNT | International - 10,000 MNT</p>
+          <p class="footer-title"><strong>Best Time to Visit:</strong> May - October</p>
+          <p class="footer-title"><strong>Location</strong><br>Bayanzag, Ömnögovi Province, Mongolia</p>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Contacts Us</h3>
+          <div class="contact-item">
+            <img src="img/phone number icon.png" alt="Phone">
+            <h1 class="footer-title">+976-12345678</h1>
+          </div>
+          <div class="contact-item">
+            <img src="img/Email icon.png" alt="Email">
+            <h1 class="footer-title">info@flamingcliffs.mn</h1>
+          </div>
+          <h3 class="footer-title">Follow Us</h3>
+          <div class="social-icons">
+            <img src="img/Facebook round.png" alt="Facebook">
+            <img src="img/Insta Round.png" alt="Instagram">
+            <img src="img/Youtube round.png" alt="YouTube">
+          </div>
+        </div>
+
+       
+
+      </footer>
+      <footer class="footer">
+         <div class="footer-bottom">
           <div class="footer-highlight">Preserving History, Supporting Communities</div>
           Your visit directly contributes to preserving Mongolia’s heritage and empowering local communities.<br>
           <strong>Plan Your Visit Today!</strong><br><br>
@@ -1195,6 +1359,7 @@
           <a href="#">Terms of Use</a>
         </div>
       </footer>
+       
     
       <script>
         // FAQ toggle logic

@@ -2,36 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Section Title Design</title>
+  <title>Flaming Cliffs Header</title>
   <style>
     body {
+      margin: 0;
+      background-color: #1e1813; /* dark background */
       font-family: Arial, sans-serif;
-      margin: 40px;
     }
-    .section-title {
-      font-size: 24px;
+
+    .header {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 1px solid #3a322b;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .title {
+      margin-left: 15px;
+      color: white;
+    }
+
+    .title h1 {
+      margin: 0;
+      font-size: 16px;
       font-weight: bold;
-      color: #5c3113;
-      position: relative;
-      display: inline-block;
-      margin-bottom: 20px;
     }
-    .section-title::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      margin-left: 10px;
-      height: 2px;
-      width: 500px;
-      background-color: #5c3113;
-      transform: translateY(-50%);
+
+    .title p {
+      margin: 2px 0 0 0;
+      font-size: 12px;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
 
-  <div class="section-title">Getting There</div>
+  <div class="header">
+    <div class="logo">
+      <img src="your-logo.png" alt="Logo">
+    </div>
+    <div class="title">
+      <h1>Flaming Cliffs ( BayanZag )</h1>
+      <p>Discover Mongolia's Legendary Dinosaur Site</p>
+    </div>
+  </div>
 
 </body>
 </html>
