@@ -12,6 +12,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Flaming Cliffs</title>
     <style>
+      .brand {
+        align-items: center;
+        font-size: 1.1rem;
+        color: #ffffff;
+        font-weight: bold;
+        
+      }
 
     .container1{
       display: flex;
@@ -77,20 +84,25 @@
     .button:hover {
        background: #d68622;
     }
-    .thumbnails1 {
-        display: flex;
-        justify-content: center;
-        margin-top: 40px;
-        gap: 10px;
+
+    .thumbnails1{
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
     }
     .thumbnails1 img{
-      width: 220px;
-      height: 150px;
-      
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      
+      width: 600px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.2s;
     }
+    .thumbnails1 img:hover {
+  transform: scale(1.05);
+}
+    
 
     .btm-divider-wt {
       shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -297,7 +309,7 @@
       position: relative;
       width: 100%;
       height: 100vh;
-      background-image: url('img/photo\ &\ video\ gallery\ top\ desktop.jpg') 
+      background-image: url('img/photo\ &\ video\ gallery\ top\ desktop.jpg');
     }
     .overlay{
       position: absolute;
@@ -579,7 +591,8 @@
         <nav class="navbar">
               <div class="logo">
                 <a href="index.html"><img src="img/baynzag logo.png" alt=""> </a>
-                &nbsp; Flaming Cliffs </div>
+                <span class="brand">Flaming Cliffs</span>
+              </div>
           <div class="hamburger" onclick="toggleMenu()">
             <div></div>
             <div></div>
@@ -639,6 +652,7 @@
           <img src="img/image.jpg" alt="Main Image">
         </div>
 
+
         <div class="right1">
           <div class="title-section1">
             <h1>Gateway to Prehistory</h1>
@@ -650,13 +664,6 @@
                <a href="learn_detail.html"><button class="button" onclick="">Learn more →</button></a>
               </p>
             </div>
-          </div>
-          <div class="thumbnails1">
-            <img src="img/image.jpg" alt="Thumbnail 1">
-            <img src="img/image-1.jpg" alt="Thumbnail 1">
-            <img src="img/image-2.jpg" alt="Thumbnail 2">
-            <img src="img/image-3.jpg" alt="Thumbnail 3">
-            <img src="img/image-4.jpg" alt="Thumbnail 4">
           </div>
         </div>
       </div>

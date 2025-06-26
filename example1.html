@@ -1,63 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>The Prelude</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Navbar</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: white;
-      margin: 20px;
-      color: #333;
-    }
-    .section-header {
-      display: flex;
-      align-items: center;
-      border-bottom: 4px solid #7b4a26;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-    }
-    .number-box {
-      background-color: #7b4a26;
-      color: white;
-      font-weight: bold;
-      font-size: 30px;
-      padding: 15px 20px;
-      margin-right: 15px;
-    }
-    .title {
-      font-size: 28px;
-      font-weight: bold;
-      color: #7b4a26;
-    }
-    .subtitle {
-      font-size: 22px;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
-    .content {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-    b {
-      font-weight: bold;
-    }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #4b2e1f, #2c1c10);
+  padding: 10px 20px;
+  color: white;
+  position: relative;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-section img {
+  width: 35px;
+  height: 35px;
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ffcc99;
+}
+
+.language-dropdown select {
+  padding: 4px 8px;
+  background: transparent;
+  border: 1px solid #ccc;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Hamburger menu hidden by default */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 960px) {
+  .hamburger {
+    display: block;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    background-color: #3a2518;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+
+  .nav-links a {
+    padding: 10px 20px;
+  }
+
+  #menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+
+  .language-dropdown {
+    margin-left: auto;
+    margin-top: 10px;
+  }
+}
+
   </style>
 </head>
 <body>
+  <header class="navbar">
+    <div class="logo-section">
+      <img src="img/baynzag logo.png" alt="Flaming Cliffs Logo" />
+      <span class="brand">Flamming Cliffs</span>
+    </div>
 
-  <div class="section-header">
-    <div class="number-box">01</div>
-    <div class="title">The Prelude</div>
-  </div>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
 
-  <div class="subtitle">Mongolia Before The Discovery</div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Fossils & Discoveries</a>
+      <a href="#">Live Stats from Visitors</a>
+      <a href="#">Preservation</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact</a>
+    </nav>
 
-  <div class="content">
-    Long before its rise to fame, the Flaming Cliffs—known locally as Bayanzag—were merely a remote area within Mongolia’s Gobi Desert. Named <b>“Bayanzag”</b> by locals for its abundance of <b>saxaul trees</b> ("bayan" meaning rich and "zag" meaning saxaul), the region was known primarily to local herders, who often stumbled upon unusual bones and stones, unaware of their scientific significance.
-    <br><br>
-    Mongolia in the early 20th century was largely unexplored by Western science, a vast territory of myth, legend, and mystery. Tales circulated about hidden treasures beneath the Gobi sands—stories that would soon inspire an adventurous scientist to embark on an epic expedition.
-  </div>
-
+    <div class="language-dropdown">
+      <select>
+        <option>EN</option>
+        <option>MN</option>
+      </select>
+    </div>
+  </header>
 </body>
 </html>
