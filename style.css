@@ -900,27 +900,27 @@ body {
 
   .section {
     display: flex;
-    flex-wrap: wrap;
-    padding: 30px;
-    gap: 30px;
-    align-items: center;
     justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 20px;
   }
 
   .left-map {
-    flex: 1;
-    min-width: 100px;
+    flex: 1 1 400px;
+    max-width: 500px;
     text-align: center;
   }
 
   .left-map img {
-    max-width: 85%;
+    max-width: 100%;
     height: auto;
+    border-radius: 12px;
   }
 
   .right-text {
-    flex: 1;
-    min-width: 300px;
+    flex: 1 1 400px;
     max-width: 600px;
   }
 
