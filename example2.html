@@ -1,122 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Uncovering Iconic Species</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flaming Cliffs Info</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fff;
-      margin: 0;
-      padding: 40px;
-      color: #3d2a17;
-    }
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1e1815;
+  color: #f2f2f2;
+  padding: 40px 60px;
+  font-family: Arial, sans-serif;
+  flex-wrap: wrap;
+}
 
-    h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
+.footer-section {
+  flex: 1 1 300px;
+  margin: 10px 20px;
+}
 
-     .line {
-      border-bottom: 3px solid #8b5a32;
-      width: 100%;
-      margin-bottom: 20px;
-    }
+.footer-section h3 {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #666;
+  padding-bottom: 5px;
+  font-size: 1.1rem;
+}
 
-    h2 {
-      font-size: 20px;
-      font-weight: normal;
-      margin-bottom: 40px;
-      color: #7c6042;
-    }
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  column-count: 2;
+  column-gap: 30px;
+}
 
-    .species-container {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-    }
+.footer-section ul li {
+  margin-bottom: 8px;
+  cursor: pointer;
+}
 
-    .species-box {
-      flex: 1;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 20px;
-    }
+.footer-section p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
 
-    .species-box img {
-      width: 100%;
-      border-radius: 20px;
-      margin-bottom: 15px;
-    }
+.icon {
+  margin-right: 8px;
+}
 
-    .species-title {
-      font-weight: bold;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
 
-    .species-description {
-      font-size: 14px;
-      line-height: 1.5;
-      color: #444;
-    }
+.social-icons span {
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid orange;
+  color: orange;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  text-align: center;
+  margin-right: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
 
-    .character {
-      position: absolute;
-      top: 20px;
-      right: 40px;
-      width: 100px;
-    }
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
 
-    @media (max-width: 900px) {
-      .species-container {
-        flex-direction: column;
-      }
-      .character {
-        position: static;
-        margin: 0 auto 20px auto;
-        display: block;
-      }
-    }
   </style>
 </head>
 <body>
+  <footer class="footer">
+  <div class="footer-section quick-links">
+    <h3>Quick links</h3>
+    <ul>
+      <li>Home</li>
+      <li>Gateway to Prehistory</li>
+      <li>Key fossils</li>
+      <li>Information Center</li>
+      <li>Getting There</li>
+      <li>Nearby Destinations</li>
+      <li>Accommodation</li>
+      <li>Gallery</li>
+      <li>FAQs</li>
+      <li>Language</li>
+    </ul>
+  </div>
 
-  <h1>Uncovering Iconic Species</h1>
-  <div class="line"></div>
-  <h2>Beyond Eggs, The Flaming Cliffs Yielded Numerous Remarkable Fossils, Providing Invaluable Insights Into Prehistoric Life:</h2>
+  <div class="footer-section visitor-info">
+    <h3>Visitor Information</h3>
+    <p><strong>Entry Fees</strong><br>
+    Domestic – 3,000 <span class="mnt">MNT</span> | International – 10,000 <span class="mnt">MNT</span></p>
 
-  <img src="img/learn more detail dino icon.png" alt="Character" class="character">
+    <p><strong>Best Time to Visit:</strong> May – October</p>
 
-  <div class="species-container">
-    <div class="species-box">
-      <div class="species-title">Velociraptor mongoliensis (1924)</div>
-      <img src="velociraptor.png" alt="Velociraptor">
-      <div class="species-description">
-        First described by Henry Fairfield Osborn, the Velociraptor became famous through multiple significant finds at the Flaming Cliffs.<br><br>
-        This agile, intelligent predator was smaller than portrayed in popular culture—about the size of a turkey—but lethal, with razor-sharp claws. Its most notable fossil, the "Fighting Dinosaurs," preserves a dramatic predator-prey encounter with Protoceratops.
-      </div>
-    </div>
+    <p><strong>Location</strong><br>
+    Bayanzag, Ömnögovi Province, Mongolia</p>
+  </div>
 
-    <div class="species-box">
-      <div class="species-title">Protoceratops andrewsi (1923)</div>
-      <img src="protoceratops.png" alt="Protoceratops">
-      <div class="species-description">
-        Discovered by Andrews himself and named in his honor, Protoceratops became one of the most abundant fossils at Bayanzag.<br><br>
-        These small, frilled, hornless ceratopsians were herbivorous dinosaurs that moved in herds, evidence indicated by fossilized nests and eggs. Their remains provided unprecedented details about dinosaur nesting behaviors and social structures.
-      </div>
-    </div>
+  <div class="footer-section contact-us">
+    <h3>Contacts Us</h3>
+    <p><i class="icon">📞</i> +976-12345678</p>
+    <p><i class="icon">✉️</i> info@flamingcliffs.mn</p>
 
-    <div class="species-box">
-      <div class="species-title">Oviraptor philoceratops (1924)</div>
-      <img src="oviraptor.png" alt="Oviraptor">
-      <div class="species-description">
-        Initially misunderstood as an "egg thief" due to fossils found near nests, later research revealed that Oviraptor was actually protecting its own eggs.<br><br>
-        These finds at the Flaming Cliffs significantly corrected paleontological misconceptions, offering a remarkable glimpse into dinosaur parental behaviors.
-      </div>
+    <h4>Follow Us</h4>
+    <div class="social-icons">
+      <span>📘</span>
+      <span>📸</span>
+      <span>▶️</span>
     </div>
   </div>
+</footer>
+
 
 </body>
 </html>
