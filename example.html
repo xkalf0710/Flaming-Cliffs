@@ -2,38 +2,154 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Photo & Video Gallery</title>
-  <style>
-    .banner {
-      position: relative;
-      width: 100%;
-      height: 250px;
-      background-image: url('your-image.jpg'); /* Зургийн замыг солино */
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flaming Cliffs</title>
+<style>
+  .footer {
+  background-color: #1c1611;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 20px;
+}
 
-    .banner-text {
-      color: white;
-      text-align: center;
-      font-size: 28px;
-      font-weight: bold;
-      line-height: 1.4; /* мөр хоорондын зай */
-      letter-spacing: 5px; /* үсэг хоорондын зай */
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* тод харагдуулах effect */
-    }
-  </style>
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 30px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.logo-column .logo {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.site-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.site-tagline {
+  font-size: 13px;
+  color: #ccc;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #bbb;
+}
+
+.footer-bottom .plan-visit {
+  margin: 10px 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.footer-bottom a {
+  color: orange;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+</style>
+
+
 </head>
 <body>
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column logo-column">
+      <img src="img/logo.png" alt="Flaming Cliffs Logo" class="logo" />
+      <div class="site-name">Flaming Cliffs ( BayanZag )</div>
+      <div class="site-tagline">Discover Mongolia’s Legendary Dinosaur Site</div>
+    </div>
 
-  <div class="banner">
-    <div class="banner-text">
-      PHOTO & VIDEO <br> GALLERY
+    <div class="footer-column">
+      <h3>Quick links</h3>
+      <ul>
+        <li>Home</li>
+        <li>Gateway to Prehistory</li>
+        <li>Key fossils</li>
+        <li>Information Center</li>
+        <li>Getting There</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <br />
+      <ul>
+        <li>Nearby Destinations</li>
+        <li>Accommodation</li>
+        <li>Gallery</li>
+        <li>FAQs</li>
+        <li>Language</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Visitor Information</h3>
+      <p><strong>Entry Fees</strong><br>Domestic - 3,000 MNT | International - 10,000 MNT</p>
+      <p><strong>Best Time to Visit:</strong> May - October</p>
+      <p><strong>Location</strong><br>Bayanzag, Ömnögovi Province, Mongolia</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Contacts Us</h3>
+      <p>📞 +976-12345678</p>
+      <p>✉️ info@flamingcliffs.mn</p>
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <img src="img/fb-icon.png" alt="Facebook" />
+        <img src="img/ig-icon.png" alt="Instagram" />
+        <img src="img/yt-icon.png" alt="YouTube" />
+      </div>
     </div>
   </div>
+
+  <div class="footer-bottom">
+    <strong>Preserving History, Supporting Communities</strong><br />
+    Your visit directly contributes to preserving Mongolia’s heritage and empowering local communities.
+    <div class="plan-visit">Plan Your Visit Today!</div>
+    <div class="footer-legal">
+      © 2025 Flaming Cliffs Administration | All Rights Reserved
+      <br />
+      <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
