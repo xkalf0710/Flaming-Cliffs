@@ -349,7 +349,7 @@ body {
     width: 773px;
     height: 435px;
     object-fit: cover;
-    border: 0.4rem solid #744017;
+    
     /* margin-bottom: 10px; */
     border-radius: 1rem;
     margin-bottom: 20px;
@@ -361,19 +361,15 @@ body {
 
   .small-pictures-2 {
     display: flex;
-    gap: 10px;
-    /* margin-top: 5vh; */
-    flex-direction: row;
-    /* margin-top: 20vh; */
-    align-items: center;
-    justify-content: center;
-    margin-top: 3rem;
+    gap: 8px;
+    margin-top: 30px;
   }
 
+
   .small-pictures-2 img {
-    width: 279px;
-    height: 155px;
-    
+    flex: 1;
+    height: 135px;
+    aspect-ratio: 16 / 9; /* Forces 16:9 ratio */
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.2s;
@@ -382,6 +378,7 @@ body {
   .small-pictures-2 img:hover {
     transform: scale(1.1);
   }
+
   .info-plus-2 {
     display: flex;
     font-size: 20px;

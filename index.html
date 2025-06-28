@@ -12,13 +12,69 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Flaming Cliffs</title>
     <style>
+
+    
       .brand {
         align-items: center;
         font-size: 1.1rem;
         color: #ffffff;
         font-weight: bold;
-        
       }
+    
+    .header{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 4px solid #693b16;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }
+    .number-box{
+      background-color: #693b16;
+      color: #fff;
+      font-size: 32px;
+      font-weight: bold;
+      padding: 15px 25px;
+    }
+    .header h1{
+      font-size: 28px;
+      color: #693b16;
+      margin: 0;
+    }
+    .description {
+      font-size: 16px;
+      margin-bottom: 20px;
+      font-weight: 400px;
+    }
+
+    .content{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .features{
+      flex: 1 1 300px;
+      list-style: disc;
+      padding-left: 20px;
+      font-size: 16px;
+    }
+
+    .features li{
+      margin-bottom: 12px;
+    }
+
+    .main-image{
+      flex: 1 1 400px;
+    }
+
+    .main-image img{
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+     
 
     .container1{
       display: flex;
@@ -166,6 +222,7 @@
     }
     .section-title1 {
       font-weight: bold;
+      font-size: 24px;
       color: #5c3113; /* similar brown color */
       margin-right: 15px;
       white-space: nowrap;
@@ -272,6 +329,7 @@
     }
 
 
+
     .container-nearby{
       max-width: 1250px;
       margin: auto;
@@ -312,11 +370,11 @@
       color: #333;
     }
 
-    .banner-hero{
+    /* .banner-hero{
       position: relative;
       width: 100%;
       height: 100vh;
-      background-image: url('img/photo\ &\ video\ gallery\ top\ desktop.jpg');
+      background-image: url('img/photo\ &\ video\ gallery\ top\ desktop.jpg')  center;
     }
     .overlay{
       position: absolute;
@@ -338,7 +396,7 @@
       font-size: 48px;
       letter-spacing: 4px;
       margin: 0;
-    }
+    } */
 
 
     .contact-header{
@@ -443,83 +501,154 @@
       transform: rotate(180deg);
     }
 
-   .footer {
-  display: flex;
-  justify-content: space-between;
-  background-color: #1e1815;
-  color: #f2f2f2;
-  padding: 40px 60px;
-  font-family: Arial, sans-serif;
-  flex-wrap: wrap;
-}
+    .description{
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
 
-.footer-section {
-  flex: 1 1 300px;
-  margin: 10px 20px;
-}
+    .footer{
+      background-color: #1f1813;
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      border-top: 1px solid #333;
+      max-width: 1700px;
+      margin: auto;
+      
+    }
+    .footer-header{
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      
+    }
+    .footer-logo img{
+      height: 50px;
+      margin: 0;
+      padding: 1%;
+    }
+    .footer-title{
+      margin-left: 15px;
+      color: white;
+    }
+    .footer-title h1{
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .footer-title p{
+      margin: 2px 0 0 0;
+      font-size: 12px;
+      color: #ccc;
+    }
 
-.footer-section h3 {
-  margin-bottom: 15px;
-  border-bottom: 1px solid #666;
-  padding-bottom: 5px;
-  font-size: 1.1rem;
-}
+    .footer-column {
+      flex: 1 1 220px;
+      margin: 10px;
+    }
+    .footer-column h3 {
+      border-bottom: 1px solid #555;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-column ul li {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s;
+    }
+    .footer-column ul li a:hover {
+      color: #f4b042;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .contact-item img {
+      width: 20px;
+      margin-right: 10px;
+    }
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .social-icons img {
+      width: 24px;
+      cursor: pointer;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .logo img {
+      width: 60px;
+      margin-right: 15px;
+    }
+    .logo-text {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .sub-text {
+      font-size: 12px;
+      color: #ccc;
+    }
 
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-  column-count: 2;
-  column-gap: 30px;
-}
+    /* Responsive styles */
+    @media (max-width: 992px) {
+      .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .footer-column {
+        margin: 20px 0;
+      }
+      .logo {
+        justify-content: center;
+      }
+      .contact-item {
+        justify-content: center;
+      }
+      .social-icons {
+        justify-content: center;
+      }
+    }
 
-.footer-section ul li {
-  margin-bottom: 8px;
-  cursor: pointer;
-}
-
-.footer-section p {
-  margin: 8px 0;
-  font-size: 0.95rem;
-}
-
-.icon {
-  margin-right: 8px;
-}
-
-
-.social-icons img {
-  display: inline-block;
-  background-color: transparent;
-  border: 2px solid orange;
-  color: orange;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  line-height: 28px;
-  text-align: center;
-  margin-right: 10px;
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-
-.footer-bottom{
-  border-top: 1px solid #444;
-  padding-top: 20px;
-  text-align: center;
-  font-size: 0.9rem;
-}
-.footer-bottom a{
-  color: #f0a500;
-  text-decoration: none;
-  margin: 0 5px;
-}
-
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    padding: 20px;
+    
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #ccc;
   }
-}
+
+  .footer-bottom a {
+    color: orange;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-highlight {
+    font-weight: bold;
+    margin-top: 10px;
+  }
       
   </style>
 </head>
@@ -611,11 +740,9 @@
         <h1>INFORMATION CENTER</h1>
     </div>
 
-
+   <img class="btm-divider" src="img/btm-divider.png" alt="">
     <!-- The Flaming Cliffs Information Center -->
-    <div class="info cntr">
-      <img class="btm-divider" src="img/btm-divider.png" alt="">
-      
+    <!-- <div class="info-cntr">
       <div class="gallery-2">
           <div class="info-plus">
               <div class="big">
@@ -669,30 +796,68 @@
               </div>
           </div>
         </div>
+  </div> -->
+
+
+  <div class="container-nearby">
+    <div class="header">
+      <div class="number-box">04</div>
+      <h1>The Flaming Cliffs Information Center</h1>
+    </div>
+
+    <p class="description">
+      The Flaming Cliffs Information Center serves as the gateway to your journey. Here, you’ll find everything you need to deepen your understanding of this remarkable destination:
+    </p>
+
+    <div class="content">
+      <ul class="features">
+         <li><strong>Documentary:</strong> Start with an immersive film that brings the story of the Flaming Cliffs to life.</li>
+        <li><strong>Coffee Shop:</strong> Relax and refresh with a variety of local and international beverages.</li>
+        <li><strong>Dining Area:</strong> Savor delicious meals prepared with care, offering a taste of Mongolia.</li>
+        <li><strong>Souvenir Shop:</strong> Take a piece of the Flaming Cliffs home with beautifully crafted local goods.</li>
+        <li><strong>Exhibition Hall:</strong> Explore a wealth of information through engaging displays, showcasing the region’s history, ecology, and preservation efforts.</li>
+      </ul>
+      <div class="main-image">
+        <img id="big-picture-2" src="img/Information Center/Information Center- (1).png" alt="Flaming Cliffs Center" class="big-picture-2">
+      </div>
+      <div class="small-pictures-2">
+         <img src="img/Information Center/Information Center- (3).png" alt="Small 1" data-big="img/Information Center/Information Center- (3).png">
+         <img src="img/Information Center/Information Center- (4).png" alt="Small 2" data-big="img/Information Center/Information Center- (4).png">
+         <img src="img/Information Center/Information Center- (7).png" alt="Small 3" data-big="img/Information Center/Information Center- (7).png">
+         <img src="img/Information Center/Information Center- (9).png" alt="Small 4" data-big="img/Information Center/Information Center- (9).png">
+         <img src="img/Information Center/Information Center- (1).png" alt="Small 5" data-big="img/Information Center/Information Center- (1).png">
+      </div>
+    </div>
   </div>
+
+  &nbsp;
+
+  
+       
 
        <!-- Entry Fees -->
 
-       <section class="container">
+       <section class="container-nearby">
         <div class="section-header1">
           <div class="section-title1">Entry Fees & Preservation</div>
           <div class="section-line1"></div>
         </div>
         <div class="content">
           <div class="text">
-            <p>Visitors to the Flaming Cliffs contribute directly to preserving this historic site. Entry fees ensure ongoing research, conservation efforts, and public education:</p>
+            <p class="description">Visitors to the Flaming Cliffs contribute directly to preserving this historic site. Entry fees ensure ongoing research, conservation efforts, and public education:</p>
             <ul>
-              <li><strong>Domestic Visitors:</strong> 3,000 MNT</li>
-              <li><strong>Tourists:</strong> 10,000 MNT</li>
+              <li> &#8226 <strong>Domestic Visitors:</strong> 3,000 MNT</li>
+              <li> &#8226 <strong>Tourists:</strong> 10,000 MNT</li>
             </ul>
     
             <p>Your visit also directly contributes to the preservation and enhancement of this iconic site. Every ticket sold supports essential projects such as:</p>
             <ul>
-              <li>Stair and pathway renovations</li>
-              <li>Regular cleaning and maintenance</li>
-              <li>Eco-friendly fencing that accommodates herders and livestock</li>
-              <li>Planting trees to combat desertification</li>
+              <li>&#8226 <span class="bold"> Stair and pathway renovations</span></li>
+              <li> &#8226 <span class="bold"> Regular cleaning and maintenance</span></li>
+              <li> &#8226 <span class="bold">Eco-friendly fencing that accommodates herders and livestock</span></li>
+              <li> &#8226 <span class="bold">Planting trees to combat desertification</span></li>
             </ul>
+            &nbsp;
     
             <p>Meet the dedicated team working tirelessly to protect and promote the Flaming Cliffs. Their commitment ensures this destination remains pristine and accessible for generations to come.</p>
           </div>
@@ -974,7 +1139,7 @@
     <div class="banner-hero">
       <div class="overlay"></div>
       <div class="banner-text">
-        <h1>PHOTO & VIDEO<span>GALLERY</span></h1>
+        <h1>PHOTO & VIDEO<span>&nbsp;GALLERY</span></h1>
       </div>
     </div>
     
@@ -1157,58 +1322,74 @@
      </div>
     </div>
     
+      <footer class="footer">
+        <div class="footer-header">
+          <div class="footer-logo">
+            <img src="img/baynzag logo.png" alt="Logo">
+            
+          </div>
 
-
-    <footer class="footer">
-    <div class="footer-section quick-links">
-      <h3>Quick links</h3>
-      <ul>
-        <li>Home</li>
-        <li>Gateway to Prehistory</li>
-        <li>Key fossils</li>
-        <li>Information Center</li>
-        <li>Getting There</li>
-        <li>Nearby Destinations</li>
-        <li>Accommodation</li>
-        <li>Gallery</li>
-        <li>FAQs</li>
-        <li>Language</li>
-      </ul>
-    </div>
-
-    <div class="footer-section visitor-info">
-      <h3>Visitor Information</h3>
-      <p><strong>Entry Fees</strong><br>
-      Domestic – 3,000 <span class="mnt">MNT</span> | International – 10,000 <span class="mnt">MNT</span></p>
-
-      <p><strong>Best Time to Visit:</strong> May – October</p>
-
-      <p><strong>Location</strong><br>
-      Bayanzag, Ömnögovi Province, Mongolia</p>
-    </div>
-
-    <div class="footer-section contact-us">
-        <h3>Contacts Us</h3>
-        <p><i class="icon">📞</i> +976-12345678</p>
-        <p><i class="icon">✉️</i> info@flamingcliffs.mn</p>
-
-        <h4>Follow Us</h4>
-        <div class="social-icons">
-          <img src="img/Facebook round.png">
-          <img src="img/Insta Round.png">
-          <img src="img/Youtube round.png">
+          <div class="footer-title">
+            <h1>Flaming Cliffs ( BayanZag )</h1>
+            <p>Discover Mongolia's Legendary Dinosaur Site</p>
+          </div>
         </div>
-      </div>
-    </div>
+      </footer>
+      <footer class="footer">
+        <div class="footer-column">
+          <h3 class="footer-title">Quick links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gateway to Prehistory</a></li>
+            <li><a href="#">Key fossils</a></li>
+            <li><a href="#">Information Center</a></li>
+            <li><a href="#">Getting There</a></li>
+            <li><a href="#">Nearby Destinations</a></li>
+            <li><a href="#">Accommodation</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Language</a></li>
+          </ul>
+        </div>
 
-    <!-- <div class="footer-bottom">
-       <p><strong>Preserving History, Supporting Communities</strong></p>
-          <p>Your visit directly contributes to preserving Mongolia’s heritage and empowering local communities.<br>Plan Your Visit Today!</p>
-        <p>© 2025 Flaming Cliffs Administration | All Rights Reserved</p>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
-    </div> -->
-</footer>
+        <div class="footer-column">
+          <h3 class="footer-title">Visitor Information</h3>
+          <p class="footer-title"><strong>Entry Fees</strong><br>Domestic - 3,000 MNT | International - 10,000 MNT</p>
+          <p class="footer-title"><strong>Best Time to Visit:</strong> May - October</p>
+          <p class="footer-title"><strong>Location</strong><br>Bayanzag, Ömnögovi Province, Mongolia</p>
+        </div>
 
+        <div class="footer-column">
+          <h3 class="footer-title">Contacts Us</h3>
+          <div class="contact-item">
+            <img src="img/phone number icon.png" alt="Phone">
+            <h1 class="footer-title">+976-12345678</h1>
+          </div>
+          <div class="contact-item">
+            <img src="img/Email icon.png" alt="Email">
+            <h1 class="footer-title">info@flamingcliffs.mn</h1>
+          </div>
+          <h3 class="footer-title">Follow Us</h3>
+          <div class="social-icons">
+            <img src="img/Facebook round.png" alt="Facebook">
+            <img src="img/Insta Round.png" alt="Instagram">
+            <img src="img/Youtube round.png" alt="YouTube">
+          </div>
+        </div>
+
+       
+
+      </footer>
+      <footer class="footer">
+         <div class="footer-bottom">
+          <div class="footer-highlight">Preserving History, Supporting Communities</div>
+          Your visit directly contributes to preserving Mongolia’s heritage and empowering local communities.<br>
+          <strong>Plan Your Visit Today!</strong><br><br>
+          &copy; 2025 Flaming Cliffs Administration | 
+          <a href="#">Privacy Policy</a> | 
+          <a href="#">Terms of Use</a>
+        </div>
+      </footer>
        
     
       <script>
