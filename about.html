@@ -4,363 +4,1026 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 767px)">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
     <link rel="stylesheet" href="tablet.css" media="screen and (max-width: 1449px) and (min-width: 768px)">
     <link rel="stylesheet" href="style.css" media="screen and (min-width: 1450px)">
     <link rel="stylesheet" href="global.css">
-    <title>About Us</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Flaming Cliffs</title>
     <style>
-      .container{
-        max-width: 1000px;
-        margin: auto;
-        padding: 20px;
-    }
+
     
-    .mission-section {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      font-family: Arial, sans-serif;
-      color: #4D3B2F;
-      padding: 20px;
-    }
-
-    .mission-icon img {
-      width: 80px;
-      height: auto;
-    }
-
-    .mission-content {
-      flex: 1;
-    }
-
-    .mission-content h2 {
-      margin: 0;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .mission-content p {
-      margin: 10px 0;
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    .mission-content hr {
-      margin-top: 10px;
-      border: none;
-      height: 4px;
-      background-color: #7B4B2A;
-      width: 100%;
-    }
-
-    .vision-section {
+      .brand {
+        align-items: center;
+        font-size: 1.1rem;
+        color: #ffffff;
+        font-weight: bold;
+      }
+    
+    .header{
       display: flex;
       align-items: center;
-      justify-content: space-between;
       gap: 20px;
-      font-family: Arial, sans-serif;
-      color: #4D3B2F;
-      padding: 20px;
+      border-bottom: 4px solid #693b16;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
     }
-
-    .vision-left img {
-      width: 100px;
-      height: auto;
+    .number-box{
+      background-color: #693b16;
+      color: #fff;
+      font-size: 32px;
+      font-weight: bold;
+      padding: 15px 25px;
     }
-
-    .vision-center {
-      flex: 1;
-      text-align: center;
-    }
-
-    .vision-center p {
-      font-size: 14px;
-      line-height: 1.5;
+    .header h1{
+      font-size: 28px;
+      color: #693b16;
       margin: 0;
     }
-
-    .vision-center hr {
-      margin-top: 10px;
-      border: none;
-      height: 4px;
-      background-color: #7B4B2A;
-      width: 100%;
+    .description {
+      font-size: 16px;
+      margin-bottom: 20px;
+      font-weight: 400px;
     }
 
-    .vision-right {
+    .content{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .features{
+      flex: 1 1 300px;
+      list-style: disc;
+      padding-left: 20px;
+      font-size: 16px;
+    }
+
+    .features li{
+      margin-bottom: 12px;
+    }
+
+    .main-image{
+      flex: 1 1 400px;
+    }
+
+    .main-image img{
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+     
+
+    .container1{
+      display: flex;
+      gap: 40px;
+      max-width: 1100px;
+      margin: auto;
+      align-items: flex-start;
+    }
+
+    .left2{
+      flex: 1;
+    }
+    .left2 img{
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .right1{
+      flex: 1;
+    }
+    .title-section1{
+      display: inline-block;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .title-section1 h1{
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #5d3c1c;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .title-number1{
+      background-color: #5d3c1c;
+      color: white;
+      font-weight: bold;
+      padding: 10px 20px;
+      font-size: 1.5rem;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    .right1 p{
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .button{
+      background-color: #f7a531;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: background 0.3s;
+      
+      
+    }
+
+    .button:hover {
+       background: #d68622;
+    }
+
+    .thumbnails1{
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .thumbnails1 img{
+      width: 600px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .thumbnails1 img:hover {
+  transform: scale(1.05);
+}
+    
+
+    .btm-divider-wt {
+      shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .btm-divider{
+     
+      shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .banner h1 {
+      font-size: 48px;
+      align-items: center;
+      color: white;
+      letter-spacing: 12px; /* This adds space between letters */
+    }
+
+
+    @media (max-width: 768px){
+      .container1{
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+      }
+      .title-section1{
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .title-number1{
+        font-size: 1.2rem;
+        padding: 8px 16px;
+      }
+
+      .title-section1 h1{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+      .left2 img{
+        max-height: 300px;
+        object-fit: cover;
+      }
+      .thumbnails1{
+        flex-direction: column;
+        align-items: center;
+      }
+      .thumbnails1 img{
+        width: 100%;
+        height: auto;
+        max-width: 98%;
+      }
+      .button{
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+        font-size: 16px;
+      }
+    }
+
+    .section-header1 {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .section-title1 {
+      font-weight: bold;
+      font-size: 24px;
+      color: #5c3113; /* similar brown color */
+      margin-right: 15px;
+      white-space: nowrap;
+    }
+    .section-line1{
+      flex-grow: 1;
+      height: 5px;
+      background-color: #5c3113; /* same color as title */
+    }
+
+    .section-title2{
+      font-size: 24px;
+      font-weight: bold;
+      color: #5c3113;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .section-title2::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      margin-left: 10px;
+      height: 4px;
+      width: 500px;
+      background-color: #5c3113;
+      transform: translateY(-50%);
+    }    
+
+    .section-header2{
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .line2{
+      flex: 1;
+      height: 4px;
+      background-color: #5c3113;
+      margin-right: 15px;
+    }
+    .title2{
+      font-weight: bold;
+      font-size: 24px;
+      color: #5c3113;
+    }
+
+    .nearby-header{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 50px 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .nearby-line{
+      flex: 1;
+      height: 4px;
+      background-color: #5c3113;
+      max-width: 400px;
+    }
+
+    .nearby-title{
+      margin: 0 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #5c3113;
+    }
+
+    .grid-container-nearby{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+
+    }
+
+    .card-nearby{
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      text-align: center;
+      overflow: hidden;
+      
+    }
+
+    .card-nearby:hover{
+      transform: scale(1.03);
+    }
+    .card-nearby img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-text{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 10px 15px;
+      
+      color: #fff;
+      width: 100%;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+
+
+    .container-nearby{
+      max-width: 1100px;
+      margin: auto;
+    }
+
+     .header-local {
+      margin-top: 40px;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #111;
+    }
+
+    .card-container-nearby1{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card-nearby1{
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      padding: 10px;
       text-align: center;
     }
-
-    .vision-right img {
-      width: 60px;
+    .card-nearby1 img{
+      width: 100%;
       height: auto;
+      border-radius: 10px;
+    }
+    .card-title-nearby1{
+      margin: 15px 0 10px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #333;
     }
 
-    .vision-right h2 {
-      margin: 5px 0 0;
-      font-size: 22px;
-      font-weight: bold;
+    /* .banner-hero{
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-image: url('img/photo\ &\ video\ gallery\ top\ desktop.jpg')  center;
     }
-    </style>
+    .overlay{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .banner-text{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+    .banner-text h1{
+      font-size: 48px;
+      letter-spacing: 4px;
+      margin: 0;
+    } */
+
+
+    .contact-header{
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-title{
+      font-size: 24px;
+      font-weight: bold;
+      color: #5c3113;
+      margin-right: 15px;
+      white-space: nowrap;
+    }
+    .divider-line{
+      flex-grow: 1;
+      height: 4px;
+      background-color: #5c3113;
+    }
+
+    .contact-content{
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+      text-align: center;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    .container-contact{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap; 
+      margin-right: 20px;
+    }
+    .card-contact{
+      text-align: center;
+      margin: 20px;
+      margin-right: 80px;
+    }
+    .icon{
+      font-size: 60px;
+      color: #f3912e;
+      margin-bottom: 10px; 
+    }
+    .title{
+      color: gray;
+      margin-bottom: 5px;
+    }
+    .value{
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+
+    .faq-header{
+      max-width: 1100px;
+      margin: 40px auto 10px;
+      padding: 0 20px;
+    }
+    .faq-header h2{
+      font-size: 24px;
+      font-weight: normal;
+      margin-bottom: 5px;
+    }
+
+   
+    .faq-container{
+      padding: 10px;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+
+    .faq-item{
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+      cursor: pointer;
+    }
+
+    .faq-question{
+      font-size: 18px;
+      font-weight: bold;
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .faq-answer{
+      display: none;
+      margin-top: 5px;
+      color: #555;
+      font-size: 16px;
+    }
+    
+
+    .faq-item.open .faq-answer{
+      display: block;
+    }
+    .arrow{
+      width: 20px;
+      height: 20px;
+      transition: transform 0.3s;
+    }
+    .rotate{
+      transform: rotate(180deg);
+    }
+
+    .description{
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+ 
+
+    .footer{
+      background-color: #1f1813;
+      color: #f2f2f2;
+      padding: 10px 10px;
+    }
+    .footer-container{
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      border-top: 1px solid #333;
+    }
+
+    .banner-footer{
+      display: flex;
+      align-items: center;
+      background-color: #1e1712;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    .banner-footer img{
+     
+      width: 50px;
+      height: auto;
+      margin-right: 15px;
+      object-fit: cover;
+    }
+    
+    .banner-text{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .banner-title{
+      font-weight: bold;
+      font-size: 1rem;
+      margin: 0;
+    }
+    .banner-subtitle{
+      font-size: 0.9rem;
+      margin-top: 2px;
+    }
+
+    .footer-column {
+      flex: 1 1 220px;
+      margin: 10px;
+    }
+    .footer-column h3 {
+      border-bottom: 1px solid #555;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-column ul li {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s;
+    }
+    .footer-column ul li a:hover {
+      color: #f4b042;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .contact-item img {
+      width: 20px;
+      margin-right: 10px;
+    }
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .social-icons img {
+      width: 24px;
+      cursor: pointer;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .logo img {
+      width: 60px;
+      margin-right: 15px;
+    }
+    .logo-text {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .sub-text {
+      font-size: 12px;
+      color: #ccc;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 992px) {
+      .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .footer-column {
+        margin: 20px 0;
+      }
+      .logo {
+        justify-content: center;
+      }
+      .contact-item {
+        justify-content: center;
+      }
+      .social-icons {
+        justify-content: center;
+      }
+    }
+
+    
+  .footer-bottom {
+    text-align: center;
+    color: #ccc;
+    font-size: 0.95rem;
+  }
+
+  .footer-bottom a {
+    color: orange;
+    text-decoration: none;
+    margin: 0 0px;
+  }
+
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-highlight {
+    font-weight: bold;
+    margin-top: 0px;
+  }
+
+
+  .footer-section{
+    flex: 1 1 150px;
+    margin: 10px 10px;
+  }
+
+  .footer-section h3{
+    margin-bottom: 15px;
+    border-bottom: 1px solid #666;
+    padding-bottom: 5px;
+    font-size: 1.1rem;
+  }
+
+  .footer-section ul{
+    list-style: none;
+    padding: 0;
+    column-count: 2;
+    column-gap: 30px;
+  }
+
+  .footer-section ul li{
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+
+  .footer-section p{
+    margin: 8px 0;
+    font-size: 0.95rem;
+  }
+  .icon{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .icons img{
+    width: 20px;
+    margin-right: 10px;
+  }
+
+  .social-icons img{
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid orange;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    margin-right: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .footer{
+      flex-direction: column;
+      padding: 20px;
+    }
+  }
+
+  .footer-logo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .footer-logo img{
+    height: 60px;
+    margin-right: 15px;
+  }
+
+  .footer-title h3{
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .footer-title p{
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  </style>
 </head>
 <body>
-    <div class="explore-about">
-    <nav class="navbar">
-        <div class="logo"><img src="img/baynzag logo.png" alt=""> &nbsp; Flaming Cliffs</div>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="menu" id="menu">
-      <a href="home.html">HOME</a>
-      <a href="about.html">ABOUT</a>
-      <a href="#fossils">FOSSILS & DISCOVERIES</a>
-      <a href="status.html">LIVE STATUS FROM VISITORS</a>
-      <a href="#preservation">PRESERVATION</a>
-      <a href="#gallery">GALLERY</a>
-      <a href="#contact">CONTACT</a>
-      <a href="login.html">LOGIN</a>
-    </div>
-    </nav>
-   
+      <div class="explore-about">
+        <nav class="navbar">
+              <div class="logo">
+                <a href="index.html"><img src="img/baynzag logo.png" alt=""> </a>
+                <span class="brand">Flaming Cliffs</span>
+              </div>
+          <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        <div class="menu" id="menu">
+          <a href="home.html">HOME</a>
+          <a href="about.html">ABOUT</a>
+          <a href="learn_detail.html">FOSSILS & DISCOVERIES</a>
+          <a href="status.html">LIVE STATUS FROM VISITORS</a>
+          <a href="#preservation">PRESERVATION</a>
+          <a href="#gallery">GALLERY</a>
+          <a href="#contact">CONTACT</a>
+          <a href="login.html">LOGIN</a>
+          <select class="bg-transparent border white px-2 py-1 rounded">
+            <option>EN</option>
+            <option>MN</option>
+          </select>
+          &nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;
+        </div>
+        
+        </nav>
+    
         <div class="collapsible-container">
-            <h1>Flaming Cliffs:<br>About Us</h1>
-          </div>
-    
-        <img class="divider" src="img/divider.png" alt="">
-    </div>
-
-   <div class="container">
-    <div class="mission-section">
-      <div class="mission-icon">
-        <img src="img/oour mission icon.png" alt="Mission Icon">
+              <h1>Flaming Cliffs <br>About Us</h1>
+        </div>
+        <img src="img/divider-wt.png" alt="">
       </div>
-      <div class="mission-content">
-        <h2>Our Misson</h2>
-        <p>At the Flaming Cliffs Administration, our mission is to preserve, study, and share the rich paleontological heritage of the Flaming Cliffs (Bayanzag).
-          We are dedicated to safeguarding this unique site, promoting scientific research, and providing educational experiences that connect visitors to its historical and natural significance.</p>
-          <hr>
+       
+    
+  <!-- Contacts  -->
+     <div class="container-nearby">
+     
+      
+     <div class="contact-header">
+       <h1 class="contact-title">Contact Us & FAQs</h1>
+       <div class="divider-line"></div>
+     </div>
+
+     <div class="contact-content">
+       The Flaming Cliffs administration team is here to assist you in every way possible.
+        Whether you have questions about your visit or require further guidance, don’t hesitate
+        to reach out. Our dedicated nature rangers are passionate about preserving the beauty and 
+        history of this iconic site. Feel free to contact us at:
+     </div>
+
+     <div class="container-contact">
+      <div class="card-contact">
+        <div class="icon">
+          <img src="img/phone number icon.png">
+        </div>
+        <div class="title">Phone Number</div>
+        <div class="value">+976 987 963</div>
       </div>
-    </div>
 
-
-    <div class="vision-section">
-      <div class="vision-left">
-        <img src="img/About us dino icon.png" alt="Dinosaur Mascot">
-
+      <div class="card-contact">
+        <div class="icon">
+          <img src="img/Email icon.png">
+        </div>
+        <div class="title">Email Address</div>
+        <div class="value">info@flamingcliffs.mn</div>
       </div>
-      <div class="vision-center">
-        <p>
-          We envision the Flaming Cliffs as a globally recognized center for paleontological research and eco-tourism,
-            where visitors can immerse themselves in the wonders of Earth's prehistoric past while contributing to the
-            preservation of this invaluable heritage.
-        </p>
-        <hr>
+
+
+      <div class="card-contact">
+        <div class="icon">
+          <img src="img/facebook icon.png">
+        </div>
+        <div class="title">Facebook</div>
+        <div class="value">Flaming Cliffs Administration</div>
       </div>
-      <div class="vision-right">
-        <img src="img/our vision icon.png" alt="Vision Icon">
-        <h2>Our Vision</h2>
+
+      <div class="card-contact">
+        <div class="icon">
+          <img src="img/Insta icon.png">
+        </div>
+        <div class="title">Instagram</div>
+        <div class="value">Flaming_Cliffs</div>
       </div>
-    </div>
+     </div>
+     </div>
+    
 
-    <!-- Our objectives -->
+     &nbsp;
 
-    <section class="objectives">
-      <h2>Our Objectives</h2>
-      <div class="objectives-container">
-        <div class="objective">
-          <h3>Conservation</h3>
-          <p>Implement sustainable practices to protect the geological and paleontological integrity of the Flaming Cliffs.</p>
+     <div class="container-nearby">
+        <div class="faq-header">
+          <h2>Frequently asked questions</h2>
+        
         </div>
-        <div class="objective">
-          <h3>Research</h3>
-          <p>Support and collaborate on scientific studies that enhance our understanding of the site’s fossils and geological formations.</p>
+     <div class="faq-container">
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          1.When is the beast time to visit?
+          <img src="img/down-arrow.png" class="arrow active">
         </div>
-        <div class="objective">
-          <h3>Community Engagement</h3>
-          <p>Work closely with local communities to promote cultural heritage and create economic opportunities through eco-tourism.</p>
-        </div>
-        <div class="objective">
-          <h3>Education</h3>
-          <p>Develop programs and exhibits that inform and inspire the public about the significance of the Flaming Cliffs and its discoveries.</p>
+        <div class="faq-answer">
+          May to October, during mild weather and accessible road conditions.
         </div>
       </div>
-    </section>
 
-
-
-      <!-- Join Us Our Team -->
-
-      <section class="team-join-section">
-        <div class="text-content">
-          <div class="team-section">
-            <h2><span class="line"></span>Our Team</h2>
-            <p>Our team comprises passionate professionals, including paleontologists, conservationists, educators, and community liaisons, all committed to preserving the legacy of the Flaming Cliffs for future generations.</p>
-          </div>
-          <div class="join-section">
-            <h2>Join Us<span class="line right"></span></h2>
-            <p>We invite you to visit the Flaming Cliffs, participate in our programs, and support our efforts to protect and celebrate this extraordinary window into Earth's distant past.</p>
-          </div>
+         <div class="faq-item">
+        <div class="faq-question">
+          2 Can I collect fossils?
+          <img src="img/down-arrow.png" class="arrow active">
         </div>
-        <div class="image-content">
-          <img src="img/Join us img.png" alt="Team illustration"/>
+        <div class="faq-answer">
+          No, fossil collection is prohibited to ensure preservation for future generations.
         </div>
-      </section>
+      </div>
+
+         <div class="faq-item">
+        <div class="faq-question">
+            3. Are there nearby accommodations?
+          <img src="img/down-arrow.png" class="arrow active">
+        </div>
+        <div class="faq-answer">
+          Yes, options include traditional ger camps and modern hotels in Dalanzadgad.
+        </div>
+      </div>
 
 
+         <div class="faq-item">
+        <div class="faq-question">
+          4. What transportation options are available?.
+          <img src="img/down-arrow.png" class="arrow active">
+        </div>
+        <div class="faq-answer">
+         Self-drive, guided tours, and flights to Dalanzadgad followed by a drive.
+        </div>
+      </div>
 
-   </div>
+         <div class="faq-item">
+        <div class="faq-question">
+          5. What should I bring for my visit?.
+          <img src="img/down-arrow.png" class="arrow active">
+        </div>
+        <div class="faq-answer">
+         Sturby shoes, sun protection, plehty of water, and sense of adventure.
+        </div>
+      </div>
+
+         <div class="faq-item">
+        <div class="faq-question">
+          6. Is there food avaliable at the Falmming Cliffs?
+          <img src="img/down-arrow.png" class="arrow active">
+        </div>
+        <div class="faq-answer">
+          Yes, the Information Center offers a dinning area with local and international cuisine.
+        </div>
+      </div>
+         <div class="faq-item">
+        <div class="faq-question">
+          7. How does my visit support the site?
+          <img src="img/down-arrow.png" class="arrow active">
+        </div>
+        <div class="faq-answer">
+          Entry fees fund conservation, research, and local community initiatives.:[LInks to Facebook and Instagram].
+        </div>
+      </div>
+     </div>
+     </div>
     
 
+   
+    
+
+     <footer class="footer">
       
-
-    
-      <!-- Contacts  -->
-      <section class="contact-section">
-        <h2>Contact Us & FAQs</h2>
-        <p>
-          The Flaming Cliffs administration team is here to assist you in every way possible. Whether you have questions about your visit or require further guidance, don’t hesitate to reach out.
-        </p>
-    
-        <div class="contact-cards">
-          <div class="contact-card">
-            <img src="img/phone number icon.png"><br/>
-            <strong>Phone Number</strong><br/>
-            +976 987 963
-          </div>
-          <div class="contact-card">
-            <img src="img/Email icon.png"><br/>
-            <strong>Email Address</strong><br/>
-            info@flamingcliffs.mn
-          </div>
-          <div class="contact-card">
-            <img src="img/facebook icon.png"><br/>
-            <strong>Facebook</strong><br/>
-            Flaming Cliffs Administration...
-          </div>
-          <div class="contact-card">
-            <img src="img/Insta icon.png"><br/>
-            <strong>Instagram</strong><br/>
-            Flaming_Cliffs
+        <div class="container-nearby">
+           <div class="banner-footer">
+          <img src="img/footer.png" alt="Falmming Cliffs Logo">
+          <div class="banner-text">
+            <div class="banner-title">Flaming Cliffs ( BayanZag )</div>
+            <div class="banner-subtitle">Discover Mongolia's Legendary Dinosaur Site</div>
           </div>
         </div>
-      </section>
-    
-      <section class="faq-section">
-        <h3>Frequently asked questions</h3>
-    
-        <div class="faq-item">
-          <div class="faq-question">1. When is the best time to visit?</div>
-          <div class="faq-answer">May to October, during mild weather and accessible road conditions.</div>
-        </div>
-    
-        <div class="faq-item">
-          <div class="faq-question">2. Can I collect fossils?</div>
-          <div class="faq-answer">No, fossil collection is prohibited to ensure preservation for future generations.</div>
-        </div>
-    
-        <div class="faq-item">
-          <div class="faq-question">3. Are there nearby accommodations?</div>
-          <div class="faq-answer">Yes, options include traditional ger camps and modern hotels in Dalanzadgad.
-          </div>
-        </div>
-    
-        <div class="faq-item">
-          <div class="faq-question">4. What transportation options are available?</div>
-          <div class="faq-answer">Self-drive, guided tours, and flights to Dalanzadgad followed by a drive.</div>
-        </div>
-    
-        <div class="faq-item">
-          <div class="faq-question">5. What should I bring for my visit?</div>
-          <div class="faq-answer">Sturdy shoes, sun protection, plenty of water, and a sense of adventure.
-          </div>
-        </div>
-    
-        <div class="faq-item">
-          <div class="faq-question">6. Is there food available at the Flaming Cliffs?</div>
-          <div class="faq-answer">Yes, the Information Center offers a dining area with local and international cuisine.</div>
-        </div>
-    
-        <div class="faq-item">
-          <div class="faq-question">7. How does my visit support the site?</div>
-          <div class="faq-answer">Entry fees fund conservation, research, and local community initiatives.: [Links to Facebook and Instagram].</div>
-        </div>
-      </section>
-    
-      <footer>
-        <div class="footer-container">
-      
-          <!-- Logo & tagline -->
-          <div class="footer-logo">
-            <img src="img/baynzag logo.png" alt="Flaming Cliffs Logo" />
-            <h3>Flaming Cliffs (BayanZag)</h3>
-            <p>Discover Mongolia’s Legendary Dinosaur Site</p>
-          </div>
-      
-          <!-- Quick Links -->
-          <div class="footer-column">
-            <h4>Quick links</h4>
-            <ul>
-              <li>Home</li>
-              <li>Gateway to Prehistory</li>
-              <li>Key fossils</li>
-              <li>Information Center</li>
-              <li>Getting There</li>
-              <li>Nearby Destinations</li>
-              <li>Accommodation</li>
-              <li>Gallery</li>
-              <li>FAQs</li>
-            </ul>
-          </div>
-      
-          <!-- Visitor Info -->
-          <div class="footer-column">
-            <h4>Visitor Information</h4>
-            <ul>
-              <li><span>Entry Fees</span>: Domestic - 3,000 <small>MNT</small> | International - 10,000 <small>MNT</small></li>
-              <li><span>Best Time to Visit</span>: May - October</li>
-              <li><span>Location</span>: Bayanzag, Ömnögovi Province, Mongolia</li>
-            </ul>
-          </div>
-      
-          <!-- Contact Info -->
-          <div class="footer-column">
-            <h4>Contacts Us</h4>
-            <ul class="contact-icons">
-              <li><i class="fas fa-phone-alt"></i>+976-12345678</li>
-              <li><i class="fas fa-envelope"></i>info@flamingcliffs.mn</li>
-            </ul>
-            <h4>Follow Us</h4>
-            <div class="social-icons">
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-instagram"></i>
-              <i class="fab fa-youtube"></i>
-            </div>
-          </div>
-      
         </div>
       
+     </footer>
+    <footer class="footer">
+      <div class="footer-container">
+       
+        <div class="footer-section quick-links">
+        <h3>Quick links</h3>
+        <ul>
+          <li>Home</li>
+          <li>Gateway to Prehistory</li>
+          <li>Key fossils</li>
+          <li>Information Center</li>
+          <li>Getting There</li>
+          <li>Nearby Destinations</li>
+          <li>Accommodation</li>
+          <li>Gallery</li>
+          <li>FAQs</li>
+          <li>Language</li>
+        </ul>
+       </div>
+
+       <div class="footer-section visitor-info">
+        <h3>Visitor Information</h3>
+        <p><strong>Entry Fees</strong><br>
+        Domestic - 3,000 <span class="mnt">MNT</span> | International - 10,000 <span class="mnt">MNT</span></p>
+
+        <p><strong>Best Time to Visit: </strong> May - October</p>
+
+        <p><strong>Location</strong><br>
+        Bayanzag, Ömnögovi Province, Mongolia</p>
+       </div>
+
+       <div class="footer-section contact-us">
+        <h3 class="footer-title">Contact Us</h3>
+        &nbsp;
+        <div class="contact-item">
+          <img src="img/phone number icon.png" alt="Phone">
+          <h1 class="footer-title">+976-12345678</h1>
+        </div>
+        <div class="contact-item">
+          <img src="img/Email icon.png" alt="Email">
+          <h1 class="footer-title">info@flamingcliffs.mn</h1>
+        </div>
+
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <span><img src="img/Facebook round.png"></span>
+          <span><img src="img/Insta Round.png"></span>
+          <span><img src="img/Youtube round.png"></span>
+        </div>
+       </div>
+      </footer>
+      <footer class="footer">
         <div class="footer-bottom">
-          <div class="footer-highlight">Preserving History, Supporting Communities</div>
-          Your visit directly contributes to preserving Mongolia’s heritage and empowering local communities.<br>
-          <strong>Plan Your Visit Today!</strong><br><br>
-          &copy; 2025 Flaming Cliffs Administration | 
-          <a href="#">Privacy Policy</a> | 
-          <a href="#">Terms of Use</a>
-        </div>
+        <div class="footer-highlight">Preserving History, Supporting Communities</div>
+        Your visit directly contributes to preserving Mongolia's heritage and empowering local communities.<br>
+        <strong>Plan Your Visit Today!</strong><br><br>
+        &copy; 2025 Flaming Cliffs Administration | 
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Terms of Use</a>
+       </div>
+      </div>
       </footer>
     
+       
+    
       <script>
-        // FAQ toggle logic
-        document.querySelectorAll('.faq-question').forEach(q => {
-          q.addEventListener('click', () => {
-            const parent = q.parentElement;
-            parent.classList.toggle('open');
-          });
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+          item.classList.toggle('open');
         });
-      </script>
+      });
+    </script>
+
 
     <script>
         function toggleMenu() {
@@ -407,6 +1070,12 @@ setupGallery('.gallery-2', '.big-picture-2', '.small-pictures-2 img');
           this.classList.toggle('expanded');
         });
       </script>
+
+      <script>
+    function changeImage(imgSrc) {
+      document.getElementById("mainDisplay").src = imgSrc;
+    }
+  </script>
     
 </body>
 </html>
