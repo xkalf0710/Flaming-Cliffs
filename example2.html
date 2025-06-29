@@ -1,72 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Visitors of All Countries</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Central Asiatic Expeditions</title>
   <style>
-body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background: #fff;
-  color: #333;
-}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      background-color: #fff;
+      color: #333;
+    }
 
-h2 {
-  background: #f57c00;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  border-radius: 4px;
-}
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-canvas {
-  width: 1000px !important;  /* Set desired width */
-  height: 800px !important;  /* Set desired height */
-  margin: 30px auto;
-  display: block;
-}
+    .image-section {
+      position: relative;
+      width: 50%;
+    }
 
+    .image-section img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+
+    .play-icon::before {
+      content: '▶';
+      font-size: 24px;
+      color: #7a4e1c;
+    }
+
+    .text-section {
+      width: 50%;
+    }
+
+    .title-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      font-size: 24px;
+      color: #603913;
+    }
+
+    .expedition-number {
+      background-color: #603913;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-size: 20px;
+    }
+
+    .subtitle {
+      color: #a67c52;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .description {
+      font-size: 15px;
+      line-height: 1.6;
+    }
 
   </style>
 </head>
 <body>
-  <h2>Visitors of All Countries</h2>
-  <canvas id="visitorsChart"></canvas>
-  <script>
-    const ctx = document.getElementById('visitorsChart').getContext('2d');
 
-new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['South Korea', 'Russia', 'China', 'Kazakhstan', 'Japan', 'USA', 'Germany', 'France', 'UK', 'Australia', 'Canada', 'Italy', 'Poland', 'Turkey', 'Switzerland'],
-    datasets: [{
-      label: 'Today',
-      data: [50, 45, 43, 40, 38, 35, 34, 33, 32, 30, 28, 25, 20, 15, 12],
-      backgroundColor: '#f57c00'
-    }, {
-      label: 'This Year',
-      data: [321, 243, 228, 180, 160, 150, 140, 135, 130, 120, 110, 100, 95, 85, 70],
-      backgroundColor: '#7f1d1d'
-    }]
-  },
-  options: {
-    indexAxis: 'y',
-    responsive: true,
-    plugins: {
-      legend: { position: 'top' },
-      title: {
-        display: false
-      }
-    },
-    scales: {
-      x: {
-        beginAtZero: true
-      }
-    }
-  }
-});
+  <div class="container">
+    <div class="image-section">
+      <img src="b054abaf-5d65-4f31-bba5-c930fb16c4a4.png" alt="Dinosaur Egg">
+      <div class="play-icon"></div>
+    </div>
 
-  </script>
+    <div class="text-section">
+      <div class="title-bar">
+        Central Asiatic Expeditions <span class="expedition-number">03</span>
+      </div>
+      <div class="subtitle">(1922–1930)<br/>A Decade Of Discovery</div>
+      <p class="description">
+        In July 1923, Andrews and his team made their most groundbreaking discovery at the Flaming Cliffs: fossilized dinosaur eggs, the first ever found in human history. This find conclusively proved dinosaurs reproduced through egg-laying, dramatically transforming the scientific understanding of dinosaur biology. The discovery instantly elevated the Flaming Cliffs to global prominence, making headlines worldwide.
+      </p>
+    </div>
+  </div>
+
 </body>
 </html>
