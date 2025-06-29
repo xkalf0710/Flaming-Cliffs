@@ -305,13 +305,14 @@
       background-color: #fff;
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      
       padding: 10px;
       text-align: center;
+      overflow: hidden;
+      
     }
 
     .card-nearby:hover{
-      transform: translateY(-5px);
+      transform: scale(1.03);
     }
     .card-nearby img{
       width: 100%;
@@ -320,12 +321,16 @@
       display: block;
     }
 
-    .card-title-nearby{
-      margin: 15px 0 10px;
-      font-size: 18px;
+    .card-text{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 10px 15px;
+      
+      color: #fff;
+      width: 100%;
       font-weight: bold;
-      color: #333;
-    
+      font-size: 1rem;
     }
 
 
@@ -456,40 +461,50 @@
       font-size: 16px;
     }
 
-    .text1{
-     background-color: #fff;
-     color: #000;
-     font-size: 32px;
+
+    .faq-header{
+      max-width: 1100px;
+      margin: 40px auto 10px;
+      padding: 0 20px;
     }
+    .faq-header h2{
+      font-size: 24px;
+      font-weight: normal;
+      margin-bottom: 5px;
+    }
+
+   
     .faq-container{
-      border-top: 2px solid #000;
-      max-width: 700px;
-      margin: 0 auto;
+      padding: 10px;
+      max-width: 800px;
+      margin: 20px auto;
     }
+
 
     .faq-item{
       border-bottom: 1px solid #ddd;
-      padding: 20px 0;
+      padding: 10px 0;
+      cursor: pointer;
     }
 
     .faq-question{
       font-size: 18px;
-      font-weight: normal;
-      cursor: pointer;
+      font-weight: bold;
+      
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .faq-question.active{
-      font-weight: bold;
-    }
+    
     .faq-answer{
       display: none;
-      margin-top: 10px;
+      margin-top: 5px;
       color: #555;
       font-size: 16px;
     }
-    .faq-answer .active{
+    
+
+    .faq-item.open .faq-answer{
       display: block;
     }
     .arrow{
@@ -1009,22 +1024,22 @@
       <div class="grid-container-nearby">
       <div class="card-nearby">
         <img src="img/Moltsog els.jpg" alt="Moltsog Els">
-        <!-- <div class="card-title-nearby">Moltsog Els</div> -->
+        <div class="card-text">Moltsog Els</div>
       </div>
 
        <div class="card-nearby">
         <img src="img/tugrugiin shiree.jpg" alt="Moltsog Els">
-        <!-- <div class="card-title-nearby">Tugrugiin Shiree</div> -->
+        <div class="card-text">Tugrugiin Shiree</div>
       </div>
 
        <div class="card-nearby">
         <img src="img/KhongoriinEls.jpg" alt="Moltsog Els">
-        <!-- <div class="card-title-nearby">Khongoryn Els</div> -->
+        <div class="card-text">Khongoryn Els</div>
       </div>
 
       <div class="card-nearby">
         <img src="img/YolynAm.jpg" alt="Moltsog Els">
-        <!-- <div class="card-title-nearby">Yolyn Am</div> -->
+        <div class="card-text">Yolyn Am</div>
       </div>
 
     </div>
@@ -1033,22 +1048,22 @@
      <div class="grid-container-nearby">
       <div class="card-nearby">
         <img src="img/PetroglyphsofKhavtsgait.jpg" alt="Moltsog Els">
-        <!-- <div class="card-title-nearby">Petroglyphs of Khavtsgait</div> -->
+        <div class="card-text">Petroglyphs of Khavtsgait</div>
       </div>
 
        <div class="card-nearby">
         <img src="img/TsagaanSuvarga.jpg" alt="Moltsog Els">
-        <!-- <div class="card-title-nearby">Tsagaan Suvraga</div> -->
+        <div class="card-text">Tsagaan Suvraga</div>
       </div>
 
        <div class="card-nearby">
         <img src="img/OngiMonastery-1.jpg" alt="Moltsog Els">
-        <!-- <div class="card-title-nearby">Ongi Monastery</div> -->
+        <div class="card-text">Ongi Monastery</div>
       </div>
 
       <div class="card-nearby">
         <img src="img/BagaGazriinChuluu.jpg" alt="Moltsog Els">
-        <!-- <div class="card-title-nearby">Baga Gazariin Chuluu</div> -->
+        <div class="card-text">Baga Gazariin Chuluu</div>
       </div>
 
     </div>
@@ -1056,22 +1071,22 @@
      <div class="grid-container-nearby">
       <div class="card-nearby">
         <img src="img/MukharShivertiinAm.jpg" alt="Moltsog Els">
-        <!-- <div class="card-title-nearby">Mukhar Shivert's Am</div> -->
+        <div class="card-text">Mukhar Shivert's Am</div>
       </div>
 
        <div class="card-nearby">
         <img src="img/KhermenTsav.jpg" alt="Moltsog Els">
-        <!-- <div class="card-title-nearby">Khermen Tsaw</div> -->
+        <div class="card-text">Khermen Tsaw</div>
       </div>
 
        <div class="card-nearby">
         <img src="img/KhaniinKhets.jpg" alt="Moltsog Els">
-        <!-- <div class="card-title-nearby">Khanan Khets</div> -->
+        <div class="card-text">Khanan Khets</div>
       </div>
 
       <div class="card-nearby">
         <img src="img/Monastery of Bulgan.jpg" alt="Moltsog Els">
-        <!-- <div class="card-title-nearby">Monastery</div> -->
+        <div class="card-text">Monastery</div>
       </div>
 
     </div>
@@ -1318,80 +1333,86 @@
     
 
      &nbsp;
-    <div class="container-nearby">
-      <div class="text1">Frequently asked questions</div> 
+
+     <div class="container-nearby">
+        <div class="faq-header">
+          <h2>Frequently asked questions</h2>
+        
+        </div>
      <div class="faq-container">
+      
       <div class="faq-item">
-        <div class="faq-question active">
+        <div class="faq-question">
           1.When is the beast time to visit?
           <img src="img/down-arrow.png" class="arrow active">
         </div>
-        <div class="faq-answer active">
+        <div class="faq-answer">
           May to October, during mild weather and accessible road conditions.
         </div>
       </div>
 
          <div class="faq-item">
-        <div class="faq-question active">
+        <div class="faq-question">
           2 Can I collect fossils?
           <img src="img/down-arrow.png" class="arrow active">
         </div>
-        <div class="faq-answer active">
+        <div class="faq-answer">
           No, fossil collection is prohibited to ensure preservation for future generations.
         </div>
       </div>
 
          <div class="faq-item">
-        <div class="faq-question active">
+        <div class="faq-question">
             3. Are there nearby accommodations?
           <img src="img/down-arrow.png" class="arrow active">
         </div>
-        <div class="faq-answer active">
+        <div class="faq-answer">
           Yes, options include traditional ger camps and modern hotels in Dalanzadgad.
         </div>
       </div>
 
 
          <div class="faq-item">
-        <div class="faq-question active">
+        <div class="faq-question">
           4. What transportation options are available?.
           <img src="img/down-arrow.png" class="arrow active">
         </div>
-        <div class="faq-answer active">
+        <div class="faq-answer">
          Self-drive, guided tours, and flights to Dalanzadgad followed by a drive.
         </div>
       </div>
 
          <div class="faq-item">
-        <div class="faq-question active">
+        <div class="faq-question">
           5. What should I bring for my visit?.
           <img src="img/down-arrow.png" class="arrow active">
         </div>
-        <div class="faq-answer active">
+        <div class="faq-answer">
          Sturby shoes, sun protection, plehty of water, and sense of adventure.
         </div>
       </div>
 
          <div class="faq-item">
-        <div class="faq-question active">
+        <div class="faq-question">
           6. Is there food avaliable at the Falmming Cliffs?
           <img src="img/down-arrow.png" class="arrow active">
         </div>
-        <div class="faq-answer active">
+        <div class="faq-answer">
           Yes, the Information Center offers a dinning area with local and international cuisine.
         </div>
       </div>
          <div class="faq-item">
-        <div class="faq-question active">
+        <div class="faq-question">
           7. How does my visit support the site?
           <img src="img/down-arrow.png" class="arrow active">
         </div>
-        <div class="faq-answer active">
+        <div class="faq-answer">
           Entry fees fund conservation, research, and local community initiatives.:[LInks to Facebook and Instagram].
         </div>
       </div>
      </div>
-    </div>
+     </div>
+    
 
    
     
@@ -1460,14 +1481,11 @@
        
     
       <script>
-      // FAQ toggle logic
-      document.querySelectorAll('.faq-question').forEach((question) => {
-        question.addEventListener('click', () => {
-          const answer = question.nextElementSibling;
-          const arrow = question.querySelector('.arrow');
+      const faqItems = document.querySelectorAll('.faq-item');
 
-          answer.classList.toggle('active');
-          arrow.classList.toggle('active');
+      faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+          item.classList.toggle('open');
         });
       });
     </script>
