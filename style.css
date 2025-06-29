@@ -642,7 +642,7 @@ body {
   }
 
   .banner {
-    background: url('img/photo\ &\ video\ gallery\ top\ desktop.jpg') no-repeat center center;
+    background: url('img/photo\ &\ video\ gallery\ top\ desktop.jpg');
     background-size: cover;
     height: 380px;
     display: flex;

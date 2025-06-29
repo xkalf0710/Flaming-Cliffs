@@ -1,121 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Flaming Cliffs Info</title>
+  <meta charset="UTF-8">
+  <title>Эртний Түүхийн Үүд Хаалга</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-.footer {
-  display: flex;
-  justify-content: space-between;
-  background-color: #1e1815;
-  color: #f2f2f2;
-  padding: 40px 60px;
-  font-family: Arial, sans-serif;
-  flex-wrap: wrap;
-}
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fffdf9;
+      color: #333;
+      line-height: 1.6;
+    }
 
-.footer-section {
-  flex: 1 1 300px;
-  margin: 10px 20px;
-}
+    .container {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
 
-.footer-section h3 {
-  margin-bottom: 15px;
-  border-bottom: 1px solid #666;
-  padding-bottom: 5px;
-  font-size: 1.1rem;
-}
+    .header-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: flex-start;
+      animation: fadeIn 1.2s ease;
+    }
 
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-  column-count: 2;
-  column-gap: 30px;
-}
+    .main-image {
+      flex: 1;
+      min-width: 300px;
+    }
 
-.footer-section ul li {
-  margin-bottom: 8px;
-  cursor: pointer;
-}
+    .main-image img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
 
-.footer-section p {
-  margin: 8px 0;
-  font-size: 0.95rem;
-}
+    .main-image img:hover {
+      transform: scale(1.02);
+    }
 
-.icon {
-  margin-right: 8px;
-}
+    .text-section {
+      flex: 1.2;
+    }
 
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 4px solid #693b16;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }
 
-.social-icons span {
-  display: inline-block;
-  background-color: transparent;
-  border: 2px solid orange;
-  color: orange;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  line-height: 28px;
-  text-align: center;
-  margin-right: 10px;
-  font-size: 1.1rem;
-  cursor: pointer;
-}
+    .number-box {
+      display: inline-block;
+      background-color: #6a3b0c;
+      color: #fff;
+      font-size: 32px;
+      font-weight: bold;
+      padding: 15px 25px;
+    
+    }
 
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    padding: 20px;
-  }
-}
+    .description {
+      font-size: 15px;
+      margin: 15px 0;
+    }
 
+    .btn {
+      background-color: #ff7b00;
+      color: white;
+      padding: 10px 22px;
+      border: none;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e96c00;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 35px;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .gallery img {
+      width: 150px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Анимац */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
-  <footer class="footer">
-  <div class="footer-section quick-links">
-    <h3>Quick links</h3>
-    <ul>
-      <li>Home</li>
-      <li>Gateway to Prehistory</li>
-      <li>Key fossils</li>
-      <li>Information Center</li>
-      <li>Getting There</li>
-      <li>Nearby Destinations</li>
-      <li>Accommodation</li>
-      <li>Gallery</li>
-      <li>FAQs</li>
-      <li>Language</li>
-    </ul>
-  </div>
+  <div class="container">
+    <div class="header-section">
+      <div class="main-image">
+        <img src="img/image.jpg" alt="Судлаач ба майхан">
+      </div>
+      <div class="text-section">
+        <div class="title">
+          Эртний Түүхийн Үүд Хаалга
+          <span class="number-box">02</span>
+        </div>
+        <div class="description">
+          1920-иод онд судлаач Рой Чапман Эндрюс анхны үлэг гүрвэлийн өндгийг илрүүлсэнээр Галтай Хадан Цохионууд дэлхийн анхаарлыг татсан түүхтэй. Энэхүү нээлт нь бидний эртний амьдралыг ойлгоход томоохон хувь нэмэр оруулж, уг бүс нутгийг дэлхийн өвд бүртгэхэд хүргэсэн юм.
+          <br><br>
+          Энд хөл тавьж буй хүн бүр түүхийн мөрөөр алхаж, гайхамшигт нээлтүүд гарсан газар дээр зогсох сэтгэл хөдлөлийг мэдэрнэ. Эдгээр хадан цохионуудаар аялснаар та геологи болон соёлын онцгой үнэт зүйлсийг олж харах болно.
+        </div>
+        <a href="#" class="btn">Дэлгэрэнгүй →</a>
+      </div>
+    </div>
 
-  <div class="footer-section visitor-info">
-    <h3>Visitor Information</h3>
-    <p><strong>Entry Fees</strong><br>
-    Domestic – 3,000 <span class="mnt">MNT</span> | International – 10,000 <span class="mnt">MNT</span></p>
-
-    <p><strong>Best Time to Visit:</strong> May – October</p>
-
-    <p><strong>Location</strong><br>
-    Bayanzag, Ömnögovi Province, Mongolia</p>
-  </div>
-
-  <div class="footer-section contact-us">
-    <h3>Contacts Us</h3>
-    <p><i class="icon">📞</i> +976-12345678</p>
-    <p><i class="icon">✉️</i> info@flamingcliffs.mn</p>
-
-    <h4>Follow Us</h4>
-    <div class="social-icons">
-      <span>📘</span>
-      <span>📸</span>
-      <span>▶️</span>
+    <div class="gallery">
+      <img src="img/image-1.jpg" alt="зураг1">
+      <img src="img/image-1.jpg" alt="зураг2">
+      <img src="img/image-1.jpg" alt="зураг3">
+      <img src="img/image-1.jpg" alt="зураг4">
+      <img src="img/image-1.jpg" alt="зураг5">
+   
     </div>
   </div>
-</footer>
-
-
 </body>
 </html>
