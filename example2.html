@@ -1,72 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Our Vision</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Team Section</title>
   <style>
-    .vision-container {
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      color: #4d2c14;
+    }
+
+    .team-section {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 20px;
-      padding: 30px;
-      font-family: sans-serif;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
     }
 
-    .vision-text {
-      max-width: 600px;
+    .text-block {
+      flex: 1;
+      min-width: 300px;
     }
 
-    .vision-text p {
-      margin: 0 0 10px;
-      font-size: 16px;
-      line-height: 1.6;
-      
+    .text-group {
+      margin-bottom: 40px;
     }
 
-    .vision-line {
-      width: 100%; /* or set fixed width like 300px */
-      height: 5px;
-      background-color: #6d3b1f;
-      margin: 10px auto 0; /* CENTERED LINE */
-    }
-
-    .vision-section {
-      flex-grow: 1;
-    }
-
-    .vision-image {
-      width: 100px;
-    }
-
-    .vision-title {
+    .text-group h2 {
+      display: flex;
+      align-items: center;
       font-size: 24px;
       font-weight: bold;
-      color: #6d3b1f;
-      margin-top: 10px;
-      
+      margin-bottom: 10px;
+    }
+
+    .text-group h2::before,
+    .text-group h2::after {
+      content: "";
+      flex: 1;
+      height: 3px;
+      background-color: #4d2c14;
+    }
+
+    .text-group h2::before {
+      margin-right: 10px;
+    }
+
+    .text-group h2::after {
+      margin-left: 10px;
+    }
+
+    .text-group p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .image-block {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .image-block img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .team-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-group h2::before,
+      .text-group h2::after {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
 
-<div class="vision-container">
-  <img src="img/About us dino icon.png" alt="Mascot" class="vision-image">
-
-  <div class="vision-section">
-    <div class="vision-text">
-      <p>We envision the Flaming Cliffs as a globally recognized center for paleontological research and eco-tourism,
-        where visitors can immerse themselves in the wonders of Earth's prehistoric past while contributing to the
-        preservation of this invaluable heritage.</p>
+  <div class="team-section">
+    <div class="text-block">
+      <div class="text-group">
+        <h2>Our Team</h2>
+        <p>
+          Our team comprises passionate professionals, including paleontologists, conservationists,
+          educators, and community liaisons, all committed to preserving the legacy of the Flaming Cliffs
+          for future generations.
+        </p>
+      </div>
+      <div class="text-group">
+        <h2>Join Us</h2>
+        <p>
+          We invite you to visit the Flaming Cliffs, participate in our programs, and support our efforts
+          to protect and celebrate this extraordinary window into Earth's distant past.
+        </p>
+      </div>
     </div>
-    <div class="vision-line"></div>
-  </div>
 
-  <div class="vision-title">
-    <img src="img/our vision icon.png" alt="Target" class="vision-image"><br>
-    Our Vision
+    <div class="image-block">
+      <img src="your-image-path.png" alt="Team illustration" />
+    </div>
   </div>
-</div>
 
 </body>
 </html>
