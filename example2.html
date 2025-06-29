@@ -2,120 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mission and Vision</title>
+  <title>Our Vision</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      color: #3b2a1a;
-    }
-
-    .section {
+    .vision-container {
       display: flex;
-      align-items: flex-start;
-      margin-bottom: 60px;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+      font-family: sans-serif;
     }
 
-    .section.reverse {
-      flex-direction: row-reverse;
-    }
-
-    .icon {
-      width: 80px;
-      margin-right: 20px;
-    }
-
-    .reverse .icon {
-      margin-left: 20px;
-      margin-right: 0;
-    }
-
-    .content {
+    .vision-text {
       max-width: 600px;
     }
 
-    .title {
-      display: flex;
-      align-items: center;
-      font-weight: bold;
-      font-size: 20px;
-      margin-bottom: 10px;
+    .vision-text p {
+      margin: 0 0 10px;
+      font-size: 16px;
+      line-height: 1.6;
+      
     }
 
-    .title img {
-      width: 40px;
-      height: 40px;
-      margin-right: 10px;
+    .vision-line {
+      width: 100%; /* or set fixed width like 300px */
+      height: 5px;
+      background-color: #6d3b1f;
+      margin: 10px auto 0; /* CENTERED LINE */
     }
 
-    .reverse .title img {
-      margin-left: 10px;
-      margin-right: 0;
+    .vision-section {
+      flex-grow: 1;
     }
 
-    .line {
-      height: 3px;
-      background-color: #5a2f0d;
-      margin: 15px 0;
-      width: 100%;
-    }
-
-    .mascot {
+    .vision-image {
       width: 100px;
-      margin-right: 20px;
     }
 
-    .reverse .mascot {
-      margin-left: 20px;
-      margin-right: 0;
-    }
-
-    .text-block {
-      display: flex;
-      align-items: flex-start;
+    .vision-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #6d3b1f;
+      margin-top: 10px;
+      
     }
   </style>
 </head>
 <body>
 
-  <!-- Our Mission Section -->
-  <div class="section">
-    <img class="icon" src="https://i.imgur.com/mVWU0wB.png" alt="Mission Icon"> <!-- Eye icon -->
-    <div class="content">
-      <div class="title">
-        Our Mission
-      </div>
-      <p>
-        At the Flaming Cliffs Administration, our mission is to preserve, study, and share the rich paleontological heritage of the Flaming Cliffs (Bayanzag). We are dedicated to safeguarding this unique site, promoting scientific research, and providing educational experiences that connect visitors to its historical and natural significance.
-      </p>
-      <div class="line"></div>
+<div class="vision-container">
+  <img src="img/About us dino icon.png" alt="Mascot" class="vision-image">
+
+  <div class="vision-section">
+    <div class="vision-text">
+      <p>We envision the Flaming Cliffs as a globally recognized center for paleontological research and eco-tourism,
+        where visitors can immerse themselves in the wonders of Earth's prehistoric past while contributing to the
+        preservation of this invaluable heritage.</p>
     </div>
+    <div class="vision-line"></div>
   </div>
 
-  <!-- Our Vision Section -->
-  <div class="section reverse">
-    <img class="mascot" src="https://i.imgur.com/3GgZ0Vf.png" alt="Mascot"> <!-- Dinosaur image -->
-    <div class="content">
-      <div class="title">
-        Our Vision
-      </div>
-      <p>
-        We envision the Flaming Cliffs as a globally recognized center for paleontological research and eco-tourism, where visitors can immerse themselves in the wonders of Earth’s prehistoric past while contributing to the preservation of this invaluable heritage.
-      </p>
-      <div class="line"></div>
-    </div>
+  <div class="vision-title">
+    <img src="img/our vision icon.png" alt="Target" class="vision-image"><br>
+    Our Vision
   </div>
+</div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
