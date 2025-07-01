@@ -1,111 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Central Asiatic Expeditions</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 40px;
-      background-color: #fff;
-      color: #333;
-    }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #fff;
+}
 
-    .container {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.container, .container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-    .image-section {
-      position: relative;
-      width: 50%;
-    }
+.left, .right {
+  flex: 1 1 45%;
+  margin: 10px;
+}
 
-    .image-section img {
-      width: 100%;
-      border-radius: 10px;
-    }
+.image-wrapper {
+  position: relative;
+  width: 100%;
+}
 
-    .play-icon {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      cursor: pointer;
-    }
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
 
-    .play-icon::before {
-      content: '▶';
-      font-size: 24px;
-      color: #7a4e1c;
-    }
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 10px 15px;
+  cursor: pointer;
+}
 
-    .text-section {
-      width: 50%;
-    }
+h2 {
+  color: #5c2f0c;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
 
-    .title-bar {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: bold;
-      font-size: 24px;
-      color: #603913;
-    }
+.years {
+  font-weight: normal;
+  font-size: 18px;
+  color: #666;
+}
 
-    .expedition-number {
-      background-color: #603913;
-      color: white;
-      padding: 5px 12px;
-      border-radius: 4px;
-      font-size: 20px;
-    }
+.label-box {
+  background-color: #5c2f0c;
+  color: #fff;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
-    .subtitle {
-      color: #a67c52;
-      font-weight: bold;
-      font-size: 18px;
-      margin: 10px 0;
-    }
+.subtitle {
+  color: #884a26;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
 
-    .description {
-      font-size: 15px;
-      line-height: 1.6;
-    }
+.expedition-text {
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.species-section h1 {
+  width: 100%;
+  font-size: 28px;
+  color: #2d160b;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.line {
+  width: 80px;
+  height: 3px;
+  background-color: #884a26;
+  margin: 0 auto 20px;
+  border: none;
+}
+
+.character-box {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.character {
+  width: 100px;
+  height: auto;
+}
+
+.description {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: #4a2e1c;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="image-section">
-      <img src="b054abaf-5d65-4f31-bba5-c930fb16c4a4.png" alt="Dinosaur Egg">
-      <div class="play-icon"></div>
-    </div>
-
-    <div class="text-section">
-      <div class="title-bar">
-        Central Asiatic Expeditions <span class="expedition-number">03</span>
+  <!-- Expedition Section -->
+  <section class="expedition-section">
+    <div class="container">
+      <div class="left">
+        <div class="image-wrapper">
+          <img src="your-image-path.png" alt="Fossilized Dinosaur Egg">
+          <div class="play-button">&#9658;</div>
+        </div>
       </div>
-      <div class="subtitle">(1922–1930)<br/>A Decade Of Discovery</div>
-      <p class="description">
-        In July 1923, Andrews and his team made their most groundbreaking discovery at the Flaming Cliffs: fossilized dinosaur eggs, the first ever found in human history. This find conclusively proved dinosaurs reproduced through egg-laying, dramatically transforming the scientific understanding of dinosaur biology. The discovery instantly elevated the Flaming Cliffs to global prominence, making headlines worldwide.
-      </p>
+      <div class="right">
+        <h2>Central Asiatic Expeditions <span class="years">(1922–1930)</span></h2>
+        <div class="label-box">03</div>
+        <h3 class="subtitle">A Decade Of Discovery</h3>
+        <p class="expedition-text">
+          In July 1923, Andrews and his team made their most groundbreaking discovery at the Flaming Cliffs: fossilized dinosaur eggs, the first ever found in human history. This find conclusively proved dinosaurs reproduced through egg-laying, dramatically transforming the scientific understanding of dinosaur biology. The discovery instantly elevated the Flaming Cliffs to global prominence, making headlines worldwide.
+        </p>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Iconic Species Section -->
+  <section class="species-section">
+    <div class="container2">
+      <h1>Uncovering Iconic Species</h1>
+      <hr class="line">
+      <div class="character-box">
+        <img class="character" src="img/learn more detail dino icon.png" alt="Character">
+      </div>
+      <h2 class="description">
+        Beyond Eggs, The Flaming Cliffs Yielded Numerous Remarkable Fossils, Providing Invaluable Insights Into Prehistoric Life:
+      </h2>
+    </div>
+  </section>
 
 </body>
 </html>

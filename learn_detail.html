@@ -49,8 +49,15 @@
 
     .content{
       display: flex;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
       gap: 20px;
+    }
+
+    .content h2{
+      flex: 1;
+      font-size: 18px;
+      line-height: 1.5;
     }
 
     .features{
@@ -857,6 +864,7 @@
     .container2{
       max-width: 1200px;
       margin: 40px auto;
+      padding: 20px;
       background-color: #fff;
     }
 
@@ -1007,6 +1015,12 @@
 
     .character {
       max-width: 180px;
+      height: auto;
+    }
+    .right-mg{
+      float: right;
+      margin-left: 20px;
+      margin-bottom: 10px;
     }
 
     @media (max-width: 900px) {
@@ -1161,12 +1175,8 @@
       <div class="play-button"></div>
     </div>
     <div class="right">
-      <div class="expedition-header">
-        <div class="expedition-title">Central Asiatic Expeditions</div>
-        <div class="expedition-number">03</div>
-      </div>
-      <div class="expedition-date">(1922-1930)</div>
-      <div class="expedition-subtitle">A Decade Of Discovery</div>
+      
+      
       <div class="expedition-text">
         In July 1923, Andrews and his team made their most groundbreaking discovery at the Flaming Cliffs: fossilized dinosaur eggs, the first ever found in human history. This find conclusively proved dinosaurs reproduced through egg-laying, dramatically transforming the scientific understanding of dinosaur biology. The discovery instantly elevated the Flaming Cliffs to global prominence, making headlines worldwide.
       </div>
@@ -1177,13 +1187,13 @@
       <h1>Uncovering Iconic Species</h1>
       
     <div class="line"></div>
-    <div>
-      <img class="character" src="img/learn more detail dino icon.png" alt="Character">
+    <!-- <div>
+      <img class="character right-img" src="img/learn more detail dino icon.png" alt="Character">
+    </div> -->
+    <div class="content">
+      <h2>Beyond Eggs, The Flaming Cliffs Yielded Numerous Remarkable Fossils, Providing Invaluable Insights Into Prehistoric Life:</h2>
+      <img class="character right-img" src="img/learn more detail dino icon.png" alt="Character">
     </div>
-    <h2>Beyond Eggs, The Flaming Cliffs Yielded Numerous Remarkable Fossils, Providing Invaluable Insights Into Prehistoric Life:</h2>
-
-     
-
 
     <div class="species-container">
       <div class="species-box">
