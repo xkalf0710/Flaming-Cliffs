@@ -1,50 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Flaming Cliffs Banner</title>
-  <style>
-    .banner-footer {
-      display: flex;
-      align-items: center;
-      background-color: #1e1712; /* Dark brown/black */
-      color: white;
-      padding: 10px 20px;
-      font-family: Arial, sans-serif;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>Explore the Flaming Cliffs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="m-0 p-0 overflow-hidden font-sans">
+    <div class="relative h-screen w-full">
+      <!-- Background Image -->
+      <img
+        src="Tours.png"
+        alt="Flaming Cliffs"
+        class="absolute inset-0 w-full h-full object-cover z-0"
+      />
 
-    .banner-footer img {
-      width: 50px;
-      height: auto;
-      margin-right: 15px;
-    }
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
 
-    .banner-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .banner-title {
-      font-weight: bold;
-      font-size: 1rem;
-      margin: 0;
-    }
-
-    .banner-subtitle {
-      font-size: 0.9rem;
-      margin-top: 2px;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="banner-footer">
-    <img src="img/baynzag logo.png" alt="Flaming Cliffs Logo">
-    <div class="banner-text">
-      <div class="banner-title">Flaming Cliffs ( BayanZag )</div>
-      <div class="banner-subtitle">Discover Mongolia's Legendary Dinosaur Site</div>
+      <!-- Content -->
+      <div
+        class="absolute z-20 top-1/2 left-20 transform -translate-y-1/2 text-white space-y-6"
+      >
+        <h1 class="text-5xl font-bold leading-tight">
+          <span class="block">Explore</span>
+          <span class="block">the Flaming Cliffs</span>
+        </h1>
+        <button
+          class="bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-2 px-5 rounded-full shadow-md transition"
+        >
+          Learn About History
+        </button>
+      </div>
     </div>
-  </div>
-
-</body>
+  </body>
 </html>
