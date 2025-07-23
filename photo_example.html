@@ -13,74 +13,6 @@
     <title>Flaming Cliffs</title>
     <style>
 
-      
-      body{
-       font-family: SF Pro Display;
-        background-color: #1e1a17;
-        color: white;
-        align-items: center;
-        justify-content: center;
-      }
-
-     .gallery-container{
-      margin: auto;
-      align-items: center;
-      justify-content: center;
-     }
-      .title-baynzag{
-        font-size: 16px;
-        margin-bottom: 10px;
-        font-style: white;
-      }
-      .gallery_bayanzag{
-       display: flex;
-       gap: 5px;
-      }
-      .gallery_bayanzag img{
-        aspect-ratio: 16/9;
-        height: 100px;
-        object-fit: cover;
-        border: 1px solid #333;
-      }
-
-
-      .gallery{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));    }
-
-    .video-card{
-      background-color: #1a1a1a;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      transition: transform 0.3s;
-    }
-
-    .video-card:hover{
-      transform: scale(1.03);
-    }
-    .video-thumb {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%;
-      background-color: #000;
-    }
-    .video-thumb iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-    .video-info {
-      padding: 12px;
-      font-size: 16px;
-    }
-    .video-info small {
-      color: #bbb;
-      font-size: 13px;
-    }
     
       .brand {
         align-items: center;
@@ -117,8 +49,15 @@
 
     .content{
       display: flex;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
       gap: 20px;
+    }
+
+    .content h2{
+      flex: 1;
+      font-size: 18px;
+      line-height: 1.5;
     }
 
     .features{
@@ -344,12 +283,12 @@
       align-items: center;
       justify-content: center;
       margin: 50px 0;
-    
+      font-family: Arial, Helvetica, sans-serif;
     }
     .nearby-line{
       flex: 1;
       height: 4px;
-      background-color: white;
+      background-color: #5c3113;
       max-width: 400px;
     }
 
@@ -357,7 +296,7 @@
       margin: 0 20px;
       font-size: 28px;
       font-weight: bold;
-      color: white;
+      color: #5c3113;
     }
 
     .grid-container-nearby{
@@ -827,10 +766,335 @@
     font-weight: bold;
   }
 
+     .section-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .number-box {
+      background-color: #5c3113;
+      color: white;
+      padding: 20px 30px;
+      font-size: 30px;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    .section-title {
+      font-size: 32px;
+      font-weight: bold;
+      color: #5c3113;
+    }
+
+    .divider {
+      border-top: 4px solid #5c3113;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      font-weight: bold;
+      color: #5c3113;
+      margin-bottom: 15px;
+    }
+
+    .content {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .bold-text {
+      font-weight: bold;
+    }
+
+
+    .experience-section{
+      display: flex;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 40px auto;
+      align-items: flex-start;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #4a2d1c;
+    }
+    .experience-content{
+      flex: 1;
+    }
+    .experience-number{
+      background-color: #5d3c1c;
+      color: white;
+      font-weight: bold;
+      padding: 10px 20px;
+      font-size: 1.5rem;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .experience-title{
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #5d3c1c;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .experience-image{
+      flex-shrink: 0;
+      position: relative;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .experience-image img {
+      width: 600px;
+      height: 400px;
+      display: block;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 40px auto;
+      background: #fff;
+      
+    }
+
+    .container2{
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    .container3{
+      max-width: 1200px;
+      margin: 40px auto;
+      background-color: #fff;
+    }
+
+    .container4{
+      max-width: 1100px;
+      margin: 40px auto;
+      background-color: #fff;
+    }
+
+
+    .left {
+      flex: 1;
+      position: relative;
+    }
+    .left img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+    .play-button:after {
+      content: '';
+      border-style: solid;
+      border-width: 12px 0 12px 20px;
+      border-color: transparent transparent transparent #7c4dff;
+      margin-left: 5px;
+    }
+    .right {
+      flex: 1;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+    .expedition-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .expedition-title {
+      font-size: 28px;
+      font-weight: bold;
+      color: #5c3113;
+      margin-right: 15px;
+      border-bottom: 3px solid #5c3113;
+      padding-bottom: 5px;
+    }
+    .expedition-number {
+      background: #5c3113;
+      color: white;
+      font-weight: bold;
+      font-size: 28px;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    .expedition-date {
+      font-style: italic;
+      color: #5c3113;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .expedition-subtitle {
+      font-weight: bold;
+      font-size: 20px;
+      color: #5c3113;
+      margin-bottom: 20px;
+    }
+    .expedition-text {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+    }
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      .right {
+        padding: 20px;
+      }
+    }
+
+    h1{
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .line{
+      border-bottom: 3px solid #8b5a32;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: normal;
+      margin-bottom: 40px;
+      color: #7c6042;
+    }
+
+    .species-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .species-box {
+      flex: 1;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    .species-box img {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 15px;
+    }
+
+    .species-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .species-description {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #444;
+    }
+
+    .character {
+      max-width: 180px;
+      height: auto;
+    }
+    .right-mg{
+      float: right;
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .species-container {
+        flex-direction: column;
+      }
+      .character {
+        max-width: 180px;
+      }
+    }
+    .sectionheader{
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .sectiontitle{
+      font-size: 28px;
+      font-weight: bold;
+      color: #5c3113;
+      margin-right: 20px;
+    }
+
+    .title-line{
+      flex-grow: 1;
+      height: 4px;
+      background-color: #5c3113;
+    }
+
+    .sectiontext{
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+      max-width: 1000px;
+    }
+
+    
+
+     .section-header4 {
+      display: flex;
+      align-items: center;
+      border-bottom: 5px solid #6B3A1A;
+      margin-bottom: 20px;
+    }
+    .number-box4 {
+      background-color: #6B3A1A;
+      color: white;
+      font-weight: bold;
+      font-size: 36px;
+      padding: 15px 25px;
+      margin-right: 15px;
+    }
+    .section-title4 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #6B3A1A;
+    }
+    .subtitle4 {
+      font-size: 20px;
+      font-weight: bold;
+      color: #6B3A1A;
+      margin-bottom: 15px;
+    }
+    .text4 {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+
   </style>
 </head>
 <body>
-      <div class="explore_photo">
+      <div class="explore-learn">
         <nav class="navbar">
               <div class="logo">
                 <a href="index.html"><img src="img/baynzag logo.png" alt=""> </a>
@@ -861,163 +1125,340 @@
         </nav>
     
         <div class="collapsible-container">
-              <h1>PHOTO & VIDEO<br> GALLERY</h1> 
+          <h1>Flaming Cliffs: <br>A Journey Throught Time</h1>
         </div>
 
         <img src="img/divider-wt.png" alt="">
       </div>
 
-      
-      <!-- baynzag -->
 
 
-      &nbsp;
-      <div class="container-nearby">
-        <div class="gallery-container">
-        <div class="title-baynzag">BayanZag</div>
-        <div class="gallery_bayanzag">
-          <img src="img/Zag/Zag-1.jpg">
-          <img src="img/Zag/Zag-2.jpg">
-          <img src="img/Zag/Zag-3.jpg">
-          <img src="img/Zag/Zag-4.jpg">
-          <img src="img/Zag/Zag-5.jpg">
+    <div class="container4">
+      <div class="section-header4">
+          <div class="number-box4">01</div>
+          <div class="section-title4">The prelude</div>
         </div>
-         &nbsp;
-         <div class="gallery_bayanzag">
-          <img src="img/Zag/Zag-6.jpg">
-          <img src="img/Zag/Zag-7.jpg">
-          <img src="img/Zag/Zag-8.jpg">
-          <img src="img/Zag/Zag-9.jpg">
-          <img src="img/Zag/Zag-10.jpg">
-       </div>
-        &nbsp;
-      <div class="gallery_bayanzag">
-        <img src="img/Zag/Zag-11.jpg">
-        <img src="img/Zag/Zag-12.jpg">
-        <img src="img/Zag/Zag-13.jpg">
-        <img src="img/Zag/Zag-14.jpg">
-        <img src="img/Zag/Zag-15.jpg">
-      </div>
-        &nbsp;
-      <div class="gallery_bayanzag">
-        <img src="img/Zag/Zag-16.jpg">
-        <img src="img/Zag/Zag-17.jpg">
-      </div>
-       &nbsp;
-      <div class="title-baynzag">Camel Caraven</div>
-      <div class="gallery_bayanzag">
-        <img src="img/Camel Caravan-2.jpg">
-        <img src="img/Zag/Zag-2.jpg">
-        <img src="img/Camel Caravan-16.jpg">
-        <img src="img/Zag/Zag-4.jpg">
-        <img src="img/Camel Caravan-1.jpg">
-      </div>
-      &nbsp;
-      <div class="gallery_bayanzag">
-        <img src="img/Zag/Zag-6.jpg">
-        <img src="img/Zag/Zag-7.jpg">
-        <img src="img/Zag/Zag-8.jpg">
-        <img src="img/Camel Caravan-19.jpg">
-        <img src="img/Camel Caravan-4.jpg">
-      </div>
-     
-      &nbsp;
-      <div class="title-baynzag">Souvenir Shop</div>
-      <div class="gallery_bayanzag">
-        <img src="img/Souviner shop/SouvinerShop-14.jpg">
-        <img src="img/Souviner shop/SouvinerShop-10.jpg">
-        <img src="img/Souviner shop/SouvinerShop-11.jpg">
-        <img src="img/Souviner shop/SouvinerShop-12.jpg">
-        <img src="img/Souviner shop/SouvinerShop-13.jpg">
-      </div>
-      &nbsp;
-      <div class="gallery_bayanzag">
-        <img src="img/Souviner shop/SouvinerShop-9.jpg">
-        <img src="img/Souviner shop/SouvinerShop-8.jpg">
-        <img src="img/Souviner shop/SouvinerShop-7.jpg">
-        <img src="img/Souviner shop/SouvinerShop-6.jpg">
-        <img src="img/Souviner shop/SouvinerShop-5.jpg">
+
+        <div class="subtitle4">Mongolia Before The Discovery</div>
+
+        <div class="text4">
+          Long before its rise to fame, the Flaming Cliffs—known locally as Bayanzag—were merely a remote area within Mongolia’s Gobi Desert. Named 
+          <span class="bold-text">“Bayanzag”</span> by locals for its abundance of 
+          <span class="bold-text">saxaul trees</span> ("bayan" meaning rich and "zag" meaning saxaul), 
+          the region was known primarily to local herders, who often stumbled upon unusual bones and stones, unaware of their scientific significance.
+        </div>
+
+        <div class="text4">
+           Mongolia in the early 20th century was largely unexplored by Western science, a vast territory of myth, legend, and mystery. 
+           Tales circulated about hidden treasures beneath the Gobi sands—stories that would soon inspire an adventurous scientist to embark on an epic expedition.
+        </div>
+  </div>
+
+    <div class="experience-section">
+    <div class="experience-content">
+       <div class="section-header4">
+          <div class="number-box4">02</div>
+          <div class="section-title4">Roy Chapman Andrews</div>
+        </div>
+      <p>Roy Chapman Andrews, an American explorer and paleontologist working for the American Museum of Natural History, was driven by a profound curiosity about Earth's past. With the ambition of discovering the origins of life in Asia, Andrews began meticulously planning the <strong>Central Asiatic Expeditions</strong> in 1921.</p>
+      <p>His vision was bold: to cross vast, uncharted terrain with the latest technology of the time, including Ford Model-T motor vehicles—revolutionary for scientific expeditions—tents, excavation tools, and advanced photographic equipment to document the discoveries. Andrews was charismatic, adventurous, and resilient; qualities that helped him secure financial backing and worldwide interest in the project.</p>
+    </div>
+    <div class="experience-image">
+      <img src="img/image.jpg">
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="left">
+      <img src="your-image-path.png" alt="Dinosaur Egg">
+      <div class="play-button"></div>
+    </div>
+    <div class="right">
+      
+      
+      <div class="expedition-text">
+        In July 1923, Andrews and his team made their most groundbreaking discovery at the Flaming Cliffs: fossilized dinosaur eggs, the first ever found in human history. This find conclusively proved dinosaurs reproduced through egg-laying, dramatically transforming the scientific understanding of dinosaur biology. The discovery instantly elevated the Flaming Cliffs to global prominence, making headlines worldwide.
       </div>
     </div>
+  </div>
+
+   <div class="container2">
+      <h1>Uncovering Iconic Species</h1>
+      
+    <div class="line"></div>
+    <!-- <div>
+      <img class="character right-img" src="img/learn more detail dino icon.png" alt="Character">
+    </div> -->
+    <div class="content">
+      <h2>Beyond Eggs, The Flaming Cliffs Yielded Numerous Remarkable Fossils, Providing Invaluable Insights Into Prehistoric Life:</h2>
+      <img class="character right-img" src="img/learn more detail dino icon.png" alt="Character">
+    </div>
+
+    <div class="species-container">
+      <div class="species-box">
+        <div class="species-title">
+          Velociraptor mongoliensis (1924)
+        </div>
+        <img src="img/Velociraptor mongoliensis.jpg" alt="Velociraptor" alt="Velociraptor">
+        <div class="species-description">
+          First described by Henry Fairfield Osborn, the Velociraptor became famous through multiple significant finds at the Flaming Cliffs.<br><br>
+          This agile, intelligent predator was smaller than portrayed in popular culture—about the size of a turkey—but lethal, with razor-sharp claws. Its most notable fossil, the "Fighting Dinosaurs," preserves a dramatic predator-prey encounter with Protoceratops.
+        </div>
       </div>
 
-       <div class="container-nearby">
-       <div class="nearby-header">
-      <div class="nearby-line"></div>
-      <div class="nearby-title">Videos</div>
-      <div class="nearby-line"></div>
+      <div class="species-box">
+      <div class="species-title">Protoceratops andrewsi (1923)</div>
+      <img src="img/Protoceratops andrewsi.jpg" alt="Protoceratops">
+      <div class="species-description">
+        Discovered by Andrews himself and named in his honor, Protoceratops became one of the most abundant fossils at Bayanzag.<br><br>
+        These small, frilled, hornless ceratopsians were herbivorous dinosaurs that moved in herds, evidence indicated by fossilized nests and eggs. Their remains provided unprecedented details about dinosaur nesting behaviors and social structures.
+      </div>
     </div>
+
+    <div class="species-box">
+      <div class="species-title">Oviraptor philoceratops (1924)</div>
+      <img src="img/Oviraptor philoceratops.jpg" alt="Oviraptor">
+      <div class="species-description">
+        Initially misunderstood as an "egg thief" due to fossils found near nests, later research revealed that Oviraptor was actually protecting its own eggs.<br><br>
+        These finds at the Flaming Cliffs significantly corrected paleontological misconceptions, offering a remarkable glimpse into dinosaur parental behaviors.
+      </div>
+    </div>
+
+
+    </div>
+  </div>
+
+    <div class="container4">
+    <div class="sectionheader">
+      <div class="sectiontitle">Scientific Legacy And Global Impact</div>
+      <div class="title-line"></div>
+    </div>
+
+    <div class="sectiontext">
+    Andrews' discoveries at the Flaming Cliffs transformed Mongolia into a paleontological epicenter.
+    They sparked worldwide interest in paleontology, inspired future generations of scientists,
+    and cemented the site's historical and scientific significance.
+  </div>
+  </div>
+
+  <div class="container4">
+      <div class="section-header4">
+          <div class="number-box4">04</div>
+          <div class="section-title4">Flaming Cliffs Today</div>
+        </div>
+
+        <div class="subtitle4">Walking In History</div>
+
+        <div class="text4">
+          Today, Bayanzag remains an active research site attracting paleontologists worldwide. Each year, new findings continue to enhance our understanding of Earth's ancient past. Visitors can explore these same cliffs, retrace Andrews’ footsteps, and directly connect with a vibrant legacy of exploration and discovery.
+        </div>
+
+        <div class="text4">
+          This site, now carefully preserved, serves as both an outdoor museum and living laboratory, constantly reminding us of the wonders still hidden beneath our feet.
+        </div>
+  </div>
+
+
+
+    &nbsp;
+
+    <!-- PHOTO & VIDEO GALLERY -->
+    <div class="banner">
+      <div class="overlay"></div>
+      <div class="banner-text">
+        <h1>PHOTO & VIDEO<span>&nbsp;GALLERY</span></h1>
+      </div>
+    </div>
+    
+    <section class="gallery-section">
+        <div class="gallery-description">
+          
+          The Flaming Cliffs are more than just a historical site—they're a visual wonder. Explore our gallery to uncover the unique aspects of this iconic location. From breathtaking drone footage and serene sunsets to snapshots of the camel caravan and souvenir shop, there’s something for everyone to discover. Click below to dive into the full gallery and immerse yourself in the beauty of the Flaming Cliffs.
+        </div>
+    
+        <h3>Photos</h3>
+        <div class="media-grid">
+          <div class="media-item">
+            <a href="photo_gallery.html">
+              <img src="img/Photo & video gallery/Flaming Cliffs Thumb.jpg" alt="">
+            </a>
+            <div class="media-caption">Flaming Cliffs</div>
+          </div>
+          <div class="media-item">
+            <a href="photo_gallery.html">
+              <img src="img/Photo & video gallery/Camel Caravan Thumb.jpg" alt="">
+            </a>
+            <div class="media-caption">Camel Caravan</div>
+          </div>
+          <div class="media-item">
+            <a href="photo_gallery.html">
+              <img src="img/Photo & video gallery/Souviner shop thumb.jpg" alt="">
+            </a>
+            <div class="media-caption">Souvenir shop</div>
+          </div>
+        </div>
+    
+        <h3 style="margin-top: 40px;">Videos</h3>
+        <div class="media-grid">
+          <div class="media-item">
+            <div class="video-thumbnail">
+              <iframe src="https://www.youtube.com/embed/LQ9jJ-l_ryE?si=QaS4CuYfJyH7Q57C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            
+          </div>
+          <div class="media-item">
+            <div class="video-thumbnail">
+              <iframe  src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=FQD-dD2FnsrR0HWQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            
+          </div>
+          <div class="media-item">
+            <div class="video-thumbnail">
+              <iframe src="https://www.youtube.com/embed/LWYDZuAbYGk?si=5hGq2vWFl3kH7VsN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+  <!-- Contacts  -->
+     <div class="container-nearby">
+     
+      
+     <div class="contact-header">
+       <h1 class="contact-title">Contact Us & FAQs</h1>
+       <div class="divider-line"></div>
      </div>
 
+     <div class="contact-content">
+       The Flaming Cliffs administration team is here to assist you in every way possible.
+        Whether you have questions about your visit or require further guidance, don’t hesitate
+        to reach out. Our dedicated nature rangers are passionate about preserving the beauty and 
+        history of this iconic site. Feel free to contact us at:
+     </div>
+
+     <div class="container-contact">
+      <div class="card-contact">
+        <div class="icon">
+          <img src="img/phone number icon.png">
+        </div>
+        <div class="title">Phone Number</div>
+        <div class="value">+976 987 963</div>
+      </div>
+
+      <div class="card-contact">
+        <div class="icon">
+          <img src="img/Email icon.png">
+        </div>
+        <div class="title">Email Address</div>
+        <div class="value">info@flamingcliffs.mn</div>
+      </div>
+
+
+      <div class="card-contact">
+        <div class="icon">
+          <img src="img/facebook icon.png">
+        </div>
+        <div class="title">Facebook</div>
+        <div class="value">Flaming Cliffs Administration</div>
+      </div>
+
+      <div class="card-contact">
+        <div class="icon">
+          <img src="img/Insta icon.png">
+        </div>
+        <div class="title">Instagram</div>
+        <div class="value">Flaming_Cliffs</div>
+      </div>
+     </div>
+     </div>
+    
+
+     &nbsp;
+
      <div class="container-nearby">
-      <h1>Flaming Cliffs</h1>
-
-       <div class="gallery">
-        <div class="video-card">
-          <div class="video-thumb">
-            <iframe src="https://www.youtube.com/embed/LWYDZuAbYGk?si=Ii1exzJNLpA7OleJ" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <small>youtube.com</small><br>
-            Sun shining
-          </div>
-        </div>
-        <div class="video-card">
-          <div class="video-thumb">
-            <iframe src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=FQD-dD2FnsrR0HWQ" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <small>youtube.com</small><br>
-            Sun shining
-          </div>
-        </div>
+        <div class="faq-header">
+          <h2>Frequently asked questions</h2>
         
-        <div class="video-card">
-          <div class="video-thumb">
-            <iframe src="https://www.youtube.com/embed/LQ9jJ-l_ryE?si=0_J3TWtT8-X6fqfR" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <small>youtube.com</small><br>
-            Sun shining
-          </div>
+        </div>
+     <div class="faq-container">
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          1.When is the beast time to visit?
+          <img src="img/down-arrow.png" class="arrow active">
+        </div>
+        <div class="faq-answer">
+          May to October, during mild weather and accessible road conditions.
         </div>
       </div>
 
-      <div class="gallery">
-        <div class="video-card">
-          <div class="video-thumb">
-            <iframe src="https://www.youtube.com/embed/LWYDZuAbYGk?si=Ii1exzJNLpA7OleJ" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <small>youtube.com</small><br>
-            Sun shining
-          </div>
+         <div class="faq-item">
+        <div class="faq-question">
+          2 Can I collect fossils?
+          <img src="img/down-arrow.png" class="arrow active">
         </div>
-        <div class="video-card">
-          <div class="video-thumb">
-            <iframe src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=FQD-dD2FnsrR0HWQ" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <small>youtube.com</small><br>
-            Sun shining
-          </div>
-        </div>
-        
-        <div class="video-card">
-          <div class="video-thumb">
-            <iframe src="https://www.youtube.com/embed/LQ9jJ-l_ryE?si=0_J3TWtT8-X6fqfR" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <small>youtube.com</small><br>
-            Sun shining
-          </div>
+        <div class="faq-answer">
+          No, fossil collection is prohibited to ensure preservation for future generations.
         </div>
       </div>
 
-  </div>
-      
-       
-      
+         <div class="faq-item">
+        <div class="faq-question">
+            3. Are there nearby accommodations?
+          <img src="img/down-arrow.png" class="arrow active">
+        </div>
+        <div class="faq-answer">
+          Yes, options include traditional ger camps and modern hotels in Dalanzadgad.
+        </div>
+      </div>
+
+
+         <div class="faq-item">
+        <div class="faq-question">
+          4. What transportation options are available?.
+          <img src="img/down-arrow.png" class="arrow active">
+        </div>
+        <div class="faq-answer">
+         Self-drive, guided tours, and flights to Dalanzadgad followed by a drive.
+        </div>
+      </div>
+
+         <div class="faq-item">
+        <div class="faq-question">
+          5. What should I bring for my visit?.
+          <img src="img/down-arrow.png" class="arrow active">
+        </div>
+        <div class="faq-answer">
+         Sturby shoes, sun protection, plehty of water, and sense of adventure.
+        </div>
+      </div>
+
+         <div class="faq-item">
+        <div class="faq-question">
+          6. Is there food avaliable at the Falmming Cliffs?
+          <img src="img/down-arrow.png" class="arrow active">
+        </div>
+        <div class="faq-answer">
+          Yes, the Information Center offers a dinning area with local and international cuisine.
+        </div>
+      </div>
+         <div class="faq-item">
+        <div class="faq-question">
+          7. How does my visit support the site?
+          <img src="img/down-arrow.png" class="arrow active">
+        </div>
+        <div class="faq-answer">
+          Entry fees fund conservation, research, and local community initiatives.:[LInks to Facebook and Instagram].
+        </div>
+      </div>
+     </div>
+     </div>
+    
+
+   
+    
+
      <footer class="footer">
       
         <div class="container-nearby">
