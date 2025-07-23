@@ -1,1162 +1,818 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
-    <link rel="stylesheet" href="tablet.css" media="screen and (max-width: 1449px) and (min-width: 768px)">
-    <link rel="stylesheet" href="style.css" media="screen and (min-width: 1450px)">
-    <link rel="stylesheet" href="global.css">
-
-    <script src="https://cdn.tailwindcss.com"></script>
+  <head>
+    <meta charset="UTF-8" />
     <title>Flaming Cliffs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
     <style>
-
-      
-      body{
-       font-family: SF Pro Display;
-        background-color: #1e1a17;
-        color: white;
-        align-items: center;
-        justify-content: center;
+      .rotate-180 {
+        transform: rotate(180deg);
       }
-
-     .gallery-container{
-      margin: auto;
-      align-items: center;
-      justify-content: center;
-     }
-      .title-baynzag{
-        font-size: 16px;
-        margin-bottom: 10px;
-        font-style: white;
-      }
-      .gallery_bayanzag{
-       display: flex;
-       gap: 5px;
-      }
-      .gallery_bayanzag img{
-        aspect-ratio: 16/9;
-        height: 100px;
-        object-fit: cover;
-        border: 1px solid #333;
-      }
-
-
-      .gallery{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));    }
-
-    .video-card{
-      background-color: #1a1a1a;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      transition: transform 0.3s;
-    }
-
-    .video-card:hover{
-      transform: scale(1.03);
-    }
-    .video-thumb {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%;
-      background-color: #000;
-    }
-    .video-thumb iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-    .video-info {
-      padding: 12px;
-      font-size: 16px;
-    }
-    .video-info small {
-      color: #bbb;
-      font-size: 13px;
-    }
-    
-      .brand {
-        align-items: center;
-        font-size: 1.1rem;
-        color: #ffffff;
-        font-weight: bold;
-      }
-    
-    .header{
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      border-bottom: 4px solid #693b16;
-      padding-bottom: 0px;
-      margin-bottom: 0px;
-    }
-    .number-box{
-      background-color: #693b16;
-      color: #fff;
-      font-size: 32px;
-      font-weight: bold;
-      padding: 15px 25px;
-    }
-    .header h1{
-      font-size: 28px;
-      color: #693b16;
-      margin: 0;
-    }
-    .description {
-      font-size: 16px;
-      margin-bottom: 20px;
-      font-weight: 400px;
-    }
-
-    .content{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .features{
-      flex: 1 1 300px;
-      list-style: disc;
-      padding-left: 20px;
-      font-size: 16px;
-    }
-
-    .features li{
-      margin-bottom: 12px;
-    }
-
-    .main-image{
-      flex: 1 1 400px;
-    }
-
-    .main-image img{
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-    }
-
-     
-
-    .container1{
-      display: flex;
-      gap: 40px;
-      max-width: 1100px;
-      margin: auto;
-      align-items: flex-start;
-    }
-
-    .left2{
-      flex: 1;
-    }
-    .left2 img{
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
-    .right1{
-      flex: 1;
-    }
-    .title-section1{
-      display: inline-block;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-    .title-section1 h1{
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      border-bottom: 3px solid #5d3c1c;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-    .title-number1{
-      background-color: #5d3c1c;
-      color: white;
-      font-weight: bold;
-      padding: 10px 20px;
-      font-size: 1.5rem;
-      border-radius: 4px;
-      display: inline-block;
-      margin-bottom: 10px;
-    }
-    .right1 p{
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-    .button{
-      background-color: #f7a531;
-      color: white;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 30px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      transition: background 0.3s;
-      
-      
-    }
-
-    .button:hover {
-       background: #d68622;
-    }
-
-    .thumbnails1{
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 20px;
-    }
-    .thumbnails1 img{
-      width: 600px;
-      height: 60px;
-      object-fit: cover;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-    .thumbnails1 img:hover {
-  transform: scale(1.05);
-}
-    
-
-    .btm-divider-wt {
-      shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-    .btm-divider{
-     
-      shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-    .banner h1 {
-      font-size: 48px;
-      align-items: center;
-      color: white;
-      letter-spacing: 12px; /* This adds space between letters */
-    }
-
-
-    @media (max-width: 768px){
-      .container1{
-        flex-direction: column;
-        padding: 20px;
-        gap: 20px;
-      }
-      .title-section1{
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .title-number1{
-        font-size: 1.2rem;
-        padding: 8px 16px;
-      }
-
-      .title-section1 h1{
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-      }
-      .left2 img{
-        max-height: 300px;
-        object-fit: cover;
-      }
-      .thumbnails1{
-        flex-direction: column;
-        align-items: center;
-      }
-      .thumbnails1 img{
-        width: 100%;
-        height: auto;
-        max-width: 98%;
-      }
-      .button{
-        width: 100%;
-        text-align: center;
-        padding: 12px 0;
-        font-size: 16px;
-      }
-    }
-
-    .section-header1 {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-    .section-title1 {
-      font-weight: bold;
-      font-size: 24px;
-      color: #5c3113; /* similar brown color */
-      margin-right: 15px;
-      white-space: nowrap;
-    }
-    .section-line1{
-      flex-grow: 1;
-      height: 5px;
-      background-color: #5c3113; /* same color as title */
-    }
-
-    .section-title2{
-      font-size: 24px;
-      font-weight: bold;
-      color: #5c3113;
-      position: relative;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
-    .section-title2::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      margin-left: 10px;
-      height: 4px;
-      width: 500px;
-      background-color: #5c3113;
-      transform: translateY(-50%);
-    }    
-
-    .section-header2{
-      display: flex;
-      align-items: center;
-      margin: 20px 0;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    .line2{
-      flex: 1;
-      height: 4px;
-      background-color: #5c3113;
-      margin-right: 15px;
-    }
-    .title2{
-      font-weight: bold;
-      font-size: 24px;
-      color: #5c3113;
-    }
-
-    .nearby-header{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 50px 0;
-    
-    }
-    .nearby-line{
-      flex: 1;
-      height: 4px;
-      background-color: white;
-      max-width: 400px;
-    }
-
-    .nearby-title{
-      margin: 0 20px;
-      font-size: 28px;
-      font-weight: bold;
-      color: white;
-    }
-
-    .grid-container-nearby{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: auto;
-
-    }
-
-    .card-nearby{
-      background-color: #fff;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      padding: 10px;
-      text-align: center;
-      overflow: hidden;
-      
-    }
-
-    .card-nearby:hover{
-      transform: scale(1.03);
-    }
-    .card-nearby img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .card-text{
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      padding: 10px 15px;
-      
-      color: #fff;
-      width: 100%;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-
-
-
-    .container-nearby{
-      max-width: 1100px;
-      margin: auto;
-    }
-
-     .header-local {
-      margin-top: 40px;
-      margin-bottom: 15px;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #111;
-    }
-
-    .card-container-nearby1{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .card-nearby1{
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-      padding: 10px;
-      text-align: center;
-    }
-    .card-nearby1 img{
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-    .card-title-nearby1{
-      margin: 15px 0 10px;
-      font-size: 18px;
-      font-weight: 500;
-      color: #333;
-    }
-
-    /* .banner-hero{
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      background-image: url('img/photo\ &\ video\ gallery\ top\ desktop.jpg')  center;
-    }
-    .overlay{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-    .banner-text{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      text-align: center;
-    }
-    .banner-text h1{
-      font-size: 48px;
-      letter-spacing: 4px;
-      margin: 0;
-    } */
-
-
-    .contact-header{
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    .contact-title{
-      font-size: 24px;
-      font-weight: bold;
-      color: #5c3113;
-      margin-right: 15px;
-      white-space: nowrap;
-    }
-    .divider-line{
-      flex-grow: 1;
-      height: 4px;
-      background-color: #5c3113;
-    }
-
-    .contact-content{
-      font-size: 18px;
-      color: #333;
-      line-height: 1.6;
-      text-align: center;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-    }
-
-    .container-contact{
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: wrap; 
-      margin-right: 20px;
-    }
-    .card-contact{
-      text-align: center;
-      margin: 20px;
-      margin-right: 80px;
-    }
-    .icon{
-      font-size: 60px;
-      color: #f3912e;
-      margin-bottom: 10px; 
-    }
-    .title{
-      color: gray;
-      margin-bottom: 5px;
-    }
-    .value{
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-
-    .faq-header{
-      max-width: 1100px;
-      margin: 40px auto 10px;
-      padding: 0 20px;
-    }
-    .faq-header h2{
-      font-size: 24px;
-      font-weight: normal;
-      margin-bottom: 5px;
-    }
-
-   
-    .faq-container{
-      padding: 10px;
-      max-width: 800px;
-      margin: 20px auto;
-    }
-
-
-    .faq-item{
-      border-bottom: 1px solid #ddd;
-      padding: 10px 0;
-      cursor: pointer;
-    }
-
-    .faq-question{
-      font-size: 18px;
-      font-weight: bold;
-      
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .faq-answer{
-      display: none;
-      margin-top: 5px;
-      color: #555;
-      font-size: 16px;
-    }
-    
-
-    .faq-item.open .faq-answer{
-      display: block;
-    }
-    .arrow{
-      width: 20px;
-      height: 20px;
-      transition: transform 0.3s;
-    }
-    .rotate{
-      transform: rotate(180deg);
-    }
-
-    .description{
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
-
- 
-
-    .footer{
-      background-color: #1f1813;
-      color: #f2f2f2;
-      padding: 10px 10px;
-    }
-    .footer-container{
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      border-top: 1px solid #333;
-    }
-
-    .banner-footer{
-      display: flex;
-      align-items: center;
-      background-color: #1e1712;
-      color: white;
-      padding: 10px 20px;
-    }
-
-    .banner-footer img{
-     
-      width: 50px;
-      height: auto;
-      margin-right: 15px;
-      object-fit: cover;
-    }
-    
-    .banner-text{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .banner-title{
-      font-weight: bold;
-      font-size: 1rem;
-      margin: 0;
-    }
-    .banner-subtitle{
-      font-size: 0.9rem;
-      margin-top: 2px;
-    }
-
-    .footer-column {
-      flex: 1 1 220px;
-      margin: 10px;
-    }
-    .footer-column h3 {
-      border-bottom: 1px solid #555;
-      padding-bottom: 10px;
-      margin-bottom: 15px;
-      font-size: 18px;
-    }
-    .footer-column ul {
-      list-style: none;
-      padding: 0;
-    }
-    .footer-column ul li {
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
-    .footer-column ul li a {
-      text-decoration: none;
-      color: #fff;
-      transition: color 0.3s;
-    }
-    .footer-column ul li a:hover {
-      color: #f4b042;
-    }
-    .contact-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
-    .contact-item img {
-      width: 20px;
-      margin-right: 10px;
-    }
-    .social-icons {
-      display: flex;
-      gap: 15px;
-      margin-top: 10px;
-    }
-    .social-icons img {
-      width: 24px;
-      cursor: pointer;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-    .logo img {
-      width: 60px;
-      margin-right: 15px;
-    }
-    .logo-text {
-      font-weight: bold;
-      font-size: 18px;
-    }
-    .sub-text {
-      font-size: 12px;
-      color: #ccc;
-    }
-
-    /* Responsive styles */
-    @media (max-width: 992px) {
-      .footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .footer-column {
-        margin: 20px 0;
-      }
-      .logo {
-        justify-content: center;
-      }
-      .contact-item {
-        justify-content: center;
-      }
-      .social-icons {
-        justify-content: center;
-      }
-    }
-
-    
-  .footer-bottom {
-    text-align: center;
-    color: #ccc;
-    font-size: 0.95rem;
-  }
-
-  .footer-bottom a {
-    color: orange;
-    text-decoration: none;
-    margin: 0 0px;
-  }
-
-  .footer-bottom a:hover {
-    text-decoration: underline;
-  }
-
-  .footer-highlight {
-    font-weight: bold;
-    margin-top: 0px;
-  }
-
-
-  .footer-section{
-    flex: 1 1 150px;
-    margin: 10px 10px;
-  }
-
-  .footer-section h3{
-    margin-bottom: 15px;
-    border-bottom: 1px solid #666;
-    padding-bottom: 5px;
-    font-size: 1.1rem;
-  }
-
-  .footer-section ul{
-    list-style: none;
-    padding: 0;
-    column-count: 2;
-    column-gap: 30px;
-  }
-
-  .footer-section ul li{
-    margin-bottom: 8px;
-    cursor: pointer;
-  }
-
-  .footer-section p{
-    margin: 8px 0;
-    font-size: 0.95rem;
-  }
-  .icon{
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-  .icons img{
-    width: 20px;
-    margin-right: 10px;
-  }
-
-  .social-icons img{
-    display: inline-block;
-    background-color: transparent;
-    border: 2px solid orange;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    line-height: 28px;
-    text-align: center;
-    margin-right: 10px;
-    font-size: 1.1rem;
-    cursor: pointer;
-  }
-
-  @media (max-width: 768px) {
-    .footer{
-      flex-direction: column;
-      padding: 20px;
-    }
-  }
-
-  .footer-logo{
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-
-  .footer-logo img{
-    height: 60px;
-    margin-right: 15px;
-  }
-
-  .footer-title h3{
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  .footer-title p{
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  </style>
-</head>
-<body>
-      <div class="explore_photo">
-        <nav class="navbar">
-              <div class="logo">
-                <a href="index.html"><img src="img/baynzag logo.png" alt=""> </a>
-                <span class="brand">Flaming Cliffs</span>
-              </div>
-          <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        <div class="menu" id="menu">
-          <a href="home.html">HOME</a>
-          <a href="about.html">ABOUT</a>
-          <a href="learn_detail.html">FOSSILS & DISCOVERIES</a>
-          <a href="status.html">LIVE STATUS FROM VISITORS</a>
-          <a href="#preservation">PRESERVATION</a>
-          <a href="#gallery">GALLERY</a>
-          <a href="#contact">CONTACT</a>
-          <a href="login.html">LOGIN</a>
-          <select class="bg-transparent border white px-2 py-1 rounded">
-            <option>EN</option>
-            <option>MN</option>
-          </select>
-          &nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;
+    </style>
+  </head>
+  <body class="bg-[#1a130f] min-h-screen">
+    <header
+      class="w-full shadow-md bg-gradient-to-b from-[#2c1c12] to-[#000000] text-white"
+    >
+      <div
+        class="max-w-6xl mx-auto flex items-center justify-between px-6 py-6"
+      >
+        <!-- Logo & Title -->
+        <div class="flex items-center gap-2">
+          <img
+            src="img/baynzag logo.png"
+            alt="Flaming Cliffs Logo"
+            class="h-10 w-auto"
+          />
+          <span class="text-lg font-semibold">Flaming Cliffs</span>
         </div>
-        
+
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex gap-6 text-sm font-semibold">
+          <a href="home.html" class="hover:text-yellow-400">HOME</a>
+          <a href="about.html" class="hover:text-yellow-400">ABOUT</a>
+          <a href="#" class="hover:text-yellow-400">FOSSILS & DISCOVERIES</a>
+          <a href="status.html" class="hover:text-yellow-400">LIVE STATS FROM VISITORS</a>
+          <a href="#" class="hover:text-yellow-400">PRESERVATION</a>
+          <a href="#" class="hover:text-yellow-400">GALLERY</a>
+          <a href="#" class="hover:text-yellow-400">CONTACT</a>
         </nav>
-    
-        <div class="collapsible-container">
-              <h1>PHOTO & VIDEO<br> GALLERY</h1> 
+
+        <!-- Language Dropdown -->
+        <div class="ml-4">
+          <select
+            class="bg-gray-800 border border-gray-600 text-white text-sm px-2 py-1 rounded"
+          >
+            <option value="en">EN</option>
+            <option value="mn">MN</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <div class="relative h-screen w-full">
+      <!-- Background Image -->
+      <img
+        src="img/photo & video gallery top desktop.jpg"
+        alt="Flaming Cliffs"
+        class="absolute object-cover z-0 hidden lg:block"
+        style="
+          width: 3440px;
+          height: 1320px;
+          transform: rotate(0deg);
+          opacity: 1;
+        "
+      />
+       <div
+          class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center"
+        >
+          <h1
+            class="text-white text-[60px] leading-[66px] font-semibold text-center uppercase tracking-[0.21em]"
+            style="font-family: 'Inter', sans-serif"
+          >
+            PHOTO & VIDEO <br />GALLERY
+          </h1>
+        </div>
+    </div>
+    <img
+      src="img/divider.png"
+      alt="Upper Divider"
+      class="absolute left-0 w-full rotate-180 pointer-events-none z-10"
+    />
+
+    <div class="mt-32">
+      <div class="max-w-6xl mx-auto px-4 py-6 text-center">
+
+        <!-- Photos Section -->
+        <div class="text-left mb-6">
+          <h2
+            class="text-[25px] leading-[32px] font-semibold text-white text-left capitalize mb-4"
+          >
+            Bayanzag
+          </h2>
+
+          <div class="grid grid-cols-5 grid-rows-4 gap-6">
+            <!-- Flaming Cliffs -->
+            
+              <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-1.jpg"
+                  alt="Zag1"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+          
+            <!-- Camel Caravan -->
+            
+              <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-2.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+            
+            
+              <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-3.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-4.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-5.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-6.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-7.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-8.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-9.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-10.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-11.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-12.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-13.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-14.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-15.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-16.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-17.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               
+            
+          </div>
         </div>
 
-        <img src="img/divider-wt.png" alt="">
-      </div>
-
-      
-      <!-- baynzag -->
-
-
-      &nbsp;
-      <div class="container-nearby">
-        <div class="gallery-container">
-        <div class="title-baynzag">BayanZag</div>
-        <div class="gallery_bayanzag">
-          <img src="img/Zag/Zag-1.jpg">
-          <img src="img/Zag/Zag-2.jpg">
-          <img src="img/Zag/Zag-3.jpg">
-          <img src="img/Zag/Zag-4.jpg">
-          <img src="img/Zag/Zag-5.jpg">
-        </div>
-         &nbsp;
-         <div class="gallery_bayanzag">
-          <img src="img/Zag/Zag-6.jpg">
-          <img src="img/Zag/Zag-7.jpg">
-          <img src="img/Zag/Zag-8.jpg">
-          <img src="img/Zag/Zag-9.jpg">
-          <img src="img/Zag/Zag-10.jpg">
-       </div>
-        &nbsp;
-      <div class="gallery_bayanzag">
-        <img src="img/Zag/Zag-11.jpg">
-        <img src="img/Zag/Zag-12.jpg">
-        <img src="img/Zag/Zag-13.jpg">
-        <img src="img/Zag/Zag-14.jpg">
-        <img src="img/Zag/Zag-15.jpg">
-      </div>
-        &nbsp;
-      <div class="gallery_bayanzag">
-        <img src="img/Zag/Zag-16.jpg">
-        <img src="img/Zag/Zag-17.jpg">
-      </div>
-       &nbsp;
-      <div class="title-baynzag">Camel Caraven</div>
-      <div class="gallery_bayanzag">
-        <img src="img/Camel Caravan-2.jpg">
-        <img src="img/Zag/Zag-2.jpg">
-        <img src="img/Camel Caravan-16.jpg">
-        <img src="img/Zag/Zag-4.jpg">
-        <img src="img/Camel Caravan-1.jpg">
-      </div>
-      &nbsp;
-      <div class="gallery_bayanzag">
-        <img src="img/Zag/Zag-6.jpg">
-        <img src="img/Zag/Zag-7.jpg">
-        <img src="img/Zag/Zag-8.jpg">
-        <img src="img/Camel Caravan-19.jpg">
-        <img src="img/Camel Caravan-4.jpg">
-      </div>
-     
-      &nbsp;
-      <div class="title-baynzag">Souvenir Shop</div>
-      <div class="gallery_bayanzag">
-        <img src="img/Souviner shop/SouvinerShop-14.jpg">
-        <img src="img/Souviner shop/SouvinerShop-10.jpg">
-        <img src="img/Souviner shop/SouvinerShop-11.jpg">
-        <img src="img/Souviner shop/SouvinerShop-12.jpg">
-        <img src="img/Souviner shop/SouvinerShop-13.jpg">
-      </div>
-      &nbsp;
-      <div class="gallery_bayanzag">
-        <img src="img/Souviner shop/SouvinerShop-9.jpg">
-        <img src="img/Souviner shop/SouvinerShop-8.jpg">
-        <img src="img/Souviner shop/SouvinerShop-7.jpg">
-        <img src="img/Souviner shop/SouvinerShop-6.jpg">
-        <img src="img/Souviner shop/SouvinerShop-5.jpg">
+        
       </div>
     </div>
-      </div>
 
-       <div class="container-nearby">
-       <div class="nearby-header">
-      <div class="nearby-line"></div>
-      <div class="nearby-title">Videos</div>
-      <div class="nearby-line"></div>
+    <div class="mt-10">
+      <div class="max-w-6xl mx-auto px-4 py-6 text-center">
+
+        <!-- Photos Section -->
+        <div class="text-left mb-6">
+          <h2
+            class="text-[25px] leading-[32px] font-semibold text-white text-left capitalize mb-4"
+          >
+            Camel Caraven
+          </h2>
+
+          <div class="grid grid-cols-5 grid-rows-2 gap-6">
+            <!-- Flaming Cliffs -->
+            
+              <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Camel Caravan-2.jpg"
+                  alt="Zag1"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+          
+            <!-- Camel Caravan -->
+            
+              <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-2.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+            
+            
+              <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Camel Caravan-16.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-4.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Camel Caravan-1.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-6.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-7.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Zag/Zag-8.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Camel Caravan-19.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Camel Caravan-4.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+          </div>
+        </div>
+      </div>
     </div>
-     </div>
 
-     <div class="container-nearby">
-      <h1>Flaming Cliffs</h1>
+    <div class="mt-10">
+      <div class="max-w-6xl mx-auto px-4 py-6 text-center">
 
-       <div class="gallery">
-        <div class="video-card">
-          <div class="video-thumb">
-            <iframe src="https://www.youtube.com/embed/LWYDZuAbYGk?si=Ii1exzJNLpA7OleJ" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <small>youtube.com</small><br>
-            Sun shining
+        <!-- Photos Section -->
+        <div class="text-left mb-6">
+          <h2
+            class="text-[25px] leading-[32px] font-semibold text-white text-left capitalize mb-4"
+          >
+            Souvenir Shop
+          </h2>
+
+          <div class="grid grid-cols-5 grid-rows-2 gap-6">
+            <!-- Flaming Cliffs -->
+            
+              <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Souviner shop/SouvinerShop-14.jpg"
+                  alt="Zag1"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+          
+            <!-- Camel Caravan -->
+            
+              <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Souviner shop/SouvinerShop-10.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+            
+            
+              <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Souviner shop/SouvinerShop-11.jpg"
+                  
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Souviner shop/SouvinerShop-12.jpg"
+                  
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Souviner shop/SouvinerShop-13.jpg"
+               
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Souviner shop/SouvinerShop-9.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Souviner shop/SouvinerShop-8.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Souviner shop/SouvinerShop-7.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Souviner shop/SouvinerShop-6.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <img
+                  src="img/Souviner shop/SouvinerShop-5.jpg"
+                  alt="Flaming Cliffs"
+                  class="rounded-md object-cover w-full h-48"
+                />
+                
+              </div>
           </div>
         </div>
-        <div class="video-card">
-          <div class="video-thumb">
-            <iframe src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=FQD-dD2FnsrR0HWQ" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <small>youtube.com</small><br>
-            Sun shining
+      </div>
+    </div>
+
+      <div class="flex items-center justify-center bg-[#1a130f] py-4">
+        <div class="w-full max-w-4xl flex items-center">
+        <div class="flex-grow h-px bg-white"></div>
+        <span class="mx-4 text-white text-[40px] leading-[32px] font-bold capitalize font-['Inter'] text-right">Videos</span>
+        <div class="flex-grow h-px bg-white"></div>
+        </div>
+      </div>
+
+      <div class="mt-10">
+      <div class="max-w-6xl mx-auto px-4 py-6 text-center">
+
+        <!-- Photos Section -->
+        <div class="text-left mb-6">
+          <h2
+            class="text-[25px] leading-[32px] font-semibold text-white text-left capitalize mb-4"
+          >
+            Flaming Cliffs
+          </h2>
+
+          <div class="grid grid-cols-3 grid-rows-2 gap-[15px]">
+            <!-- Flaming Cliffs -->
+            
+              <div class="relative aspect-[16/9]">
+               <iframe
+                width="350"
+                height="252"
+                src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=0Zmj7nqP4PEzcDM_"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+              </div>
+          
+            <!-- Camel Caravan -->
+            
+              <div class="relative aspect-[16/9]">
+               <iframe
+                width="350"
+                height="252"
+                src="https://www.youtube.com/embed/LQ9jJ-l_ryE?si=QNf_V2vdaFS5NVGN"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+              </div>
+            
+            
+              <div class="relative aspect-[16/9]">
+                <iframe
+                width="350"
+                height="252"
+                src="https://www.youtube.com/embed/LWYDZuAbYGk?si=c1agOLf72Ms7EIoH"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+              </div>
+              
+               <div class="relative aspect-[16/9]">
+               <iframe
+                width="350"
+                height="252"
+                src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=0Zmj7nqP4PEzcDM_"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                <iframe
+                width="350"
+                height="252"
+                src="https://www.youtube.com/embed/LQ9jJ-l_ryE?si=QNf_V2vdaFS5NVGN"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+              </div>
+
+               <div class="relative aspect-[16/9]">
+                 <iframe
+                width="350"
+                height="252"
+                src="https://www.youtube.com/embed/LWYDZuAbYGk?si=c1agOLf72Ms7EIoH"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+                
+              </div>
+
+               
           </div>
         </div>
+      </div>
+    </div>
+
+      
+    </div>
+
         
-        <div class="video-card">
-          <div class="video-thumb">
-            <iframe src="https://www.youtube.com/embed/LQ9jJ-l_ryE?si=0_J3TWtT8-X6fqfR" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <small>youtube.com</small><br>
-            Sun shining
-          </div>
+    <div class="bg-[#1a130f] px-4 py-4">
+      <div class="flex items-center gap-4 max-w-6xl mx-auto py-6">
+        <!-- Icon -->
+        <img
+          src="img/baynzag logo.png"
+          alt="Flaming Cliffs Icon"
+          class="w-[101.23px] h-[96.87px] object-cover"
+        />
+
+        <!-- Text -->
+        <div>
+          <h1
+            class="text-white font-semibold text-[26.93px] leading-[22.44px] font-[Inter]"
+          >
+            Flaming Cliffs ( Bayanzag )
+          </h1>
+          &nbsp;
+          <p
+            class="text-gray-300 font-normal text-[20.94px] leading-[22.44px] font-[Inter]"
+          >
+            Discover Mongolia's Legendary Dinosaur Site
+          </p>
         </div>
       </div>
 
-      <div class="gallery">
-        <div class="video-card">
-          <div class="video-thumb">
-            <iframe src="https://www.youtube.com/embed/LWYDZuAbYGk?si=Ii1exzJNLpA7OleJ" allowfullscreen></iframe>
+      <!-- Divider line -->
+      <div class="border-t border-[#3f3932] mt-2 max-w-6xl mx-auto"></div>
+    </div>
+
+    <footer class="bg-[#1a130f] text-white py-10 px-6">
+      <div class="max-w-6xl mx-auto text-sm">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-10 md:divide-x divide-[#2d211c]"
+        >
+          <!-- Quick Links -->
+          <div class="md:pr-6">
+            <h3
+              class="font-extrabold text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
+            >
+              Quick links
+            </h3>
+            <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-gray-300">
+              <a
+                href="#"
+                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
+              >
+                Home
+              </a>
+
+              <a
+                href="#"
+                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
+                >Nearby Destinations</a
+              >
+              <a
+                href="#"
+                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
+                >Gateway to Prehistory</a
+              >
+              <a
+                href="#"
+                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
+                >Accommodation</a
+              >
+              <a
+                href="#"
+                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
+                >Key fossils</a
+              >
+              <a
+                href="#"
+                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
+                >Gallery</a
+              >
+              <a
+                href="#"
+                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
+                >Information Center</a
+              >
+              <a
+                href="#"
+                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
+                >FAQs</a
+              >
+              <a
+                href="#"
+                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
+                >FAQs</a
+              >
+              <a
+                href="#"
+                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
+                >Getting There</a
+              >
+              <a
+                href="#"
+                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
+                >Getting There</a
+              >
+              <a
+                href="#"
+                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
+                >Language</a
+              >
+            </div>
           </div>
-          <div class="video-info">
-            <small>youtube.com</small><br>
-            Sun shining
+
+          <!-- Visitor Information -->
+          <div class="md:pr-1">
+            <h3
+              class="font-extrabold text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
+            >
+              Visitor Information
+            </h3>
+            <p class="text-gray-300 mb-3">
+              <span
+                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
+                >Entry Fees</span
+              ><br />
+              Domestic - 3,000 MNT | International - 10,000 MNT
+            </p>
+            <p class="text-gray-300 mb-3">
+              <span class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"">Best Time to Visit:</span>
+              May - October
+            </p>
+            <p class="text-gray-300">
+              <span class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']">Location</span><br />
+              Bayanzag, Ömnögovi Province, Mongolia
+            </p>
           </div>
-        </div>
-        <div class="video-card">
-          <div class="video-thumb">
-            <iframe src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=FQD-dD2FnsrR0HWQ" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <small>youtube.com</small><br>
-            Sun shining
-          </div>
-        </div>
-        
-        <div class="video-card">
-          <div class="video-thumb">
-            <iframe src="https://www.youtube.com/embed/LQ9jJ-l_ryE?si=0_J3TWtT8-X6fqfR" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <small>youtube.com</small><br>
-            Sun shining
+
+          <!-- Contacts & Socials -->
+          <div class="md:pr-1">
+            <h3
+              class="font-extrabold text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
+            >
+              Contacts Us
+            </h3>
+            <div class="flex items-center gap-3 mb-2 text-gray-300">
+              <img src="img/phone number icon.png" class="w-4 h-4" alt="Phone" />
+              +976-12345678
+            </div>
+            <div class="flex items-center gap-3 mb-4 text-gray-300">
+              <img src="img/Email icon.png" class="w-4 h-4" alt="Email" />
+              info@flamingcliffs.mn
+            </div>
+            <h4 class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']">Follow Us</h4>
+            <div class="flex gap-4">
+              <a href="#"
+                ><img src="img/Facebook round.png" alt="Facebook" class="w-6 h-6"
+              /></a>
+              <a href="#"
+                ><img src="img/Insta Round.png" alt="Instagram" class="w-6 h-6"
+              /></a>
+              <a href="#"
+                ><img src="img/Youtube round.png" alt="YouTube" class="w-6 h-6"
+              /></a>
+            </div>
           </div>
         </div>
       </div>
+    </footer>
 
-  </div>
-      
-       
-      
-     <footer class="footer">
-      
-        <div class="container-nearby">
-           <div class="banner-footer">
-          <img src="img/footer.png" alt="Falmming Cliffs Logo">
-          <div class="banner-text">
-            <div class="banner-title">Flaming Cliffs ( BayanZag )</div>
-            <div class="banner-subtitle">Discover Mongolia's Legendary Dinosaur Site</div>
-          </div>
-        </div>
-        </div>
-      
-     </footer>
-    <footer class="footer">
-      <div class="footer-container">
-       
-        <div class="footer-section quick-links">
-        <h3>Quick links</h3>
-        <ul>
-          <li>Home</li>
-          <li>Gateway to Prehistory</li>
-          <li>Key fossils</li>
-          <li>Information Center</li>
-          <li>Getting There</li>
-          <li>Nearby Destinations</li>
-          <li>Accommodation</li>
-          <li>Gallery</li>
-          <li>FAQs</li>
-          <li>Language</li>
-        </ul>
-       </div>
+    <footer class="bg-[#1a130f] text-white text-center py-6 text-sm">
+      <div class="border-t border-[#3f3932] mt-2 max-w-6xl mx-auto py-6"></div>
 
-       <div class="footer-section visitor-info">
-        <h3>Visitor Information</h3>
-        <p><strong>Entry Fees</strong><br>
-        Domestic - 3,000 <span class="mnt">MNT</span> | International - 10,000 <span class="mnt">MNT</span></p>
+      <p cclass="font-semibold text-[17px] leading-[30px] tracking-normal font-['Open_Sans']">Preserving History, Supporting Communities</p>
+      <p class="font-semibold text-[17px] leading-[30px] tracking-normal font-['Open_Sans'] mt-1">
+        Your visit directly contributes to preserving Mongolia’s heritage and
+        empowering local communities.
+      </p>
+      <p class="font-semibold text-[17px] leading-[30px] tracking-normal font-['Open_Sans'] mt-1">Plan Your Visit Today!</p>
 
-        <p><strong>Best Time to Visit: </strong> May - October</p>
+      <p class="font-semibold text-[17px] leading-[30px] tracking-normal font-['Open_Sans'] mt-4">
+        © 2025 Flaming Cliffs Administration | All Rights Reserved
+      </p>
 
-        <p><strong>Location</strong><br>
-        Bayanzag, Ömnögovi Province, Mongolia</p>
-       </div>
-
-       <div class="footer-section contact-us">
-        <h3 class="footer-title">Contact Us</h3>
-        &nbsp;
-        <div class="contact-item">
-          <img src="img/phone number icon.png" alt="Phone">
-          <h1 class="footer-title">+976-12345678</h1>
-        </div>
-        <div class="contact-item">
-          <img src="img/Email icon.png" alt="Email">
-          <h1 class="footer-title">info@flamingcliffs.mn</h1>
-        </div>
-
-        <h4>Follow Us</h4>
-        <div class="social-icons">
-          <span><img src="img/Facebook round.png"></span>
-          <span><img src="img/Insta Round.png"></span>
-          <span><img src="img/Youtube round.png"></span>
-        </div>
-       </div>
-      </footer>
-      <footer class="footer">
-        <div class="footer-bottom">
-        <div class="footer-highlight">Preserving History, Supporting Communities</div>
-        Your visit directly contributes to preserving Mongolia's heritage and empowering local communities.<br>
-        <strong>Plan Your Visit Today!</strong><br><br>
-        &copy; 2025 Flaming Cliffs Administration | 
-        <a href="#">Privacy Policy</a> | 
-        <a href="#">Terms of Use</a>
-       </div>
+      <div class="mt-1 space-x-2">
+        <a href="#" class="text-[#f9a825] hover:underline font-semibold text-[17px] leading-[30px] tracking-normal font-['Open_Sans']">Privacy Policy</a>
+        <span class="text-gray-600">|</span>
+        <a href="#" class="text-[#f9a825] hover:underline font-semibold text-[17px] leading-[30px] tracking-normal font-['Open_Sans']">Terms of Use</a>
       </div>
-      </footer>
-    
-       
-    
-      <script>
-      const faqItems = document.querySelectorAll('.faq-item');
+    </footer>
 
-      faqItems.forEach(item => {
-        item.addEventListener('click', () => {
-          item.classList.toggle('open');
+    <!-- <script>
+      fetch('http://localhost:3000').then(res => res.json()).then(
+        data => {
+          const el = document.querySelector("img")
+          e.class = data
+        }
+      )
+    </script> -->
+
+    <script>
+      const faqButtons = document.querySelectorAll(".faq-question");
+
+      faqButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const currentlyOpen = document.querySelector(
+            ".faq-answer:not(.hidden)"
+          );
+          const currentArrow = document.querySelector(".rotate-180");
+
+          const content = button.nextElementSibling;
+          const arrowIcon = button.querySelector("img");
+
+          if (currentlyOpen && currentlyOpen !== content) {
+            currentlyOpen.classList.add("hidden");
+            currentArrow?.classList.remove("rotate-180");
+          }
+
+          content.classList.toggle("hidden");
+          arrowIcon.classList.toggle("rotate-180");
         });
       });
     </script>
-
-
-    <script>
-        function toggleMenu() {
-          const menu = document.getElementById('menu');
-          menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-        }
-    </script>
-    <script>
-        function setupGallery(gallerySelector, bigPictureSelector, smallPicturesSelector) {
-    // Select the gallery container
-    const gallery = document.querySelector(gallerySelector);
-
-    if (gallery) {
-        // Select the big picture element within the gallery
-        const bigPicture = gallery.querySelector(bigPictureSelector);
-
-        // Select all small picture elements within the gallery
-        const smallPictures = gallery.querySelectorAll(smallPicturesSelector);
-
-        // Add hover events to small pictures
-        smallPictures.forEach(smallPic => {
-            smallPic.addEventListener('mouseover', () => {
-                // Update the big picture's source with the data-big attribute of the hovered small picture
-                bigPicture.src = smallPic.getAttribute('data-big');
-            });
-
-            smallPic.addEventListener('mouseout', () => {
-                // Optionally reset the big picture if needed
-                // bigPicture.src = "default-image-path.png";
-            });
-        });
-    }
-}
-
-// Apply the function to both galleries
-
-
-setupGallery('.gallery', '.big-picture', '.small-pictures img');
-setupGallery('.gallery-2', '.big-picture-2', '.small-pictures-2 img');
-    </script>
-    
-    <script>
-        document.querySelector('.collapsible-container').addEventListener('click', function () {
-          this.classList.toggle('expanded');
-        });
-      </script>
-
-      <script>
-    function changeImage(imgSrc) {
-      document.getElementById("mainDisplay").src = imgSrc;
-    }
-  </script>
-    
-</body>
+  </body>
 </html>
