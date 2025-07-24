@@ -3,102 +3,108 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donut Chart Dashboard</title>
+    <title>Visitor–Moon Phase Correlation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      .moon-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #eee;
+        border: 2px solid #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: bold;
+        margin: auto;
+      }
+    </style>
   </head>
-  <body class="bg-white p-10 text-gray-800">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-      <!-- Chart 1 -->
-      <div class="bg-white shadow-lg rounded-xl p-6">
-        <h2 class="text-center font-bold text-xl mb-4">
-          Visitors by Top Countries
-        </h2>
-        <canvas id="countryChart"></canvas>
-      </div>
+  <body class="bg-gray-50 p-6">
+    <div class="max-w-6xl mx-auto bg-white p-6 rounded-3xl shadow">
+      <h2
+        class="text-[24px] font-[700] leading-[100%] tracking-[0%] text-gray-800 mb-4"
+        style="font-family: 'SF Pro Display'"
+      >
+        Visitor–Moon Phase Correlation
+      </h2>
 
-      <!-- Chart 2 -->
-      <div class="bg-white shadow-lg rounded-xl p-6">
-        <h2 class="text-center font-bold text-xl mb-4">Vehicle Types</h2>
-        <canvas id="vehicleChart"></canvas>
-      </div>
+      <canvas id="moonChart" class="w-full h-96"></canvas>
     </div>
 
     <script>
-      const countryChart = new Chart(document.getElementById("countryChart"), {
-        type: "doughnut",
-        data: {
-          labels: [
-            "China",
-            "Russia",
-            "South Korea",
-            "Others",
-            "Kazakhstan",
-            "Japan",
-            "USA",
-          ],
-          datasets: [
-            {
-              data: [31, 24, 22, 14, 4, 3, 2],
-              backgroundColor: [
-                "#f97316",
-                "#f43f5e",
-                "#fbbf24",
-                "#06d6a0",
-                "#22d3ee",
-                "#a855f7",
-                "#ec4899",
-              ],
-              borderWidth: 0,
-            },
-          ],
-        },
-        options: {
-          cutout: "65%",
-          plugins: {
-            legend: {
-              position: "right",
-              labels: { color: "#000", padding: 20, boxWidth: 15 },
-            },
-          },
-        },
-      });
+      const ctxMoon = document.getElementById("moonChart").getContext("2d");
 
-      const vehicleChart = new Chart(document.getElementById("vehicleChart"), {
-        type: "doughnut",
+      const moonIcons = {
+        new: "🌑",
+        first: "🌓",
+        full: "🌕",
+        last: "🌗",
+      };
+
+      const moonChart = new Chart(ctxMoon, {
+        type: "bar",
         data: {
-          labels: [
-            "Minibus",
-            "4WD SUV",
-            "Bus",
-            "Mid-Size Crossover",
-            "Compact car",
-            "Motorcycle",
-          ],
+          labels: ["New Moon", "First Quarter", "Full Moon", "Last Quarter"],
           datasets: [
             {
-              data: [30, 25, 20, 15, 5, 5],
-              backgroundColor: [
-                "#f97316",
-                "#ef4444",
-                "#facc15",
-                "#e879f9",
-                "#38bdf8",
-                "#14b8a6",
-              ],
-              borderWidth: 0,
+              label: "Visitors",
+              data: [280, 460, 160, 370],
+              backgroundColor: ["#1a1a1a", "#e4bc75", "#fceec7", "#a46f4d"],
+              borderRadius: 12,
+              borderSkipped: false,
             },
           ],
         },
         options: {
-          cutout: "65%",
+          responsive: true,
           plugins: {
-            legend: {
-              position: "right",
-              labels: { color: "#000", padding: 20, boxWidth: 15 },
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  return `Visitors: ${context.parsed.y}`;
+                },
+              },
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              grid: {
+                color: "#ccc",
+                borderDash: [4, 4],
+              },
+            },
+            x: {
+              grid: { display: false },
             },
           },
         },
+        plugins: [
+          {
+            id: "customMoonIcons",
+            afterDatasetsDraw(chart) {
+              const {
+                ctxMoon,
+                data,
+                chartArea: { top },
+                scales: { x, y },
+              } = chart;
+              const icons = ["🌑", "🌓", "🌕", "🌗"];
+              ctxMoon.font = "24px Arial";
+              ctxMoon.textAlign = "center";
+              ctxMoon.textBaseline = "middle";
+              data.datasets[0].data.forEach((value, i) => {
+                const xCenter = x.getPixelForValue(i);
+                const yTop = y.getPixelForValue(value) + 20;
+                ctx.fillText(icons[i], xCenter, yTop);
+              });
+            },
+          },
+        ],
       });
     </script>
   </body>

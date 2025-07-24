@@ -1,163 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Central Asiatic Expeditions</title>
-  <style>
-    body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background-color: #fff;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monthly Guides and Drivers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body class="bg-gray-100 p-6 font-sans">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+      <!-- Left Panel -->
+      <div class="bg-white rounded-2xl p-6 shadow">
+        <h2
+          class="text-[28px] font-bold leading-[20.38px] text-center mb-6"
+          style="font-family: 'SF Pro Display'"
+        >
+          Monthly Guides and Drivers
+        </h2>
+        <div class="flex justify-around gap-[40px]">
+          <!-- This Month Chart -->
+          <div class="relative w-32 h-32">
+            <canvas id="chartThisMonth"></canvas>
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center"
+            >
+              <span class="text-lg font-bold">800</span>
+              <div class="text-xs text-gray-500 mt-1">
+                <span class="inline-block mr-1 text-orange-500">●</span>600
+                <span class="inline-block mx-1 text-blue-500">●</span>200
+              </div>
+              <div class="text-sm mt-1">This Month</div>
+            </div>
+          </div>
 
-.container, .container2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.left, .right {
-  flex: 1 1 45%;
-  margin: 10px;
-}
-
-.image-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.image-wrapper img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 32px;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
-h2 {
-  color: #5c2f0c;
-  font-size: 24px;
-  margin-bottom: 5px;
-}
-
-.years {
-  font-weight: normal;
-  font-size: 18px;
-  color: #666;
-}
-
-.label-box {
-  background-color: #5c2f0c;
-  color: #fff;
-  display: inline-block;
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  color: #884a26;
-  font-size: 18px;
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
-.expedition-text {
-  line-height: 1.6;
-  font-size: 16px;
-}
-
-.species-section h1 {
-  width: 100%;
-  font-size: 28px;
-  color: #2d160b;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.line {
-  width: 80px;
-  height: 3px;
-  background-color: #884a26;
-  margin: 0 auto 20px;
-  border: none;
-}
-
-.character-box {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.character {
-  width: 100px;
-  height: auto;
-}
-
-.description {
-  text-align: center;
-  font-size: 18px;
-  font-weight: 400;
-  color: #4a2e1c;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-  </style>
-</head>
-<body>
-
-  <!-- Expedition Section -->
-  <section class="expedition-section">
-    <div class="container">
-      <div class="left">
-        <div class="image-wrapper">
-          <img src="your-image-path.png" alt="Fossilized Dinosaur Egg">
-          <div class="play-button">&#9658;</div>
+          <!-- 2025 Chart -->
+          <div class="relative w-32 h-32">
+            <canvas id="chart2025"></canvas>
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center"
+            >
+              <span class="text-lg font-bold">6300</span>
+              <div class="text-xs text-gray-500 mt-1">
+                <span class="inline-block mr-1 text-orange-500">●</span>4725
+                <span class="inline-block mx-1 text-blue-500">●</span>1575
+              </div>
+              <div class="text-sm mt-1">2025</div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="right">
-        <h2>Central Asiatic Expeditions <span class="years">(1922–1930)</span></h2>
-        <div class="label-box">03</div>
-        <h3 class="subtitle">A Decade Of Discovery</h3>
-        <p class="expedition-text">
-          In July 1923, Andrews and his team made their most groundbreaking discovery at the Flaming Cliffs: fossilized dinosaur eggs, the first ever found in human history. This find conclusively proved dinosaurs reproduced through egg-laying, dramatically transforming the scientific understanding of dinosaur biology. The discovery instantly elevated the Flaming Cliffs to global prominence, making headlines worldwide.
-        </p>
+
+      <!-- Right Panel -->
+      <div class="bg-white rounded-2xl p-6 shadow">
+        <h2 class="text-xl font-bold text-center mb-4">
+          Visitors by Tour Operator
+        </h2>
+        <canvas id="barChart"></canvas>
       </div>
     </div>
-  </section>
 
-  <!-- Iconic Species Section -->
-  <section class="species-section">
-    <div class="container2">
-      <h1>Uncovering Iconic Species</h1>
-      <hr class="line">
-      <div class="character-box">
-        <img class="character" src="img/learn more detail dino icon.png" alt="Character">
-      </div>
-      <h2 class="description">
-        Beyond Eggs, The Flaming Cliffs Yielded Numerous Remarkable Fossils, Providing Invaluable Insights Into Prehistoric Life:
-      </h2>
-    </div>
-  </section>
+    <script>
+      // Donut Chart - This Month
+      new Chart(document.getElementById("chartThisMonth"), {
+        type: "doughnut",
+        data: {
+          labels: ["Drivers", "Guides"],
+          datasets: [
+            {
+              data: [600, 200],
+              backgroundColor: ["#F7941D", "#4870B5"],
+              borderWidth: 0,
+            },
+          ],
+        },
+        options: {
+          cutout: "70%",
+          plugins: {
+            legend: { display: false },
+            tooltip: { enabled: false },
+          },
+        },
+      });
 
-</body>
+      // Donut Chart - 2025
+      new Chart(document.getElementById("chart2025"), {
+        type: "doughnut",
+        data: {
+          labels: ["Drivers", "Guides"],
+          datasets: [
+            {
+              data: [4725, 1575],
+              backgroundColor: ["#F7941D", "#4870B5"],
+              borderWidth: 0,
+            },
+          ],
+        },
+        options: {
+          cutout: "70%",
+          plugins: {
+            legend: { display: false },
+            tooltip: { enabled: false },
+          },
+        },
+      });
+
+      // Bar Chart
+      new Chart(document.getElementById("barChart"), {
+        type: "bar",
+        data: {
+          labels: [
+            "Tour operator B",
+            "Tour operator C",
+            "Tour operator D",
+            "Tour operator E",
+            "Tour operator F",
+          ],
+          datasets: [
+            {
+              label: "Visitors",
+              data: [98, 97, 96, 95, 94],
+              backgroundColor: "#4870B5",
+              borderRadius: 6,
+              barThickness: 20,
+            },
+          ],
+        },
+        options: {
+          indexAxis: "y",
+          plugins: {
+            legend: { display: false },
+          },
+          scales: {
+            x: {
+              beginAtZero: true,
+              ticks: { stepSize: 20 },
+              grid: {
+                drawBorder: false,
+                color: "#e5e7eb",
+              },
+            },
+            y: {
+              grid: { display: false },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
 </html>
