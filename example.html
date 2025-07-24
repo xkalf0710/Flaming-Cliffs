@@ -3,100 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Footer Section</title>
+    <title>Central Asiatic Expeditions</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-white text-gray-900 font-sans">
-    <footer
-      class="bg-[#1a130f] text-white py-10 px-6 border-t border-[#2d211c]"
-    >
-      <div class="max-w-7xl mx-auto text-sm">
+  <body class="text-white font-sans">
+    <div class="max-w-6xl mx-auto py-6">
+      <div class="flex items-center justify-between w-full bg-[#ffffff]">
+        <!-- Left: Image Section -->
         <div
-          class="grid grid-cols-1 md:grid-cols-3 gap-10 md:divide-x divide-[#2d211c]"
+          class="relative w-1/2 h-full bg-cover bg-center"
+          style="background-image: url('img/egg-dino.jpg')"
         >
-          <!-- Quick Links -->
-          <div class="md:pr-6">
-            <h3 class="font-semibold mb-4 border-b border-[#2d211c] pb-2">
-              Quick links
-            </h3>
-            <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-gray-300">
-              <a href="#">Home</a>
-              <a href="#">Nearby Destinations</a>
-              <a href="#">Gateway to Prehistory</a>
-              <a href="#">Accommodation</a>
-              <a href="#">Key fossils</a>
-              <a href="#">Gallery</a>
-              <a href="#">Information Center</a>
-              <a href="#">FAQs</a>
-              <a href="#">Getting There</a>
-              <a href="#">Language</a>
-            </div>
-          </div>
-
-          <!-- Visitor Information -->
-          <div class="px-6">
-            <h3 class="font-semibold mb-4">Visitor Information</h3>
-            <p class="text-gray-300 mb-3">
-              <span class="text-white font-semibold">Entry Fees</span><br />
-              Domestic - 3,000 MNT | International - 10,000 MNT
-            </p>
-            <p class="text-gray-300 mb-3">
-              <span class="text-white font-semibold">Best Time to Visit:</span>
-              May - October
-            </p>
-            <p class="text-gray-300">
-              <span class="text-white font-semibold">Location</span><br />
-              Bayanzag, Ömnögovi Province, Mongolia
-            </p>
-          </div>
-
-          <!-- Contacts & Socials -->
-          <div class="pl-6">
-            <h3 class="font-semibold mb-4">Contacts Us</h3>
-            <div class="flex items-center gap-3 mb-2 text-gray-300">
-              <img src="img/phone-icon.png" class="w-4 h-4" alt="Phone" />
-              +976-12345678
-            </div>
-            <div class="flex items-center gap-3 mb-4 text-gray-300">
-              <img src="img/email-icon.png" class="w-4 h-4" alt="Email" />
-              info@flamingcliffs.mn
-            </div>
-            <h4 class="font-semibold mb-2">Follow Us</h4>
-            <div class="flex gap-4">
-              <a href="#"
-                ><img src="img/facebook.png" alt="Facebook" class="w-6 h-6"
-              /></a>
-              <a href="#"
-                ><img src="img/instagram.png" alt="Instagram" class="w-6 h-6"
-              /></a>
-              <a href="#"
-                ><img src="img/youtube.png" alt="YouTube" class="w-6 h-6"
-              /></a>
+          <!-- Egg Overlay Button -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div
+              class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg"
+            >
+              <svg
+                class="w-6 h-6 text-purple-600"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
             </div>
           </div>
         </div>
+
+        <!-- Right: Text Section -->
+        <div class="w-1/2 px-10 space-y-3">
+          <div class="flex items-center justify-end">
+            <div class="text-right">
+              <h1 class="text-4xl font-bold text-[#4d2e13]">
+                Central Asiatic Expeditions
+              </h1>
+              <div
+                class="border-t-4 border-[#4d2e13] w-[80%] ml-auto mt-1 mb-2"
+              ></div>
+              <p class="italic text-lg text-[#7a4f2f]">(1922–1930)</p>
+            </div>
+            <div
+              class="ml-4 bg-[#4d2e13] text-white px-3 py-2 text-3xl font-bold rounded"
+            >
+              03
+            </div>
+          </div>
+          <p class="text-right text-xl text-[#7a4f2f] mt-4">
+            A Decade Of Discovery
+          </p>
+        </div>
       </div>
-    </footer>
-
-    <footer
-      class="bg-[#1a130f] text-white text-center py-6 text-sm border-t border-[#2d211c]"
-    >
-      <p class="font-semibold">Preserving History, Supporting Communities</p>
-      <p class="text-gray-300 mt-1">
-        Your visit directly contributes to preserving Mongolia’s heritage and
-        empowering local communities.
-      </p>
-      <p class="mt-1 font-medium">Plan Your Visit Today!</p>
-
-      <p class="mt-4 text-gray-400">
-        © 2025 Flaming Cliffs Administration | All Rights Reserved
-      </p>
-
-      <div class="mt-1 space-x-2">
-        <a href="#" class="text-[#f9a825] hover:underline">Privacy Policy</a>
-        <span class="text-gray-600">|</span>
-        <a href="#" class="text-[#f9a825] hover:underline">Terms of Use</a>
-      </div>
-    </footer>
+    </div>
   </body>
 </html>
