@@ -3,33 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Central Asiatic Expeditions</title>
+    <title>Donut Chart Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
-  <body class="bg-white text-[#5e3617]">
-    <div class="max-w-xl mx-auto mt-10 px-4 text-center">
-      <!-- Title and Number Badge -->
-      <div class="flex justify-center items-center relative">
-        <h1 class="text-xl font-bold text-[#5e3617] mr-2">
-          Central Asiatic Expeditions
-        </h1>
-        <div
-          class="bg-[#5e3617] text-white text-sm font-bold w-10 h-10 flex items-center justify-center rounded"
-        >
-          03
-        </div>
+  <body class="bg-white p-10 text-gray-800">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+      <!-- Chart 1 -->
+      <div class="bg-white shadow-lg rounded-xl p-6">
+        <h2 class="text-center font-bold text-xl mb-4">
+          Visitors by Top Countries
+        </h2>
+        <canvas id="countryChart"></canvas>
       </div>
 
-      <!-- Horizontal Line with Year on Right -->
-      <div class="flex items-center justify-center mt-1">
-        <div class="border-t-[3px] border-[#5e3617] w-[200px]"></div>
-        <span class="italic text-sm text-[#5e3617] ml-2">(1922–1930)</span>
+      <!-- Chart 2 -->
+      <div class="bg-white shadow-lg rounded-xl p-6">
+        <h2 class="text-center font-bold text-xl mb-4">Vehicle Types</h2>
+        <canvas id="vehicleChart"></canvas>
       </div>
-
-      <!-- Subtitle -->
-      <p class="text-sm font-medium mt-2 text-[#5e3617]">
-        A Decade Of Discovery
-      </p>
     </div>
+
+    <script>
+      const countryChart = new Chart(document.getElementById("countryChart"), {
+        type: "doughnut",
+        data: {
+          labels: [
+            "China",
+            "Russia",
+            "South Korea",
+            "Others",
+            "Kazakhstan",
+            "Japan",
+            "USA",
+          ],
+          datasets: [
+            {
+              data: [31, 24, 22, 14, 4, 3, 2],
+              backgroundColor: [
+                "#f97316",
+                "#f43f5e",
+                "#fbbf24",
+                "#06d6a0",
+                "#22d3ee",
+                "#a855f7",
+                "#ec4899",
+              ],
+              borderWidth: 0,
+            },
+          ],
+        },
+        options: {
+          cutout: "65%",
+          plugins: {
+            legend: {
+              position: "right",
+              labels: { color: "#000", padding: 20, boxWidth: 15 },
+            },
+          },
+        },
+      });
+
+      const vehicleChart = new Chart(document.getElementById("vehicleChart"), {
+        type: "doughnut",
+        data: {
+          labels: [
+            "Minibus",
+            "4WD SUV",
+            "Bus",
+            "Mid-Size Crossover",
+            "Compact car",
+            "Motorcycle",
+          ],
+          datasets: [
+            {
+              data: [30, 25, 20, 15, 5, 5],
+              backgroundColor: [
+                "#f97316",
+                "#ef4444",
+                "#facc15",
+                "#e879f9",
+                "#38bdf8",
+                "#14b8a6",
+              ],
+              borderWidth: 0,
+            },
+          ],
+        },
+        options: {
+          cutout: "65%",
+          plugins: {
+            legend: {
+              position: "right",
+              labels: { color: "#000", padding: 20, boxWidth: 15 },
+            },
+          },
+        },
+      });
+    </script>
   </body>
 </html>
