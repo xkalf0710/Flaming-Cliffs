@@ -11,6 +11,7 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 
     <style>
       .rotate-180 {
@@ -291,6 +292,28 @@
     </div>
 
     <div class="mt-32">
+      <div class="max-w-6xl mx-auto py-6">
+        <div class="grid grid-cols-2 gap-6">
+          <!-- Visitors by Top Countries -->
+          <div
+            class="bg-white w-[512px] h-[400px] rounded-[20px] shadow p-6 flex flex-col items-center justify-center"
+          >
+            <h2 class="text-lg font-bold mb-4">Visitors by Top Countries</h2>
+            <canvas id="countryChart" class="w-[200px] h-[200px]"></canvas>
+          </div>
+
+          <!-- Vehicle Types -->
+          <div
+            class="bg-white w-[512px] h-[400px] rounded-[20px] shadow p-6 flex flex-col items-center justify-center"
+          >
+            <h2 class="text-lg font-bold mb-4">Vehicle Types</h2>
+            <canvas id="vehicleChart" class="w-[200px] h-[200px]"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-32">
       <div class="flex flex-wrap gap-8 justify-center max-w-6xl p-8 mx-auto">
         <!-- Left Chart Card -->
         <div
@@ -453,7 +476,7 @@
     </div>
 
     <div class="mt-32">
-        <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg p-8">
+      <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg p-8">
         <h2 class="text-3xl font-semibold text-gray-800 mb-6">
           Peak Visitor Hours
         </h2>
@@ -462,7 +485,7 @@
     </div>
 
     <div class="mt-32">
-        <div class="max-w-6xl mx-auto bg-white p-6 rounded-3xl shadow">
+      <div class="max-w-6xl mx-auto bg-white p-6 rounded-3xl shadow">
         <h2
           class="text-[24px] font-[700] leading-[100%] tracking-[0%] text-gray-800 mb-4"
           style="font-family: 'SF Pro Display'"
@@ -552,21 +575,13 @@
                 class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
                 >Information Center</a
               >
+
               <a
                 href="#"
                 class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
                 >FAQs</a
               >
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >FAQs</a
-              >
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Getting There</a
-              >
+
               <a
                 href="#"
                 class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
@@ -693,8 +708,6 @@
         >
       </div>
     </footer>
-
-   
 
     <script>
       const data = [
@@ -950,14 +963,267 @@
       };
 
       new Chart(ctx1, config);
-
-      
     </script>
 
-    
+    <script>
+      const countryLabels = [
+        "China",
+        "Russia",
+        "South Korea",
+        "Others",
+        "Kazakhstan",
+        "Japan",
+        "USA",
+      ];
+      const countryData = [31, 24, 22, 14, 4, 3, 2];
 
-    
-  </body>
+      const countryCtx = document
+        .getElementById("countryChart")
+        .getContext("2d");
+      new Chart(countryCtx, {
+        type: "doughnut",
+        data: {
+          labels: countryLabels,
+          datasets: [
+            {
+              data: countryData,
+              backgroundColor: [
+                "#F97316",
+                "#EF4444",
+                "#FBBF24",
+                "#22D3EE",
+                "#0EA5E9",
+                "#A855F7",
+                "#EC4899",
+              ],
+              borderWidth: 0,
+            },
+          ],
+        },
+        options: {
+          cutout: "80%",
+          plugins: {
+            legend: { display: false },
+            datalabels: {
+              color: "#000",
+              font: {
+                size: 12,
+                weight: "bold",
+              },
+              formatter: (value) => value + "%",
+              anchor: "center",
+              align: "center",
+            },
+            tooltip: {
+              callbacks: {
+                label: (context) =>
+                  `${countryLabels[context.dataIndex]}: ${context.parsed}%`,
+              },
+            },
+          },
+        },
+        plugins: [
+          ChartDataLabels,
+          {
+            id: "countryLabelsOutside",
+            afterDatasetsDraw(chart) {
+              const ctx = chart.ctx;
+              const meta = chart.getDatasetMeta(0);
+              const dataset = chart.data.datasets[0];
+              meta.data.forEach((element, index) => {
+                const angle = (element.startAngle + element.endAngle) / 2;
+                const radius = element.outerRadius + 20;
+                const x = chart.width / 2 + Math.cos(angle) * radius;
+                const y = chart.height / 2 + Math.sin(angle) * radius;
+                ctx.save();
+                ctx.fillStyle = "#000";
+                ctx.font = "12px sans-serif";
+                ctx.textAlign = "center";
+                ctx.textBaseline = "middle";
+                ctx.fillText(countryLabels[index], x, y);
+                ctx.restore();
+              });
+            },
+          },
+        ],
+      });
 
+      const vehicleLabels = [
+        "Minibus",
+        "4WD SUV",
+        "Bus",
+        "Mid-Size Crossover",
+        "Compact car",
+        "Motorcycle",
+      ];
+      const vehicleData = [30, 25, 20, 15, 5, 5];
+      const vehicleIcons = {
+        Minibus: "🚐",
+        "4WD SUV": "🚙",
+        Bus: "🚌",
+        "Mid-Size Crossover": "🛻",
+        "Compact car": "🚗",
+        Motorcycle: "🏍️",
+      };
+
+      const vehicleCtx = document
+        .getElementById("vehicleChart")
+        .getContext("2d");
+      new Chart(vehicleCtx, {
+        type: "doughnut",
+        data: {
+          labels: vehicleLabels,
+          datasets: [
+            {
+              data: vehicleData,
+              backgroundColor: [
+                "#F97316",
+                "#EF4444",
+                "#FBBF24",
+                "#A855F7",
+                "#38BDF8",
+                "#06B6D4",
+              ],
+              borderWidth: 0,
+            },
+          ],
+        },
+        options: {
+          cutout: "80%",
+          plugins: {
+            legend: { display: false },
+            datalabels: {
+              color: "#000",
+              font: {
+                size: 12,
+                weight: "bold",
+              },
+              formatter: (value) => value + "%",
+              anchor: "center",
+              align: "center",
+            },
+            tooltip: {
+              callbacks: {
+                label: (context) =>
+                  `${vehicleIcons[vehicleLabels[context.dataIndex]]} ${
+                    vehicleLabels[context.dataIndex]
+                  }: ${context.parsed}%`,
+              },
+            },
+          },
+        },
+        plugins: [
+          ChartDataLabels,
+          {
+            id: "vehicleLabelsOutside",
+            afterDatasetsDraw(chart) {
+              const ctx = chart.ctx;
+              const meta = chart.getDatasetMeta(0);
+              meta.data.forEach((element, index) => {
+                const angle = (element.startAngle + element.endAngle) / 2;
+                const radius = element.outerRadius + 20;
+                const x = chart.width / 2 + Math.cos(angle) * radius;
+                const y = chart.height / 2 + Math.sin(angle) * radius;
+                ctx.save();
+                ctx.fillStyle = "#000";
+                ctx.font = "12px sans-serif";
+                ctx.textAlign = "center";
+                ctx.textBaseline = "middle";
+                ctx.fillText(
+                  `${vehicleIcons[vehicleLabels[index]]} ${
+                    vehicleLabels[index]
+                  }`,
+                  x,
+                  y
+                );
+                ctx.restore();
+              });
+            },
+          },
+          {
+            id: "centerImage",
+            afterDraw(chart) {
+              const image = new Image();
+              image.src = "images/bus.png"; // <-- Өөрийн зурган замаа оруул
+              image.onload = () => {
+                const ctx = chart.ctx;
+                const size = 50; // Зурагны хэмжээ
+                const x = chart.width / 2 - size / 2;
+                const y = chart.height / 2 - size / 2;
+                ctx.save();
+                ctx.drawImage(image, x, y, size, size);
+                ctx.restore();
+              };
+            },
+          },
+        ],
+      });
+    </script>
+
+    <script>
+      const ctxMoon = document.getElementById("moonChart").getContext("2d");
+
+      const moonChart = new Chart(ctxMoon, {
+        type: "bar",
+        data: {
+          labels: ["New Moon", "First Quarter", "Full Moon", "Last Quarter"],
+          datasets: [
+            {
+              label: "Visitors",
+              data: [280, 460, 160, 370],
+              backgroundColor: ["#1a1a1a", "#e4bc75", "#fceec7", "#a46f4d"],
+              borderRadius: 12,
+              borderSkipped: false,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  return `Visitors: ${context.parsed.y}`;
+                },
+              },
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              grid: {
+                color: "#ccc",
+                borderDash: [4, 4],
+              },
+            },
+            x: {
+              grid: { display: false },
+            },
+          },
+        },
+        plugins: [
+          {
+            id: "customMoonIcons",
+            afterDatasetsDraw(chart) {
+              const {
+                ctx,
+                data,
+                scales: { x, y },
+              } = chart;
+              const icons = ["🌑", "🌓", "🌕", "🌗"];
+              ctx.font = "24px Arial";
+              ctx.textAlign = "center";
+              ctx.textBaseline = "middle";
+              data.datasets[0].data.forEach((value, i) => {
+                const xCenter = x.getPixelForValue(i);
+                const yTop = y.getPixelForValue(value) + 20;
+                ctx.fillText(icons[i], xCenter, yTop);
+              });
+            },
+          },
+        ],
+      });
+    </script>
   </body>
 </html>

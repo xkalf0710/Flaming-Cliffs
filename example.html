@@ -37,13 +37,6 @@
     <script>
       const ctxMoon = document.getElementById("moonChart").getContext("2d");
 
-      const moonIcons = {
-        new: "🌑",
-        first: "🌓",
-        full: "🌕",
-        last: "🌗",
-      };
-
       const moonChart = new Chart(ctxMoon, {
         type: "bar",
         data: {
@@ -88,15 +81,14 @@
             id: "customMoonIcons",
             afterDatasetsDraw(chart) {
               const {
-                ctxMoon,
+                ctx,
                 data,
-                chartArea: { top },
                 scales: { x, y },
               } = chart;
               const icons = ["🌑", "🌓", "🌕", "🌗"];
-              ctxMoon.font = "24px Arial";
-              ctxMoon.textAlign = "center";
-              ctxMoon.textBaseline = "middle";
+              ctx.font = "24px Arial";
+              ctx.textAlign = "center";
+              ctx.textBaseline = "middle";
               data.datasets[0].data.forEach((value, i) => {
                 const xCenter = x.getPixelForValue(i);
                 const yTop = y.getPixelForValue(value) + 20;
