@@ -343,11 +343,11 @@
     </div>
 
     <div class="mt-32">
-      <div class="max-w-6xl mx-auto py-6">
+      <div class="max-w-6xl mx-auto py-6 space-y-6">
         <div class="grid grid-cols-2 gap-6">
           <!-- Visitors by Top Countries -->
           <div
-            class="bg-white w-[512px] h-[400px] rounded-[20px] shadow p-6 flex flex-col items-center justify-center"
+            class="bg-white w-725px h-620px rounded-[20px] shadow p-6 flex flex-col items-center justify-center"
           >
             <h2
               class="text-[28px] font-bold text-center mb-6"
@@ -355,12 +355,12 @@
             >
               Visitors by Top Countries
             </h2>
-            <canvas id="countryChart" class="w-[200px] h-[200px]"></canvas>
+            <canvas id="countryChart" class="width-20px height-20px"></canvas>
           </div>
 
           <!-- Vehicle Types -->
           <div
-            class="bg-white w-[512px] h-[400px] rounded-[20px] shadow p-6 flex flex-col items-center justify-center"
+            class="bg-white w-625px h-620px rounded-[20px] shadow p-6 flex flex-col items-center justify-center"
           >
             <h2
               class="text-[28px] font-bold text-center mb-6"
@@ -368,7 +368,7 @@
             >
               Vehicle Types
             </h2>
-            <canvas id="vehicleChart" class="w-[200px] h-[200px]"></canvas>
+            <canvas id="vehicleChart" class="w-[20px] h-[20px]"></canvas>
           </div>
         </div>
       </div>
@@ -1030,7 +1030,7 @@
       const countryLabels = [
         "China",
         "Russia",
-        "South Korea",
+        "South",
         "Others",
         "Kazakhstan",
         "Japan",
@@ -1113,7 +1113,7 @@
         "Minibus",
         "4WD SUV",
         "Bus",
-        "Mid-Size Crossover",
+        "Crossover",
         "Compact car",
         "Motorcycle",
       ];
@@ -1122,7 +1122,7 @@
         Minibus: "🚐",
         "4WD SUV": "🚙",
         Bus: "🚌",
-        "Mid-Size Crossover": "🛻",
+        Crossover: "🛻",
         "Compact car": "🚗",
         Motorcycle: "🏍️",
       };
