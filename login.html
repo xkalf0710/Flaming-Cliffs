@@ -1,139 +1,122 @@
 <!DOCTYPE html>
 <html lang="mn">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flaming Cliffs Registration</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", sans-serif;
-      height: 100%;
-    }
-
-    .hero {
-      background-image: url('img/Baynzag\ ariin\ zurag.jpg'); /* Replace with your image path */
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      position: relative;
-      color: white;
-      text-align: center;
-    }
-
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.45);
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .content {
-      position: relative;
-      z-index: 2;
-      top: 50%;
-      transform: translateY(-50%);
-      padding: 0 20px;
-    }
-
-    .logo {
-      width: 120px;
-      margin: 0 auto 20px;
-    }
-
-    h1 {
-      font-size: 28px;
-      margin: 10px 0;
-    }
-
-    h2 {
-      font-weight: 300;
-      font-size: 16px;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      background: white;
-      color: #333;
-      border: none;
-      border-radius: 10px;
-      padding: 15px 25px;
-      font-size: 16px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background: #eee;
-    }
-
-    .top-nav {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      display: flex;
-      gap: 10px;
-      z-index: 2;
-    }
-
-    .top-nav button {
-      background-color: rgba(255, 255, 255, 0.85);
-      border: none;
-      border-radius: 8px;
-      padding: 8px 14px;
-      font-size: 14px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .top-nav button:hover {
-      background-color: #ddd;
-    }
-  </style>
-</head>
-<body>
-  <div class="hero">
-    <div class="overlay"></div>
-    <div class="top-nav">
-      <button onclick="goBack()"><i class="fas fa-arrow-left"></i> Back</button>
-      <button onclick="goHome()"><i class="fas fa-home"></i> Home</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flaming Cliffs - Баянзаг</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="relative h-screen bg-cover bg-center"
+    style="background-image: url('img/baynzag-1.png')"
+  >
+    <!-- Top buttons -->
+    <div class="absolute top-4 left-4 flex space-x-2">
+      <button
+        id="backBtn"
+        class="bg-white/80 text-gray-800 px-3 py-1 rounded shadow"
+      >
+        <span style="display: flex; align-items: center; font-family: 'Inter'">
+          <img
+            src="img/line.png"
+            class="w-18 h-15 object-cover"
+            style="margin-right: 10px"
+          />
+          Back
+        </span>
+      </button>
+      <button
+        id="homeBtn"
+        class="bg-white/80 text-gray-800 px-3 py-1 rounded shadow"
+      >
+        <span style="display: flex; align-items: center; font-family: 'Inter'">
+          <img
+            src="img/sr-home-4x.png"
+            class="w-5 h-5 object-cover"
+            style="margin-right: 10px"
+          />
+          Home
+        </span>
+      </button>
     </div>
-    <div class="content">
-      <img src="img/baynzag logo.png" alt="Logo" class="logo">
-      <h1>Flaming Cliffs - Баянзаг Улалзах Цонж</h1>
-      <h2>Аялагчдын Бүртгэлийн Систем</h2>
-      <div class="buttons">
-        <button class="btn"><i class="fas fa-shield-alt"></i> Хянан Шалгагч</button>
-        <button class="btn"><i class="fas fa-user-edit"></i> Жуулчин бүртгэгч</button>
+
+    <!-- Center content -->
+    <div
+      class="flex flex-col items-center justify-center h-full text-white text-center px-4"
+    >
+      <img src="img/baynzag logo.png" alt="" class="w-[181px] h-[232px] mb-4" />
+      <!-- Replace with actual logo -->
+
+      <div class="text-center text-white py-8">
+        <h1
+          class="text-[36px] leading-[60px] font-semibold text-center font-[SF Pro Display] drop-shadow"
+        >
+          Flaming Cliffs - Баянзаг Улалзах Цонж
+        </h1>
+
+        <p
+          class="text-[24px] leading-[60px] font-semibold text-center font-[SF Pro Display] drop-shadow"
+        >
+          Аялагчдын бүртгэлийн систем
+        </p>
+        <hr class="border-t-2 border-white opacity-70 w-[1000px] mx-auto" />
+      </div>
+
+      <div class="flex space-x-4">
+        <button
+          id="inspectorBtn"
+          class="bg-white text-gray-800 px-6 py-3 rounded-lg shadow-lg flex items-center space-x-2 hover:bg-gray-100"
+        >
+          <span
+            style="display: flex; align-items: center; font-family: 'Inter'"
+          >
+            <img
+              src="img/sr-shield-check-4x.png"
+              class="w-8 h-8 object-cover"
+              style="margin-right: 10px"
+            />
+            <span class="font-normal text-[25px] leading-[77.03px] align-middle"
+              >Хянан Шалгагч</span
+            >
+          </span>
+        </button>
+        <button
+          id="touristBtn"
+          class="bg-white text-gray-800 px-6 py-3 rounded-lg shadow-lg flex items-center space-x-2 hover:bg-gray-100"
+        >
+          <span
+            style="display: flex; align-items: center; font-family: 'Inter'"
+          >
+            <img
+              src="img/sr-document-add-4x.png"
+              class="w-8 h-8 object-cover"
+              style="margin-right: 10px"
+            />
+            <span class="font-normal text-[25px] leading-[77.03px] align-middle"
+              >Жуулчин бүртгэгч</span
+            >
+          </span>
+        </button>
       </div>
     </div>
-  </div>
 
-  <script>
-    function goBack() {
-      window.history.back();
-    }
+    <!-- JS Functionality -->
+    <script>
+      document.getElementById("backBtn").addEventListener("click", () => {
+        window.history.back();
+      });
 
-    function goHome() {
-      window.location.href = "index.html";
-    }
-  </script>
-</body>
+      document.getElementById("homeBtn").addEventListener("click", () => {
+        window.location.href = "index.html";
+      });
+
+      document.getElementById("inspectorBtn").addEventListener("click", () => {
+        window.location.href = "/inspector"; // Replace with real path
+      });
+
+      document.getElementById("touristBtn").addEventListener("click", () => {
+        window.location.href = "juulchid bvrtgel.html"; // Replace with real path
+      });
+    </script>
+  </body>
 </html>

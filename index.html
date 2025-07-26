@@ -13,38 +13,44 @@
       .rotate-180 {
         transform: rotate(180deg);
       }
+
+        html {
+        scroll-behavior: smooth;
+      }
+
     </style>
   </head>
-  <body class="bg-white text-black font-sans min-h-screen">
-    <header
-      class="w-full shadow-md bg-gradient-to-b from-[#2c1c12] to-[#000000] text-white"
-    >
+  <body class="bg-white min-h-screen">
+    <header class="bg-gradient-to-b from-[#2c1c12] to-[#000000] text-white shadow-md">
       <div
         class="max-w-6xl mx-auto flex items-center justify-between px-6 py-6"
       >
         <!-- Logo & Title -->
-        <div class="flex items-center gap-2">
+         <a href="index.html">
+          <div class="flex items-center gap-4">
           <img
             src="img/baynzag logo.png"
             alt="Flaming Cliffs Logo"
             class="h-10 w-auto"
           />
-          <span class="text-lg font-semibold">Flaming Cliffs</span>
+          <span class="text-xl font-bold text-white">Flaming Cliffs</span>
         </div>
+         </a>
 
-        <!-- Navigation Links -->
-        <nav class="hidden md:flex gap-6 text-sm font-semibold">
-          <a href="home.html" class="hover:text-yellow-400">HOME</a>
-          <a href="about.html" class="hover:text-yellow-400">ABOUT</a>
-          <a href="#" class="hover:text-yellow-400">FOSSILS & DISCOVERIES</a>
-          <a href="status.html" class="hover:text-yellow-400">LIVE STATS FROM VISITORS</a>
-          <a href="#" class="hover:text-yellow-400">PRESERVATION</a>
-          <a href="#" class="hover:text-yellow-400">GALLERY</a>
-          <a href="#" class="hover:text-yellow-400">CONTACT</a>
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex gap-6 text-sm font-semibold text-white">
+          <a href="#home" class="hover:text-yellow-500">HOME</a>
+          <a href="about.html" class="hover:text-yellow-500">ABOUT</a>
+          <a href="#" class="hover:text-yellow-500">FOSSILS & DISCOVERIES</a>
+          <a href="status.html" class="hover:text-yellow-500">LIVE STATS</a>
+          <a href="#" class="hover:text-yellow-500">PRESERVATION</a>
+          <a href="#gallery" class="hover:text-yellow-500">GALLERY</a>
+          <a href="#contact" class="hover:text-yellow-500">CONTACT</a>
+          <a href="login.html" class="hover:text-yellow-500">LOGIN</a>
         </nav>
 
-        <!-- Language Dropdown -->
-        <div class="ml-4">
+        <!-- Language Selector -->
+        <div class="hidden md:block ml-4">
           <select
             class="bg-gray-800 border border-gray-600 text-white text-sm px-2 py-1 rounded"
           >
@@ -52,10 +58,57 @@
             <option value="mn">MN</option>
           </select>
         </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button
+            id="menu-toggle"
+            class="text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
+        <nav class="flex flex-col gap-3 text-sm font-semibold text-gray-700">
+          <a href="#home" class="hover:text-yellow-500">HOME</a>
+          <a href="about.html" class="hover:text-yellow-500">ABOUT</a>
+          <a href="#fossils" class="hover:text-yellow-500">FOSSILS & DISCOVERIES</a>
+          <a href="status.html" class="hover:text-yellow-500">LIVE STATS</a>
+          <a href="#entry" class="hover:text-yellow-500">PRESERVATION</a>
+          <a href="#gallery" class="hover:text-yellow-500">GALLERY</a>
+          <a href="#contact" class="hover:text-yellow-500">CONTACT</a>
+          <a href="login.html" class="hover:text-yellow-500">LOGIN</a>
+
+          <!-- Mobile Language -->
+          <div>
+            <select
+              class="bg-gray-800 border border-gray-600 text-white text-sm px-2 py-1 rounded mt-2"
+            >
+              <option value="en">EN</option>
+              <option value="mn">MN</option>
+            </select>
+          </div>
+        </nav>
       </div>
     </header>
 
-    <div class="relative h-screen w-full">
+    <div id="home" class="relative h-screen w-full">
       <!-- Background Image -->
       <img
         src="img/DJI_20240813193714_0038_D.00_01_28_21.Still044 1.png"
@@ -76,16 +129,18 @@
       <div
         class="absolute z-20 top-1/2 left-[1204px] top-[600px] transform -translate-y-1/2 text-white space-y-6 max-w-6xl mx-auto py-6"
       >
-        <h1 class="text-5xl font-bold leading-tight">
+        <h1 class="text-[64px] font-semibold leading-[100%] tracking-[0] font-['SF_Pro_Display']">
           <span class="block">Explore</span>
           <span class="block">the Flaming Cliffs</span>
         </h1>
+
         <a href="learn_detail.html">
           <button
-            class="bg-gray-700 text-white font-medium py-2 px-5 rounded-xl shadow-md transition"
+            class="w-[224.26px] h-[40.22px] bg-white text-gray-800 font-medium rounded-[11.52px] shadow-md opacity-100 transition"
           >
             Learn About History
           </button>
+
         </a>
       </div>
     </div>
@@ -107,14 +162,15 @@
             </div>
 
             <h2
-              class="text-[40px] leading-[32px] font-bold font-['Inter'] tracking-normal text-justify capitalize text-[#6F3F18]"
+              class="text-[32px] leading-[32px] font-bold font-['Inter'] capitalize text-[#6F3F18]"
             >
               The Flaming Cliffs Experience
             </h2>
+
           </div>
 
           <p
-            class="text-gray-700 mb-4 font-[400] text-[20px] leading-[32px] text-justify"
+            class="text-black mb-4 font-[400] text-[20px] leading-[32px] text-justify"
             style="font-family: 'SF Pro Display', sans-serif"
           >
             Nestled in the heart of Mongolia's Gobi Desert, the Flaming Cliffs
@@ -125,7 +181,7 @@
             invites you to create unforgettable memories.
           </p>
           <p
-            class="text-gray-700 mb-4 font-[400] text-[20px] leading-[32px] text-justify"
+            class="text-black mb-4 font-[400] text-[20px] leading-[32px] text-justify"
             style="font-family: 'SF Pro Display', sans-serif"
           >
             From sunrise to sunset, the Flaming Cliffs radiate an otherworldly
@@ -201,7 +257,7 @@
               class="flex items-center gap-4 mb-4 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[4px] after:bg-[#6F3F18]"
             >
               <h2
-                class="text-[40px] leading-[32px] font-bold font-['Inter'] tracking-normal text-justify capitalize text-[#6F3F18]"
+                class="text-[32px] leading-[32px] font-bold font-['Inter'] tracking-normal text-justify capitalize text-[#6F3F18]"
               >
                 Gateway to Prehistory
               </h2>
@@ -212,7 +268,7 @@
           </div>
 
           <p
-            class="text-gray-700 mb-4 font-[400] text-[20px] leading-[32px] text-justify"
+            class="text-black mb-4 font-[400] text-[20px] leading-[32px] text-justify"
             style="font-family: 'SF Pro Display', sans-serif"
           >
             The Flaming Cliffs gained global fame in the 1920s when
@@ -221,7 +277,7 @@
             and placed the Flaming Cliffs firmly on the map of world heritage.
           </p>
           <p
-            class="text-gray-700 mb-4 font-[400] text-[20px] leading-[32px] text-justify"
+            class="text-black mb-4 font-[400] text-[20px] leading-[32px] text-justify"
             style="font-family: 'SF Pro Display', sans-serif"
           >
             Every visitor who steps foot here walks in the footsteps of history,
@@ -283,7 +339,7 @@
             </div>
 
           <h2
-            class="text-[40px] leading-[32px] font-bold font-['Inter'] tracking-normal text-justify capitalize text-[#6F3F18]"
+            class="text-[36px] leading-[32px] font-bold font-['Inter'] tracking-normal text-justify capitalize text-[#6F3F18]"
           >
             The Flaming Cliffs Information Center
           </h2>
@@ -291,7 +347,7 @@
 
         <!-- Description -->
         <p
-          class="text-justify text-gray-700 mb-6 text-[20px] leading-[26px] font-['SF_Pro_Display']"
+          class="text-justify text-black mb-6 text-[20px] leading-[26px] font-['SF_Pro_Display']"
         >
           The Flaming Cliffs Information Center serves as the gateway to your
           journey. Here, you'll find everything you need to deepen your
@@ -302,7 +358,7 @@
         <div class="grid md:grid-cols-2 gap-6 mb-10">
           <!-- Bullet points -->
           <ul
-            class="list-disc list-inside text-gray-800 text-[16px] leading-[28px] space-y-2"
+            class="list-disc list-inside text-black text-[16px] leading-[28px] space-y-2"
           >
             <li
               class="text-justify text-[20px] leading-[26px] font-normal font-['SF_Pro_Display']"
@@ -383,7 +439,7 @@
     </div>
 
     <div class="mt-32">
-      <div class="max-w-6xl mx-auto px-4 py-6">
+      <div id="entry" class="max-w-6xl mx-auto px-4 py-6">
         <div class="flex items-center w-[759px] h-[37px] mb-6">
           <h2
             class="text-[34px] leading-[32px] font-bold font-['Inter'] text-justify capitalize whitespace-nowrap mr-2 text-[#6F3F18]"
@@ -397,7 +453,7 @@
           <!-- Text Section -->
           <div>
             <p
-              class="text-justify text-gray-700 mb-6 text-[20px] leading-[26px] font-[400] font-['SF_Pro_Display']"
+              class="text-justify text-black mb-6 text-[20px] leading-[26px] font-[400] font-['SF_Pro_Display']"
             >
               Visitors to the Flaming Cliffs contribute directly to preserving
               this historic site. Entry fees ensure ongoing research,
@@ -412,7 +468,7 @@
             </ul>
 
             <p
-              class="text-[#4B5563] mb-4 text-[20px] leading-[20px] text-justify w-[662px] align-middle"
+              class="text-black mb-4 text-[20px] leading-[20px] text-justify w-[662px] align-middle"
             >
               Your visit also directly contributes to the preservation and
               enhancement of this iconic site. Every ticket sold supports
@@ -420,7 +476,7 @@
             </p>
 
             <ul
-              class="text-[#4B5563] list-disc list-inside space-y-1 text-[20px] leading-[26px] w-[590px]"
+              class="text-black list-disc list-inside space-y-1 text-[20px] leading-[26px] w-[590px]"
             >
               <li>Stair and pathway renovations</li>
               <li>Regular cleaning and maintenance</li>
@@ -432,7 +488,7 @@
             </ul>
 
             <p
-              class="text-gray-700 mt-4 text-[20px] leading-[26px] font-[400] font-['SF_Pro_Display'] text-justify"
+              class="text-black mt-4 text-[20px] leading-[26px] font-[400] font-['SF_Pro_Display'] text-justify"
             >
               Meet the dedicated team working tirelessly to protect and promote
               the Flaming Cliffs. Their commitment ensures this destination
@@ -1015,7 +1071,7 @@
         >
           <!-- Card -->
           <div
-            class="w-[363.18px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
+            class="w-[280px] h-[240px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
           >
             <div class="rounded-xl shadow-md overflow-hidden bg-white">
               <img
@@ -1035,11 +1091,11 @@
           </div>
 
           <div
-            class="w-[363.18px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
+            class="w-[280px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
           >
             <div class="rounded-xl shadow-md overflow-hidden bg-white">
               <img
-                src="img/Dino's tourist camp.jpg"
+                src="img/GobiTour.jpg"
                 alt="Dino’s Guest House"
                 class="w-[330.73px] h-[186.64px] rounded-[8.86px] object-cover"
               />
@@ -1055,11 +1111,11 @@
           </div>
 
           <div
-            class="w-[363.18px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
+            class="w-[280px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
           >
             <div class="rounded-xl shadow-md overflow-hidden bg-white">
               <img
-                src="img/Dino's tourist camp.jpg"
+                src="img/GobiOasis.jpg"
                 alt="Dino’s Guest House"
                 class="w-[330.73px] h-[186.64px] rounded-[8.86px] object-cover"
               />
@@ -1075,11 +1131,11 @@
           </div>
 
           <div
-            class="w-[363.18px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
+            class="w-[280px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
           >
             <div class="rounded-xl shadow-md overflow-hidden bg-white">
               <img
-                src="img/Dino's tourist camp.jpg"
+                src="img/Mongol Gobi tourist camp.jpg"
                 alt="Dino’s Guest House"
                 class="w-[330.73px] h-[186.64px] rounded-[8.86px] object-cover"
               />
@@ -1108,11 +1164,11 @@
         >
           <!-- Card -->
           <div
-            class="w-[363.18px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
+            class="w-[280px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
           >
             <div class="rounded-xl shadow-md overflow-hidden bg-white">
               <img
-                src="img/Dino's tourist camp.jpg"
+                src="img/Dalanzadgad/GobiOasis.jpg"
                 alt="Dino’s Guest House"
                 class="w-[330.73px] h-[186.64px] rounded-[8.86px] object-cover"
               />
@@ -1128,11 +1184,11 @@
           </div>
 
           <div
-            class="w-[363.18px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
+            class="w-[280px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
           >
             <div class="rounded-xl shadow-md overflow-hidden bg-white">
               <img
-                src="img/Dino's tourist camp.jpg"
+                src="img/Dalanzadgad/Saikhanhotel.jpg"
                 alt="Dino’s Guest House"
                 class="w-[330.73px] h-[186.64px] rounded-[8.86px] object-cover"
               />
@@ -1148,11 +1204,11 @@
           </div>
 
           <div
-            class="w-[363.18px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
+            class="w-[280px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
           >
             <div class="rounded-xl shadow-md overflow-hidden bg-white">
               <img
-                src="img/Dino's tourist camp.jpg"
+                src="img/Dalanzadgad/CozyDZ.jpg"
                 alt="Dino’s Guest House"
                 class="w-[330.73px] h-[186.64px] rounded-[8.86px] object-cover"
               />
@@ -1181,11 +1237,11 @@
         >
           <!-- Card -->
           <div
-            class="w-[363.18px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
+            class="w-[280px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
           >
             <div class="rounded-xl shadow-md overflow-hidden bg-white">
               <img
-                src="img/Dino's tourist camp.jpg"
+                src="img/Khongor sand dunes/GobiErdene.jpg"
                 alt="Dino’s Guest House"
                 class="w-[330.73px] h-[186.64px] rounded-[8.86px] object-cover"
               />
@@ -1201,11 +1257,11 @@
           </div>
 
           <div
-            class="w-[363.18px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
+            class="w-[280px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
           >
             <div class="rounded-xl shadow-md overflow-hidden bg-white">
               <img
-                src="img/Dino's tourist camp.jpg"
+                src="img/Khongor sand dunes/GobiDiscovery.jpg"
                 alt="Dino’s Guest House"
                 class="w-[330.73px] h-[186.64px] rounded-[8.86px] object-cover"
               />
@@ -1221,11 +1277,11 @@
           </div>
 
           <div
-            class="w-[363.18px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
+            class="w-[280px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
           >
             <div class="rounded-xl shadow-md overflow-hidden bg-white">
               <img
-                src="img/Dino's tourist camp.jpg"
+                src="img/Khongor sand dunes/Gobiin anar.jpg"
                 alt="Dino’s Guest House"
                 class="w-[330.73px] h-[186.64px] rounded-[8.86px] object-cover"
               />
@@ -1241,11 +1297,11 @@
           </div>
 
           <div
-            class="w-[363.18px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
+            class="w-[280px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
           >
             <div class="rounded-xl shadow-md overflow-hidden bg-white">
               <img
-                src="img/Dino's tourist camp.jpg"
+                src="img/Khongor sand dunes/Buren Erdene.jpg"
                 alt="Dino’s Guest House"
                 class="w-[330.73px] h-[186.64px] rounded-[8.86px] object-cover"
               />
@@ -1274,11 +1330,11 @@
         >
           <!-- Card -->
           <div
-            class="w-[363.18px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
+            class="w-[280px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
           >
             <div class="rounded-xl shadow-md overflow-hidden bg-white">
               <img
-                src="img/Dino's tourist camp.jpg"
+                src="img/yolyn am/Dungenee tourist camp.jpg"
                 alt="Dino’s Guest House"
                 class="w-[330.73px] h-[186.64px] rounded-[8.86px] object-cover"
               />
@@ -1294,11 +1350,11 @@
           </div>
 
           <div
-            class="w-[363.18px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white"
+            class="w-[280px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white"
           >
             <div class="rounded-xl shadow-md overflow-hidden bg-white">
               <img
-                src="img/Dino's tourist camp.jpg"
+                src="img/yolyn am/Khanbogd.jpg"
                 alt="Dino’s Guest House"
                 class="w-[330.73px] h-[186.64px] rounded-[8.86px] object-cover"
               />
@@ -1314,11 +1370,11 @@
           </div>
 
           <div
-            class="w-[363.18px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
+            class="w-[280px] h-[240.64px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white mx-auto"
           >
             <div class="rounded-xl shadow-md overflow-hidden bg-white">
               <img
-                src="img/Dino's tourist camp.jpg"
+                src="img/yolyn am/Jinjig Noamdic family.jpg"
                 alt="Dino’s Guest House"
                 class="w-[330.73px] h-[186.64px] rounded-[8.86px] object-cover"
               />
@@ -1367,7 +1423,7 @@
     </div>
 
     <div class="mt-8">
-      <div class="max-w-6xl mx-auto px-4 py-6 text-center">
+      <div id="gallery" class="max-w-6xl mx-auto px-4 py-6 text-center">
         <!-- Intro Text -->
         <p
           class="font-[Inter] font-normal text-[20px] leading-[26px] text-center text-black mb-10"
@@ -1508,7 +1564,7 @@
       </div>
     </div>
 
-    <section class="max-w-6xl mx-auto py-6">
+    <section id="contact" class="max-w-6xl mx-auto py-6">
       <!-- Header -->
       <div class="flex items-center mb-4">
         <h2
@@ -1816,17 +1872,10 @@
                 href="#"
                 class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
                 >FAQs</a
+              
+             
               >
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >FAQs</a
-              >
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Getting There</a
-              >
+             
               <a
                 href="#"
                 class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
@@ -1947,6 +1996,12 @@
           content.classList.toggle("hidden");
           arrowIcon.classList.toggle("rotate-180");
         });
+      });
+   
+      // Toggle mobile menu
+      document.getElementById("menu-toggle").addEventListener("click", () => {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
       });
     </script>
   </body>

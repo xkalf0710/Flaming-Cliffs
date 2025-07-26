@@ -3,101 +3,122 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visitor–Moon Phase Correlation</title>
+    <title>Flaming Cliffs</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-      .moon-icon {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background: #eee;
-        border: 2px solid #000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 14px;
-        font-weight: bold;
-        margin: auto;
+      html {
+        scroll-behavior: smooth;
       }
     </style>
   </head>
-  <body class="bg-gray-50 p-6">
-    <div class="max-w-6xl mx-auto bg-white p-6 rounded-3xl shadow">
-      <h2
-        class="text-[24px] font-[700] leading-[100%] tracking-[0%] text-gray-800 mb-4"
-        style="font-family: 'SF Pro Display'"
+  <body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <header class="bg-black bg-opacity-80 fixed w-full z-50">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
       >
-        Visitor–Moon Phase Correlation
+        <h1 class="text-xl font-bold text-yellow-500">Flaming Cliffs</h1>
+        <nav class="hidden md:flex gap-6 text-sm font-semibold">
+          <a href="#home" class="hover:text-yellow-500">HOME</a>
+          <a href="about.html" class="hover:text-yellow-500">ABOUT</a>
+          <a href="#fossils" class="hover:text-yellow-500"
+            >FOSSILS & DISCOVERIES</a
+          >
+          <a href="status.html" class="hover:text-yellow-500">LIVE STATS</a>
+          <a href="#preservation" class="hover:text-yellow-500">PRESERVATION</a>
+          <a href="#gallery" class="hover:text-yellow-500">GALLERY</a>
+          <a href="#contact" class="hover:text-yellow-500">CONTACT</a>
+          <a href="login.html" class="hover:text-yellow-500">LOGIN</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HOME Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center bg-cover bg-center"
+      style="background-image: url('https://i.ibb.co/vv3n4Sr/gobi.jpg')"
+    >
+      <div class="text-center bg-black bg-opacity-60 p-10 rounded-xl">
+        <h2 class="text-4xl font-bold mb-4 text-yellow-400">
+          Welcome to Flaming Cliffs
+        </h2>
+        <p class="text-lg">Explore the mysteries of the Gobi Desert</p>
+      </div>
+    </section>
+
+    <!-- FOSSILS Section -->
+    <section id="fossils" class="min-h-screen px-6 py-20 bg-gray-800">
+      <h2 class="text-3xl font-bold mb-6 text-yellow-400">
+        Fossils & Discoveries
       </h2>
+      <p class="text-lg max-w-3xl">
+        Discover the ancient dinosaur fossils found at the Flaming Cliffs. These
+        remarkable finds provide a glimpse into prehistoric life.
+      </p>
+    </section>
 
-      <canvas id="moonChart" class="w-full h-96"></canvas>
-    </div>
+    <!-- PRESERVATION Section -->
+    <section id="preservation" class="min-h-screen px-6 py-20 bg-gray-700">
+      <h2 class="text-3xl font-bold mb-6 text-yellow-400">Preservation</h2>
+      <p class="text-lg max-w-3xl">
+        Learn about ongoing efforts to protect and preserve this unique
+        environment and its invaluable fossils.
+      </p>
+    </section>
 
-    <script>
-      const ctxMoon = document.getElementById("moonChart").getContext("2d");
+    <!-- GALLERY Section -->
+    <section id="gallery" class="min-h-screen px-6 py-20 bg-gray-800">
+      <h2 class="text-3xl font-bold mb-6 text-yellow-400">Gallery</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <img
+          src="https://via.placeholder.com/300x200"
+          alt="Gallery Image"
+          class="rounded shadow"
+        />
+        <img
+          src="https://via.placeholder.com/300x200"
+          alt="Gallery Image"
+          class="rounded shadow"
+        />
+        <img
+          src="https://via.placeholder.com/300x200"
+          alt="Gallery Image"
+          class="rounded shadow"
+        />
+      </div>
+    </section>
 
-      const moonChart = new Chart(ctxMoon, {
-        type: "bar",
-        data: {
-          labels: ["New Moon", "First Quarter", "Full Moon", "Last Quarter"],
-          datasets: [
-            {
-              label: "Visitors",
-              data: [280, 460, 160, 370],
-              backgroundColor: ["#1a1a1a", "#e4bc75", "#fceec7", "#a46f4d"],
-              borderRadius: 12,
-              borderSkipped: false,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: { display: false },
-            tooltip: {
-              callbacks: {
-                label: function (context) {
-                  return `Visitors: ${context.parsed.y}`;
-                },
-              },
-            },
-          },
-          scales: {
-            y: {
-              beginAtZero: true,
-              grid: {
-                color: "#ccc",
-                borderDash: [4, 4],
-              },
-            },
-            x: {
-              grid: { display: false },
-            },
-          },
-        },
-        plugins: [
-          {
-            id: "customMoonIcons",
-            afterDatasetsDraw(chart) {
-              const {
-                ctx,
-                data,
-                scales: { x, y },
-              } = chart;
-              const icons = ["🌑", "🌓", "🌕", "🌗"];
-              ctx.font = "24px Arial";
-              ctx.textAlign = "center";
-              ctx.textBaseline = "middle";
-              data.datasets[0].data.forEach((value, i) => {
-                const xCenter = x.getPixelForValue(i);
-                const yTop = y.getPixelForValue(value) + 20;
-                ctx.fillText(icons[i], xCenter, yTop);
-              });
-            },
-          },
-        ],
-      });
-    </script>
+    <!-- CONTACT Section -->
+    <section id="contact" class="min-h-screen px-6 py-20 bg-gray-900">
+      <h2 class="text-3xl font-bold mb-6 text-yellow-400">Contact</h2>
+      <form class="max-w-xl space-y-4">
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600"
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600"
+        />
+        <textarea
+          placeholder="Your Message"
+          rows="5"
+          class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600"
+        ></textarea>
+        <button
+          class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-6 py-2 rounded"
+        >
+          Send
+        </button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 bg-black text-gray-500">
+      &copy; 2025 Flaming Cliffs. All rights reserved.
+    </footer>
   </body>
 </html>

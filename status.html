@@ -35,36 +35,37 @@
   </head>
   <body class="bg-white text-black font-sans min-h-screen">
     <header
-      class="w-full shadow-md bg-gradient-to-b from-[#2c1c12] to-[#000000] text-white"
+      class="bg-gradient-to-b from-[#2c1c12] to-[#000000] text-white shadow-md"
     >
       <div
         class="max-w-6xl mx-auto flex items-center justify-between px-6 py-6"
       >
         <!-- Logo & Title -->
-        <div class="flex items-center gap-2">
-          <img
-            src="img/baynzag logo.png"
-            alt="Flaming Cliffs Logo"
-            class="h-10 w-auto"
-          />
-          <span class="text-lg font-semibold gap-[15px]">Flaming Cliffs</span>
-        </div>
+        <a href="index.html">
+          <div class="flex items-center gap-4">
+            <img
+              src="img/baynzag logo.png"
+              alt="Flaming Cliffs Logo"
+              class="h-10 w-auto"
+            />
+            <span class="text-xl font-bold text-white">Flaming Cliffs</span>
+          </div>
+        </a>
 
-        <!-- Navigation Links -->
-        <nav class="hidden md:flex gap-6 text-sm font-semibold">
-          <a href="home.html" class="hover:text-yellow-400">HOME</a>
-          <a href="about.html" class="hover:text-yellow-400">ABOUT</a>
-          <a href="#" class="hover:text-yellow-400">FOSSILS & DISCOVERIES</a>
-          <a href="status.html" class="hover:text-yellow-400"
-            >LIVE STATS FROM VISITORS</a
-          >
-          <a href="#" class="hover:text-yellow-400">PRESERVATION</a>
-          <a href="#" class="hover:text-yellow-400">GALLERY</a>
-          <a href="#" class="hover:text-yellow-400">CONTACT</a>
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex gap-6 text-sm font-semibold text-white">
+          <a href="#home" class="hover:text-yellow-500">HOME</a>
+          <a href="about.html" class="hover:text-yellow-500">ABOUT</a>
+          <a href="#" class="hover:text-yellow-500">FOSSILS & DISCOVERIES</a>
+          <a href="status.html" class="hover:text-yellow-500">LIVE STATS</a>
+          <a href="#" class="hover:text-yellow-500">PRESERVATION</a>
+          <a href="#gallery" class="hover:text-yellow-500">GALLERY</a>
+          <a href="#contact" class="hover:text-yellow-500">CONTACT</a>
+          <a href="login.html" class="hover:text-yellow-500">LOGIN</a>
         </nav>
 
-        <!-- Language Dropdown -->
-        <div class="ml-4">
+        <!-- Language Selector -->
+        <div class="hidden md:block ml-4">
           <select
             class="bg-gray-800 border border-gray-600 text-white text-sm px-2 py-1 rounded"
           >
@@ -72,10 +73,59 @@
             <option value="mn">MN</option>
           </select>
         </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button
+            id="menu-toggle"
+            class="text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
+        <nav class="flex flex-col gap-3 text-sm font-semibold text-gray-700">
+          <a href="#home" class="hover:text-yellow-500">HOME</a>
+          <a href="about.html" class="hover:text-yellow-500">ABOUT</a>
+          <a href="#fossils" class="hover:text-yellow-500"
+            >FOSSILS & DISCOVERIES</a
+          >
+          <a href="status.html" class="hover:text-yellow-500">LIVE STATS</a>
+          <a href="#entry" class="hover:text-yellow-500">PRESERVATION</a>
+          <a href="#gallery" class="hover:text-yellow-500">GALLERY</a>
+          <a href="#contact" class="hover:text-yellow-500">CONTACT</a>
+          <a href="login.html" class="hover:text-yellow-500">LOGIN</a>
+
+          <!-- Mobile Language -->
+          <div>
+            <select
+              class="bg-gray-800 border border-gray-600 text-white text-sm px-2 py-1 rounded mt-2"
+            >
+              <option value="en">EN</option>
+              <option value="mn">MN</option>
+            </select>
+          </div>
+        </nav>
       </div>
     </header>
 
-    <div class="relative h-screen w-full">
+    <div id="home" class="relative h-screen w-full">
       <!-- Background Image -->
       <img
         src="img/live stats top desktop.jpg"
@@ -112,11 +162,12 @@
     <div class="mt-32">
       <div class="max-w-6xl mx-auto py-6 px-6">
         <!-- Title -->
-        <div
-          class="bg-orange-500 text-white text-[32px] font-bold text-center py-2 rounded font-['SF_Pro_Display']"
+        <h2
+          class="text-[24px] font-bold text-center mb-6"
+          style="font-family: 'SF Pro Display'"
         >
-          Visitors of All Countries
-        </div>
+          Visitors by Tour Operator
+        </h2>
 
         <!-- Tabs -->
         <div
@@ -298,7 +349,12 @@
           <div
             class="bg-white w-[512px] h-[400px] rounded-[20px] shadow p-6 flex flex-col items-center justify-center"
           >
-            <h2 class="text-lg font-bold mb-4">Visitors by Top Countries</h2>
+            <h2
+              class="text-[28px] font-bold text-center mb-6"
+              style="font-family: 'SF Pro Display'"
+            >
+              Visitors by Top Countries
+            </h2>
             <canvas id="countryChart" class="w-[200px] h-[200px]"></canvas>
           </div>
 
@@ -306,7 +362,12 @@
           <div
             class="bg-white w-[512px] h-[400px] rounded-[20px] shadow p-6 flex flex-col items-center justify-center"
           >
-            <h2 class="text-lg font-bold mb-4">Vehicle Types</h2>
+            <h2
+              class="text-[28px] font-bold text-center mb-6"
+              style="font-family: 'SF Pro Display'"
+            >
+              Vehicle Types
+            </h2>
             <canvas id="vehicleChart" class="w-[200px] h-[200px]"></canvas>
           </div>
         </div>
@@ -317,7 +378,7 @@
       <div class="flex flex-wrap gap-8 justify-center max-w-6xl p-8 mx-auto">
         <!-- Left Chart Card -->
         <div
-          class="w-[525px] h-[380px] bg-white rounded-[24px] p-[30px] shadow-md"
+          class="w-[525px] h-[400px] bg-white rounded-[24px] p-[30px] shadow-md"
         >
           <h2
             class="text-[28px] font-bold leading-[20.38px] text-center mb-6"
@@ -445,7 +506,7 @@
 
         <!-- Right Chart Card -->
         <div
-          class="w-[525px] h-[380px] bg-white rounded-[24px] p-[30px] gap-[30px] shadow-md"
+          class="w-[525px] h-[400px] bg-white rounded-[24px] p-[30px] gap-[30px] shadow-md"
         >
           <h2
             class="text-[24px] font-bold text-center mb-6"
