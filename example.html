@@ -1,124 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mn">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flaming Cliffs</title>
+    <title>Улс сонгох</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
   </head>
-  <body class="bg-gray-900 text-white">
-    <!-- Navigation -->
-    <header class="bg-black bg-opacity-80 fixed w-full z-50">
-      <div
-        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
-      >
-        <h1 class="text-xl font-bold text-yellow-500">Flaming Cliffs</h1>
-        <nav class="hidden md:flex gap-6 text-sm font-semibold">
-          <a href="#home" class="hover:text-yellow-500">HOME</a>
-          <a href="about.html" class="hover:text-yellow-500">ABOUT</a>
-          <a href="#fossils" class="hover:text-yellow-500"
-            >FOSSILS & DISCOVERIES</a
-          >
-          <a href="status.html" class="hover:text-yellow-500">LIVE STATS</a>
-          <a href="#preservation" class="hover:text-yellow-500">PRESERVATION</a>
-          <a href="#gallery" class="hover:text-yellow-500">GALLERY</a>
-          <a href="#contact" class="hover:text-yellow-500">CONTACT</a>
-          <a href="login.html" class="hover:text-yellow-500">LOGIN</a>
-        </nav>
+  <body class="bg-white p-6 font-sans">
+    <!-- Нийт контейнер -->
+    <div class="max-w-6xl mx-auto flex gap-6">
+      <!-- Зүүн талын хэсэг -->
+      <div class="flex-1 p-4">
+        <div class="flex gap-6">
+          <!-- Жуулчдын тоо нэмэх блок -->
+          <div class="bg-white rounded-xl shadow-md p-6 w-40 text-center">
+            <h1 class="text-lg font-semibold mb-4 leading-tight">
+              Жуулчдын тоо<br />Нэмэх
+            </h1>
+            <div id="count" class="text-3xl font-bold mb-4">1</div>
+            <button
+              id="resetBtn"
+              class="w-full py-2 bg-gray-100 rounded-md hover:bg-gray-200"
+            >
+              Reset
+            </button>
+          </div>
+
+          <!-- Улс сонгох хэсэг -->
+          <div class="flex-1 rounded-xl shadow-md">
+            <div class="flex items-center gap-2 mb-4">
+              <select class="w-full p-2 border rounded text-sm">
+                <option>Бусад улс сонгох</option>
+                <option>Хятад</option>
+                <option>Орос</option>
+                <option>Япон</option>
+              </select>
+              <button class="bg-gray-200 px-3 py-1 rounded text-xl">+</button>
+            </div>
+
+            <div class="grid grid-cols-6 gap-4">
+              <div class="flex flex-col items-center text-xs">
+                <img
+                  src="https://flagcdn.com/w40/cn.png"
+                  class="w-6 h-4"
+                  alt="Хятад"
+                />
+                <span>Хятад</span>
+              </div>
+              <div class="flex flex-col items-center text-xs">
+                <img
+                  src="https://flagcdn.com/w40/ru.png"
+                  class="w-6 h-4"
+                  alt="Орос"
+                />
+                <span>Орос</span>
+              </div>
+              <div class="flex flex-col items-center text-xs">
+                <img
+                  src="https://flagcdn.com/w40/jp.png"
+                  class="w-6 h-4"
+                  alt="Япон"
+                />
+                <span>Япон</span>
+              </div>
+              <div class="flex flex-col items-center text-xs">
+                <img
+                  src="https://flagcdn.com/w40/fr.png"
+                  class="w-6 h-4"
+                  alt="Франц"
+                />
+                <span>Франц</span>
+              </div>
+              <div class="flex flex-col items-center text-xs">
+                <img
+                  src="https://flagcdn.com/w40/kr.png"
+                  class="w-6 h-4"
+                  alt="Солонгос"
+                />
+                <span>Солонгос</span>
+              </div>
+              <div class="flex flex-col items-center text-xs">
+                <img
+                  src="https://flagcdn.com/w40/us.png"
+                  class="w-6 h-4"
+                  alt="АНУ"
+                />
+                <span>АНУ</span>
+              </div>
+              <div class="flex flex-col items-center text-xs">
+                <img
+                  src="https://flagcdn.com/w40/kz.png"
+                  class="w-6 h-4"
+                  alt="Казахстан"
+                />
+                <span>Казахстан</span>
+              </div>
+              <div class="flex flex-col items-center text-xs">
+                <img
+                  src="https://flagcdn.com/w40/ua.png"
+                  class="w-6 h-4"
+                  alt="Украйн"
+                />
+                <span>Украйн</span>
+              </div>
+              <div class="flex flex-col items-center text-xs">
+                <img
+                  src="https://flagcdn.com/w40/it.png"
+                  class="w-6 h-4"
+                  alt="Итали"
+                />
+                <span>Итали</span>
+              </div>
+              <div class="flex flex-col items-center text-xs">
+                <img
+                  src="https://flagcdn.com/w40/de.png"
+                  class="w-6 h-4"
+                  alt="Герман"
+                />
+                <span>Герман</span>
+              </div>
+            </div>
+
+            <hr class="border-t-2 border-black opacity-70 mt-4" />
+
+            <div class="mt-2 text-xs text-gray-600 italic">
+              Хятад (6), Орос (10)
+            </div>
+          </div>
+        </div>
       </div>
-    </header>
 
-    <!-- HOME Section -->
-    <section
-      id="home"
-      class="min-h-screen flex items-center justify-center bg-cover bg-center"
-      style="background-image: url('https://i.ibb.co/vv3n4Sr/gobi.jpg')"
-    >
-      <div class="text-center bg-black bg-opacity-60 p-10 rounded-xl">
-        <h2 class="text-4xl font-bold mb-4 text-yellow-400">
-          Welcome to Flaming Cliffs
-        </h2>
-        <p class="text-lg">Explore the mysteries of the Gobi Desert</p>
-      </div>
-    </section>
-
-    <!-- FOSSILS Section -->
-    <section id="fossils" class="min-h-screen px-6 py-20 bg-gray-800">
-      <h2 class="text-3xl font-bold mb-6 text-yellow-400">
-        Fossils & Discoveries
-      </h2>
-      <p class="text-lg max-w-3xl">
-        Discover the ancient dinosaur fossils found at the Flaming Cliffs. These
-        remarkable finds provide a glimpse into prehistoric life.
-      </p>
-    </section>
-
-    <!-- PRESERVATION Section -->
-    <section id="preservation" class="min-h-screen px-6 py-20 bg-gray-700">
-      <h2 class="text-3xl font-bold mb-6 text-yellow-400">Preservation</h2>
-      <p class="text-lg max-w-3xl">
-        Learn about ongoing efforts to protect and preserve this unique
-        environment and its invaluable fossils.
-      </p>
-    </section>
-
-    <!-- GALLERY Section -->
-    <section id="gallery" class="min-h-screen px-6 py-20 bg-gray-800">
-      <h2 class="text-3xl font-bold mb-6 text-yellow-400">Gallery</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <img
-          src="https://via.placeholder.com/300x200"
-          alt="Gallery Image"
-          class="rounded shadow"
-        />
-        <img
-          src="https://via.placeholder.com/300x200"
-          alt="Gallery Image"
-          class="rounded shadow"
-        />
-        <img
-          src="https://via.placeholder.com/300x200"
-          alt="Gallery Image"
-          class="rounded shadow"
-        />
-      </div>
-    </section>
-
-    <!-- CONTACT Section -->
-    <section id="contact" class="min-h-screen px-6 py-20 bg-gray-900">
-      <h2 class="text-3xl font-bold mb-6 text-yellow-400">Contact</h2>
-      <form class="max-w-xl space-y-4">
-        <input
-          type="text"
-          placeholder="Your Name"
-          class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600"
-        />
-        <input
-          type="email"
-          placeholder="Your Email"
-          class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600"
-        />
-        <textarea
-          placeholder="Your Message"
-          rows="5"
-          class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600"
-        ></textarea>
+      <!-- Баруун талын төлбөрийн хэсэг -->
+      <div class="bg-white rounded-xl shadow p-6 w-72 h-fit">
+        <p class="text-gray-700">
+          Жуулчдын тоо: <span class="font-bold" id="countRight">16</span>
+        </p>
+        <p class="text-gray-700 mt-2">
+          Төлөх дүн: <span class="font-bold" id="total">160,000₮</span>
+        </p>
+        <p class="text-gray-400 text-sm mt-2">10,000₮*(10+6)</p>
         <button
-          class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-6 py-2 rounded"
+          class="bg-orange-400 hover:bg-orange-500 text-white font-semibold rounded-lg w-full py-2 mt-4"
         >
-          Send
+          Төлбөр хийх
         </button>
-      </form>
-    </section>
+      </div>
+    </div>
 
-    <!-- Footer -->
-    <footer class="text-center py-6 bg-black text-gray-500">
-      &copy; 2025 Flaming Cliffs. All rights reserved.
-    </footer>
+    <script>
+      let count = 1;
+      const countEl = document.getElementById("count");
+      const countRightEl = document.getElementById("countRight");
+      const resetBtn = document.getElementById("resetBtn");
+
+      document.querySelector(".flex-1").addEventListener("click", (e) => {
+        if (e.target !== resetBtn) {
+          count++;
+          countEl.textContent = count;
+          countRightEl.textContent = count;
+        }
+      });
+
+      resetBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        count = 1;
+        countEl.textContent = count;
+        countRightEl.textContent = count;
+      });
+    </script>
   </body>
 </html>

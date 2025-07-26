@@ -68,40 +68,168 @@
           <!-- Улс сонгох -->
 
           <!-- Жуулчны тоо, төлбөр -->
-          <span
-            style="display: flex; align-items: center; font-family: 'Inter'"
-          >
-            <img
-              src="img/sr-globe.png"
-              class="w-8 h-8 object-cover"
-              style="margin-right: 10px"
-            />
-            <span
-              class="font-normal text-[25px] text-white leading-[77.03px] align-middle"
-            >
-              Улс сонгох
+          <div class="flex justify-between items-center w-full font-['Inter']">
+            <!-- Улс сонгох -->
+            <span class="flex items-center">
+              <img src="img/sr-globe.png" class="w-8 h-8 object-cover mr-2" />
+              <span
+                class="font-normal text-[25px] text-white leading-[77.03px] align-middle"
+              >
+                Улс сонгох
+              </span>
             </span>
-          </span>
-          <div class="flex gap-4 mt-4">
-            <div class="bg-white rounded-lg p-4 w-40 text-center shadow">
-              <p class="font-semibold text-sm">Жуулчны тоо</p>
-              <p id="travelerCount" class="text-2xl font-bold">1</p>
-              <div class="flex justify-center gap-2 mt-2">
-                <button
-                  id="decreaseBtn"
-                  class="text-sm px-2 bg-gray-200 rounded"
-                >
-                  -
-                </button>
-                <button
-                  id="increaseBtn"
-                  class="text-sm px-2 bg-gray-200 rounded"
-                >
-                  +
-                </button>
+
+            <!-- Clear All -->
+            <span id="clear-all" class="flex items-center cursor-pointer">
+              <img
+                src="img/sr-close-4x.png"
+                class="w-8 h-8 object-cover mr-2"
+              />
+              <span
+                class="font-normal text-[25px] text-white leading-[77.03px] align-middle"
+              >
+                Clear All
+              </span>
+            </span>
+          </div>
+
+          <div class="max-w-6xl mx-auto flex gap-6">
+            <!-- Зүүн талын хэсэг -->
+            <div class="flex-1 p-4">
+              <div class="flex gap-6">
+                <!-- Жуулчдын тоо нэмэх блок -->
+                <div class="bg-white rounded-xl shadow-md p-6 w-40 text-center">
+                  <h1 class="text-lg font-semibold mb-4 leading-tight">
+                    Жуулчдын тоо<br />Нэмэх
+                  </h1>
+                  <div id="count" class="text-3xl font-bold mb-4">1</div>
+                  <button
+                    id="resetBtn"
+                    class="w-full py-2 bg-gray-100 rounded-md hover:bg-gray-200"
+                  >
+                    Reset
+                  </button>
+                </div>
+
+                <!-- Улс сонгох хэсэг -->
+                <div class="flex-1 rounded-xl shadow-md bg-white">
+                  <div class="flex items-center gap-2 mb-4">
+                    <select class="w-full p-2 border rounded text-sm">
+                      <option>Бусад улс сонгох</option>
+                      <option>Хятад</option>
+                      <option>Орос</option>
+                      <option>Япон</option>
+                    </select>
+                    <button class="bg-gray-200 px-3 py-1 rounded text-xl">
+                      +
+                    </button>
+                  </div>
+
+                  <div class="grid grid-cols-6 gap-4">
+                    <div class="flex flex-col items-center text-xs">
+                      <img
+                        src="https://flagcdn.com/w40/cn.png"
+                        class="w-6 h-4"
+                        alt="Хятад"
+                      />
+                      <span>Хятад</span>
+                    </div>
+                    <div class="flex flex-col items-center text-xs">
+                      <img
+                        src="https://flagcdn.com/w40/ru.png"
+                        class="w-6 h-4"
+                        alt="Орос"
+                      />
+                      <span>Орос</span>
+                    </div>
+                    <div class="flex flex-col items-center text-xs">
+                      <img
+                        src="https://flagcdn.com/w40/jp.png"
+                        class="w-6 h-4"
+                        alt="Япон"
+                      />
+                      <span>Япон</span>
+                    </div>
+                    <div class="flex flex-col items-center text-xs">
+                      <img
+                        src="https://flagcdn.com/w40/fr.png"
+                        class="w-6 h-4"
+                        alt="Франц"
+                      />
+                      <span>Франц</span>
+                    </div>
+                    <div class="flex flex-col items-center text-xs">
+                      <img
+                        src="https://flagcdn.com/w40/kr.png"
+                        class="w-6 h-4"
+                        alt="Солонгос"
+                      />
+                      <span>Солонгос</span>
+                    </div>
+                    <div class="flex flex-col items-center text-xs">
+                      <img
+                        src="https://flagcdn.com/w40/us.png"
+                        class="w-6 h-4"
+                        alt="АНУ"
+                      />
+                      <span>АНУ</span>
+                    </div>
+                    <div class="flex flex-col items-center text-xs">
+                      <img
+                        src="https://flagcdn.com/w40/kz.png"
+                        class="w-6 h-4"
+                        alt="Казахстан"
+                      />
+                      <span>Казахстан</span>
+                    </div>
+                    <div class="flex flex-col items-center text-xs">
+                      <img
+                        src="https://flagcdn.com/w40/ua.png"
+                        class="w-6 h-4"
+                        alt="Украйн"
+                      />
+                      <span>Украйн</span>
+                    </div>
+                    <div class="flex flex-col items-center text-xs">
+                      <img
+                        src="https://flagcdn.com/w40/it.png"
+                        class="w-6 h-4"
+                        alt="Итали"
+                      />
+                      <span>Итали</span>
+                    </div>
+                    <div class="flex flex-col items-center text-xs">
+                      <img
+                        src="https://flagcdn.com/w40/de.png"
+                        class="w-6 h-4"
+                        alt="Герман"
+                      />
+                      <span>Герман</span>
+                    </div>
+                  </div>
+
+                  <hr class="border-t-2 border-black opacity-70 mt-4" />
+
+                  <div class="mt-2 text-xs text-gray-600 italic">
+                    Хятад (6), Орос (10)
+                  </div>
+                </div>
               </div>
-              <button id="resetBtn" class="text-sm text-blue-500 mt-1">
-                Reset
+            </div>
+
+            <!-- Баруун талын төлбөрийн хэсэг -->
+            <div class="bg-white rounded-xl shadow p-6 w-72 h-fit">
+              <p class="text-gray-700">
+                Жуулчдын тоо: <span class="font-bold" id="countRight">16</span>
+              </p>
+              <p class="text-gray-700 mt-2">
+                Төлөх дүн: <span class="font-bold" id="total">160,000₮</span>
+              </p>
+              <p class="text-gray-400 text-sm mt-2">10,000₮*(10+6)</p>
+              <button
+                class="bg-orange-400 hover:bg-orange-500 text-white font-semibold rounded-lg w-full py-2 mt-4"
+              >
+                Төлбөр хийх
               </button>
             </div>
           </div>
@@ -157,11 +285,48 @@
 
         <!-- Footer -->
         <div class="text-right text-white mt-8">
-          <button class="underline text-sm mr-4">Бүртгэл үсэглэх</button>
-          <button class="underline text-sm">Статистик харах ↗</button>
+          <a href="bvrtgel.html">
+            <button class="hidden:underline text-sm mr-4">
+              <span
+                class="font-normal text-[25px] text-white leading-[77.03px] align-middle"
+              >
+                Бүртгэл сэлгэх
+              </span>
+            </button>
+          </a>
+          | &nbsp;
+          <button class="hidden:underline text-sm">
+            <span
+              class="font-normal text-[25px] text-white leading-[77.03px] align-middle"
+            >
+              Статистик харах
+            </span>
+          </button>
         </div>
       </div>
     </div>
+
+    <script>
+      let count = 1;
+      const countEl = document.getElementById("count");
+      const countRightEl = document.getElementById("countRight");
+      const resetBtn = document.getElementById("resetBtn");
+
+      document.querySelector(".flex-1").addEventListener("click", (e) => {
+        if (e.target !== resetBtn) {
+          count++;
+          countEl.textContent = count;
+          countRightEl.textContent = count;
+        }
+      });
+
+      resetBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        count = 1;
+        countEl.textContent = count;
+        countRightEl.textContent = count;
+      });
+    </script>
 
     <!-- JS Logic -->
     <script>
@@ -200,6 +365,23 @@
       });
 
       updateDisplay();
+
+      const clearAllBtn = document.getElementById("clear-all");
+
+      clearAllBtn.addEventListener("click", () => {
+        // Clear all input fields
+        document.querySelectorAll("input").forEach((input) => {
+          input.value = "";
+        });
+
+        // Clear the list items
+        const list = document.getElementById("items");
+        if (list) {
+          list.innerHTML = "";
+        }
+
+        console.log("All cleared!");
+      });
     </script>
   </body>
 </html>
