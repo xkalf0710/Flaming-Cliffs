@@ -135,89 +135,86 @@
         src="img/live stats top desktop.jpg"
         alt="Flaming Cliffs"
         class="absolute object-cover z-0 hidden lg:block"
-        style="width: 1920px; height: 1320px"
+        style="width: 1920px; height: 1080px"
       />
 
       <div
-        class="absolute z-20 top-1/2 left-[341px] top-[600px] transform -translate-y-1/2 text-white space-y-6 max-w-6xl mx-auto py-6"
+        class="absolute z-20 left-[341px] top-[600px] transform -translate-y-1/2 text-white space-y-6 max-w-6xl mx-auto py-6"
       >
         <h1
-          class="text-[64px] font-semibold leading-[100%] tracking-[0] font-['SF_Pro_Display']"
+          class="text-white text-[60px] leading-[66px] font-semibold text-center uppercase tracking-[0.21em]"
+          style="font-family: 'Inter', sans-serif"
         >
-          <span class="block">Live stats of Visitors</span>
+          Live Stats for Visitors
         </h1>
       </div>
+
+      <!-- Divider image - moved inside and positioned at top -->
+      <img
+        src="img/divider.png"
+        alt="Upper Divider"
+        class="absolute bottom-[138px] left-0 w-[1920px] h-[87px] rotate-180 opacity-[0.59] pointer-events-none z-10"
+      />
     </div>
-    <img
-      src="img/divider.png"
-      alt="Upper Divider"
-      class="absolute left-0 w-full rotate-180 pointer-events-none z-10"
-    />
+    <div class="max-w-6xl mx-auto py-6 px-6">
+      <!-- Title -->
+      <h2
+        class="text-[24px] font-bold text-center mb-6 text-white bg-orange-500 rounded-xl px-8 py-3 w-full mx-auto"
+        style="font-family: 'SF Pro Display'"
+      >
+        Visitors by Tour Operator
+      </h2>
 
-    <div class="mt-32">
-      <div class="max-w-6xl mx-auto py-6 px-6">
-        <!-- Title -->
-        <h2
-          class="text-[24px] font-bold text-center mb-6 text-white bg-orange-500 rounded-xl px-8 py-3 w-full mx-auto"
-          style="font-family: 'SF Pro Display'"
+      <!-- Tabs -->
+      <div class="flex space-x-6 mt-6 text-sm font-semibold border-b" id="tabs">
+        <button
+          class="tab-button text-orange-500 text-[24px] font-['SF_Pro_Display'] border-b-2 border-orange-500 pb-2"
         >
-          Visitors by Tour Operator
-        </h2>
+          Today
+        </button>
+        <button
+          class="tab-button text-gray-400 text-[24px] font-['SF_Pro_Display'] pb-2"
+        >
+          This week
+        </button>
+        <button
+          class="tab-button text-gray-400 text-[24px] font-['SF_Pro_Display'] pb-2"
+        >
+          This year
+        </button>
+      </div>
 
-        <!-- Tabs -->
+      <!-- Chart Section -->
+      <div class="mt-6 relative overflow-y-auto max-w-6xl mx-auto py-6">
+        <!-- Grid Lines -->
         <div
-          class="flex space-x-6 mt-6 text-sm font-semibold border-b"
-          id="tabs"
+          class="absolute top-0 left-40 right-0 bottom-0 pointer-events-none z-0"
         >
-          <button
-            class="tab-button text-orange-500 text-[24px] font-['SF_Pro_Display'] border-b-2 border-orange-500 pb-2"
-          >
-            Today
-          </button>
-          <button
-            class="tab-button text-gray-400 text-[24px] font-['SF_Pro_Display'] pb-2"
-          >
-            This week
-          </button>
-          <button
-            class="tab-button text-gray-400 text-[24px] font-['SF_Pro_Display'] pb-2"
-          >
-            This year
-          </button>
+          <div class="flex h-full justify-between px-2">
+            <!-- 6 dashed vertical lines -->
+            <div class="h-full border-l border-dashed border-gray-300"></div>
+            <div class="h-full border-l border-dashed border-gray-300"></div>
+            <div class="h-full border-l border-dashed border-gray-300"></div>
+            <div class="h-full border-l border-dashed border-gray-300"></div>
+            <div class="h-full border-l border-dashed border-gray-300"></div>
+            <div class="h-full border-l border-dashed border-gray-300"></div>
+          </div>
         </div>
 
-        <!-- Chart Section -->
-        <div class="mt-6 relative overflow-y-auto max-w-6xl mx-auto py-6">
-          <!-- Grid Lines -->
-          <div
-            class="absolute top-0 left-40 right-0 bottom-0 pointer-events-none z-0"
-          >
-            <div class="flex h-full justify-between px-2">
-              <!-- 6 dashed vertical lines -->
-              <div class="h-full border-l border-dashed border-gray-300"></div>
-              <div class="h-full border-l border-dashed border-gray-300"></div>
-              <div class="h-full border-l border-dashed border-gray-300"></div>
-              <div class="h-full border-l border-dashed border-gray-300"></div>
-              <div class="h-full border-l border-dashed border-gray-300"></div>
-              <div class="h-full border-l border-dashed border-gray-300"></div>
-            </div>
-          </div>
+        <!-- Bar Chart -->
+        <div id="chart" class="relative z-10 space-y-4"></div>
+      </div>
 
-          <!-- Bar Chart -->
-          <div id="chart" class="relative z-10 space-y-4"></div>
-        </div>
-
-        <!-- Bottom Axis -->
-        <div class="relative mt-6 h-4">
-          <div class="absolute left-0 w-full h-px bg-gray-300"></div>
-          <div class="flex justify-between text-xs text-gray-500 mt-1 pl-40">
-            <span>0</span>
-            <span>100</span>
-            <span>200</span>
-            <span>300</span>
-            <span>400</span>
-            <span>500</span>
-          </div>
+      <!-- Bottom Axis -->
+      <div class="relative mt-6 h-4">
+        <div class="absolute left-0 w-full h-px bg-gray-300"></div>
+        <div class="flex justify-between text-xs text-gray-500 mt-1 pl-40">
+          <span>0</span>
+          <span>100</span>
+          <span>200</span>
+          <span>300</span>
+          <span>400</span>
+          <span>500</span>
         </div>
       </div>
     </div>
