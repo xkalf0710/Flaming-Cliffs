@@ -64,16 +64,17 @@
     </header>
 
 
-    <div id="home" class="relative h-screen">
-  <!-- Background Image -->
+   <div id="home" class="relative h-screen">
+      <!-- Background Image -->
       <img
         src="img/photo & video gallery top desktop.jpg"
         alt="Flaming Cliffs"
         class="absolute object-cover z-0 hidden lg:block"
-        style="width: 1920px; height: 1080px;"
+        style="width: 1920px; height: 1080px"
       />
 
-      <div
+      <!-- Text and button -->
+     <div
           class="absolute z-20 left-1/2 top-[600px] transform -translate-x-1/2 -translate-y-1/2 text-white space-y-6 max-w-6xl mx-auto py-6 text-center"
         >
           <h1
@@ -82,19 +83,28 @@
           >
             PHOTO & VIDEO <br />GALLERY
           </h1>
-      </div>
+      </div> 
 
-
-      <!-- Divider image - moved inside and positioned at top -->
+      <!-- Divider image: position at bottom -->
       <img
         src="img/divider.png"
         alt="Upper Divider"
-        class="absolute  bottom-[138px] left-0 w-[1920px] h-[87px] rotate-180 opacity-[0.59] pointer-events-none z-10"
+        class="absolute left-0 top-[1080px] w-full h-[87px] rotate-180 opacity-[0.59] pointer-events-none z-10"
       />
     </div>
+<!-- <div
+          class="absolute z-20 left-1/2 top-[600px] transform -translate-x-1/2 -translate-y-1/2 text-white space-y-6 max-w-6xl mx-auto py-6 text-center"
+        >
+          <h1
+            class="text-white text-[60px] leading-[66px] font-semibold uppercase tracking-[0.21em]"
+            style="font-family: 'Inter', sans-serif"
+          >
+            PHOTO & VIDEO <br />GALLERY
+          </h1>
+      </div> -->
 
-
-      <div class="max-w-6xl mx-auto px-4 py-6 text-center">
+      <div class="mt-20">
+        <div class="max-w-6xl mx-auto px-4 py-6 text-center">
 
         <!-- Photos Section -->
         <div class="text-left mb-6">
@@ -268,6 +278,7 @@
         </div>
 
         
+      </div>
       </div>
     
 
@@ -494,9 +505,9 @@
 
       <div class="flex items-center justify-center bg-[#1a130f] py-4">
         <div class="w-full max-w-4xl flex items-center">
-        <div class="flex-grow h-px bg-white"></div>
+        <div class="flex-grow h-2 bg-white"></div>
         <span class="mx-4 text-white text-[40px] leading-[32px] font-bold capitalize font-['Inter'] text-right">Videos</span>
-        <div class="flex-grow h-px bg-white"></div>
+        <div class="flex-grow h-2 bg-white"></div>
         </div>
       </div>
 

@@ -64,7 +64,7 @@
     </header>
 
     <div id="home" class="relative h-screen">
-  <!-- Background Image -->
+      <!-- Background Image -->
       <img
         src="img/Learn more detail Top dektop.jpg"
         alt="Flaming Cliffs"
@@ -72,29 +72,32 @@
         style="width: 1920px; height: 1080px;"
       />
 
+      <!-- Text and button -->
       <div
-        class="absolute z-20 left-[341px] top-[600px] transform -translate-y-1/2 text-white space-y-6 max-w-6xl mx-auto py-6"
+        class="absolute z-20 left-[200px] top-[270px]  transform -translate-y-1/2 text-white space-y-6 max-w-6xl mx-auto py-6"
       >
-    
-       <h1
-          class="text-[64px] font-semibold leading-[100%] tracking-[0] font-['SF_Pro_Display']"
-        >
-          <span class="block">Flaming Cliffs:</span>
+        <h1 class="text-[64px] font-semibold leading-[100%] tracking-[0] font-['SF_Pro_Display']">
+          <span class="block">Flaming Cliffs:
+          </span>
           <span class="block">A Journey Through Time</span>
         </h1>
-      
+
+        
       </div>
 
-      <!-- Divider image - moved inside and positioned at top -->
+      <!-- Divider image: position at bottom -->
       <img
         src="img/divider.png"
         alt="Upper Divider"
-        class="absolute  bottom-[138px] left-0 w-[1920px] h-[87px] rotate-180 opacity-[0.59] pointer-events-none z-10"
+        class="absolute left-0 top-[1080px] w-full h-[87px] rotate-180 opacity-[0.59] pointer-events-none z-10"
       />
+
+
     </div>
 
-      <div class="max-w-6xl mx-auto py-6">
-        <div class="text-white p-4">
+      <div class="mt-20">
+        <div class="max-w-6xl mx-auto py-6">
+        <div class="text-white py-6">
       <!-- Section Header -->
           <div class="flex items-center space-x-6">
             <!-- Number -->
@@ -125,11 +128,12 @@
           </p>
         </div>
       </div>
+      </div>
     
 
     <div class="mt-10">
       <div class="max-w-6xl mx-auto py-6">
-        <div class="flex flex-col lg:flex-row items-start gap-10 bg-white p-6">
+        <div class="flex flex-col lg:flex-row items-start gap-10 bg-white py-6">
         <!-- Left Side: Text -->
         <div class="flex-1">
           <div class="flex items-center space-x-4">
@@ -162,7 +166,8 @@
       </div>
     </div>
 
-    <div class="max-w-6xl mx-auto py-6">
+    <div class="mt-8">
+       <div class="max-w-6xl mx-auto py-6">
       <div class="flex items-center justify-between w-full bg-[#ffffff] py-6">
         <!-- Left: Image Section -->
         <div class="relative aspect-[16/9]">
@@ -192,10 +197,32 @@
               03
             </div>
 
-            <p class="absolute top-[134px] left-[0px] w-[688px] h-[192px]  text-black text-[20px] leading-[32px] font-normal text-justify font-['SF_Pro_Display']">
-              In July 1923, Andrews and his team made their most groundbreaking discovery at the Flaming Cliffs: fossilized dinosaur eggs, the first ever found in human history. 
-              This find conclusively proved dinosaurs reproduced through egg-laying, dramatically transforming the scientific understanding of dinosaur biology. The discovery instantly elevated the Flaming Cliffs to global prominence, making headlines worldwide.
-            </p>
+            <div 
+              class="absolute" 
+              style="
+                width: 600px; 
+                height: 192px; 
+                top: 134px; 
+                left: 15px; 
+                opacity: 1;
+              "
+            >
+              <p 
+                class="text-justify font-normal" 
+                style="
+                  font-family: 'SF Pro Display', sans-serif; 
+                  font-size: 20px; 
+                  line-height: 32px; 
+                  font-weight: 400; 
+                  letter-spacing: 0;
+                "
+              >
+                In July 1923, Andrews and his team made their most groundbreaking discovery at the Flaming Cliffs: fossilized dinosaur eggs, the first ever found in human history. 
+                This find conclusively proved dinosaurs reproduced through egg-laying, dramatically transforming the scientific understanding of dinosaur biology. 
+                The discovery instantly elevated the Flaming Cliffs to global prominence, making headlines worldwide.
+              </p>
+            </div>
+
 
           </div>
 
@@ -216,10 +243,11 @@
 
       </div>
     </div>
+    </div>
 
     
     
-    <div class="max-w-6xl mx-auto  py-6 px-4 flex items-start justify-between mt-10">
+    <div class="max-w-6xl mx-auto  py-6 flex items-start justify-between mt-10">
       <!-- Left Text Content -->
       <div class="max-w-5xl">
         <h2 class="text-2xl md:text-3xl font-bold text-[#5e3617] mb-1">
@@ -233,7 +261,7 @@
       </div>
 
       <!-- Right Image -->
-      <div class="absolute  left-[1180px] w-[200px] h-[200px] opacity-100">
+      <div class="absolute  left-[1350px] w-[200px] h-[250px] opacity-100">
         <img src="img/learn more detail dino icon.png" alt="Cartoon Dinosaur" class="w-full h-full object-contain transform scale-x-[-1]">
       </div>
     </div>
@@ -307,7 +335,7 @@
 
 
 
-    <div class="max-w-6xl mx-auto px-4 mt-10">
+    <div class="max-w-6xl mx-auto py-6 mt-10">
       <!-- Title and Line -->
       <div class="flex items-center">
         <h2 class="text-[40px] leading-[32px] font-bold text-[#5e3617] capitalize text-right font-['Inter']">
@@ -424,7 +452,7 @@
                 <img
                   src="img/Photo & video gallery/Flaming Cliffs Thumb.jpg"
                   alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
+                  class="rounded-md object-cover w-451 h-253"
                 />
                 <div
                   class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-[18px] leading-[100%] font-semibold px-3 py-2"
@@ -440,7 +468,7 @@
                 <img
                   src="img/Photo & video gallery/Camel Caravan Thumb.jpg"
                   alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
+                  class="rounded-md object-cover w-451 h-253"
                 />
                 <div
                   class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-[18px] leading-[100%] font-semibold px-3 py-2"
@@ -456,7 +484,7 @@
                 <img
                   src="img/Photo & video gallery/Souviner shop thumb.jpg"
                   alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
+                  class="rounded-md object-cover w-451 h-253"
                 />
                 <div
                   class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-[18px] leading-[100%] font-semibold px-3 py-2"
@@ -615,13 +643,13 @@
     </div>
 
     <div class="max-w-6xl mx-auto my-10 px-4">
-      <h2 class="text-2xl font-semibold mb-6 border-b-2 pb-2">
+      <h2 class="text-2xl font-semibold mb-6 border-b-2 border-black pb-2">
         Frequently asked questions
       </h2>
 
       <div class="space-y-4" id="faqContainer">
         <!-- Example Question -->
-        <div class="border-b pb-3">
+        <div class="pb-3">
           <button
             class="faq-question w-full text-left flex items-center justify-between text-black font-semibold text-[20px] leading-[100%] tracking-normal"
             style="font-family: 'SF Pro Display'"
@@ -640,7 +668,7 @@
           </p>
         </div>
 
-        <div class="border-b pb-3">
+        <div class="pb-3">
           <button
             class="faq-question w-full text-left flex items-center justify-between text-black font-semibold text-[20px] leading-[100%] tracking-normal"
             style="font-family: 'SF Pro Display'"
@@ -660,7 +688,7 @@
           </p>
         </div>
 
-        <div class="border-b pb-3">
+        <div class="pb-3">
           <button
             class="faq-question w-full text-left flex items-center justify-between text-black font-semibold text-[20px] leading-[100%] tracking-normal"
             style="font-family: 'SF Pro Display'"
@@ -680,7 +708,7 @@
           </p>
         </div>
 
-        <div class="border-b pb-3">
+        <div class="pb-3">
           <button
             class="faq-question w-full text-left flex items-center justify-between text-black font-semibold text-[20px] leading-[100%] tracking-normal"
             style="font-family: 'SF Pro Display'"
@@ -700,7 +728,7 @@
           </p>
         </div>
 
-        <div class="border-b pb-3">
+        <div class="pb-3">
           <button
             class="faq-question w-full text-left flex items-center justify-between text-black font-semibold text-[20px] leading-[100%] tracking-normal"
             style="font-family: 'SF Pro Display'"
@@ -720,7 +748,7 @@
           </p>
         </div>
 
-        <div class="border-b pb-3">
+        <div class="pb-3">
           <button
             class="faq-question w-full text-left flex items-center justify-between text-black font-semibold text-[20px] leading-[100%] tracking-normal"
             style="font-family: 'SF Pro Display'"
@@ -740,7 +768,7 @@
           </p>
         </div>
 
-        <div class="border-b pb-3">
+        <div class="pb-3">
           <button
             class="faq-question w-full text-left flex items-center justify-between text-black font-semibold text-[20px] leading-[100%] tracking-normal"
             style="font-family: 'SF Pro Display'"
@@ -795,7 +823,7 @@
     <footer class="bg-[#1a130f] text-white py-10 px-6">
       <div class="max-w-6xl mx-auto text-sm">
         <div
-          class="grid grid-cols-1 md:grid-cols-3 gap-10 divide-[#2d211c]"
+          class="grid grid-cols-1 md:grid-cols-3 gap-10  divide-[#2d211c]"
         >
           <!-- Quick Links -->
           <div class="md:pr-6">
@@ -803,7 +831,7 @@
               class="font-extrabold text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
             >
               Quick links
-            </h3>           
+            </h3>
             <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-gray-300">
               <a
                 href="#"
@@ -846,8 +874,10 @@
                 href="#"
                 class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
                 >FAQs</a
+              
+             
               >
-                 
+             
               <a
                 href="#"
                 class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
@@ -876,7 +906,7 @@
               Domestic - 3,000 MNT | International - 10,000 MNT
             </p>
             <p class="text-gray-300 mb-3">
-              <span class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']">Best Time to Visit:</span>
+              <span class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"">Best Time to Visit:</span>
               May - October
             </p>
             <p class="text-gray-300">
@@ -948,7 +978,7 @@
     </script> -->
 
     <script>
-      const faqButtons = document.querySelectorAll(".faq-question"); zz
+      const faqButtons = document.querySelectorAll(".faq-question");
 
       faqButtons.forEach((button) => {
         button.addEventListener("click", () => {
@@ -968,6 +998,12 @@
           content.classList.toggle("hidden");
           arrowIcon.classList.toggle("rotate-180");
         });
+      });
+   
+      // Toggle mobile menu
+      document.getElementById("menu-toggle").addEventListener("click", () => {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
       });
     </script>
   </body>
