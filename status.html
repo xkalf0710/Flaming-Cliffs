@@ -65,6 +65,7 @@
           <a href="#" class="hover:text-yellow-500">PRESERVATION</a>
           <a href="#gallery" class="hover:text-yellow-500">GALLERY</a>
           <a href="#contact" class="hover:text-yellow-500">CONTACT</a>
+          <a href="login.html" class="hover:text-yellow-500">LOGIN</a>
         </nav>
 
         <!-- Language Selector -->
@@ -102,32 +103,25 @@
       </div>
     </header>
 
-    <div id="home" class="relative h-screen">
+    <div id="home" class="w-full">
       <!-- Background Image -->
-      <img
-        src="img/live stats top desktop.jpg"
-        alt="Flaming Cliffs"
-        class="absolute object-cover z-0 hidden lg:block"
-        style="width: 1920px; height: 1080px"
-      />
-
-      <!-- Text and button -->
-      <div
-        class="absolute z-20 left-[341px] top-[373px] transform -translate-y-1/2 text-white space-y-6 max-w-6xl mx-auto py-6"
-      >
+      <div class="relative">
+        <img
+          src="img/live stats top desktop.jpg"
+          alt="Flaming Cliffs"
+          class="object-cover z-0 hidden lg:block w-full"
+        />
+        <img
+          src="img/divider.png"
+          alt="Upper Divider"
+          class="absolute left-0 bottom-0 w-full pointer-events-none z-10"
+        />
         <h1
-          class="text-[64px] font-semibold leading-[100%] tracking-[0] font-['SF_Pro_Display']"
+          class="text-[64px] absolute top-1/2 left-[20%] -translate-y-1/2 text-white font-semibold leading-[100%] tracking-[0] font-['SF_Pro_Display']"
         >
           <span class="block">Live Stats for Visitors </span>
         </h1>
       </div>
-
-      <!-- Divider image: position at bottom -->
-      <img
-        src="img/divider.png"
-        alt="Upper Divider"
-        class="absolute left-0 top-[1080px] w-full h-[87px] rotate-180 opacity-[0.59] pointer-events-none z-10"
-      />
     </div>
 
     <div class="mt-20">
@@ -530,7 +524,7 @@
     </div>
 
     &nbsp;&nbsp;
-    <div class="bg-[#1a130f] px-6 py-6">
+    <div class="bg-[#1a130f] py-4">
       <div class="flex items-center gap-4 max-w-6xl mx-auto py-6">
         <!-- Icon -->
         <img
@@ -541,15 +535,11 @@
 
         <!-- Text -->
         <div>
-          <h1
-            class="text-white font-semibold text-[26.93px] leading-[22.44px] font-[Inter]"
-          >
+          <h1 class="text-white text-[20px] leading-[22.44px] font-[Inter]">
             Flaming Cliffs ( Bayanzag )
           </h1>
           &nbsp;
-          <p
-            class="text-gray-300 font-normal text-[20.94px] leading-[22.44px] font-[Inter]"
-          >
+          <p class="text-white text-[20px] leading-[22.44px] font-[Inter]">
             Discover Mongolia's Legendary Dinosaur Site
           </p>
         </div>
@@ -559,13 +549,13 @@
       <div class="border-t border-[#3f3932] mt-2 max-w-6xl mx-auto"></div>
     </div>
 
-    <footer class="bg-[#1a130f] text-white py-10 px-6">
+    <footer class="bg-[#1a130f] text-white py-10">
       <div class="max-w-6xl mx-auto text-sm">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 divide-[#2d211c]">
           <!-- Quick Links -->
           <div class="md:pr-6">
             <h3
-              class="font-extrabold text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
+              class="text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
             >
               Quick links
             </h3>
@@ -607,7 +597,6 @@
                 class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
                 >Information Center</a
               >
-
               <a
                 href="#"
                 class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
@@ -630,7 +619,7 @@
           <!-- Visitor Information -->
           <div class="md:pr-1">
             <h3
-              class="font-extrabold text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
+              class="text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
             >
               Visitor Information
             </h3>
@@ -660,7 +649,7 @@
           <!-- Contacts & Socials -->
           <div class="md:pr-1">
             <h3
-              class="font-extrabold text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
+              class="text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
             >
               Contacts Us
             </h3>
@@ -704,24 +693,24 @@
       <div class="border-t border-[#3f3932] mt-2 max-w-6xl mx-auto py-6"></div>
 
       <p
-        cclass="font-semibold text-[17px] leading-[30px] tracking-normal font-['Open_Sans']"
+        class="font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans']"
       >
         Preserving History, Supporting Communities
       </p>
       <p
-        class="font-semibold text-[17px] leading-[30px] tracking-normal font-['Open_Sans'] mt-1"
+        class="font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans'] mt-1"
       >
         Your visit directly contributes to preserving Mongolia’s heritage and
         empowering local communities.
       </p>
       <p
-        class="font-semibold text-[17px] leading-[30px] tracking-normal font-['Open_Sans'] mt-1"
+        class="font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans'] mt-1"
       >
         Plan Your Visit Today!
       </p>
 
       <p
-        class="font-semibold text-[17px] leading-[30px] tracking-normal font-['Open_Sans'] mt-4"
+        class="font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans'] mt-4"
       >
         © 2025 Flaming Cliffs Administration | All Rights Reserved
       </p>
@@ -729,13 +718,13 @@
       <div class="mt-1 space-x-2">
         <a
           href="#"
-          class="text-[#f9a825] hover:underline font-semibold text-[17px] leading-[30px] tracking-normal font-['Open_Sans']"
+          class="text-[#f9a825] hover:underline font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans']"
           >Privacy Policy</a
         >
         <span class="text-gray-600">|</span>
         <a
           href="#"
-          class="text-[#f9a825] hover:underline font-semibold text-[17px] leading-[30px] tracking-normal font-['Open_Sans']"
+          class="text-[#f9a825] hover:underline font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans']"
           >Terms of Use</a
         >
       </div>

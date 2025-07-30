@@ -16,11 +16,18 @@
     </style>
   </head>
   <body class="bg-[#1a130f] min-h-screen">
-    <header class="bg-gradient-to-b from-[#2c1c12] to-[#000000] text-white shadow-md border-b border-black">
-      <div class="w-full flex items-center justify-between px-[247px] py-[18px]" style="height:92px;">
+    <header
+      class="bg-gradient-to-b from-[#2c1c12] to-[#000000] text-white shadow-md border-b border-black"
+    >
+      <div
+        class="w-full flex items-center justify-between px-[247px] py-[18px]"
+        style="height: 92px"
+      >
         <!-- Logo & Title -->
-        <a href="index.html"
-          class="flex flex-row items-center gap-[10px] w-[215px] h-[57px]">
+        <a
+          href="index.html"
+          class="flex flex-row items-center gap-[10px] w-[215px] h-[57px]"
+        >
           <img
             src="img/baynzag logo.png"
             alt="Flaming Cliffs Logo"
@@ -34,10 +41,13 @@
           <a href="#home" class="hover:text-yellow-500">HOME</a>
           <a href="about.html" class="hover:text-yellow-500">ABOUT</a>
           <a href="#" class="hover:text-yellow-500">FOSSILS & DISCOVERIES</a>
-          <a href="status.html" class="hover:text-yellow-500">LIVE STATS FROM VISITORS</a>
+          <a href="status.html" class="hover:text-yellow-500"
+            >LIVE STATS FROM VISITORS</a
+          >
           <a href="#" class="hover:text-yellow-500">PRESERVATION</a>
           <a href="#gallery" class="hover:text-yellow-500">GALLERY</a>
           <a href="#contact" class="hover:text-yellow-500">CONTACT</a>
+          <a href="login.html" class="hover:text-yellow-500">LOGIN</a>
         </nav>
 
         <!-- Language Selector -->
@@ -52,30 +62,45 @@
 
         <!-- Mobile Menu Button -->
         <div class="md:hidden">
-          <button id="menu-toggle" class="text-white focus:outline-none focus:ring-2 focus:ring-yellow-400">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"></path>
+          <button
+            id="menu-toggle"
+            class="text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
             </svg>
           </button>
         </div>
       </div>
     </header>
 
-
-   <div id="home" class="relative h-screen">
+    <div id="home" class="w-full">
       <!-- Background Image -->
-      <img
-        src="img/photo & video gallery top desktop.jpg"
-        alt="Flaming Cliffs"
-        class="absolute object-cover z-0 hidden lg:block"
-        style="width: 1920px; height: 1080px"
-      />
+      <div class="relative">
+        <img
+          src="img/photo & video gallery top desktop.jpg"
+          alt="Flaming Cliffs"
+          class="object-cover z-0 hidden lg:block w-full"
+        />
+        <img
+          src="img/divider.png"
+          alt="Upper Divider"
+          class="absolute left-0 bottom-0 w-full pointer-events-none z-10"
+        />
 
-      <!-- Text and button -->
-     <div
-          class="absolute z-20 left-1/2 top-[600px] transform -translate-x-1/2 -translate-y-1/2 text-white space-y-6 max-w-6xl mx-auto py-6 text-center"
+        <div
+          class="absolute z-20 left-1/2 top-[60%] transform -translate-x-1/2 -translate-y-1/2 text-white space-y-6 max-w-6xl mx-auto py-6 text-center"
         >
           <h1
             class="text-white text-[60px] leading-[66px] font-semibold uppercase tracking-[0.21em]"
@@ -83,16 +108,11 @@
           >
             PHOTO & VIDEO <br />GALLERY
           </h1>
-      </div> 
-
-      <!-- Divider image: position at bottom -->
-      <img
-        src="img/divider.png"
-        alt="Upper Divider"
-        class="absolute left-0 top-[1080px] w-full h-[87px] rotate-180 opacity-[0.59] pointer-events-none z-10"
-      />
+        </div>
+      </div>
     </div>
-<!-- <div
+
+    <!-- <div
           class="absolute z-20 left-1/2 top-[600px] transform -translate-x-1/2 -translate-y-1/2 text-white space-y-6 max-w-6xl mx-auto py-6 text-center"
         >
           <h1
@@ -103,9 +123,8 @@
           </h1>
       </div> -->
 
-      <div class="mt-20">
-        <div class="max-w-6xl mx-auto px-4 py-6 text-center">
-
+    <div class="mt-20">
+      <div class="max-w-6xl mx-auto px-4 py-6 text-center">
         <!-- Photos Section -->
         <div class="text-left mb-6">
           <h2
@@ -116,175 +135,149 @@
 
           <div class="grid grid-cols-5 grid-rows-4 gap-6">
             <!-- Flaming Cliffs -->
-            
-              <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-1.jpg"
-                  alt="Zag1"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
-          
+
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-1.jpg"
+                alt="Zag1"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
+
             <!-- Camel Caravan -->
-            
-              <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-2.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
-            
-            
-              <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-3.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-4.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-5.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-6.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-2.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-7.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-3.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-4.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-5.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-8.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-6.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-9.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-7.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-10.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-8.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-11.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-9.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-10.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-12.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-11.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-13.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-12.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-14.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-13.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-15.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-14.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-16.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-15.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-17.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-16.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               
-            
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-17.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
           </div>
         </div>
-
-        
       </div>
-      </div>
-    
+    </div>
 
     <div class="mt-10">
       <div class="max-w-6xl mx-auto px-4 py-6 text-center">
-
         <!-- Photos Section -->
         <div class="text-left mb-6">
           <h2
@@ -295,97 +288,86 @@
 
           <div class="grid grid-cols-5 grid-rows-2 gap-6">
             <!-- Flaming Cliffs -->
-            
-              <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Camel Caravan-2.jpg"
-                  alt="Zag1"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
-          
+
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Camel Caravan-2.jpg"
+                alt="Zag1"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
+
             <!-- Camel Caravan -->
-            
-              <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-2.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
-            
-            
-              <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Camel Caravan-16.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-4.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Camel Caravan-1.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-6.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-2.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-7.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Camel Caravan-16.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-4.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Camel Caravan-1.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Zag/Zag-8.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-6.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Camel Caravan-19.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-7.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Camel Caravan-4.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Zag/Zag-8.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
+
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Camel Caravan-19.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
+
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Camel Caravan-4.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -393,7 +375,6 @@
 
     <div class="mt-10">
       <div class="max-w-6xl mx-auto px-4 py-6 text-center">
-
         <!-- Photos Section -->
         <div class="text-left mb-6">
           <h2
@@ -404,116 +385,104 @@
 
           <div class="grid grid-cols-5 grid-rows-2 gap-6">
             <!-- Flaming Cliffs -->
-            
-              <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Souviner shop/SouvinerShop-14.jpg"
-                  alt="Zag1"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
-          
+
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Souviner shop/SouvinerShop-14.jpg"
+                alt="Zag1"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
+
             <!-- Camel Caravan -->
-            
-              <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Souviner shop/SouvinerShop-10.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
-            
-            
-              <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Souviner shop/SouvinerShop-11.jpg"
-                  
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Souviner shop/SouvinerShop-12.jpg"
-                  
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Souviner shop/SouvinerShop-13.jpg"
-               
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Souviner shop/SouvinerShop-9.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Souviner shop/SouvinerShop-10.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Souviner shop/SouvinerShop-8.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Souviner shop/SouvinerShop-11.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Souviner shop/SouvinerShop-12.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Souviner shop/SouvinerShop-13.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Souviner shop/SouvinerShop-7.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Souviner shop/SouvinerShop-9.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Souviner shop/SouvinerShop-6.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Souviner shop/SouvinerShop-8.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <img
-                  src="img/Souviner shop/SouvinerShop-5.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-full h-48"
-                />
-                
-              </div>
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Souviner shop/SouvinerShop-7.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
+
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Souviner shop/SouvinerShop-6.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
+
+            <div class="relative aspect-[16/9]">
+              <img
+                src="img/Souviner shop/SouvinerShop-5.jpg"
+                alt="Flaming Cliffs"
+                class="rounded-md object-cover w-full h-48"
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-      <div class="flex items-center justify-center bg-[#1a130f] py-4">
-        <div class="w-full max-w-4xl flex items-center">
+    <div class="flex items-center justify-center bg-[#1a130f] py-4">
+      <div class="w-full max-w-4xl flex items-center">
         <div class="flex-grow h-2 bg-white"></div>
-        <span class="mx-4 text-white text-[40px] leading-[32px] font-bold capitalize font-['Inter'] text-right">Videos</span>
+        <span
+          class="mx-4 text-white text-[40px] leading-[32px] font-bold capitalize font-['Inter'] text-right"
+          >Videos</span
+        >
         <div class="flex-grow h-2 bg-white"></div>
-        </div>
       </div>
+    </div>
 
-      <div class="mt-10">
+    <div class="mt-10">
       <div class="max-w-6xl mx-auto px-4 py-6 text-center">
-
         <!-- Photos Section -->
         <div class="text-left mb-6">
           <h2
@@ -524,9 +493,9 @@
 
           <div class="grid grid-cols-3 grid-rows-2 gap-[15px]">
             <!-- Flaming Cliffs -->
-            
-              <div class="relative aspect-[16/9]">
-               <iframe
+
+            <div class="relative aspect-[16/9]">
+              <iframe
                 width="350"
                 height="252"
                 src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=0Zmj7nqP4PEzcDM_"
@@ -536,12 +505,12 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
-              </div>
-          
+            </div>
+
             <!-- Camel Caravan -->
-            
-              <div class="relative aspect-[16/9]">
-               <iframe
+
+            <div class="relative aspect-[16/9]">
+              <iframe
                 width="350"
                 height="252"
                 src="https://www.youtube.com/embed/LQ9jJ-l_ryE?si=QNf_V2vdaFS5NVGN"
@@ -551,11 +520,10 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
-              </div>
-            
-            
-              <div class="relative aspect-[16/9]">
-                <iframe
+            </div>
+
+            <div class="relative aspect-[16/9]">
+              <iframe
                 width="350"
                 height="252"
                 src="https://www.youtube.com/embed/LWYDZuAbYGk?si=c1agOLf72Ms7EIoH"
@@ -565,10 +533,10 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
-              </div>
-              
-               <div class="relative aspect-[16/9]">
-               <iframe
+            </div>
+
+            <div class="relative aspect-[16/9]">
+              <iframe
                 width="350"
                 height="252"
                 src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=0Zmj7nqP4PEzcDM_"
@@ -578,10 +546,10 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
-              </div>
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                <iframe
+            <div class="relative aspect-[16/9]">
+              <iframe
                 width="350"
                 height="252"
                 src="https://www.youtube.com/embed/LQ9jJ-l_ryE?si=QNf_V2vdaFS5NVGN"
@@ -591,10 +559,10 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
-              </div>
+            </div>
 
-               <div class="relative aspect-[16/9]">
-                 <iframe
+            <div class="relative aspect-[16/9]">
+              <iframe
                 width="350"
                 height="252"
                 src="https://www.youtube.com/embed/LWYDZuAbYGk?si=c1agOLf72Ms7EIoH"
@@ -604,20 +572,13 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
-                
-              </div>
-
-               
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-      
-    </div>
-
-        
-    <div class="bg-[#1a130f] px-4 py-4">
+    <div class="bg-[#1a130f] py-4">
       <div class="flex items-center gap-4 max-w-6xl mx-auto py-6">
         <!-- Icon -->
         <img
@@ -628,15 +589,11 @@
 
         <!-- Text -->
         <div>
-          <h1
-            class="text-white font-semibold text-[26.93px] leading-[22.44px] font-[Inter]"
-          >
+          <h1 class="text-white text-[20px] leading-[22.44px] font-[Inter]">
             Flaming Cliffs ( Bayanzag )
           </h1>
           &nbsp;
-          <p
-            class="text-gray-300 font-normal text-[20.94px] leading-[22.44px] font-[Inter]"
-          >
+          <p class="text-white text-[20px] leading-[22.44px] font-[Inter]">
             Discover Mongolia's Legendary Dinosaur Site
           </p>
         </div>
@@ -646,15 +603,13 @@
       <div class="border-t border-[#3f3932] mt-2 max-w-6xl mx-auto"></div>
     </div>
 
-    <footer class="bg-[#1a130f] text-white py-10 px-6">
+    <footer class="bg-[#1a130f] text-white py-10">
       <div class="max-w-6xl mx-auto text-sm">
-        <div
-          class="grid grid-cols-1 md:grid-cols-3 gap-10  divide-[#2d211c]"
-        >
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 divide-[#2d211c]">
           <!-- Quick Links -->
           <div class="md:pr-6">
             <h3
-              class="font-extrabold text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
+              class="text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
             >
               Quick links
             </h3>
@@ -701,7 +656,7 @@
                 class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
                 >FAQs</a
               >
-            
+
               <a
                 href="#"
                 class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
@@ -718,7 +673,7 @@
           <!-- Visitor Information -->
           <div class="md:pr-1">
             <h3
-              class="font-extrabold text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
+              class="text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
             >
               Visitor Information
             </h3>
@@ -730,11 +685,17 @@
               Domestic - 3,000 MNT | International - 10,000 MNT
             </p>
             <p class="text-gray-300 mb-3">
-              <span class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"">Best Time to Visit:</span>
+              <span
+                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
+                >Best Time to Visit:</span
+              >
               May - October
             </p>
             <p class="text-gray-300">
-              <span class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']">Location</span><br />
+              <span
+                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
+                >Location</span
+              ><br />
               Bayanzag, Ömnögovi Province, Mongolia
             </p>
           </div>
@@ -742,22 +703,33 @@
           <!-- Contacts & Socials -->
           <div class="md:pr-1">
             <h3
-              class="font-extrabold text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
+              class="text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
             >
               Contacts Us
             </h3>
             <div class="flex items-center gap-3 mb-2 text-gray-300">
-              <img src="img/phone number icon.png" class="w-4 h-4" alt="Phone" />
+              <img
+                src="img/phone number icon.png"
+                class="w-4 h-4"
+                alt="Phone"
+              />
               +976-12345678
             </div>
             <div class="flex items-center gap-3 mb-4 text-gray-300">
               <img src="img/Email icon.png" class="w-4 h-4" alt="Email" />
               info@flamingcliffs.mn
             </div>
-            <h4 class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']">Follow Us</h4>
+            <h4
+              class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
+            >
+              Follow Us
+            </h4>
             <div class="flex gap-4">
               <a href="#"
-                ><img src="img/Facebook round.png" alt="Facebook" class="w-6 h-6"
+                ><img
+                  src="img/Facebook round.png"
+                  alt="Facebook"
+                  class="w-6 h-6"
               /></a>
               <a href="#"
                 ><img src="img/Insta Round.png" alt="Instagram" class="w-6 h-6"
@@ -774,21 +746,41 @@
     <footer class="bg-[#1a130f] text-white text-center py-6 text-sm">
       <div class="border-t border-[#3f3932] mt-2 max-w-6xl mx-auto py-6"></div>
 
-      <p cclass="font-semibold text-[17px] leading-[30px] tracking-normal font-['Open_Sans']">Preserving History, Supporting Communities</p>
-      <p class="font-semibold text-[17px] leading-[30px] tracking-normal font-['Open_Sans'] mt-1">
+      <p
+        class="font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans']"
+      >
+        Preserving History, Supporting Communities
+      </p>
+      <p
+        class="font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans'] mt-1"
+      >
         Your visit directly contributes to preserving Mongolia’s heritage and
         empowering local communities.
       </p>
-      <p class="font-semibold text-[17px] leading-[30px] tracking-normal font-['Open_Sans'] mt-1">Plan Your Visit Today!</p>
+      <p
+        class="font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans'] mt-1"
+      >
+        Plan Your Visit Today!
+      </p>
 
-      <p class="font-semibold text-[17px] leading-[30px] tracking-normal font-['Open_Sans'] mt-4">
+      <p
+        class="font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans'] mt-4"
+      >
         © 2025 Flaming Cliffs Administration | All Rights Reserved
       </p>
 
       <div class="mt-1 space-x-2">
-        <a href="#" class="text-[#f9a825] hover:underline font-semibold text-[17px] leading-[30px] tracking-normal font-['Open_Sans']">Privacy Policy</a>
+        <a
+          href="#"
+          class="text-[#f9a825] hover:underline font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans']"
+          >Privacy Policy</a
+        >
         <span class="text-gray-600">|</span>
-        <a href="#" class="text-[#f9a825] hover:underline font-semibold text-[17px] leading-[30px] tracking-normal font-['Open_Sans']">Terms of Use</a>
+        <a
+          href="#"
+          class="text-[#f9a825] hover:underline font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans']"
+          >Terms of Use</a
+        >
       </div>
     </footer>
 
