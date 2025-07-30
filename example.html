@@ -2,10 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Local Ger Camps Slider</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bayanzag Gallery</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Swiper CSS -->
@@ -14,134 +13,105 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <!-- Custom Fonts (Optional) -->
+    <!-- LightGallery CSS -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css"
     />
   </head>
-
-  <body class="bg-gray-100">
-    <section class="max-w-6xl mx-auto py-10 px-4">
-      <h2
-        class="text-[20px] leading-[26px] font-semibold text-left text-[#000000] mb-6 font-['SF_Pro_Display']"
-      >
-        Khongor Sand Dunes
+  <body class="bg-gray-900 text-white">
+    <div class="max-w-6xl mx-auto px-4 py-10">
+      <h2 class="text-[25px] leading-[32px] font-semibold capitalize mb-6">
+        Bayanzag
       </h2>
 
-      <!-- Swiper Container -->
+      <!-- Swiper container with LightGallery -->
       <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <!-- Slide 1 -->
-          <div class="swiper-slide flex justify-center">
-            <div
-              class="w-[280px] h-[240px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white"
-            >
-              <img
-                src="img/Dino's tourist camp.jpg"
-                alt="Dino’s Guest House"
-                class="w-full h-[186.64px] rounded-[8.86px] object-cover"
-              />
-              <p class="text-[18px] mt-2 font-['SF_Pro_Display']">
-                Dino’s Guest House
-              </p>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="swiper-slide flex justify-center">
-            <div
-              class="w-[280px] h-[240px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white"
-            >
-              <img
-                src="img/GobiTour.jpg"
-                alt="Gobi Tour"
-                class="w-full h-[186.64px] rounded-[8.86px] object-cover"
-              />
-              <p class="text-[18px] mt-2 font-['SF_Pro_Display']">
-                Gobi Tour Tourist Camp
-              </p>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="swiper-slide flex justify-center">
-            <div
-              class="w-[280px] h-[240px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white"
-            >
-              <img
-                src="img/GobiOasis.jpg"
-                alt="Gobi Oasis"
-                class="w-full h-[186.64px] rounded-[8.86px] object-cover"
-              />
-              <p class="text-[18px] mt-2 font-['SF_Pro_Display']">
-                Gobi Oasis 2 Tourist Camp
-              </p>
-            </div>
-          </div>
-
-          <!-- Slide 4 -->
-          <div class="swiper-slide flex justify-center">
-            <div
-              class="w-[280px] h-[240px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white"
-            >
-              <img
-                src="img/Mongol Gobi tourist camp.jpg"
-                alt="Mongol Gobi"
-                class="w-full h-[186.64px] rounded-[8.86px] object-cover"
-              />
-              <p class="text-[18px] mt-2 font-['SF_Pro_Display']">
-                Mongol Gobi Tourist Camp
-              </p>
-            </div>
-          </div>
-
-          <div class="swiper-slide flex justify-center">
-            <div
-              class="w-[280px] h-[240px] p-[10px] rounded-[17.71px] shadow-[0px_4.43px_17.71px_0px_rgba(158,158,158,0.25)] bg-white"
-            >
-              <img
-                src="img/Mongol Gobi tourist camp.jpg"
-                alt="Mongol Gobi"
-                class="w-full h-[186.64px] rounded-[8.86px] object-cover"
-              />
-              <p class="text-[18px] mt-2 font-['SF_Pro_Display']">
-                Mongol Gobi Tourist Camp
-              </p>
-            </div>
-          </div>
+        <div id="lightgallery" class="swiper-wrapper">
+          <!-- Each image slide wrapped in <a> for LightGallery -->
+          <a href="img/Zag/Zag-1.jpg" class="swiper-slide">
+            <img
+              src="img/Zag/Zag-1.jpg"
+              alt="Zag1"
+              class="rounded-md object-cover w-full h-48"
+            />
+          </a>
+          <a href="img/Zag/Zag-2.jpg" class="swiper-slide">
+            <img
+              src="img/Zag/Zag-2.jpg"
+              alt="Zag2"
+              class="rounded-md object-cover w-full h-48"
+            />
+          </a>
+          <a href="img/Zag/Zag-3.jpg" class="swiper-slide">
+            <img
+              src="img/Zag/Zag-3.jpg"
+              alt="Zag3"
+              class="rounded-md object-cover w-full h-48"
+            />
+          </a>
+          <a href="img/Zag/Zag-4.jpg" class="swiper-slide">
+            <img
+              src="img/Zag/Zag-4.jpg"
+              alt="Zag4"
+              class="rounded-md object-cover w-full h-48"
+            />
+          </a>
+          <a href="img/Zag/Zag-5.jpg" class="swiper-slide">
+            <img
+              src="img/Zag/Zag-5.jpg"
+              alt="Zag5"
+              class="rounded-md object-cover w-full h-48"
+            />
+          </a>
+          <a href="img/Zag/Zag-6.jpg" class="swiper-slide">
+            <img
+              src="img/Zag/Zag-6.jpg"
+              alt="Zag6"
+              class="rounded-md object-cover w-full h-48"
+            />
+          </a>
+          <!-- Та бусад зургуудыг ижил байдлаар үргэлжлүүлж оруулна -->
         </div>
 
-        <!-- Navigation Arrows -->
+        <!-- Navigation arrows -->
         <div class="swiper-button-next text-white"></div>
+        <div class="swiper-button-prev text-white"></div>
       </div>
-    </section>
+    </div>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Swiper Initialization -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
+    <!-- LightGallery JS -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
 
+    <!-- Init Scripts -->
+    <script>
+      // Swiper init
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 20,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
         breakpoints: {
-          640: {
-            slidesPerView: 2,
-          },
-          768: {
-            slidesPerView: 3,
-          },
-          1024: {
-            slidesPerView: 4,
-          },
+          640: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
         },
+      });
+
+      // LightGallery init (on swiper-wrapper)
+      lightGallery(document.getElementById("lightgallery"), {
+        selector: "a", // each swiper-slide <a>
+        plugins: [lgZoom, lgThumbnail],
+        speed: 400,
+        download: false,
+        actualSize: false,
       });
     </script>
   </body>
