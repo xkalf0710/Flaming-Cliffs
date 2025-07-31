@@ -52,7 +52,7 @@
 
         <!-- Desktop/Tablet Navigation -->
         <nav
-          class="hidden md:flex gap-4 lg:gap-8 text-sm font-semibold text-white"
+          class="hidden xl:flex gap-4 lg:gap-8 text-sm font-semibold text-white"
         >
           <a href="index.html" class="hover:text-yellow-500">HOME</a>
           <a href="about.html" class="hover:text-yellow-500">ABOUT</a>
@@ -69,7 +69,7 @@
         </nav>
 
         <!-- Language Selector -->
-        <div class="hidden md:block">
+        <div class="hidden xl:block">
           <select
             class="bg-[#2c2c2c] border border-gray-600 text-white text-sm px-2 py-1 rounded"
           >
@@ -79,7 +79,7 @@
         </div>
 
         <!-- Mobile Menu Button -->
-        <div class="md:hidden">
+        <div class="xl:hidden">
           <button
             id="menu-toggle"
             class="text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
@@ -102,7 +102,7 @@
         </div>
       </div>
       <!-- Mobile Menu -->
-      <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2">
+      <div id="mobile-menu" class="hidden xl:hidden px-4 pb-4 space-y-2">
         <a href="index.html" class="block hover:text-yellow-500">HOME</a>
         <a href="about.html" class="block hover:text-yellow-500">ABOUT</a>
         <a href="learn_detail.html" class="block hover:text-yellow-500"
@@ -1107,6 +1107,12 @@
             },
           },
         ],
+      });
+
+      // Toggle mobile menu
+      document.getElementById("menu-toggle").addEventListener("click", () => {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
       });
     </script>
   </body>
