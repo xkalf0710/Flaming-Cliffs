@@ -31,6 +31,23 @@
       .rotate-180 {
         transform: rotate(180deg);
       }
+
+      * Fade эффект */ #mainImage.fade {
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+      #mainImage.show {
+        opacity: 1;
+        transition: opacity 0.4s ease;
+      }
+      * Fade эффект */ #mainImage2.fade {
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+      #mainImage2.show {
+        opacity: 1;
+        transition: opacity 0.4s ease;
+      }
     </style>
   </head>
 
@@ -64,7 +81,7 @@
             >LIVE STATS FROM VISITORS</a
           >
           <a href="#" class="hover:text-yellow-500">PRESERVATION</a>
-          <a href="#gallery" class="hover:text-yellow-500">GALLERY</a>
+          <a href="photo_gallery.html" class="hover:text-yellow-500">GALLERY</a>
           <a href="#contact" class="hover:text-yellow-500">CONTACT</a>
           <a href="login.html" class="hover:text-yellow-500">LOGIN</a>
         </nav>
@@ -113,7 +130,9 @@
           >LIVE STATS FROM VISITORS</a
         >
         <a href="#" class="block hover:text-yellow-500">PRESERVATION</a>
-        <a href="#gallery" class="block hover:text-yellow-500">GALLERY</a>
+        <a href="photo_gallery.html" class="block hover:text-yellow-500"
+          >GALLERY</a
+        >
         <a href="#contact" class="block hover:text-yellow-500">CONTACT</a>
         <a href="login.html" class="block hover:text-yellow-500">LOGIN</a>
         <select
@@ -213,6 +232,7 @@
         <div class="relative w-full h-64 md:h-auto">
           <!-- Main Image -->
           <img
+            id="mainImage"
             src="img/image.jpg"
             alt="Explorer Vintage"
             class="w-full h-auto max-h-[300px] sm:max-h-[400px] md:max-h-[500px] rounded shadow-md object-cover"
@@ -223,27 +243,27 @@
           >
             <img
               src="img/image.jpg"
-              class="rounded object-cover w-full h-48"
+              class="thumb rounded object-cover w-full h-32 cursor-pointer"
               alt=""
             />
             <img
               src="img/image-1.jpg"
-              class="rounded object-cover w-full h-48"
+              class="thumb rounded object-cover w-full h-32 cursor-pointer"
               alt=""
             />
             <img
               src="img/image-2.jpg"
-              class="rounded object-cover w-full h-48"
+              class="thumb rounded object-cover w-full h-32 cursor-pointer"
               alt=""
             />
             <img
               src="img/image-3.jpg"
-              class="rounded object-cover w-full h-48"
+              class="thumb rounded object-cover w-full h-32 cursor-pointer"
               alt=""
             />
             <img
               src="img/image-4.jpg"
-              class="rounded object-cover w-full h-48"
+              class="thumb rounded object-cover w-full h-32 cursor-pointer"
               alt=""
             />
           </div>
@@ -380,6 +400,7 @@
           <!-- Main image -->
           <div class="relative w-full h-64 md:h-auto">
             <img
+              id="mainImage2"
               src="img/Information Center/Information Center- (1).png"
               alt="Flaming Cliffs Info Center"
               class="w-full h-full rounded shadow-md object-cover"
@@ -391,27 +412,27 @@
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
           <img
             src="img/Information Center/Information Center- (1).png"
-            class="rounded shadow w-full h-auto object-cover"
+            class="thumb2 rounded object-cover w-full h-32 cursor-pointer"
             alt="Image 1"
           />
           <img
             src="img/Information Center/Information Center- (3).png"
-            class="rounded shadow w-full h-auto object-cover"
+            class="thumb2 rounded object-cover w-full h-32 cursor-pointer"
             alt="Image 2"
           />
           <img
             src="img/Information Center/Information Center- (4).png"
-            class="rounded shadow w-full h-auto object-cover"
+            class="thumb2 rounded object-cover w-full h-32 cursor-pointer"
             alt="Image 3"
           />
           <img
             src="img/Information Center/Information Center- (7).png"
-            class="rounded shadow w-full h-auto object-cover"
+            class="thumb2 rounded object-cover w-full h-32 cursor-pointer"
             alt="Image 4"
           />
           <img
             src="img/Information Center/Information Center- (9).png"
-            class="rounded shadow w-full h-auto object-cover"
+            class="thumb2 rounded object-cover w-full h-32 cursor-pointer"
             alt="Image 5"
           />
         </div>
@@ -1837,6 +1858,42 @@
       document.getElementById("menu-toggle").addEventListener("click", () => {
         const menu = document.getElementById("mobile-menu");
         menu.classList.toggle("hidden");
+      });
+
+      const mainImage = document.getElementById("mainImage");
+      const thumbs = document.querySelectorAll(".thumb");
+
+      thumbs.forEach((img) => {
+        img.addEventListener("click", () => {
+          // Fade out
+          mainImage.classList.remove("show");
+          mainImage.classList.add("fade");
+
+          // 0.4s дараа зургыг сольж fade-in хийх
+          setTimeout(() => {
+            mainImage.src = img.src;
+            mainImage.classList.remove("fade");
+            mainImage.classList.add("show");
+          }, 400);
+        });
+      });
+
+      const mainImage2 = document.getElementById("mainImage2");
+      const thumbs2 = document.querySelectorAll(".thumb2");
+
+      thumbs2.forEach((img) => {
+        img.addEventListener("click", () => {
+          // Fade out
+          mainImage2.classList.remove("show");
+          mainImage2.classList.add("fade");
+
+          // 0.4s дараа зургыг сольж fade-in хийх
+          setTimeout(() => {
+            mainImage2.src = img.src;
+            mainImage2.classList.remove("fade");
+            mainImage2.classList.add("show");
+          }, 400);
+        });
       });
     </script>
   </body>
