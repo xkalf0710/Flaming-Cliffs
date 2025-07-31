@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Learn Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script
       src="https://kit.fontawesome.com/a076d05399.js"
@@ -20,25 +21,23 @@
       class="bg-gradient-to-b from-[#2c1c12] to-[#000000] text-white shadow-md border-b border-black"
     >
       <div
-        class="w-full flex items-center justify-between px-[247px] py-[18px]"
-        style="height: 92px"
+        class="flex items-center justify-between px-4 sm:px-10 md:px-20 lg:px-40 py-4"
       >
         <!-- Logo & Title -->
-        <a
-          href="index.html"
-          class="flex flex-row items-center gap-[10px] w-[215px] h-[57px]"
-        >
+        <a href="index.html" class="flex flex-row items-center gap-2">
           <img
             src="img/baynzag logo.png"
             alt="Flaming Cliffs Logo"
-            class="h-12 w-auto"
+            class="h-10 w-auto"
           />
-          <span class="text-xl font-bold text-white">Flaming Cliffs</span>
+          <span class="text-lg font-bold text-white">Flaming Cliffs</span>
         </a>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex gap-12 text-sm font-semibold text-white">
-          <a href="#home" class="hover:text-yellow-500">HOME</a>
+        <!-- Desktop/Tablet Navigation -->
+        <nav
+          class="hidden md:flex gap-4 lg:gap-8 text-sm font-semibold text-white"
+        >
+          <a href="index.html" class="hover:text-yellow-500">HOME</a>
           <a href="about.html" class="hover:text-yellow-500">ABOUT</a>
           <a href="learn_detail.html" class="hover:text-yellow-500"
             >FOSSILS & DISCOVERIES</a
@@ -85,6 +84,27 @@
           </button>
         </div>
       </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2">
+        <a href="index.html" class="block hover:text-yellow-500">HOME</a>
+        <a href="about.html" class="block hover:text-yellow-500">ABOUT</a>
+        <a href="learn_detail.html" class="block hover:text-yellow-500"
+          >FOSSILS & DISCOVERIES</a
+        >
+        <a href="status.html" class="block hover:text-yellow-500"
+          >LIVE STATS FROM VISITORS</a
+        >
+        <a href="#" class="block hover:text-yellow-500">PRESERVATION</a>
+        <a href="#gallery" class="block hover:text-yellow-500">GALLERY</a>
+        <a href="#contact" class="block hover:text-yellow-500">CONTACT</a>
+        <a href="login.html" class="block hover:text-yellow-500">LOGIN</a>
+        <select
+          class="bg-[#2c2c2c] border border-gray-600 text-white text-sm px-2 py-1 rounded w-full mt-2"
+        >
+          <option value="en">EN</option>
+          <option value="mn">MN</option>
+        </select>
+      </div>
     </header>
 
     <div id="home" class="w-full">
@@ -93,36 +113,38 @@
         <img
           src="img/Learn more detail Top dektop.jpg"
           alt="Flaming Cliffs"
-          class="object-cover z-0 hidden lg:block w-full"
+          class="object-cover z-0 w-full h-64 md:h-auto"
         />
         <img
           src="img/divider.png"
           alt="Upper Divider"
           class="absolute left-0 bottom-0 w-full pointer-events-none z-10"
         />
-        <h1
-          class="text-[64px] absolute top-1/2 left-[20%] -translate-y-1/2 text-white font-semibold leading-[100%] tracking-[0] font-['SF_Pro_Display']"
+        <div
+          class="absolute top-1/2 left-1/2 md:left-1/4 transform -translate-y-1/2 text-white text-center md:text-left px-4"
         >
-          <span class="block">Flaming Cliffs:</span>
-          <span class="block">A Journey Through Time</span>
-        </h1>
+          <h1
+            class="text-4xl md:text-6xl font-semibold leading-tight tracking-tight"
+          >
+            <span class="block">Flaming Cliffs:</span>
+            <span class="block">A Journey Through Time</span>
+          </h1>
+        </div>
       </div>
     </div>
 
     <div class="mt-20">
-      <div class="max-w-6xl mx-auto py-6">
-        <div class="text-white py-6">
+      <div class="max-w-6xl mx-auto py-6 px-4">
+        <div class="text-black py-6">
           <!-- Section Header -->
-          <div class="flex items-center space-x-6">
+          <div class="flex items-center space-x-4">
             <!-- Number -->
             <div
-              class="bg-[#6C3B1F] w-[82px] h-[87px] px-[21px] py-[21px] text-3xl text-[60px] leading-[32px] font-extrabold flex items-center justify-center"
+              class="bg-[#6C3B1F] w-20 h-20 text-3xl text-white font-extrabold flex items-center justify-center"
             >
               01
             </div>
-            <div
-              class="text-[#6C3B1F] font-[Inter] font-bold text-[40px] leading-[32px] tracking-normal text-justify capitalize"
-            >
+            <div class="text-[#6C3B1F] font-bold text-3xl md:text-4xl">
               The Prelude
             </div>
           </div>
@@ -131,29 +153,21 @@
           <div class="border-b-4 border-[#6C3B1F] mt-0 w-full"></div>
 
           <!-- Subtitle -->
-          <div
-            class="text-[#6C3B1F] font-[Inter] font-medium text-[28px] leading-[32px] tracking-normal text-justify capitalize mt-2"
-          >
+          <div class="text-[#6C3B1F] font-medium text-2xl md:text-3xl mt-4">
             Mongolia Before The Discovery
           </div>
-          &nbsp;
 
-          <p
-            class="text-[#000000] font-[SF Pro Display] text-[18px] leading-[32px] tracking-normal text-justify"
-          >
+          <p class="text-lg leading-relaxed text-justify mt-4">
             Long before its rise to fame, the Flaming Cliffs—known locally as
             Bayanzag—were merely a remote area within Mongolia’s Gobi Desert.
-            Named <span class="font-bold text-[#000000]">“Bayanzag”</span> by
-            locals for its abundance of
-            <span class="font-bold text-[#000000]">saxaul trees</span> ("bayan"
+            Named <span class="font-bold">“Bayanzag”</span> by locals for its
+            abundance of <span class="font-bold">saxaul trees</span> ("bayan"
             meaning rich and "zag" meaning saxaul), the region was known
             primarily to local herders, who often stumbled upon unusual bones
             and stones, unaware of their scientific significance.
           </p>
 
-          <p
-            class="text-[#000000] font-[SF Pro Display] text-[18px] leading-[32px] tracking-normal text-justify mt-4"
-          >
+          <p class="text-lg leading-relaxed text-justify mt-4">
             Mongolia in the early 20th century was largely unexplored by Western
             science, a vast territory of myth, legend, and mystery. Tales
             circulated about hidden treasures beneath the Gobi sands—stories
@@ -165,32 +179,25 @@
     </div>
 
     <div class="mt-10">
-      <div class="max-w-6xl mx-auto py-6">
+      <div class="max-w-6xl mx-auto py-6 px-4">
         <div class="flex flex-col lg:flex-row items-start gap-10 bg-white py-6">
           <!-- Left Side: Text -->
           <div class="flex-1">
             <div class="flex items-center space-x-4">
               <div
-                class="bg-[#6C3B1F] w-[82px] h-[87px] px-[21px] py-[21px] text-3xl text-[60px] leading-[32px] text-white font-extrabold flex items-center justify-center"
+                class="bg-[#6C3B1F] w-20 h-20 text-3xl text-white font-extrabold flex items-center justify-center"
               >
                 02
               </div>
-              <div
-                class="text-[#6C3B1F] font-[Inter] font-bold text-[40px] leading-[32px] tracking-normal text-justify capitalize"
-              >
+              <div class="text-[#6C3B1F] font-bold text-3xl md:text-4xl">
                 Roy Chapman Andrews
               </div>
             </div>
             <div class="border-b-4 border-[#6C3B1F] mt-0 w-full"></div>
-            <div
-              class="text-[#6C3B1F] font-[Inter] font-medium text-[28px] leading-[32px] tracking-normal text-justify capitalize mt-2"
-            >
+            <div class="text-[#6C3B1F] font-medium text-2xl md:text-3xl mt-4">
               The Man Behind The Legend
             </div>
-            &nbsp;
-            <p
-              class="text-[#000000] font-[SF Pro Display] text-[18px] leading-[32px] tracking-normal text-justify"
-            >
+            <p class="text-lg leading-relaxed text-justify mt-4">
               Roy Chapman Andrews, an American explorer and paleontologist
               working for the American Museum of Natural History, was driven by
               a profound curiosity about Earth's past. With the ambition of
@@ -199,9 +206,7 @@
               <strong>Central Asiatic Expeditions</strong> in 1921.
             </p>
 
-            <p
-              class="text-[#000000] font-[SF Pro Display] text-[18px] leading-[32px] tracking-normal text-justify mt-1"
-            >
+            <p class="text-lg leading-relaxed text-justify mt-4">
               His vision was bold: to cross vast, uncharted terrain with the
               latest technology of the time, including Ford Model-T motor
               vehicles—revolutionary for scientific expeditions—tents,
@@ -213,11 +218,11 @@
           </div>
 
           <!-- Right Side: Image -->
-          <div class="flex-1 mt-32 top-[-150px]">
+          <div class="flex-1 mt-8 lg:mt-0">
             <img
               src="img/image.jpg"
               alt="Roy Chapman Andrews"
-              class="w-[688px] h-[400px] top-[122px] left-[741px] object-cover"
+              class="w-full h-auto object-cover rounded-lg shadow-lg"
             />
           </div>
         </div>
@@ -225,13 +230,14 @@
     </div>
 
     <div class="mt-8">
-      <div class="max-w-6xl mx-auto py-6">
-        <div class="flex items-center justify-between w-full bg-[#ffffff] py-6">
+      <div class="max-w-6xl mx-auto py-6 px-4">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between w-full bg-white py-6 gap-10"
+        >
           <!-- Left: Image Section -->
-          <div class="relative aspect-[16/9]">
+          <div class="relative w-full lg:w-1/2">
             <iframe
-              width="500"
-              height="386"
+              class="w-full h-64 md:h-96"
               src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=0Zmj7nqP4PEzcDM_"
               title="YouTube video player"
               frameborder="0"
@@ -242,69 +248,44 @@
           </div>
 
           <!-- Right: Text Section -->
-          <div class="max-w-6xl mx-auto py-6">
-            <div class="text-center relative top-[-150px]">
+          <div class="w-full lg:w-1/2">
+            <div class="text-center lg:text-left">
               <!-- Title and Number Badge -->
-              <div class="flex justify-center items-start relative">
-                <h1
-                  class="font-bold text-[40px] leading-[32px] text-right capitalize text-[#5e3617] mr-2 font-['Inter']"
-                >
+              <div class="flex items-center justify-center lg:justify-start">
+                <h1 class="font-bold text-2xl md:text-4xl text-[#5e3617]">
                   Central Asiatic Expeditions
                 </h1>
 
                 <div
-                  class="absolute left-[530px] bg-[#6F3F18] text-white text-[60px] leading-[32px] font-normal w-[82px] h-[87px] pt-[21px] pr-[16px] pb-[21px] pl-[10px] flex items-center justify-center rounded font-['Anton_SC']"
+                  class="bg-[#6F3F18] text-white text-4xl w-20 h-20 flex items-center justify-center ml-4"
                 >
                   03
-                </div>
-
-                <div
-                  class="absolute"
-                  style="
-                    width: 600px;
-                    height: 192px;
-                    top: 134px;
-                    left: 15px;
-                    opacity: 1;
-                  "
-                >
-                  <p
-                    class="text-justify font-normal"
-                    style="
-                      font-family: 'SF Pro Display';
-                      font-size: 18px;
-                      line-height: 32px;
-
-                      letter-spacing: 0;
-                    "
-                  >
-                    In July 1923, Andrews and his team made their most
-                    groundbreaking discovery at the Flaming Cliffs: fossilized
-                    dinosaur eggs, the first ever found in human history. This
-                    find conclusively proved dinosaurs reproduced through
-                    egg-laying, dramatically transforming the scientific
-                    understanding of dinosaur biology. The discovery instantly
-                    elevated the Flaming Cliffs to global prominence, making
-                    headlines worldwide.
-                  </p>
                 </div>
               </div>
 
               <!-- Horizontal Line with Year on Right -->
-              <div class="flex items-center justify-center mt-1">
-                <div class="border-t-[3px] border-[#5e3617] w-[380px]"></div>
-                <span
-                  class="font-normal italic text-[28px] leading-[32px] text-left capitalize text-[#5e3617] font-['Inter']"
-                >
+              <div
+                class="flex items-center justify-center lg:justify-start mt-4"
+              >
+                <div class="border-t-2 border-[#5e3617] flex-grow"></div>
+                <span class="font-normal italic text-2xl text-[#5e3617] ml-4">
                   (1922–1930)
                 </span>
               </div>
 
               <!-- Subtitle -->
-              <p
-                class="relative left-[250px] w-[317px] text-[#5e3617] font-medium text-[28px] leading-[28px] text-justify capitalize font-['Inter']"
-              >
+              <p class="text-[#5e3617] font-medium text-2xl left-10">
                 A Decade Of Discovery
+              </p>
+
+              <p class="text-justify text-lg leading-relaxed mt-4">
+                In July 1923, Andrews and his team made their most
+                groundbreaking discovery at the Flaming Cliffs: fossilized
+                dinosaur eggs, the first ever found in human history. This find
+                conclusively proved dinosaurs reproduced through egg-laying,
+                dramatically transforming the scientific understanding of
+                dinosaur biology. The discovery instantly elevated the Flaming
+                Cliffs to global prominence, making headlines worldwide.
               </p>
             </div>
           </div>
@@ -312,17 +293,19 @@
       </div>
     </div>
 
-    <div class="max-w-6xl mx-auto py-6 flex items-start justify-between mt-10">
+    <div
+      class="max-w-6xl mx-auto py-6 flex flex-col md:flex-row items-center justify-between mt-10 px-4"
+    >
       <!-- Left Text Content -->
       <div class="max-w-5xl">
         <h2
-          class="text-[#6C3B1F] text-[40px] font-bold leading-[36px] text-justify capitalize font-['Inter']"
+          class="text-[#6C3B1F] text-3xl md:text-4xl font-bold leading-tight text-justify capitalize"
         >
           Uncovering Iconic Species
         </h2>
-        <div class="h-[4px] w-full bg-[#5e3617] mb-2"></div>
+        <div class="h-1 w-full bg-[#5e3617] mb-2"></div>
         <p
-          class="text-[#6C3B1F] text-[25px] font-medium [36px] text-justify capitalize font-['Inter']"
+          class="text-[#6C3B1F] text-xl md:text-2xl font-medium leading-tight text-justify capitalize"
         >
           Beyond Eggs, The Flaming Cliffs Yielded Numerous Remarkable Fossils,
           Providing Invaluable Insights Into Prehistoric Life:
@@ -330,11 +313,11 @@
       </div>
 
       <!-- Right Image -->
-      <div class="absolute left-[65%] w-[20%] h-[20%] opacity-100">
+      <div class="w-1/2 md:w-1/5 mt-8 md:mt-0">
         <img
           src="img/learn more detail dino icon.png"
           alt="Cartoon Dinosaur"
-          class="w-full h-full object-contain transform scale-x-[-1]"
+          class="w-full h-auto object-contain transform scale-x-[-1]"
         />
       </div>
     </div>
@@ -346,28 +329,22 @@
         <!-- Card 1 -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden">
           <div class="p-5">
-            <h2
-              class="font-bold text-[18px] leading-[33.09px] text-justify font-['SF_Pro_Display']"
-            >
+            <h2 class="font-bold text-xl leading-tight">
               Velociraptor mongoliensis (1924)
             </h2>
 
-            <p
-              class="text-[18px] leading-[28.95px] text-justify text-black mt-2 font-['SF_Pro_Display']"
-            >
+            <p class="text-lg leading-relaxed text-justify text-black mt-2">
               First described by Henry Fairfield Osborn, the Velociraptor became
               famous through multiple significant finds at the Flaming Cliffs.
             </p>
 
             <img
               src="img/Velociraptor mongoliensis.jpg"
-              alt="Protoceratops"
-              class="w-full h-full object-cover rounded-tr-[52.56px]"
+              alt="Velociraptor mongoliensis"
+              class="w-full h- object-cover rounded-lg mt-4"
             />
 
-            <p
-              class="text-[18px] leading-[28.95px] text-justify text-black mt-2 font-['SF_Pro_Display']"
-            >
+            <p class="text-lg leading-relaxed text-justify text-black mt-4">
               This agile, intelligent predator was smaller than portrayed in
               popular culture—about the size of a turkey—but lethal, with
               razor-sharp claws. Its most notable fossil, the “Fighting
@@ -380,28 +357,22 @@
         <!-- Card 2 -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden">
           <div class="p-5">
-            <h2
-              class="font-bold text-[20px] leading-[33.09px] text-justify font-['SF_Pro_Display']"
-            >
+            <h2 class="font-bold text-xl leading-tight">
               Protoceratops andrewsi (1923)
             </h2>
 
-            <p
-              class="text-[18px] leading-[28.95px] text-justify text-black mt-2 font-['SF_Pro_Display']"
-            >
+            <p class="text-lg leading-relaxed text-justify text-black mt-2">
               Discovered by Andrews himself and named in his honor,
               Protoceratops became one of the most abundant fossils at Bayanzag.
             </p>
 
             <img
               src="img/Protoceratops andrewsi.jpg"
-              alt="Protoceratops"
-              class="w-full h-full object-cover rounded-tr-[52.56px]"
+              alt="Protoceratops andrewsi"
+              class="w-full h-full object-cover rounded-lg mt-4"
             />
 
-            <p
-              class="text-[18px] leading-[28.95px] text-justify text-black mt-2 font-['SF_Pro_Display']"
-            >
+            <p class="text-lg leading-relaxed text-justify text-black mt-4">
               These small, frilled, hornless ceratopsians were herbivorous
               dinosaurs that moved in herds, evidence indicated by fossilized
               nests and eggs. Their remains provided unprecedented details about
@@ -413,15 +384,11 @@
         <!-- Card 3 -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden">
           <div class="p-5">
-            <h2
-              class="font-bold text-[20px] leading-[33.09px] text-justify font-['SF_Pro_Display']"
-            >
+            <h2 class="font-bold text-xl leading-tight">
               Oviraptor philoceratops (1924)
             </h2>
 
-            <p
-              class="text-[18px] leading-[28.95px] text-justify text-black mt-2 font-['SF_Pro_Display']"
-            >
+            <p class="text-lg leading-relaxed text-justify text-black mt-2">
               Initially misunderstood as an “egg thief” due to fossils found
               near nests, later research revealed that Oviraptor was actually
               protecting its own eggs.
@@ -429,12 +396,10 @@
 
             <img
               src="img/Oviraptor philoceratops.jpg"
-              alt="Protoceratops"
-              class="w-full h-full object-cover rounded-tr-[52.56px]"
+              alt="Oviraptor philoceratops"
+              class="w-full h-full object-cover rounded-lg mt-4"
             />
-            <p
-              class="text-[18px] leading-[28.95px] text-justify text-black mt-2 font-['SF_Pro_Display']"
-            >
+            <p class="text-lg leading-relaxed text-justify text-black mt-4">
               These finds at the Flaming Cliffs significantly corrected
               paleontological misconceptions, offering a remarkable glimpse into
               dinosaur parental behaviors.
@@ -444,11 +409,11 @@
       </div>
     </div>
 
-    <div class="max-w-6xl mx-auto py-6 mt-10">
+    <div class="max-w-6xl mx-auto py-6 mt-10 px-4">
       <!-- Title and Line -->
       <div class="flex items-center">
         <h2
-          class="text-[40px] leading-[32px] font-bold text-[#5e3617] capitalize text-right font-['Inter']"
+          class="text-3xl md:text-4xl font-bold text-[#5e3617] capitalize text-right"
         >
           Scientific Legacy And Global Impact
         </h2>
@@ -457,10 +422,7 @@
       </div>
 
       <!-- Paragraph -->
-      &nbsp;
-      <p
-        class="text-[18px] leading-[32px] text-justify text-black font-['SF_Pro_Display']"
-      >
+      <p class="text-lg leading-relaxed text-justify text-black mt-4">
         Andrews' discoveries at the Flaming Cliffs transformed Mongolia into a
         paleontological epicenter. They sparked worldwide interest in
         paleontology, inspired future generations of scientists, and cemented
@@ -468,38 +430,31 @@
       </p>
     </div>
 
-    <div class="max-w-6xl mx-auto py-6 mt-10">
+    <div class="max-w-6xl mx-auto py-6 mt-10 px-4">
       <!-- Title Row -->
       <div class="flex items-center space-x-4">
         <!-- Number Badge -->
         <div
-          class="bg-[#5e3617] text-white text-[60px] leading-[32px] font-bold w-[82px] h-[87px] px-[16px] py-[21px] flex items-center justify-center"
+          class="bg-[#5e3617] text-white text-4xl w-20 h-20 font-bold flex items-center justify-center"
         >
           04
         </div>
 
         <!-- Title -->
-        <h1
-          class="font-['Inter'] font-bold text-[40px] leading-[32px] tracking-normal text-justify capitalize text-[#5e3617]"
-        >
+        <h1 class="font-bold text-3xl md:text-4xl text-[#5e3617]">
           Flaming Cliffs Today
         </h1>
       </div>
 
       <!-- Brown Line -->
-      <div class="relative -top-1 h-[4px] bg-[#5e3617]"></div>
+      <div class="h-1 bg-[#5e3617] mt-2"></div>
 
       <!-- Subtitle -->
-      <p
-        class="font-['Inter'] font-medium text-[28px] leading-[32px] tracking-normal text-justify capitalize text-[#5e3617]"
-      >
+      <p class="font-medium text-2xl md:text-3xl text-[#5e3617] mt-4">
         Walking In History
       </p>
-      &nbsp;
 
-      <p
-        class="font-['SF_Pro_Display'] text-[18px] leading-[32px] tracking-normal text-justify text-[#000000]"
-      >
+      <p class="text-lg leading-relaxed text-justify text-black mt-4">
         Today, Bayanzag remains an active research site attracting
         paleontologists worldwide. Each year, new findings continue to enhance
         our understanding of Earth's ancient past. Visitors can explore these
@@ -520,14 +475,13 @@
       />
 
       <section
-        class="w-full h-[70vh] bg-cover bg-center flex items-center justify-center"
+        class="w-full h-[50vh] md:h-[70vh] bg-cover bg-center flex items-center justify-center"
         style="
-          background-image: url('img/photo\ &\ video\ gallery\ top\ desktop.jpg');
+          background-image: url('img/photo & video gallery top desktop.jpg');
         "
       >
         <h1
-          class="text-white text-[60px] leading-[66px] font-bold text-center uppercase tracking-[0.21em]"
-          style="font-family: 'Inter', sans-serif"
+          class="text-white text-4xl md:text-6xl leading-tight font-bold text-center uppercase tracking-widest"
         >
           PHOTO & VIDEO <br />GALLERY
         </h1>
@@ -539,12 +493,10 @@
       />
     </div>
 
-    <div class="mt-32">
+    <div class="mt-20 md:mt-32">
       <div id="gallery" class="max-w-6xl mx-auto px-4 py-6 text-center">
         <!-- Intro Text -->
-        <p
-          class="font-[Inter] text-[18px] leading-[26px] text-center text-black mb-10"
-        >
+        <p class="text-lg leading-relaxed text-center text-black mb-10">
           The Flaming Cliffs are more than just a historical site—they're a
           visual wonder. Explore our gallery to uncover the unique aspects of
           this iconic location. From breathtaking drone footage and serene
@@ -556,7 +508,7 @@
         <!-- Photos Section -->
         <div class="text-left mb-6">
           <h2
-            class="text-[25px] leading-[32px] font-semibold text-black text-left capitalize mb-4"
+            class="text-2xl font-semibold text-black text-left capitalize mb-4"
           >
             Photos
           </h2>
@@ -564,15 +516,14 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <!-- Flaming Cliffs -->
             <a href="photo_gallery.html">
-              <div class="relative aspect-[16/9]">
+              <div class="relative aspect-video">
                 <img
                   src="img/Photo & video gallery/Flaming Cliffs Thumb.jpg"
                   alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-451 h-253"
+                  class="rounded-md object-cover w-full h-full"
                 />
                 <div
-                  class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-[18px] leading-[100%] font-semibold px-3 py-2"
-                  style="font-family: 'SF Pro Display', sans-serif"
+                  class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-lg font-semibold px-4 py-2"
                 >
                   Flaming Cliffs
                 </div>
@@ -580,15 +531,14 @@
             </a>
             <!-- Camel Caravan -->
             <a href="photo_gallery.html">
-              <div class="relative aspect-[16/9]">
+              <div class="relative aspect-video">
                 <img
                   src="img/Photo & video gallery/Camel Caravan Thumb.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-451 h-253"
+                  alt="Camel Caravan"
+                  class="rounded-md object-cover w-full h-full"
                 />
                 <div
-                  class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-[18px] leading-[100%] font-semibold px-3 py-2"
-                  style="font-family: 'SF Pro Display', sans-serif"
+                  class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-lg font-semibold px-4 py-2"
                 >
                   Camel Caravan
                 </div>
@@ -596,15 +546,14 @@
             </a>
             <!-- Souvenir Shop -->
             <a href="photo_gallery.html">
-              <div class="relative aspect-[16/9]">
+              <div class="relative aspect-video">
                 <img
                   src="img/Photo & video gallery/Souviner shop thumb.jpg"
-                  alt="Flaming Cliffs"
-                  class="rounded-md object-cover w-451 h-253"
+                  alt="Souvenir shop"
+                  class="rounded-md object-cover w-full h-full"
                 />
                 <div
-                  class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-[18px] leading-[100%] font-semibold px-3 py-2"
-                  style="font-family: 'SF Pro Display', sans-serif"
+                  class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-lg font-semibold px-4 py-2"
                 >
                   Souvenir shop
                 </div>
@@ -616,18 +565,15 @@
         <!-- Videos Section -->
         <div class="text-left mt-6">
           <h2
-            class="text-[25px] leading-[32px] font-semibold text-black text-left capitalize mb-4"
+            class="text-2xl font-semibold text-black text-left capitalize mb-4"
           >
             Videos
           </h2>
-          <div
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[15px]"
-          >
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <!-- Video 1 -->
-            <div class="relative aspect-[16/9]">
+            <div class="relative aspect-video">
               <iframe
-                width="350"
-                height="252"
+                class="w-full h-full"
                 src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=0Zmj7nqP4PEzcDM_"
                 title="YouTube video player"
                 frameborder="0"
@@ -635,19 +581,12 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
-              <!-- <div
-                class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-[18px] leading-[100%] font-semibold px-3 py-2"
-                style="font-family: 'SF Pro Display', sans-serif"
-              >
-                Souvenir shop
-              </div> -->
             </div>
 
             <!-- Video 2 -->
-            <div class="relative aspect-[16/9]">
+            <div class="relative aspect-video">
               <iframe
-                width="350"
-                height="252"
+                class="w-full h-full"
                 src="https://www.youtube.com/embed/LQ9jJ-l_ryE?si=QNf_V2vdaFS5NVGN"
                 title="YouTube video player"
                 frameborder="0"
@@ -657,10 +596,9 @@
               ></iframe>
             </div>
             <!-- Video 3 -->
-            <div class="relative aspect-[16/9]">
+            <div class="relative aspect-video">
               <iframe
-                width="350"
-                height="252"
+                class="w-full h-full"
                 src="https://www.youtube.com/embed/LWYDZuAbYGk?si=c1agOLf72Ms7EIoH"
                 title="YouTube video player"
                 frameborder="0"
@@ -668,34 +606,24 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
-              <!-- <div
-                class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-[18px] leading-[100%] font-semibold px-3 py-2"
-                style="font-family: 'SF Pro Display', sans-serif"
-              >
-                Bayanzag
-              </div> -->
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <section id="contact" class="max-w-6xl mx-auto py-6">
+    <section id="contact" class="max-w-6xl mx-auto py-6 px-4">
       <!-- Header -->
       <div class="flex items-center mb-4">
-        <h2
-          class="text-[40px] font-bold leading-[32px] tracking-normal text-justify capitalize text-[#5D3A1A] mr-4"
-        >
+        <h2 class="text-3xl md:text-4xl font-bold text-[#5D3A1A] mr-4">
           Contact Us & FAQs
         </h2>
 
-        <div class="flex-grow h-[3px] bg-[#6C3B1F]"></div>
+        <div class="flex-grow h-1 bg-[#6C3B1F]"></div>
       </div>
 
       <!-- Paragraph -->
-      <p
-        class="text-[18px] font-normal leading-[26px] tracking-normal text-black font-['Inter']"
-      >
+      <p class="text-lg leading-relaxed text-black">
         The Flaming Cliffs administration team is here to assist you in every
         way possible. Whether you have questions about your visit or require
         further guidance, don’t hesitate to reach out. Our dedicated nature
@@ -704,58 +632,43 @@
       </p>
     </section>
 
-    <div class="flex justify-center items-center gap-[4%] w-full mx-auto py-6">
+    <div
+      class="flex flex-wrap justify-center items-center gap-8 w-full mx-auto py-6 px-4"
+    >
       <!-- Phone -->
       <div class="flex flex-col items-center text-center">
-        <img src="img/phone number icon.png" class="w-[71px] h-[70px] mb-1" />
-        <p
-          class="text-base font-semibold text-black leading-[30px] text-center font-['SF_Pro_Display']"
-        >
-          Phone Number
-        </p>
-        <p class="text-base font-medium text-black mt-1">+976 8944 1212</p>
+        <img src="img/phone number icon.png" class="w-16 h-16 mb-2" />
+        <p class="text-lg font-semibold text-black">Phone Number</p>
+        <p class="text-lg font-medium text-black mt-1">+976 8944 1212</p>
       </div>
 
       <!-- Email -->
       <div class="flex flex-col items-center text-center">
-        <img src="img/Email icon.png" class="w-[71px] h-[70px] mb-1" />
-        <p
-          class="text-base font-semibold text-black leading-[30px] text-center font-['SF_Pro_Display']"
-        >
-          Email Address
-        </p>
-        <p class="text-base font-medium text-black mt-1">
-          info@flamingcliffs.mn
-        </p>
+        <img src="img/Email icon.png" class="w-16 h-16 mb-2" />
+        <p class="text-lg font-semibold text-black">Email Address</p>
+        <p class="text-lg font-medium text-black mt-1">info@flamingcliffs.mn</p>
       </div>
 
       <!-- Facebook -->
       <div class="flex flex-col items-center text-center">
-        <img src="img/facebook icon.png" class="w-[71px] h-[70px] mb-1" />
-        <p
-          class="text-base font-semibold text-black leading-[30px] text-center font-['SF_Pro_Display']"
-        >
-          Facebook
-        </p>
-        <p class="text-base font-medium text-black mt-1">
-          Баянзагийн Хамгаалалтын Захиргаа <br />Flaming Cliffs Administration
+        <img src="img/facebook icon.png" class="w-16 h-16 mb-2" />
+        <p class="text-lg font-semibold text-black">Facebook</p>
+        <p class="text-lg font-medium text-black mt-1">
+          Баянзагийн Хамгаалалтын Захиргаа <br />
+          Flaming Cliffs Administration
         </p>
       </div>
 
       <!-- Instagram -->
       <div class="flex flex-col items-center text-center">
-        <img src="img/Insta icon.png" class="w-[71px] h-[70px] mb-1" />
-        <p
-          class="text-base font-semibold text-black leading-[30px] text-center font-['SF_Pro_Display']"
-        >
-          Instagram
-        </p>
+        <img src="img/Insta icon.png" class="w-16 h-16 mb-2" />
+        <p class="text-lg font-semibold text-black">Instagram</p>
 
-        <p class="text-base font-medium text-black mt-1">Flaming_Cliffs</p>
+        <p class="text-lg font-medium text-black mt-1">Flaming_Cliffs</p>
       </div>
     </div>
 
-    <div class="max-w-6xl mx-auto my-10">
+    <div class="max-w-6xl mx-auto my-10 px-4">
       <h2 class="text-2xl font-semibold mb-6 border-b-2 border-black pb-2">
         Frequently asked questions
       </h2>
@@ -764,7 +677,7 @@
         <!-- Example Question -->
         <div class="pb-3">
           <button
-            class="faq-question w-full text-left flex items-center justify-between text-black font-['SF_Pro_Display'] text-[18px] leading-[100%] tracking-normal"
+            class="faq-question w-full text-left flex items-center justify-between text-black text-lg"
           >
             1. When is the best time to visit?
             <img
@@ -772,16 +685,14 @@
               class="w-4 h-4 transition-transform duration-200 rotate-180"
             />
           </button>
-          <p
-            class="faq-answer text-black mt-2 pl-4 text-[18px] leading-[100%] tracking-normal hidden font-['SF_Pro_Display']"
-          >
+          <p class="faq-answer text-black mt-2 pl-4 text-lg hidden">
             May to October, during mild weather and accessible road conditions.
           </p>
         </div>
 
         <div class="pb-3">
           <button
-            class="faq-question w-full text-left flex items-center justify-between text-black font-['SF_Pro_Display'] text-[18px] leading-[100%] tracking-normal"
+            class="faq-question w-full text-left flex items-center justify-between text-black text-lg"
           >
             2. Can I collect fossils?
             <img
@@ -789,9 +700,7 @@
               class="w-4 h-4 transition-transform duration-200"
             />
           </button>
-          <p
-            class="faq-answer text-black mt-2 pl-4 text-[18px] leading-[100%] font-['SF_Pro_Display'] tracking-normal hidden"
-          >
+          <p class="faq-answer text-black mt-2 pl-4 text-lg hidden">
             No, fossil collection is prohibited to ensure preservation for
             future generations.
           </p>
@@ -799,7 +708,7 @@
 
         <div class="pb-3">
           <button
-            class="faq-question w-full text-left flex items-center justify-between text-black text-[18px] leading-[100%] tracking-normal font-['SF_Pro_Display']"
+            class="faq-question w-full text-left flex items-center justify-between text-black text-lg"
           >
             3. Are there nearby accommodations?
             <img
@@ -807,9 +716,7 @@
               class="w-4 h-4 transition-transform duration-200"
             />
           </button>
-          <p
-            class="faq-answer text-black mt-2 pl-4 text-[18px] leading-[100%] font-['SF_Pro_Display'] tracking-normal hidden"
-          >
+          <p class="faq-answer text-black mt-2 pl-4 text-lg hidden">
             Yes, options include traditional ger camps and modern hotels in
             Dalanzadgad.
           </p>
@@ -817,7 +724,7 @@
 
         <div class="pb-3">
           <button
-            class="faq-question w-full text-left flex items-center justify-between text-black font-['SF_Pro_Display'] text-[18px] leading-[100%] tracking-normal"
+            class="faq-question w-full text-left flex items-center justify-between text-black text-lg"
           >
             4. What transportation options are available?
             <img
@@ -825,9 +732,7 @@
               class="w-4 h-4 transition-transform duration-200"
             />
           </button>
-          <p
-            class="faq-answer text-black mt-2 pl-4 text-[18px] leading-[100%] font-['SF_Pro_Display'] tracking-normal hidden"
-          >
+          <p class="faq-answer text-black mt-2 pl-4 text-lg hidden">
             Self-drive, guided tours, and flights to Dalanzadgad followed by a
             drive.
           </p>
@@ -835,7 +740,7 @@
 
         <div class="pb-3">
           <button
-            class="faq-question w-full text-left flex items-center justify-between text-black font-['SF_Pro_Display'] text-[18px] leading-[100%] tracking-normal"
+            class="faq-question w-full text-left flex items-center justify-between text-black text-lg"
           >
             5. What should I bring for my visit?
             <img
@@ -843,17 +748,15 @@
               class="w-4 h-4 transition-transform duration-200"
             />
           </button>
-          <p
-            class="faq-answer text-black mt-2 pl-4 text-[18px] leading-[100%] font-['SF_Pro_Display'] tracking-normal hidden"
-          >
-            Sturby shoes, sun protection, plehty of water, and sense of
+          <p class="faq-answer text-black mt-2 pl-4 text-lg hidden">
+            Sturdy shoes, sun protection, plenty of water, and a sense of
             adventure.
           </p>
         </div>
 
         <div class="pb-3">
           <button
-            class="faq-question w-full text-left flex items-center justify-between text-black font-['SF_Pro_Display'] text-[18px] leading-[100%] tracking-normal"
+            class="faq-question w-full text-left flex items-center justify-between text-black text-lg"
           >
             6. Is there food available at the Flaming Cliffs?
             <img
@@ -861,17 +764,15 @@
               class="w-4 h-4 transition-transform duration-200"
             />
           </button>
-          <p
-            class="faq-answer text-black mt-2 pl-4 text-[18px] leading-[100%] font-['SF_Pro_Display'] tracking-normal hidden"
-          >
-            Yes, the Information Center offers a dinning area with local and
+          <p class="faq-answer text-black mt-2 pl-4 text-lg hidden">
+            Yes, the Information Center offers a dining area with local and
             international cuisine.
           </p>
         </div>
 
         <div class="pb-3">
           <button
-            class="faq-question w-full text-left flex items-center justify-between text-black font-['SF_Pro_Display'] text-[18px] leading-[100%] tracking-normal"
+            class="faq-question w-full text-left flex items-center justify-between text-black text-lg"
           >
             7. How does my visit support the site?
             <img
@@ -880,9 +781,7 @@
             />
           </button>
 
-          <p
-            class="faq-answer text-black mt-2 pl-4 text-[18px] leading-[100%] font-['SF_Pro_Display'] tracking-normal hidden"
-          >
+          <p class="faq-answer text-black mt-2 pl-4 text-lg hidden">
             Entry fees fund conservation, research, and local community
             initiatives. [Links to Facebook and Instagram].
           </p>
@@ -891,21 +790,20 @@
     </div>
 
     <div class="bg-[#1a130f] py-4">
-      <div class="flex items-center gap-4 max-w-6xl mx-auto py-6">
+      <div class="flex items-center gap-4 max-w-6xl mx-auto py-6 px-4">
         <!-- Icon -->
         <img
           src="img/baynzag logo.png"
           alt="Flaming Cliffs Icon"
-          class="w-[101.23px] h-[96.87px] object-cover"
+          class="w-24 h-24 object-cover"
         />
 
         <!-- Text -->
         <div>
-          <h1 class="text-white text-[20px] leading-[22.44px] font-[Inter]">
+          <h1 class="text-white text-xl md:text-2xl">
             Flaming Cliffs ( Bayanzag )
           </h1>
-          &nbsp;
-          <p class="text-white text-[20px] leading-[22.44px] font-[Inter]">
+          <p class="text-white text-lg md:text-xl mt-2">
             Discover Mongolia's Legendary Dinosaur Site
           </p>
         </div>
@@ -916,138 +814,84 @@
     </div>
 
     <footer class="bg-[#1a130f] text-white py-10">
-      <div class="max-w-6xl mx-auto text-sm">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 divide-[#2d211c]">
+      <div class="max-w-6xl mx-auto text-sm px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
           <!-- Quick Links -->
           <div class="md:pr-6">
             <h3
-              class="text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
+              class="text-xl font-semibold mb-4 border-b border-[#2d211c] pb-2"
             >
               Quick links
             </h3>
             <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-gray-300">
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-              >
-                Home
-              </a>
+              <a href="#" class="hover:text-white"> Home </a>
 
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Nearby Destinations</a
-              >
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Gateway to Prehistory</a
-              >
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Accommodation</a
-              >
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Key fossils</a
-              >
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Gallery</a
-              >
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Information Center</a
-              >
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >FAQs</a
-              >
+              <a href="#" class="hover:text-white">Nearby Destinations</a>
+              <a href="#" class="hover:text-white">Gateway to Prehistory</a>
+              <a href="#" class="hover:text-white">Accommodation</a>
+              <a href="#" class="hover:text-white">Key fossils</a>
+              <a href="#" class="hover:text-white">Gallery</a>
+              <a href="#" class="hover:text-white">Information Center</a>
+              <a href="#" class="hover:text-white">FAQs</a>
 
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Getting There</a
-              >
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Language</a
-              >
+              <a href="#" class="hover:text-white">Getting There</a>
+              <a href="#" class="hover:text-white">Language</a>
             </div>
           </div>
 
           <!-- Visitor Information -->
-          <div class="md:pr-1">
+          <div>
             <h3
-              class="text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
+              class="text-xl font-semibold mb-4 border-b border-[#2d211c] pb-2"
             >
               Visitor Information
             </h3>
             <p class="text-gray-300 mb-3">
-              <span
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Entry Fees</span
-              ><br />
+              <span class="font-semibold">Entry Fees</span><br />
               Domestic - 3,000 MNT | International - 10,000 MNT
             </p>
             <p class="text-gray-300 mb-3">
-              <span
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Best Time to Visit:</span
-              >
+              <span class="font-semibold">Best Time to Visit:</span>
               May - October
             </p>
             <p class="text-gray-300">
-              <span
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Location</span
-              ><br />
+              <span class="font-semibold">Location</span><br />
               Bayanzag, Ömnögovi Province, Mongolia
             </p>
           </div>
 
           <!-- Contacts & Socials -->
-          <div class="md:pr-1">
+          <div>
             <h3
-              class="text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
+              class="text-xl font-semibold mb-4 border-b border-[#2d211c] pb-2"
             >
               Contacts Us
             </h3>
             <div class="flex items-center gap-3 mb-2 text-gray-300">
               <img
                 src="img/phone number icon.png"
-                class="w-4 h-4"
+                class="w-5 h-5"
                 alt="Phone"
               />
               +976 8944 1212
             </div>
             <div class="flex items-center gap-3 mb-4 text-gray-300">
-              <img src="img/Email icon.png" class="w-4 h-4" alt="Email" />
+              <img src="img/Email icon.png" class="w-5 h-5" alt="Email" />
               info@flamingcliffs.mn
             </div>
-            <h4
-              class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-            >
-              Follow Us
-            </h4>
-            <div class="flex gap-4">
+            <h4 class="font-semibold text-lg">Follow Us</h4>
+            <div class="flex gap-4 mt-2">
               <a href="#"
                 ><img
                   src="img/Facebook round.png"
                   alt="Facebook"
-                  class="w-6 h-6"
+                  class="w-8 h-8"
               /></a>
               <a href="#"
-                ><img src="img/Insta Round.png" alt="Instagram" class="w-6 h-6"
+                ><img src="img/Insta Round.png" alt="Instagram" class="w-8 h-8"
               /></a>
               <a href="#"
-                ><img src="img/Youtube round.png" alt="YouTube" class="w-6 h-6"
+                ><img src="img/Youtube round.png" alt="YouTube" class="w-8 h-8"
               /></a>
             </div>
           </div>
@@ -1058,39 +902,23 @@
     <footer class="bg-[#1a130f] text-white text-center py-6 text-sm">
       <div class="border-t border-[#3f3932] mt-2 max-w-6xl mx-auto py-6"></div>
 
-      <p
-        class="font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans']"
-      >
-        Preserving History, Supporting Communities
-      </p>
-      <p
-        class="font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans'] mt-1"
-      >
+      <p class="text-lg">Preserving History, Supporting Communities</p>
+      <p class="text-lg mt-2">
         Your visit directly contributes to preserving Mongolia’s heritage and
         empowering local communities.
       </p>
-      <p
-        class="font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans'] mt-1"
-      >
-        Plan Your Visit Today!
-      </p>
+      <p class="text-lg mt-2">Plan Your Visit Today!</p>
 
-      <p
-        class="font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans'] mt-4"
-      >
+      <p class="text-lg mt-4">
         © 2025 Flaming Cliffs Administration | All Rights Reserved
       </p>
 
-      <div class="mt-1 space-x-2">
-        <a
-          href="#"
-          class="text-[#f9a825] hover:underline font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans']"
+      <div class="mt-2 space-x-4">
+        <a href="#" class="text-[#f9a825] hover:underline text-lg"
           >Privacy Policy</a
         >
         <span class="text-gray-600">|</span>
-        <a
-          href="#"
-          class="text-[#f9a825] hover:underline font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans']"
+        <a href="#" class="text-[#f9a825] hover:underline text-lg"
           >Terms of Use</a
         >
       </div>

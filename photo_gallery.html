@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Flaming Cliffs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script
       src="https://kit.fontawesome.com/a076d05399.js"
@@ -26,25 +27,23 @@
       class="bg-gradient-to-b from-[#2c1c12] to-[#000000] text-white shadow-md border-b border-black"
     >
       <div
-        class="w-full flex items-center justify-between px-[247px] py-[18px]"
-        style="height: 92px"
+        class="flex items-center justify-between px-4 sm:px-10 md:px-20 lg:px-40 py-4"
       >
         <!-- Logo & Title -->
-        <a
-          href="index.html"
-          class="flex flex-row items-center gap-[10px] w-[215px] h-[57px]"
-        >
+        <a href="index.html" class="flex flex-row items-center gap-2">
           <img
             src="img/baynzag logo.png"
             alt="Flaming Cliffs Logo"
-            class="h-12 w-auto"
+            class="h-10 w-auto"
           />
-          <span class="text-xl font-bold text-white">Flaming Cliffs</span>
+          <span class="text-lg font-bold text-white">Flaming Cliffs</span>
         </a>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex gap-12 text-sm font-semibold text-white">
-          <a href="#home" class="hover:text-yellow-500">HOME</a>
+        <!-- Desktop/Tablet Navigation -->
+        <nav
+          class="hidden md:flex gap-4 lg:gap-8 text-sm font-semibold text-white"
+        >
+          <a href="index.html" class="hover:text-yellow-500">HOME</a>
           <a href="about.html" class="hover:text-yellow-500">ABOUT</a>
           <a href="learn_detail.html" class="hover:text-yellow-500"
             >FOSSILS & DISCOVERIES</a
@@ -91,6 +90,27 @@
           </button>
         </div>
       </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2">
+        <a href="index.html" class="block hover:text-yellow-500">HOME</a>
+        <a href="about.html" class="block hover:text-yellow-500">ABOUT</a>
+        <a href="learn_detail.html" class="block hover:text-yellow-500"
+          >FOSSILS & DISCOVERIES</a
+        >
+        <a href="status.html" class="block hover:text-yellow-500"
+          >LIVE STATS FROM VISITORS</a
+        >
+        <a href="#" class="block hover:text-yellow-500">PRESERVATION</a>
+        <a href="#gallery" class="block hover:text-yellow-500">GALLERY</a>
+        <a href="#contact" class="block hover:text-yellow-500">CONTACT</a>
+        <a href="login.html" class="block hover:text-yellow-500">LOGIN</a>
+        <select
+          class="bg-[#2c2c2c] border border-gray-600 text-white text-sm px-2 py-1 rounded w-full mt-2"
+        >
+          <option value="en">EN</option>
+          <option value="mn">MN</option>
+        </select>
+      </div>
     </header>
 
     <div id="home" class="w-full">
@@ -99,7 +119,7 @@
         <img
           src="img/photo & video gallery top desktop.jpg"
           alt="Flaming Cliffs"
-          class="object-cover z-0 hidden lg:block w-full"
+          class="object-cover z-0 w-full h-64 md:h-auto"
         />
         <img
           src="img/divider.png"
@@ -108,11 +128,10 @@
         />
 
         <div
-          class="absolute z-20 left-1/2 top-[60%] transform -translate-x-1/2 -translate-y-1/2 text-white space-y-6 max-w-6xl mx-auto py-6 text-center"
+          class="absolute z-20 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center"
         >
           <h1
-            class="text-white text-[60px] leading-[66px] font-semibold uppercase tracking-[0.21em]"
-            style="font-family: 'Inter', sans-serif"
+            class="text-4xl md:text-6xl font-semibold uppercase tracking-widest"
           >
             PHOTO & VIDEO <br />GALLERY
           </h1>
@@ -125,164 +144,150 @@
         <!-- Photos Section -->
         <div class="text-left mb-6">
           <h2
-            class="text-[25px] leading-[32px] font-semibold text-white text-left capitalize mb-4"
+            class="text-2xl md:text-3xl font-semibold text-white text-left capitalize mb-4"
           >
             Bayanzag
           </h2>
 
-          <div id="lightgallery" class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <!-- Flaming Cliffs -->
-
-            <a href="img/Zag/Zag-1.jpg" class="relative aspect-[16/9]">
+          <div
+            id="lightgallery"
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"
+          >
+            <!-- Images -->
+            <a href="img/Zag/Zag-1.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-1.jpg"
                 alt="Bayanzag image 1"
-                class="rounded-md object-cover w-full h-48"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <!-- Camel Caravan -->
-
-            <a href="img/Zag/Zag-2.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-2.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-2.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Bayanzag image 2"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Zag/Zag-3.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-3.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-3.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Bayanzag image 3"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-            <a href="img/Zag/Zag-4.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-4.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-4.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Bayanzag image 4"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-            <a href="img/Zag/Zag-5.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-5.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-5.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Bayanzag image 5"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Zag/Zag-6.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-6.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-6.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Bayanzag image 6"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Zag/Zag-7.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-7.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-7.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Bayanzag image 7"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Zag/Zag-8.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-8.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-8.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Bayanzag image 8"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Zag/Zag-9.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-9.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-9.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Bayanzag image 9"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Zag/Zag-10.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-10.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-10.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Bayanzag image 10"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Zag/Zag-11.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-11.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-11.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Bayanzag image 11"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Zag/Zag-12.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-12.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-12.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Bayanzag image 12"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Zag/Zag-13.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-13.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-13.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Bayanzag image 13"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Zag/Zag-14.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-14.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-14.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Bayanzag image 14"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Zag/Zag-15.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-15.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-15.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Bayanzag image 15"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Zag/Zag-16.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-16.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-16.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Bayanzag image 16"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Zag/Zag-17.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-17.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-17.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Bayanzag image 17"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
           </div>
@@ -295,101 +300,94 @@
         <!-- Photos Section -->
         <div class="text-left mb-6">
           <h2
-            class="text-[25px] leading-[32px] font-semibold text-white text-left capitalize mb-4"
+            class="text-2xl md:text-3xl font-semibold text-white text-left capitalize mb-4"
           >
-            Camel Caraven
+            Camel Caravan
           </h2>
 
-          <div id="lightgallery1" class="grid grid-cols-5 grid-rows-2 gap-6">
-            <!-- Flaming Cliffs -->
-
-            <a href="img/Camel Caravan-2.jpg" class="relative aspect-[16/9]">
+          <div
+            id="lightgallery1"
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
+          >
+            <!-- Images -->
+            <a href="img/Camel Caravan-2.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Camel Caravan-2.jpg"
-                alt="Zag1"
-                class="rounded-md object-cover w-full h-48"
+                alt="Camel Caravan image 1"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <!-- Camel Caravan -->
-
-            <a href="img/Zag/Zag-2.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-2.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-2.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Camel Caravan image 2"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Camel Caravan-16.jpg" class="relative aspect-[16/9]">
+            <a href="img/Camel Caravan-16.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Camel Caravan-16.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Camel Caravan image 3"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-            <a href="img/Zag/Zag-14.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-14.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-4.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Camel Caravan image 4"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-            <a href="img/Camel Caravan-1.jpg" class="relative aspect-[16/9]">
+            <a href="img/Camel Caravan-1.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Camel Caravan-1.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Camel Caravan image 5"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Zag/Zag-16.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-16.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-6.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Camel Caravan image 6"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Zag/Zag-7.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-7.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-7.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Camel Caravan image 7"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Zag/Zag-8.jpg" class="relative aspect-[16/9]">
+            <a href="img/Zag/Zag-8.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Zag/Zag-8.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Camel Caravan image 8"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Camel Caravan-19.jpg" class="relative aspect-[16/9]">
+            <a href="img/Camel Caravan-19.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Camel Caravan-19.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Camel Caravan image 9"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <a href="img/Camel Caravan-4.jpg" class="relative aspect-[16/9]">
+            <a href="img/Camel Caravan-4.jpg" class="relative aspect-video">
               <img
                 loading="lazy"
                 src="img/Camel Caravan-4.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Camel Caravan image 10"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
           </div>
@@ -402,132 +400,124 @@
         <!-- Photos Section -->
         <div class="text-left mb-6">
           <h2
-            class="text-[25px] leading-[32px] font-semibold text-white text-left capitalize mb-4"
+            class="text-2xl md:text-3xl font-semibold text-white text-left capitalize mb-4"
           >
             Souvenir Shop
           </h2>
 
-          <div id="lightgallery2" class="grid grid-cols-5 grid-rows-2 gap-6">
-            <!-- Flaming Cliffs -->
-
+          <div
+            id="lightgallery2"
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
+          >
+            <!-- Images -->
             <a
               href="img/Souviner shop/SouvinerShop-14.jpg"
-              class="relative aspect-[16/9]"
+              class="relative aspect-video"
             >
               <img
                 loading="lazy"
                 src="img/Souviner shop/SouvinerShop-14.jpg"
-                alt="Souvenir shop"
-                class="rounded-md object-cover w-full h-48"
+                alt="Souvenir Shop image 1"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
-            <!-- Camel Caravan -->
-
             <a
               href="img/Souviner shop/SouvinerShop-10.jpg"
-              class="relative aspect-[16/9]"
+              class="relative aspect-video"
             >
               <img
                 loading="lazy"
                 src="img/Souviner shop/SouvinerShop-10.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Souvenir Shop image 2"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
             <a
               href="img/Souviner shop/SouvinerShop-11.jpg"
-              class="relative aspect-[16/9]"
+              class="relative aspect-video"
             >
               <img
                 loading="lazy"
                 src="img/Souviner shop/SouvinerShop-11.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Souvenir Shop image 3"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
             <a
               href="img/Souviner shop/SouvinerShop-12.jpg"
-              class="relative aspect-[16/9]"
+              class="relative aspect-video"
             >
               <img
                 loading="lazy"
                 src="img/Souviner shop/SouvinerShop-12.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Souvenir Shop image 4"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
             <a
               href="img/Souviner shop/SouvinerShop-13.jpg"
-              class="relative aspect-[16/9]"
+              class="relative aspect-video"
             >
               <img
                 loading="lazy"
                 src="img/Souviner shop/SouvinerShop-13.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Souvenir Shop image 5"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
             <a
               href="img/Souviner shop/SouvinerShop-9.jpg"
-              class="relative aspect-[16/9]"
+              class="relative aspect-video"
             >
               <img
                 loading="lazy"
                 src="img/Souviner shop/SouvinerShop-9.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Souvenir Shop image 6"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
             <a
               href="img/Souviner shop/SouvinerShop-8.jpg"
-              class="relative aspect-[16/9]"
+              class="relative aspect-video"
             >
               <img
                 loading="lazy"
                 src="img/Souviner shop/SouvinerShop-8.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Souvenir Shop image 7"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
             <a
               href="img/Souviner shop/SouvinerShop-7.jpg"
-              class="relative aspect-[16/9]"
+              class="relative aspect-video"
             >
               <img
                 loading="lazy"
                 src="img/Souviner shop/SouvinerShop-7.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Souvenir Shop image 8"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-
             <a
               href="img/Souviner shop/SouvinerShop-6.jpg"
-              class="relative aspect-[16/9]"
+              class="relative aspect-video"
             >
               <img
                 loading="lazy"
                 src="img/Souviner shop/SouvinerShop-6.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Souvenir Shop image 9"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
-            <!-- <div class="relative aspect-[16/9]"></div> -->
-
             <a
               href="img/Souviner shop/SouvinerShop-5.jpg"
-              class="relative aspect-[16/9]"
+              class="relative aspect-video"
             >
               <img
                 loading="lazy"
                 src="img/Souviner shop/SouvinerShop-5.jpg"
-                alt="Flaming Cliffs"
-                class="rounded-md object-cover w-full h-48"
+                alt="Souvenir Shop image 10"
+                class="rounded-md object-cover w-full h-full"
               />
             </a>
           </div>
@@ -536,33 +526,31 @@
     </div>
 
     <div class="flex items-center justify-center bg-[#1a130f] py-4">
-      <div class="w-full max-w-4xl flex items-center">
-        <div class="flex-grow h-2 bg-white"></div>
+      <div class="w-full max-w-4xl flex items-center px-4">
+        <div class="flex-grow h-1 bg-white"></div>
         <span
-          class="mx-4 text-white text-[40px] leading-[32px] font-bold capitalize font-['Inter'] text-right"
+          class="mx-4 text-white text-3xl md:text-4xl font-bold capitalize text-center"
           >Videos</span
         >
-        <div class="flex-grow h-2 bg-white"></div>
+        <div class="flex-grow h-1 bg-white"></div>
       </div>
     </div>
 
     <div class="mt-10">
       <div class="max-w-6xl mx-auto px-4 py-6 text-center">
-        <!-- Photos Section -->
+        <!-- Videos Section -->
         <div class="text-left mb-6">
           <h2
-            class="text-[25px] leading-[32px] font-semibold text-white text-left capitalize mb-4"
+            class="text-2xl md:text-3xl font-semibold text-white text-left capitalize mb-4"
           >
             Flaming Cliffs
           </h2>
 
-          <div class="grid grid-cols-3 grid-rows-2 gap-[15px]">
-            <!-- Flaming Cliffs -->
-
-            <div class="relative aspect-[16/9]">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Videos -->
+            <div class="relative aspect-video">
               <iframe
-                width="350"
-                height="252"
+                class="w-full h-full"
                 src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=0Zmj7nqP4PEzcDM_"
                 title="YouTube video player"
                 frameborder="0"
@@ -571,13 +559,9 @@
                 allowfullscreen
               ></iframe>
             </div>
-
-            <!-- Camel Caravan -->
-
-            <div class="relative aspect-[16/9]">
+            <div class="relative aspect-video">
               <iframe
-                width="350"
-                height="252"
+                class="w-full h-full"
                 src="https://www.youtube.com/embed/LQ9jJ-l_ryE?si=QNf_V2vdaFS5NVGN"
                 title="YouTube video player"
                 frameborder="0"
@@ -586,11 +570,9 @@
                 allowfullscreen
               ></iframe>
             </div>
-
-            <div class="relative aspect-[16/9]">
+            <div class="relative aspect-video">
               <iframe
-                width="350"
-                height="252"
+                class="w-full h-full"
                 src="https://www.youtube.com/embed/LWYDZuAbYGk?si=c1agOLf72Ms7EIoH"
                 title="YouTube video player"
                 frameborder="0"
@@ -599,11 +581,9 @@
                 allowfullscreen
               ></iframe>
             </div>
-
-            <div class="relative aspect-[16/9]">
+            <div class="relative aspect-video">
               <iframe
-                width="350"
-                height="252"
+                class="w-full h-full"
                 src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=0Zmj7nqP4PEzcDM_"
                 title="YouTube video player"
                 frameborder="0"
@@ -612,11 +592,9 @@
                 allowfullscreen
               ></iframe>
             </div>
-
-            <div class="relative aspect-[16/9]">
+            <div class="relative aspect-video">
               <iframe
-                width="350"
-                height="252"
+                class="w-full h-full"
                 src="https://www.youtube.com/embed/LQ9jJ-l_ryE?si=QNf_V2vdaFS5NVGN"
                 title="YouTube video player"
                 frameborder="0"
@@ -625,11 +603,9 @@
                 allowfullscreen
               ></iframe>
             </div>
-
-            <div class="relative aspect-[16/9]">
+            <div class="relative aspect-video">
               <iframe
-                width="350"
-                height="252"
+                class="w-full h-full"
                 src="https://www.youtube.com/embed/LWYDZuAbYGk?si=c1agOLf72Ms7EIoH"
                 title="YouTube video player"
                 frameborder="0"
@@ -644,21 +620,20 @@
     </div>
 
     <div class="bg-[#1a130f] py-4">
-      <div class="flex items-center gap-4 max-w-6xl mx-auto py-6">
+      <div class="flex items-center gap-4 max-w-6xl mx-auto py-6 px-4">
         <!-- Icon -->
         <img
           src="img/baynzag logo.png"
           alt="Flaming Cliffs Icon"
-          class="w-[101.23px] h-[96.87px] object-cover"
+          class="w-24 h-24 object-cover"
         />
 
         <!-- Text -->
         <div>
-          <h1 class="text-white text-[20px] leading-[22.44px] font-[Inter]">
+          <h1 class="text-white text-xl md:text-2xl">
             Flaming Cliffs ( Bayanzag )
           </h1>
-          &nbsp;
-          <p class="text-white text-[20px] leading-[22.44px] font-[Inter]">
+          <p class="text-white text-lg md:text-xl mt-2">
             Discover Mongolia's Legendary Dinosaur Site
           </p>
         </div>
@@ -669,138 +644,84 @@
     </div>
 
     <footer class="bg-[#1a130f] text-white py-10">
-      <div class="max-w-6xl mx-auto text-sm">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 divide-[#2d211c]">
+      <div class="max-w-6xl mx-auto text-sm px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
           <!-- Quick Links -->
           <div class="md:pr-6">
             <h3
-              class="text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
+              class="text-xl font-semibold mb-4 border-b border-[#2d211c] pb-2"
             >
               Quick links
             </h3>
             <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-gray-300">
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-              >
-                Home
-              </a>
+              <a href="#" class="hover:text-white"> Home </a>
 
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Nearby Destinations</a
-              >
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Gateway to Prehistory</a
-              >
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Accommodation</a
-              >
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Key fossils</a
-              >
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Gallery</a
-              >
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Information Center</a
-              >
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >FAQs</a
-              >
+              <a href="#" class="hover:text-white">Nearby Destinations</a>
+              <a href="#" class="hover:text-white">Gateway to Prehistory</a>
+              <a href="#" class="hover:text-white">Accommodation</a>
+              <a href="#" class="hover:text-white">Key fossils</a>
+              <a href="#" class="hover:text-white">Gallery</a>
+              <a href="#" class="hover:text-white">Information Center</a>
+              <a href="#" class="hover:text-white">FAQs</a>
 
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Getting There</a
-              >
-              <a
-                href="#"
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Language</a
-              >
+              <a href="#" class="hover:text-white">Getting There</a>
+              <a href="#" class="hover:text-white">Language</a>
             </div>
           </div>
 
           <!-- Visitor Information -->
-          <div class="md:pr-1">
+          <div>
             <h3
-              class="text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
+              class="text-xl font-semibold mb-4 border-b border-[#2d211c] pb-2"
             >
               Visitor Information
             </h3>
             <p class="text-gray-300 mb-3">
-              <span
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Entry Fees</span
-              ><br />
+              <span class="font-semibold">Entry Fees</span><br />
               Domestic - 3,000 MNT | International - 10,000 MNT
             </p>
             <p class="text-gray-300 mb-3">
-              <span
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Best Time to Visit:</span
-              >
+              <span class="font-semibold">Best Time to Visit:</span>
               May - October
             </p>
             <p class="text-gray-300">
-              <span
-                class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-                >Location</span
-              ><br />
+              <span class="font-semibold">Location</span><br />
               Bayanzag, Ömnögovi Province, Mongolia
             </p>
           </div>
 
           <!-- Contacts & Socials -->
-          <div class="md:pr-1">
+          <div>
             <h3
-              class="text-[20px] leading-[30px] tracking-normal font-['Open_Sans'] mb-4 border-b border-[#2d211c] pb-2"
+              class="text-xl font-semibold mb-4 border-b border-[#2d211c] pb-2"
             >
               Contacts Us
             </h3>
             <div class="flex items-center gap-3 mb-2 text-gray-300">
               <img
                 src="img/phone number icon.png"
-                class="w-4 h-4"
+                class="w-5 h-5"
                 alt="Phone"
               />
               +976 8944 1212
             </div>
             <div class="flex items-center gap-3 mb-4 text-gray-300">
-              <img src="img/Email icon.png" class="w-4 h-4" alt="Email" />
+              <img src="img/Email icon.png" class="w-5 h-5" alt="Email" />
               info@flamingcliffs.mn
             </div>
-            <h4
-              class="font-semibold text-[15px] leading-[30px] tracking-normal font-['Open_Sans']"
-            >
-              Follow Us
-            </h4>
-            <div class="flex gap-4">
+            <h4 class="font-semibold text-lg">Follow Us</h4>
+            <div class="flex gap-4 mt-2">
               <a href="#"
                 ><img
                   src="img/Facebook round.png"
                   alt="Facebook"
-                  class="w-6 h-6"
+                  class="w-8 h-8"
               /></a>
               <a href="#"
-                ><img src="img/Insta Round.png" alt="Instagram" class="w-6 h-6"
+                ><img src="img/Insta Round.png" alt="Instagram" class="w-8 h-8"
               /></a>
               <a href="#"
-                ><img src="img/Youtube round.png" alt="YouTube" class="w-6 h-6"
+                ><img src="img/Youtube round.png" alt="YouTube" class="w-8 h-8"
               /></a>
             </div>
           </div>
@@ -811,76 +732,27 @@
     <footer class="bg-[#1a130f] text-white text-center py-6 text-sm">
       <div class="border-t border-[#3f3932] mt-2 max-w-6xl mx-auto py-6"></div>
 
-      <p
-        class="font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans']"
-      >
-        Preserving History, Supporting Communities
-      </p>
-      <p
-        class="font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans'] mt-1"
-      >
+      <p class="text-lg">Preserving History, Supporting Communities</p>
+      <p class="text-lg mt-2">
         Your visit directly contributes to preserving Mongolia’s heritage and
         empowering local communities.
       </p>
-      <p
-        class="font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans'] mt-1"
-      >
-        Plan Your Visit Today!
-      </p>
+      <p class="text-lg mt-2">Plan Your Visit Today!</p>
 
-      <p
-        class="font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans'] mt-4"
-      >
+      <p class="text-lg mt-4">
         © 2025 Flaming Cliffs Administration | All Rights Reserved
       </p>
 
-      <div class="mt-1 space-x-2">
-        <a
-          href="#"
-          class="text-[#f9a825] hover:underline font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans']"
+      <div class="mt-2 space-x-4">
+        <a href="#" class="text-[#f9a825] hover:underline text-lg"
           >Privacy Policy</a
         >
         <span class="text-gray-600">|</span>
-        <a
-          href="#"
-          class="text-[#f9a825] hover:underline font-semibold text-[18px] leading-[30px] tracking-normal font-['Open_Sans']"
+        <a href="#" class="text-[#f9a825] hover:underline text-lg"
           >Terms of Use</a
         >
       </div>
     </footer>
-
-    <!-- <script>
-      fetch('http://localhost:3000').then(res => res.json()).then(
-        data => {
-          const el = document.querySelector("img")
-          e.class = data
-        }
-      )
-    </script> -->
-
-    <script>
-      const faqButtons = document.querySelectorAll(".faq-question");
-
-      faqButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const currentlyOpen = document.querySelector(
-            ".faq-answer:not(.hidden)"
-          );
-          const currentArrow = document.querySelector(".rotate-180");
-
-          const content = button.nextElementSibling;
-          const arrowIcon = button.querySelector("img");
-
-          if (currentlyOpen && currentlyOpen !== content) {
-            currentlyOpen.classList.add("hidden");
-            currentArrow?.classList.remove("rotate-180");
-          }
-
-          content.classList.toggle("hidden");
-          arrowIcon.classList.toggle("rotate-180");
-        });
-      });
-    </script>
 
     <!-- LightGallery JS -->
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
@@ -898,7 +770,6 @@
         mode: "lg-slide", // ⬅️ Smooth transition
       });
     </script>
-
     <script>
       lightGallery(document.getElementById("lightgallery1"), {
         plugins: [lgZoom],

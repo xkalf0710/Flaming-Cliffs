@@ -11,32 +11,26 @@
     style="background-image: url('img/baynzag-1.png')"
   >
     <!-- Top buttons -->
-    <div class="absolute top-4 left-4 flex space-x-2">
+    <div class="absolute top-4 left-4 flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
       <button
         id="backBtn"
-        class="bg-white/80 text-gray-800 px-3 py-1 rounded shadow"
+        class="bg-white/80 text-gray-800 px-3 py-1 rounded shadow flex items-center"
       >
-        <span style="display: flex; align-items: center; font-family: 'Inter'">
-          <img
-            src="img/line.png"
-            class="w-18 h-15 object-cover"
-            style="margin-right: 10px"
-          />
-          Back
-        </span>
+        <img
+          src="img/line.png"
+          class="w-5 h-5 object-cover mr-2"
+        />
+        <span>Back</span>
       </button>
       <button
         id="homeBtn"
-        class="bg-white/80 text-gray-800 px-3 py-1 rounded shadow"
+        class="bg-white/80 text-gray-800 px-3 py-1 rounded shadow flex items-center"
       >
-        <span style="display: flex; align-items: center; font-family: 'Inter'">
-          <img
-            src="img/sr-home-4x.png"
-            class="w-5 h-5 object-cover"
-            style="margin-right: 10px"
-          />
-          Home
-        </span>
+        <img
+          src="img/sr-home-4x.png"
+          class="w-5 h-5 object-cover mr-2"
+        />
+        <span>Home</span>
       </button>
     </div>
 
@@ -44,58 +38,44 @@
     <div
       class="flex flex-col items-center justify-center h-full text-white text-center px-4"
     >
-      <img src="img/baynzag logo.png" alt="" class="w-[181px] h-[232px] mb-4" />
+      <img src="img/baynzag logo.png" alt="" class="w-32 h-auto mb-4" />
       <!-- Replace with actual logo -->
 
       <div class="text-center text-white py-8">
         <h1
-          class="text-[36px] leading-[60px] font-semibold text-center font-[SF Pro Display] drop-shadow"
+          class="text-2xl md:text-4xl font-semibold drop-shadow"
         >
           Flaming Cliffs - Баянзаг Улалзах Цонж
         </h1>
 
         <p
-          class="text-[24px] leading-[60px] font-semibold text-center font-[SF Pro Display] drop-shadow"
+          class="text-xl md:text-2xl font-semibold drop-shadow mt-2"
         >
           Аялагчдын бүртгэлийн систем
         </p>
-        <hr class="border-t-2 border-white opacity-70 w-[1000px] mx-auto" />
+        <hr class="border-t-2 border-white opacity-70 w-full max-w-lg mx-auto mt-4" />
       </div>
 
-      <div class="flex space-x-4">
+      <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
         <button
           id="inspectorBtn"
           class="bg-white text-gray-800 px-6 py-3 rounded-lg shadow-lg flex items-center space-x-2 hover:bg-gray-100"
         >
-          <span
-            style="display: flex; align-items: center; font-family: 'Inter'"
-          >
-            <img
-              src="img/sr-shield-check-4x.png"
-              class="w-8 h-8 object-cover"
-              style="margin-right: 10px"
-            />
-            <span class="font-normal text-[25px] leading-[77.03px] align-middle"
-              >Хянан Шалгагч</span
-            >
-          </span>
+          <img
+            src="img/sr-shield-check-4x.png"
+            class="w-8 h-8 object-cover"
+          />
+          <span class="font-normal text-xl">Хянан Шалгагч</span>
         </button>
         <button
           id="touristBtn"
           class="bg-white text-gray-800 px-6 py-3 rounded-lg shadow-lg flex items-center space-x-2 hover:bg-gray-100"
         >
-          <span
-            style="display: flex; align-items: center; font-family: 'Inter'"
-          >
-            <img
-              src="img/sr-document-add-4x.png"
-              class="w-8 h-8 object-cover"
-              style="margin-right: 10px"
-            />
-            <span class="font-normal text-[25px] leading-[77.03px] align-middle"
-              >Жуулчин бүртгэгч</span
-            >
-          </span>
+          <img
+            src="img/sr-document-add-4x.png"
+            class="w-8 h-8 object-cover"
+          />
+          <span class="font-normal text-xl">Жуулчин бүртгэгч</span>
         </button>
       </div>
     </div>
