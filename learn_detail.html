@@ -123,10 +123,10 @@
           class="absolute left-0 bottom-0 w-full pointer-events-none z-10"
         />
         <div
-          class="absolute -bottom-[1%] left-[30%] transform -translate-x-1/2 -translate-y-1/2 text-white text-center px-4 md:top-1/2 md:left-[15%] md:text-left md:-translate-x-0"
+          class="absolute bottom-4 left-[34%] transform -translate-x-1/2 text-white text-center px-4 md:top-1/2 md:left-[15%] md:text-left md:-translate-x-0 md:-translate-y-1/2"
         >
           <h1
-            class="text-2xl leading-[1.2] font-semibold tracking-tight md:text-6xl"
+            class="text-xl leading-tight font-semibold tracking-tight md:text-6xl"
           >
             <span class="block">Flaming Cliffs:</span>
             <span class="block">A Journey Through Time</span>
@@ -181,8 +181,10 @@
     </div>
 
     <div class="max-w-6xl mx-auto py-6 px-4">
-      <div class="flex flex-col lg:flex-row items-start gap-10 bg-white py-6">
-        <!-- Left Side: Text -->
+      <div
+        class="flex flex-col-reverse lg:flex-row items-start gap-10 bg-white py-6"
+      >
+        <!-- Text Section -->
         <div class="flex-1">
           <div class="flex items-center space-x-4">
             <div
@@ -193,11 +195,23 @@
             <div class="text-[#6C3B1F] font-bold text-3xl md:text-4xl">
               Roy Chapman Andrews
             </div>
+
+            <!-- Only show on mobile -->
+            <div class="w-1/2 md:w-1/5 mt-0 md:mt-0 block lg:hidden">
+              <img
+                src="img/learn more detail dino icon.png"
+                alt="Cartoon Dinosaur"
+                class="w-full h-auto object-contain transform scale-x-[-1] my-6 mx-auto max-w-md"
+              />
+            </div>
           </div>
+
           <div class="border-b-4 border-[#6C3B1F] mt-0 w-full"></div>
+
           <div class="text-[#6C3B1F] font-medium text-2xl md:text-3xl mt-4">
             The Man Behind The Legend
           </div>
+
           <p class="text-lg leading-relaxed text-justify mt-4">
             Roy Chapman Andrews, an American explorer and paleontologist working
             for the American Museum of Natural History, was driven by a profound
@@ -206,6 +220,11 @@
             <strong>Central Asiatic Expeditions</strong> in 1921.
           </p>
 
+          <img
+            src="img/image.jpg"
+            alt="Roy Chapman Andrews"
+            class="block md:hidden my-6 mx-auto w-full max-w-md rounded shadow-md object-cover"
+          />
           <p class="text-lg leading-relaxed text-justify mt-4">
             His vision was bold: to cross vast, uncharted terrain with the
             latest technology of the time, including Ford Model-T motor
@@ -217,8 +236,8 @@
           </p>
         </div>
 
-        <!-- Right Side: Image -->
-        <div class="flex-1 lg:mt-[15%]">
+        <!-- Image Section (Optional on large screen) -->
+        <div class="flex-1 lg:mt-[15%] hidden lg:block">
           <img
             src="img/image.jpg"
             alt="Roy Chapman Andrews"
@@ -233,7 +252,7 @@
         class="flex flex-col lg:flex-row items-center justify-between w-full bg-white py-6 gap-10"
       >
         <!-- Left: Image Section -->
-        <div class="relative w-full lg:w-1/2">
+        <div class="relative w-full lg:w-1/2 hidden lg:block">
           <iframe
             class="w-full h-64 md:h-96"
             src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=0Zmj7nqP4PEzcDM_"
@@ -255,7 +274,6 @@
               >
                 Central Asiatic Expeditions
               </h1>
-
               <div
                 class="bg-[#6F3F18] text-white text-4xl w-20 h-20 flex items-center justify-center ml-4"
               >
@@ -264,7 +282,7 @@
             </div>
 
             <!-- Horizontal Line with Year on Right -->
-            <div class="flex items-center h-full lg:justify-start">
+            <div class="flex items-center h-full lg:justify-start mt-2">
               <div
                 class="border-b-2 border-[#5e3617] flex-grow text-white"
               ></div>
@@ -278,6 +296,7 @@
               A Decade Of Discovery
             </p>
 
+            <!-- Main Text -->
             <p class="text-justify text-lg leading-relaxed mt-2">
               In July 1923, Andrews and his team made their most groundbreaking
               discovery at the Flaming Cliffs: fossilized dinosaur eggs, the
@@ -287,6 +306,19 @@
               instantly elevated the Flaming Cliffs to global prominence, making
               headlines worldwide.
             </p>
+
+            <!-- YouTube Video (Mobile/Tablet Only) -->
+            <div class="relative w-full block lg:hidden mt-6">
+              <iframe
+                class="w-full h-64"
+                src="https://www.youtube.com/embed/ZptQeVJ5qZM?si=0Zmj7nqP4PEzcDM_"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -312,7 +344,7 @@
       </div>
 
       <!-- Right Image -->
-      <div class="w-1/2 md:w-1/5 mt-0 md:mt-0">
+      <div class="w-1/2 md:w-1/5 mt-0 md:mt-0 hidden lg:block">
         <img
           src="img/learn more detail dino icon.png"
           alt="Cartoon Dinosaur"
@@ -417,7 +449,7 @@
           Scientific Legacy And Global Impact
         </h2>
 
-        <div class="flex-grow h-1 bg-[#5e3617] ml-4"></div>
+        <div class="flex-grow h-1 bg-[#5e3617] ml-2"></div>
       </div>
 
       <!-- Paragraph -->
@@ -446,7 +478,7 @@
       </div>
 
       <!-- Brown Line -->
-      <div class="h-1 bg-[#5e3617] mt-2"></div>
+      <div class="h-1 bg-[#5e3617] mt-0"></div>
 
       <!-- Subtitle -->
       <p class="font-medium text-2xl md:text-3xl text-[#5e3617] mt-0">
