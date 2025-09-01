@@ -146,7 +146,7 @@
             alt="Mission Icon"
             class="w-32 h-auto mx-auto md:mx-0"
           />
-          <h2 class="mt-4 font-bold text-3xl md:text-4xl text-[#5e3617]">
+          <h2 class="mt-4 text-2xl md:text-3xl font-bold text-[#6F3F18]">
             Our Mission
           </h2>
         </div>
@@ -173,7 +173,7 @@
       class="max-w-7xl mx-auto flex flex-col md:flex-row items-center py-6 px-4"
     >
       <!-- Dinosaur Icon -->
-      <div class="flex-shrink-0">
+      <div class="flex-shrink-0 hidden md:block">
         <img
           src="img/About us dino icon.png"
           alt="Dino holding compass"
@@ -181,44 +181,51 @@
         />
       </div>
 
-      <!-- Vision Text -->
-      <div class="flex-1 mt-0 md:mt-0 md:ml-8">
-        <p class="text-lg leading-relaxed text-justify text-black">
-          We envision the Flaming Cliffs as a globally recognized center for
-          paleontological research and eco-tourism, where visitors can immerse
-          themselves in the wonders of Earth's prehistoric past while
-          contributing to the preservation of this invaluable heritage.
-        </p>
+      <!-- Vision Section -->
+        <div class="flex flex-col md:flex-row items-center md:items-start">
+          <!-- Image + Title -->
+          <div class="flex-shrink-0 text-center md:text-right py-6 md:ml-8 order-1 md:order-2">
+            <img
+              src="img/our vision icon.png"
+              alt="Vision Icon"
+              class="w-32 h-auto mx-auto md:mx-0"
+            />
 
-        <!-- Brown Divider Line -->
-        <div class="h-1 bg-[#6F3E1D] mt-4 w-full"></div>
-      </div>
+            <div class="mt-4">
+              <h2 class="text-2xl md:text-3xl font-bold text-[#6F3F18]">
+                Our Vision
+              </h2>
+            </div>
+          </div>
 
-      <div
-        class="flex-shrink-0 text-center md:text-right py-6 mt-0 md:mt-0 md:ml-8"
-      >
-        <img
-          src="img/our vision icon.png"
-          alt="Vision Icon"
-          class="w-32 h-auto mx-auto md:mx-0"
-        />
+          <!-- Vision Text -->
+          <div class="flex-1 mt-4 md:mt-0 md:ml-8 order-2 md:order-1">
+            <p class="text-lg leading-relaxed text-justify text-black">
+              We envision the Flaming Cliffs as a globally recognized center for
+              paleontological research and eco-tourism, where visitors can immerse
+              themselves in the wonders of Earth's prehistoric past while contributing
+              to the preservation of this invaluable heritage.
+            </p>
 
-        <div class="mt-4">
-          <h2 class="font-bold text-3xl md:text-4xl text-[#5e3617]">
-            Our Vision
-          </h2>
+            <!-- Brown Divider Line -->
+            <div class="h-1 bg-[#6F3E1D] mt-4 w-full"></div>
+          </div>
         </div>
-      </div>
+
     </div>
 
-    <div class="mt-0 md:mt-32">
+    <div class="mt-0 md:mt-10">
       <div class="max-w-6xl mx-auto py-6 px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-[#6F3F18] capitalize">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-[#6F3F18] capitalize text-center md:text-left"
+        >
           Our Objectives
         </h2>
+        
+
       </div>
 
-      <div class="max-w-6xl mx-auto py-6 px-4">
+      <div class="max-w-6xl mx-auto py-6 px-4 hidden lg:block">
         <div
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center text-[#6C3B1F] text-xl font-semibold"
         >
@@ -258,6 +265,50 @@
           </div>
         </div>
       </div>
+
+
+      <div class="max-w-6xl mx-auto py-6 px-4 md:hidden">
+
+        <!-- Item 1 -->
+        <div>
+          <h3 class="text-xl font-semibold">Conservation</h3>
+          <p class="text-lg leading-relaxed text-black mt-2">
+            Implement sustainable practices to protect the geological and
+            paleontological integrity of the Flaming Cliffs.
+          </p>
+        </div>
+
+        <!-- Item 2 -->
+        <div>
+          <h3 class="text-xl font-semibold">Research</h3>
+          <p class="text-lg leading-relaxed text-black mt-2">
+            Support and collaborate on scientific studies that enhance our
+            understanding of the site's fossils and geological formations.
+          </p>
+        </div>
+
+        <!-- Item 3 -->
+        <div>
+          <h3 class="text-xl font-semibold">Community Engagement</h3>
+          <p class="text-lg leading-relaxed text-black mt-2">
+            Work closely with local communities to promote cultural heritage
+            and create economic opportunities through eco-tourism.
+          </p>
+        </div>
+
+        <!-- Item 4 -->
+        <div>
+          <h3 class="text-xl font-semibold">Education</h3>
+          <p class="text-lg leading-relaxed text-black mt-2">
+            Develop programs and exhibits that inform and inspire the public
+            about the significance of the Flaming Cliffs and its discoveries.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
     </div>
 
     <section
@@ -561,7 +612,7 @@
             >
               Contacts Us
             </h3>
-            <div class="flex items-center gap-3 mb-2 text-gray-300">
+            <div class="flex items-center gap-3 mb-2 text-gray-300 text-sm">
               <img
                 src="img/phone number icon.png"
                 class="w-5 h-5"
@@ -569,7 +620,7 @@
               />
               +976 8944 1212
             </div>
-            <div class="flex items-center gap-3 mb-4 text-gray-300">
+            <div class="flex items-center gap-3 mb-4 text-gray-300 text-sm">
               <img src="img/Email icon.png" class="w-5 h-5" alt="Email" />
               info@flamingcliffs.mn
             </div>
@@ -596,23 +647,23 @@
     <footer class="bg-[#1a130f] text-white text-center py-6 text-sm">
       <div class="border-t border-[#3f3932] mt-2 max-w-6xl mx-auto py-6"></div>
 
-      <p class="text-lg">Preserving History, Supporting Communities</p>
-      <p class="text-lg mt-2">
+      <p class="text-lg font-['SF_Pro_Display']">Preserving History, Supporting Communities</p>
+      <p class="text-lg mt-2 font-['SF_Pro_Display']">
         Your visit directly contributes to preserving Mongolia’s heritage and
         empowering local communities.
       </p>
-      <p class="text-lg mt-2">Plan Your Visit Today!</p>
+      <p class="text-lg mt-2 font-['SF_Pro_Display']">Plan Your Visit Today!</p>
 
-      <p class="text-lg mt-4">
+      <p class="text-lg mt-4 font-['SF_Pro_Display']">
         © 2025 Flaming Cliffs Administration | All Rights Reserved
       </p>
 
-      <div class="mt-2 space-x-4">
+      <div class="mt-2 space-x-4 font-['SF_Pro_Display']">
         <a href="#" class="text-[#f9a825] hover:underline text-lg"
           >Privacy Policy</a
         >
         <span class="text-gray-600">|</span>
-        <a href="#" class="text-[#f9a825] hover:underline text-lg"
+        <a href="#" class="text-[#f9a825] hover:underline text-lg font-['SF_Pro_Display']"
           >Terms of Use</a
         >
       </div>
